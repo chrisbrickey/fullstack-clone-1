@@ -1,24 +1,25 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+See design docs for development README.  This production README will be WIP during development.
 
-Things you may want to cover:
 
-* Ruby version
+## Design Docs
 
-* System dependencies
+* [Development README][READMEdev]
+* [View Wireframes][wireframes]
+* [React Components][components]
+* [API endpoints][api-endpoints]
+* [DB schema][schema]
+* [Sample State][sample-state]
 
-* Configuration
+[READMEdev]: docs/READMEdev.md
+[wireframes]: docs/wireframes
+[components]: docs/component-hierarchy.md
+[sample-state]: docs/sample-state.md
+[api-endpoints]: docs/api-endpoints.md
+[schema.md]: docs/schema.md
 
-* Database creation
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
+##Upcoming Features:
 
 * ...
