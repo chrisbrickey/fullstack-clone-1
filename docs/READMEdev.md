@@ -30,7 +30,7 @@ This visual platform enables performing artists (ballet dancers to start) to sha
 [components]: component-hierarchy.md
 [sample-state]: sample-state.md
 [api-endpoints]: api-endpoints.md
-[schema.md]: schema.md
+[schema]: schema.md
 
 
 ## Implementation Timeline
