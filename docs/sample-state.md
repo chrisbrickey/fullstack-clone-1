@@ -1,11 +1,11 @@
-{
-// default state (no user logged in)
+
+  *default state (no user logged in)*
   session: {
     currentUser: null,
     errors: ["Invalid login credentials"]
   },
 
-// if user logged in
+  *if user logged in*
   session: {
     currentUser: {
       id: 1,
@@ -13,7 +13,6 @@
       profile_image: "xx"
     },
     errors: []
-    },
   },
 
   forms: {
@@ -44,19 +43,22 @@
       photo_url: 'xx.png',
       description: "xx",
       upload_date: 'xx',
+
       comments: {
         1: {
           username: 'xx',
           body: "xx"
         }
       },
+
       likes: {
         1: {
           username: 'xx'
         }
       }
-    },  
-    2: //..
+    },
+
+    2: ...
   }
 
   photo: {
@@ -77,7 +79,7 @@
         id: 1,
         username: "xx"
       }
-      2: //..
+      2: ...
     }
 
     comments: {
@@ -85,8 +87,6 @@
         username: "xx",
         body: "xx"
       }
-      2: //..
-    }
-
+      2: ...
+    }  
   }
-}
