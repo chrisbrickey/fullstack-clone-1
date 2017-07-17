@@ -2,19 +2,34 @@
 
 WIP - will pull from sample below
 
+
+
+
 ## Routes
 
-Note: I'd prefer the AuthFormContainer and the UploadContainer to be at the root route, perhaps modals that just overlay when the user needs them.
+|Path              | Component              |
+|------------------|------------------------|
+| "/"              | "FeedContainer"        |
+| "/users/:userId" | "ProfileContainer"     |
 
-|Path   | Component   |
-|-------|-------------|
-| "/hello" | "AuthFormContainer" |
-| "/" | "FeedContainer" |
-| "/upload" | "UploadContainer" |
-| "/:username" | "OtherUserContainer" |
-| "/:username" | "ProfileViewContainer" |
-| "/edit/:username" | "ProfileEditContainer" |
 
+## To be replaced with modals at the root route
+
+|Path              | Component              |
+|------------------|------------------------|
+| "/hello"         | "AuthFormContainer"    |
+| "/upload"        | "UploadContainer"      |
+
+
+### Bonus
+
+|Path                   | Component   |
+|-----------------------|------------------------|
+| "/users/:userId"      | "OtherUserContainer"   |   (conditionally renders when this user is NOT current user)
+| "/users/:userId"      | "ProfileContainer"     |   (if current user)
+| "/users/:userId/edit" | "ProfileEditContainer" |   (for MVP user page will just be the collection of the users photos where they can add/delete, no settings-etc)
+
+Use usernames as wildcards in the routes instead of userIds.  This might require forbidding usernames that match with predetermined list of possible routes so users can't exploit the site via their username.
 
 
 
