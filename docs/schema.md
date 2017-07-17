@@ -28,13 +28,14 @@ updated_at  | datetime  |
 
 
 ## likes
-column_name | data_type | details
-------------|-----------|-----------------------
-id          | integer   | not null, primary key
-user_id     | integer   | not null, foreign key (users), indexed, unique (photo_id)
-photo_id    | integer   | not null, foreign key (photos), indexed
-created_at  | datetime  |
-updated_at  | datetime  |
+column_name  | data_type | details
+-------------|-----------|-----------------------
+id           | integer   | not null, primary key
+likable_type | string    | not null, indexed
+user_id      | integer   | not null, foreign key (users), indexed, unique (likable_id, likable_type)
+likable_id   | string    | not null, foreign key (likable), indexed
+created_at   | datetime  |
+updated_at   | datetime  |
 
 
 ## comments
