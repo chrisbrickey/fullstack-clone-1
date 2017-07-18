@@ -31,9 +31,9 @@ updated_at  | datetime  |
 column_name  | data_type | details
 -------------|-----------|-----------------------
 id           | integer   | not null, primary key
-likable_type | string    | not null, indexed
 user_id      | integer   | not null, foreign key (users), indexed, unique (likable_id, likable_type)
-likable_id   | string    | not null, foreign key (likable), indexed
+likable_id   | integer   | not null, foreign key (likable), indexed
+likable_type | string    | not null, indexed
 created_at   | datetime  |
 updated_at   | datetime  |
 
