@@ -2,9 +2,7 @@
 
 
 **App**
-  * NavBar
-  * Footer
-
+  - NavBar & Footer
 
 
 **LoginContainer**
