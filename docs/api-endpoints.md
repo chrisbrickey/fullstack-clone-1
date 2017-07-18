@@ -35,25 +35,22 @@
 
 ### Likes (polymorphic)
 
-- `POST /api/photos/:photo_id/like` - add a like to a photo
-- `DELETE /api/photos/:photo_id/like` - remove like from a photo
+- `POST /api/photos/:photo_id/likes` - add a like to a photo
+- `POST /api/comments/:comment_id/likes` - add a like to a comment
 
-- `POST /api/comments/:comment_id/like` - add a like to a comment
-- `DELETE /api/comments/:comment_id/like` - remove like from a comment
-
-
+- `DELETE /api/likes` - remove a like from a photo
 
 
 ### Comments
 
 - `POST /api/photos/:photo_id/comments` - add a comment to a photo
-- `DELETE /api/comment/:comment_id` - remove comment from a photo
+- `DELETE /api/comment/:comment_id` - remove a comment from a photo
 
 
 ### Follows
 
-- `POST /api/users/:user_id/follow` - add a follow to a user
-- `DELETE /api/users/:user_id/follow` - remove follow from a user
+- `POST /api/users/:user_id/follows` - add a follow to a user
+- `DELETE /api/follows/:follow_id` - remove a follow from a user
 
 
 ### Bonus
