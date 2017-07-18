@@ -33,10 +33,15 @@
 - `DELETE /api/photos/:photo_id` - remove photo
 
 
-### Likes
+### Likes (polymorphic)
 
 - `POST /api/photos/:photo_id/like` - add a like to a photo
 - `DELETE /api/photos/:photo_id/like` - remove like from a photo
+
+- `POST /api/comments/:comment_id/like` - add a like to a comment
+- `DELETE /api/comments/:comment_id/like` - remove like from a comment
+
+
 
 
 ### Comments

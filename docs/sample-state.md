@@ -87,6 +87,8 @@
         body: "xx",
         username: "xx"
         user_id: 22,
+        likesCount: 10,
+        likers: ["xx", ...] 
       },
 
       2: {
