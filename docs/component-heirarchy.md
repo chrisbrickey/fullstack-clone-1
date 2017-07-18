@@ -15,6 +15,8 @@
    - Home
     * PhotoIndex
       * PhotoItem
+    * FollowingIndex
+      * FollowingItem
 
 
 **UploadContainer**
