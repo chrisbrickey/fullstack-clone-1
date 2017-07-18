@@ -1,33 +1,34 @@
 ## Component Hierarchy
 
+
+**App**
+  * NavBar
+  * Footer
+
+
+
 **LoginContainer**
-   - LoginModal
+   - Login
      * PhonePhoto
      * AuthForm
-     * GetTheAppSmall
-     * Footer
 
 
 **HomeContainer**
-   - HomeIndex
-    * NavBar
+   - Home
     * PhotoIndex
-      * PhotoDetail
-    * Footer
+      * PhotoItem
 
 
 **UploadContainer**
-  - UploadModal
+  - Upload
 
 
 **ProfileContainer**
-  - ProfileIndex
-    * NavBar
+  - Profile
     * ProfileBanner
     * UserPhotos
       * PhotoSnapshot
-    * GetTheAppLarge
-    * Footer
+
 
 
 
