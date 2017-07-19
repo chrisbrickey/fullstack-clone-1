@@ -9,14 +9,13 @@ class Api::SessionsController < ApplicationController
 
     if @user
       login!(@user)
-      # render "api/users/show"
       render(
         json: {},
         status: 200
       )
     else
       render(
-        json: ["invalid username/password combination"],
+        json: { errors: ["invalid username/password combination"] },
         status: 401
       )
     end
@@ -27,15 +26,16 @@ class Api::SessionsController < ApplicationController
   def destroy
     @user = current_user
 
-    #Should I be rendering an empty object instead? {}
     if @user
       logout
-      #how will it know this is a POST request NOT a DELETE request?
-      render "/api/session"
+      render(
+        json: {},
+        status: 200
+      )
 
     else
       render(
-        json: ["please sign up or log in"],
+        json: { errors: ["please sign up or log in"] },
         status: 404
       )
 
