@@ -10,8 +10,7 @@ class User < ApplicationRecord
               allow_nil: true
 
   validates :name,
-              presence: true,
-              uniqueness: true
+              presence: true
 
   validates :session_token,
               presence: true,

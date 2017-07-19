@@ -20,6 +20,6 @@ See design docs for development README.  This production README will be WIP duri
 [schema]: docs/schema.md
 
 
-##Upcoming Features:
+## Upcoming Features:
 
-* ...
+* Video player
