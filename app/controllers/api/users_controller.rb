@@ -18,12 +18,11 @@ class Api::UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      # login!(@user)
+      login!(@user)
       render "api/users/show"
-      # render "/"
     else
       render(
-        json: @user.errors.full_messages,
+        json: { errors: @user.errors.full_messages },
         status: 422
       )
     end
@@ -33,12 +32,12 @@ class Api::UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
 
-    #why do we want the object to be returned even if it doesn't pass validation (functionality of update vs update_attributes)
+    #using update will return true/false depending on whether validations passed
     if @user.update(user_params)
-      render "/"
+      render "api/users/show"
     else
       render(
-        json: @user.errors.full_messages,
+        json: { errors: @user.errors.full_messages },
         status: 422
       )
     end
