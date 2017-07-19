@@ -17,7 +17,7 @@ See design docs for development README.  This production README will be WIP duri
 [components]: docs/component-hierarchy.md
 [sample-state]: docs/sample-state.md
 [api-endpoints]: docs/api-endpoints.md
-[schema.md]: docs/schema.md
+[schema]: docs/schema.md
 
 
 ##Upcoming Features:
