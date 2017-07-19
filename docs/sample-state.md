@@ -2,7 +2,7 @@
 
 {
 
-  if no user logged in (default state):
+  if user is NOT logged in (default state):
   session: {
     currentUser: null,
     errors: ["Invalid login credentials"]
@@ -18,7 +18,7 @@
 
   forms: {
     signUp: {errors:[]},
-    logIn: {errors:["Invalid login credentials"]},
+    logIn: {errors: ["Invalid login credentials"]},
     createPhoto: {errors: ["Image must be uploaded"]}
   },
 
@@ -88,7 +88,7 @@
         username: "xx"
         user_id: 22,
         likesCount: 10,
-        likers: ["xx", ...] 
+        likers: ["xx", ...]
       },
 
       2: {
