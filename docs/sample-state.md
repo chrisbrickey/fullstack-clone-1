@@ -2,6 +2,7 @@
 
 {
 
+  //why do I want to start off with errors?  or how do I clear them at login?
   if user is NOT logged in (default state):
   session: {
     currentUser: null,
