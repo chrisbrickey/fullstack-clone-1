@@ -11,7 +11,9 @@ const defaultState = Object.freeze({
   },
 });
 
-export const sesionReducer = (state = defaultState, action) => {
+
+//double check format of action.current user to make it sure merging will work
+export const sessionReducer = (state = defaultState, action) => {
   Object.freeze(state);
 
   switch(action.type) {
