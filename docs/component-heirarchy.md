@@ -5,8 +5,8 @@
   - NavBar & Footer
 
 
-**LoginContainer**
-   - Login
+**SignupContainer**
+   - SignUp
      * PhonePhoto
      * AuthForm
 
