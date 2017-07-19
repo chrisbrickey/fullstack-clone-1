@@ -9,10 +9,7 @@ class Api::SessionsController < ApplicationController
 
     if @user
       login!(@user)
-      render(
-        json: {},
-        status: 200
-      )
+      render "api/users/show"
     else
       render(
         json: { errors: ["invalid username/password combination"] },

@@ -1,5 +1,5 @@
 export const ajaxSignup = user => {
-  console.log("in  ajaxSignup");
+  console.log("in ajaxSignup");
   return(
     $.ajax({
       method: 'POST',
@@ -10,7 +10,7 @@ export const ajaxSignup = user => {
 };
 
 export const ajaxLogin = user => {
-  console.log("in  ajaxLogin");
+  console.log("in ajaxLogin");
   return(
     $.ajax({
       method: 'POST',
@@ -21,7 +21,7 @@ export const ajaxLogin = user => {
 };
 
 export const ajaxLogout = user => {
-  console.log("in  ajaxLogout");
+  console.log("in ajaxLogout");
   return(
     $.ajax({
       method: 'DELETE',

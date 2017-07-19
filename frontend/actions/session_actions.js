@@ -1,18 +1,21 @@
 import { ajaxSignup,
          ajaxLogin,
-         ajaxLogout } from "./../util/session_api_util";
+         ajaxLogout } from "../util/session_api_util";
 
 export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
 export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
+export const CLEAR_ERRORS = 'CLEAR_ERRORS';
 
 
 //synchronous action creators
 
 export const receiveCurrentUser = currentUser => {
   console.log("inside sync receiveCurrentUser");
+  console.log(currentUser);
   return({
       type: RECEIVE_CURRENT_USER,
-      currentUser  //shorthand for currentUser: currentUser
+      currentUser: currentUser,  //shorthand for currentUser: currentUser
+      errors: []  //I added this to clear the errors at log in.  Is this ok to do?
     });
 };
 
@@ -21,9 +24,18 @@ export const receiveCurrentUser = currentUser => {
     // status: 401
 export const receiveErrors = errors => {
   console.log("inside sync receiveErrors");
+  console.log(errors);
   return ({
     type: RECEIVE_ERRORS,
     errors
+  });
+};
+
+export const clearErrors = errors => {
+  console.log("inside sync clearErrors");
+  return ({
+    type: CLEAR_ERRORS,
+    errors: []
   });
 };
 
@@ -34,13 +46,14 @@ export const signupCreateUser = user => dispatch => {
   console.log("inside signupCreateUser");
 
   ajaxSignup(user)
-    .then( returnedUser => (dispatch(receiveCurrentUser(returnedUser))),
-           returnedErrors => (receiveErrors(returnedErrors.responseJSON))
+    .then( (returnedUser => dispatch(receiveCurrentUser(returnedUser))),
+           (returnedErrors => dispatch(receiveErrors(returnedErrors.responseJSON)))
     );
 };
 
 export const loginCreateSession = user => dispatch => {
   console.log("inside loginCreateSession");
+  console.log(user);
 
   ajaxLogin(user)
     .then( returnedUser => (dispatch(receiveCurrentUser(returnedUser))),
@@ -53,5 +66,6 @@ export const logoutDestroySession = () => dispatch => {
   console.log("inside logoutDestroySession");
 
   ajaxLogout()
-    .then( () => (dispatch(receiveCurrentUser(null))));
+    .then( () => (dispatch(receiveCurrentUser(null)))
+  );
 };
