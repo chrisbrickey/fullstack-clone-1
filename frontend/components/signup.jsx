@@ -77,7 +77,7 @@ class Signup extends React.Component {
 
         <p>--------------OR-------------------</p>
 
-          <form onSubmit={this.handleSubmit} className="login-form-box">
+          <form onSubmit={this.handleSubmit} className="auth-form-box">
               <br/>
 
               <label>Name:
@@ -113,21 +113,21 @@ class Signup extends React.Component {
 
               <br/>
               <br/>
-              <input type="submit" value="Sign up" className="button"/>
+              <input type="submit" value={buttonText} className="button"/>
 
                 <br/>
                 <p>By signing up, you agree to our</p>
                 <p>Terms & Privacy Policy.</p>
           </form>
-
-          <section className="button">
-            <button onClick={this.props.loginCreateSession}>Log in</button>
-          </section>
-
         </section>
 
-        <section className="auth-toggle">
-          Have an account? Log in
+        <div className="auth-form-toggle">
+          <p>{`${prefixText}`}</p>
+          
+        </div>
+
+        <section className="button">
+          <button onClick={this.props.loginCreateSession}>Log in</button>
         </section>
 
         <section className="button">
@@ -142,3 +142,4 @@ class Signup extends React.Component {
 }
 
 export default Signup;
+// export default withRouter(Signup);
