@@ -19,7 +19,10 @@ class Signup extends React.Component {
     };
 
     //this.anyMethod = this.anyMethod.bind(this);
+    this.myUpdate = this.myUpdate.bind(this);
+    this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+
   }
 
   myUpdate(field) {
@@ -28,6 +31,10 @@ class Signup extends React.Component {
         [field]: event.currentTarget.value
       });
     });
+  }
+
+  handleChange(event) {
+    event.preventDefault();
   }
 
 
@@ -59,8 +66,8 @@ class Signup extends React.Component {
             <br/>
 
               <br/>
-              <label>Password:
-                <input type="name"
+              <label>Name:
+                <input type="text"
                   value={this.state.name}
                   onChange={this.myUpdate('name')}
                   className="login-input"
@@ -80,7 +87,7 @@ class Signup extends React.Component {
               <br/>
 
               <label>Password:
-                <input type="password"
+                <input type="text"
                   value={this.state.password}
                   onChange={this.myUpdate('password')}
                   className="login-input"
