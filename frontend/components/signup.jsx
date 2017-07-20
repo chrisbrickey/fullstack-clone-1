@@ -96,11 +96,9 @@ class Signup extends React.Component {
 
 
             <div className="left">left
-              <div className="hero">hero
-
-                  <figure>Photo of iPhones</figure>
-
-              </div>
+              <figure className="hero">hero
+                <img src={require('/images/succulent_hero.png')} alt="iPhone App" className="hero2"/>
+              </figure>
             </div>
 
 
