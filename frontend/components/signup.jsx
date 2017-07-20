@@ -123,8 +123,10 @@ class Signup extends React.Component {
                       <form onSubmit={this.handleSubmit} className="auth-form">
                           <br/>
 
-                          <label>Name:
-                            <input type="text"
+                          <label>
+                            <input
+                              type="text"
+                              placeholder="Full Name"
                               name="name"
                               value={this.state.user.name}
                               onChange={this.updateUser}
@@ -134,8 +136,10 @@ class Signup extends React.Component {
 
                           <br/>
 
-                          <label>Username:
-                            <input type="text"
+                          <label>
+                            <input
+                              type="text"
+                              placeholder="Username"
                               name="username"
                               value={this.state.user.username}
                               onChange={this.updateUser}
@@ -145,8 +149,10 @@ class Signup extends React.Component {
 
                           <br/>
 
-                          <label>Password:
-                            <input type="password"
+                          <label>
+                            <input
+                              type="password"
+                              placeholder="Password"
                               name="password"
                               value={this.state.user.password}
                               onChange={this.updateUser}
