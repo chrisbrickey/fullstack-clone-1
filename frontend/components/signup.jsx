@@ -90,7 +90,6 @@ class Signup extends React.Component {
     return (
 
       <div className="signup-container">
-        <header>...from signup top-level component</header>
         <figure>Photo of iPhones</figure>
 
         <section className="auth-form">

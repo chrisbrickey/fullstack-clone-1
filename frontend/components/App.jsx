@@ -14,10 +14,6 @@ import SignupContainer from './signup_container';
 
 export const App = ({store}) => (
   <div>
-    <header>
-      <p>...from App.jsx via Root.jsx, which was rendered in entry file</p>
-    </header>
-
     <div>
       <Switch>
         <Route path="/signup" component={SignupContainer} />

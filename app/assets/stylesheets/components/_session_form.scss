@@ -1,0 +1,34 @@
+
+.auth-container {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.auth-form {
+  border: 5px;
+  border-color: red;
+  border-style: dotted;
+
+  width: 500px;
+  display: inline-block;
+  font-size: 20px;
+  background-color: pink;
+}
+
+.auth-link-toggle {}
+
+
+/* directly below is from my work on Assessment06 */
+
+h1 {
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  text-align: center;
+}
