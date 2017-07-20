@@ -21,6 +21,7 @@ class Signup extends React.Component {
     //this.anyMethod = this.anyMethod.bind(this);
     this.updateUser = this.updateUser.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.demoLogin = this.demoLogin.bind(this);
   }
 
   updateUser(event) {
@@ -37,6 +38,12 @@ class Signup extends React.Component {
     event.preventDefault();
     let newUser = this.state.user;
     this.props.signupCreateUser(newUser);
+  }
+
+  demoLogin(event) {
+    event.preventDefault();
+    const demoUser = { user: {name: "Demo Login", username: "demologin", password: "password"}}
+    this.props.loginCreateSession(demoUser);
   }
 
 
@@ -56,6 +63,9 @@ class Signup extends React.Component {
         </figure>
 
         <section className="auth-form">
+          <input type="submit" value="Demo login" className="button" onClick={this.demoLogin}/>
+
+
           <form onSubmit={this.handleSubmit} className="login-form-box">
             Sign up to see photos from your friends.
             <br/>
@@ -95,7 +105,7 @@ class Signup extends React.Component {
               <br/>
               By signing up, you agree to our
               Terms & Privacy Policy.
-              <input type="submit" value="Submit" className="button"/>
+              <input type="submit" value="Sign up" className="button"/>
           </form>
 
           <section className="button">
