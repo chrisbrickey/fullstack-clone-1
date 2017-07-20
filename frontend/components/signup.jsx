@@ -19,22 +19,13 @@ class Signup extends React.Component {
     };
 
     //this.anyMethod = this.anyMethod.bind(this);
-    this.myUpdate = this.myUpdate.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
 
   }
 
-  myUpdate(field) {
-    return ( (event) => {
-      this.setState({
-        [field]: event.currentTarget.value
-      });
-    });
-  }
-
   handleChange(event) {
-    event.preventDefault();
+    this.setState({value: event.target.value});
   }
 
 
@@ -69,7 +60,7 @@ class Signup extends React.Component {
               <label>Name:
                 <input type="text"
                   value={this.state.name}
-                  onChange={this.myUpdate('name')}
+                  onChange={this.handleChange}
                   className="login-input"
                 />
               </label>
@@ -79,7 +70,7 @@ class Signup extends React.Component {
               <label>Username:
                 <input type="text"
                   value={this.state.username}
-                  onChange={this.myUpdate('username')}
+                  onChange={this.handleChange}
                   className="login-input"
                 />
               </label>
@@ -89,7 +80,7 @@ class Signup extends React.Component {
               <label>Password:
                 <input type="text"
                   value={this.state.password}
-                  onChange={this.myUpdate('password')}
+                  onChange={this.handleChange}
                   className="login-input"
                 />
               </label>
