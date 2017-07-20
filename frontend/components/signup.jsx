@@ -19,9 +19,9 @@ class Signup extends React.Component {
 
     return (
       <div>
-        <h3>...from signup top-level component</h3>
-        <h4>PhonePhoto</h4>
-        <h4>AuthForm</h4>
+        <p>...from signup top-level component</p>
+        <p>PhonePhoto</p>
+        <p>AuthForm</p>
       </div>
     );
   }
