@@ -20,9 +20,9 @@ export const App = ({store}) => (
 
     <div>
       <Switch>
-        <Route exact path="/signup" component={SignupContainer} />
-        <Route exact path="/login" component={SignupContainer} />
-        <Route path="/" />
+        <Route path="/signup" component={SignupContainer} />
+        <Route path="/login" component={SignupContainer} />
+        <Route exact path="/" component={SignupContainer}/>
       </Switch>
     </div>
   </div>

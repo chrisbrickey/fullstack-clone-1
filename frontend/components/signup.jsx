@@ -86,7 +86,7 @@ class Signup extends React.Component {
 
         <p>--------------OR-------------------</p>
 
-          <form onSubmit={this.handleSubmit} className="auth-form-box">
+          <form onSubmit={this.handleSubmit} className="auth-form">
               <br/>
 
               <label>Name:
@@ -130,9 +130,9 @@ class Signup extends React.Component {
           </form>
         </section>
 
-        <nav className="auth-form-toggle">
+        <nav className="auth-toggle">
           <p>{`${prefixText}`}
-            <Link to={`${linkPath}`}>{linkText}</Link>
+            <Link className="auth-link-toggle" to={`${linkPath}`}>{linkText}</Link>
           </p>
         </nav>
 
