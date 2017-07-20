@@ -41,14 +41,19 @@ class Signup extends React.Component {
   }
 
   handleSubmit(event) {
+    console.log("inside handleSubmit");
+    let testUser = this.state.user;
+    console.log(testUser);
+    console.log({user: testUser});
+
     event.preventDefault();
     let newUser = this.state.user;
-    this.props.signupCreateUser(newUser);
+    this.props.processForm({ user: newUser });
   }
 
   demoLogin(event) {
     event.preventDefault();
-    const demoUser = { user: {name: "Demo Login", username: "demologin", password: "password"}}
+    const demoUser = { user: {name: "Demo Login", username: "demologin", password: "password"}};
     this.props.loginCreateSession(demoUser);
   }
 
@@ -62,12 +67,6 @@ class Signup extends React.Component {
     const linkText = this.props.formType === ('login') ? "Sign up" : "Log in";
     const linkPath = this.props.formType === ('login') ? "/signup" : "login";
 
-    const sessionLinks = () => (
-      <nav className="auth-toggle">
-        <Link to="/login">Login</Link>
-        <Link to="/signup">Sign up!</Link>
-      </nav>
-    );
 
     return (
 
@@ -131,16 +130,11 @@ class Signup extends React.Component {
           </form>
         </section>
 
-        <div className="auth-form-toggle">
-          <p>{`${prefixText}`}</p>
-          <nav className="auth-toggle">
+        <nav className="auth-form-toggle">
+          <p>{`${prefixText}`}
             <Link to={`${linkPath}`}>{linkText}</Link>
-          </nav>
-        </div>
-
-        <section className="button">
-          <button onClick={this.props.loginCreateSession}>Log in</button>
-        </section>
+          </p>
+        </nav>
 
         <section className="button">
           <button onClick={this.props.logoutDestroySession}>Logout</button>

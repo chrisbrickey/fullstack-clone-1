@@ -24,7 +24,7 @@ const mapDispatchToProps = (dispatch, { location }) => {
   return {
     processForm: user => dispatch(processForm(user)),
     formType,
-    signupCreateUser: (user) => dispatch(signupCreateUser(user)),
+    // signupCreateUser: (user) => dispatch(signupCreateUser(user)),
     loginCreateSession: (user) => dispatch(loginCreateSession(user)),
     logoutDestroySession: () => dispatch(logoutDestroySession()),
     clearErrors: () => dispatch(clearErrors())

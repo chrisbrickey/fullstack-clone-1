@@ -69,4 +69,5 @@ export const logoutDestroySession = () => dispatch => {
   ajaxLogout()
     .then( () => (dispatch(receiveCurrentUser(null)))
   );
+  //NEED TO ADD call to clear ERRORS here
 };
