@@ -160,6 +160,7 @@
   font-family: sans-serif;
   color: black;
   padding: 5px;
+  text-decoration: none;
  }
  /* HTML5 display-role reset for older browsers */
  article, aside, details, figcaption, figure,

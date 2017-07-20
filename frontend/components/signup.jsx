@@ -59,9 +59,19 @@ class Signup extends React.Component {
     const prefixText = this.props.formType === ('login') ? "Don't have an account?" : "Have an account?";
     const buttonText = this.props.formType === ('login') ? "Log in" : "Sign up";
 
-    return (
-      <div className="signup-container">
+    const linkText = this.props.formType === ('login') ? "Sign up" : "Log in";
+    const linkPath = this.props.formType === ('login') ? "/signup" : "login";
 
+    const sessionLinks = () => (
+      <nav className="auth-toggle">
+        <Link to="/login">Login</Link>
+        <Link to="/signup">Sign up!</Link>
+      </nav>
+    );
+
+    return (
+
+      <div className="signup-container">
         <header>...from signup top-level component</header>
         <figure>Photo of iPhones</figure>
 
@@ -123,7 +133,9 @@ class Signup extends React.Component {
 
         <div className="auth-form-toggle">
           <p>{`${prefixText}`}</p>
-          
+          <nav className="auth-toggle">
+            <Link to={`${linkPath}`}>{linkText}</Link>
+          </nav>
         </div>
 
         <section className="button">
