@@ -9,35 +9,57 @@ console.log("on the signup.jsx");
 class Signup extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      user: {
-        name: '',
-        username: '',
-        password: ''
-      },
-      errors: {}
-    };
+    this.state = { name: "", username: "", password: ""};
 
     //this.anyMethod = this.anyMethod.bind(this);
-    this.updateUser = this.updateUser.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+    // this.updateUser = this.updateUser.bind(this);
+    // this.handleSubmit = this.handleSubmit.bind(this);
+    this.setName = this.setName.bind(this);
+    this.setUsername = this.setUsername.bind(this);
+    this.setPassword = this.setPassword.bind(this);
+    this.handleClick = this.handleClick.bind(this);
 
   }
 
-  updateUser(event) {
-    let oldUser = this.state.user;
-    oldUser[event.target.name] = event.target.value;
+  // updateUser(event) {
+  //   let currentState = this.state.user;
+  //   currentState[event.target.name] = event.target.value;
+  //
+  //   this.setState(
+  //     {user: currentState}
+  //   );
+  //
+  // }
 
-    this.setState(
-      {user: oldUser}
-    );
-  }
+  // handleSubmit(event) {
+  //   event.preventDefault();
+  //   let newUser = this.state.user;
+  //   this.props.signupCreateUser(newUser);
+  // }
 
+  setName(e){
+   const name = e.target.value ? e.target.value : "";
+   this.setState({name});
+ }
 
-  handleSubmit(event) {
-    event.preventDefault();
-    this.props.signupCreateUser(this.state.user);
-  }
+ setUsername(e){
+   const username = e.target.value ? e.target.value : "";
+   this.setState({username});
+ }
+
+ setPassword(e){
+   const password = e.target.value ? e.target.value : "";
+   this.setState({password});
+ }
+
+ handleClick(e){
+   e.preventDefault();
+   console.log("inside handeClick fxn:");
+   let newUser = this.state.user;
+
+   this.props.signupCreateUser(newUser).then(() => this.setState({ name: "", username: "" , password: ""}));
+ }
+
 
   //remember that errors might be null so render conditionally
   render() {
@@ -47,15 +69,47 @@ class Signup extends React.Component {
 
         <header>
           ...from signup top-level component
-          Photo of iPhones
         </header>
 
         <figure>
           Photo of iPhones
         </figure>
 
+        <section className="FromCreateForm">
+          <form>
+
+            <label>Name:
+              <input
+                className="inputBox"
+                onChange={this.setName}
+                value={this.state.name} />
+            </label>
+            <br/>
+            <br/>
+
+            <label>Username:
+              <input
+                className="inputBox"
+                onChange={this.setUsername}
+                value={this.state.username} />
+            </label>
+            <br/>
+
+              <label>Password:
+                <input
+                  className="inputBox"
+                  onChange={this.setPassword}
+                  value={this.state.password} />
+              </label>
+              <br/>
+
+            <button className="createButton" onClick={this.handleClick}>New Submit Button</button>
+
+          </form>
+        </section>
+
         <section className="auth-form">
-          <form onSubmit={this.handleSubmit} className="login-form-box">
+          <form onSubmit={this.handleClick} className="login-form-box">
             Sign up to see photos from your friends.
             <br/>
 

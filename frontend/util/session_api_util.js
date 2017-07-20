@@ -1,5 +1,6 @@
 export const ajaxSignup = user => {
   console.log("in ajaxSignup");
+  console.log ({user});
   return(
     $.ajax({
       method: 'POST',
