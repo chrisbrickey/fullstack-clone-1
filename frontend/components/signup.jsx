@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
+import merge from 'lodash/merge';
 
 
 console.log("on the signup.jsx");
@@ -31,12 +32,16 @@ class Signup extends React.Component {
   // }
 
   updateUser(event) {
-    let currentState = this.state.user;
-    currentState[event.target.name] = event.target.value;
+    const newState = merge({}, this.state);
+    newState.user[event.target.name] = event.target.value;
+    this.setState(newState);
 
-    this.setState(
-      {user: currentState}
-    );
+    // let currentState = this.state.user;
+    // currentState[event.target.name] = event.target.value;
+    //
+    // this.setState(
+    //   {user: currentState}
+    // );
 
   }
 
@@ -48,7 +53,21 @@ class Signup extends React.Component {
 
     event.preventDefault();
     let newUser = this.state.user;
-    this.props.processForm({ user: newUser });
+    this.props.processForm({ user: newUser })
+      .then(()=> {
+        console.log("hi there");
+
+        this.setState({
+        user: {
+          name: "",
+          username: "",
+          password: ""
+        },
+        errors: {}
+      });
+    });
+
+
   }
 
   demoLogin(event) {
@@ -92,7 +111,7 @@ class Signup extends React.Component {
               <label>Name:
                 <input type="text"
                   name="name"
-                  value={this.state.name}
+                  value={this.state.user.name}
                   onChange={this.updateUser}
                   className="login-input"
                 />
@@ -103,7 +122,7 @@ class Signup extends React.Component {
               <label>Username:
                 <input type="text"
                   name="username"
-                  value={this.state.username}
+                  value={this.state.user.username}
                   onChange={this.updateUser}
                   className="login-input"
                 />
@@ -112,9 +131,9 @@ class Signup extends React.Component {
               <br/>
 
               <label>Password:
-                <input type="text"
+                <input type="password"
                   name="password"
-                  value={this.state.password}
+                  value={this.state.user.password}
                   onChange={this.updateUser}
                   className="login-input"
                 />

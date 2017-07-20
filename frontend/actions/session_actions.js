@@ -46,7 +46,7 @@ export const signupCreateUser = user => dispatch => {
   console.log("inside signupCreateUser");
   console.log(user);
 
-  ajaxSignup(user)
+  return ajaxSignup(user)
     .then( (returnedUser => dispatch(receiveCurrentUser(returnedUser))),
            (returnedErrors => dispatch(receiveErrors(returnedErrors.responseJSON)))
     );
@@ -56,7 +56,7 @@ export const loginCreateSession = user => dispatch => {
   console.log("inside loginCreateSession");
   console.log(user);
 
-  ajaxLogin(user)
+  return ajaxLogin(user)
     .then( returnedUser => (dispatch(receiveCurrentUser(returnedUser))),
            returnedErrors => (dispatch(receiveErrors(returnedErrors.responseJSON)))
     );
