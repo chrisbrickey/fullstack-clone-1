@@ -2,6 +2,7 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Root } from './components/root';
 
 // import { ajaxSignup, ajaxLogin, ajaxLogout } from './util/session_api_util';
 import { receiveCurrentUser,
@@ -29,5 +30,5 @@ document.addEventListener('DOMContentLoaded', () => {
   window.dispatch = store.dispatch;
 
   const root = document.getElementById('root');
-  ReactDOM.render(<h3>Instagram...coming from entry.jsx</h3>, root);
+  ReactDOM.render(<Root store={store} />, root);
 });
