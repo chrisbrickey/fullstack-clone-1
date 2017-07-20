@@ -91,90 +91,114 @@ class Signup extends React.Component {
 
       <div className="auth-container">
 
-        <div className="auth-outer">
-          <div className="auth-inner">
+        <div className="auth-outer">outer
+          <div className="auth-inner">inner
 
 
-            <div className="left">
-              <div className="iPhones">
-                <figure>Photo of iPhones</figure>
+            <div className="left">left
+              <div className="hero">hero
+
+                  <figure>Photo of iPhones</figure>
+
               </div>
             </div>
 
 
-            <div className="right">
-              <section className="auth-form">
-                <br/>
-                <h1>Instagram</h1>
-                <br/>
-                <p>Sign up to see photos from your friends.</p>
+            <div className="right">right
 
-                <br/>
-                <input type="submit" value="Demo login" className="button" onClick={this.demoLogin}/>
-                <br/>
+              <div className="subright">sub-right
 
-                <p>--------------OR-------------------</p>
-
-                <form onSubmit={this.handleSubmit} className="auth-form">
-                    <br/>
-
-                    <label>Name:
-                      <input type="text"
-                        name="name"
-                        value={this.state.user.name}
-                        onChange={this.updateUser}
-                        className="login-input"
-                      />
-                    </label>
-
-                    <br/>
-
-                    <label>Username:
-                      <input type="text"
-                        name="username"
-                        value={this.state.user.username}
-                        onChange={this.updateUser}
-                        className="login-input"
-                      />
-                    </label>
-
-                    <br/>
-
-                    <label>Password:
-                      <input type="password"
-                        name="password"
-                        value={this.state.user.password}
-                        onChange={this.updateUser}
-                        className="login-input"
-                      />
-                    </label>
-
-                    <br/>
-                    <br/>
-                    <input type="submit" value={buttonText} className="button"/>
+                  <div className="auth-form-container">auth-form-container
+                    <section className="auth-form-contents">auth-form-contents
+                      <br/>
+                      <h1>Instagram</h1>
+                      <br/>
+                      <p>Sign up to see photos from your friends.</p>
 
                       <br/>
-                      <p>By signing up, you agree to our</p>
-                      <p>Terms & Privacy Policy.</p>
-                </form>
-              </section>
+                      <input type="submit" value="Demo login" className="button" onClick={this.demoLogin}/>
+                      <br/>
 
-              <nav className="auth-toggle">
-                <p>{`${prefixText}`}
-                  <Link className="auth-link-toggle" to={`${linkPath}`}>{linkText}</Link>
-                </p>
-              </nav>
+                      <p>--------------OR-------------------</p>
 
-            </div>
-            
+                      <form onSubmit={this.handleSubmit} className="auth-form">
+                          <br/>
+
+                          <label>Name:
+                            <input type="text"
+                              name="name"
+                              value={this.state.user.name}
+                              onChange={this.updateUser}
+                              className="login-input"
+                            />
+                          </label>
+
+                          <br/>
+
+                          <label>Username:
+                            <input type="text"
+                              name="username"
+                              value={this.state.user.username}
+                              onChange={this.updateUser}
+                              className="login-input"
+                            />
+                          </label>
+
+                          <br/>
+
+                          <label>Password:
+                            <input type="password"
+                              name="password"
+                              value={this.state.user.password}
+                              onChange={this.updateUser}
+                              className="login-input"
+                            />
+                          </label>
+
+                          <br/>
+                          <br/>
+                          <input type="submit" value={buttonText} className="button"/>
+
+                            <br/>
+                            <p>By signing up, you agree to our</p>
+                            <p>Terms & Privacy Policy.</p>
+                      </form>
+                    </section>
+                    auth-form-container
+                  </div>
+
+                  <section className="toggle-container">toggle-container
+                    <nav className="toggle-contents">toggle-contents
+                      <p>{`${prefixText}`}
+                        <Link className="auth-link-toggle" to={`${linkPath}`}>{linkText}</Link>
+                      </p>
+                    </nav>
+                  </section>
+                  sub-right
+                </div>
+                right
+              </div>
           </div>
         </div>
 
 
-        <nav className="footer">
+        <nav className="footer">footer
           <section className="button">
             <button onClick={this.props.logoutDestroySession}>Logout</button>
           </section>
+          <ul className="navLinks">
+            <li>ABOUT US</li>
+            <li>SUPPORT</li>
+            <li>BLOG</li>
+            <li>PRESS</li>
+            <li>API</li>
+            <li>JOBS</li>
+            <li>PRIVACY</li>
+            <li>TERMS</li>
+            <li>DIRECTORY</li>
+            <li>LANGUAGE</li>
+            <li id="copyright"> &copy; 2017 INSTAGRAM</li>
+          </ul>
         </nav>
 
 
