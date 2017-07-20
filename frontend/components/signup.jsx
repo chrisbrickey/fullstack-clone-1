@@ -109,16 +109,21 @@ class Signup extends React.Component {
 
                   <div className="auth-form-container">auth-form-container
                     <section className="auth-form-contents">auth-form-contents
-                      <br/>
+
                       <h1>Instagram</h1>
-                      <br/>
-                      <p>Sign up to see photos from your friends.</p>
 
-                      <br/>
-                      <input type="submit" value="Demo login" className="button" onClick={this.demoLogin}/>
+                      <div className="copy-top">
+                        <p>Sign up to see photos </p>
+                        <p>from your friends.</p>
+                      </div>
+
+                      <input type="submit" value="Demo login" className="auth-button" onClick={this.demoLogin}/>
                       <br/>
 
-                      <p>--------------OR-------------------</p>
+                        <div className="copy-top">
+                          <p>----------------OR-----------------</p>
+                        </div>
+
 
                       <form onSubmit={this.handleSubmit} className="auth-form">
                           <br/>
@@ -162,12 +167,14 @@ class Signup extends React.Component {
 
                           <br/>
                           <br/>
-                          <input type="submit" value={buttonText} className="button"/>
+                          <input type="submit" value={buttonText} className="auth-button"/>
+                        </form>
 
-                            <br/>
-                            <p>By signing up, you agree to our</p>
-                            <p>Terms & Privacy Policy.</p>
-                      </form>
+                        <div className="copy-bottom">
+                          <p>By signing up, you agree to our</p>
+                          <p>Terms & Privacy Policy.</p>
+                        </div>
+
                     </section>
                     auth-form-container
                   </div>
@@ -200,11 +207,12 @@ class Signup extends React.Component {
             <li>TERMS</li>
             <li>DIRECTORY</li>
             <li>LANGUAGE</li>
+            <li>{"      "}</li>
             <li id="copyright"> &copy; 2017 INSTAGRAM</li>
           </ul>
 
           <section>
-            <button onClick={this.props.logoutDestroySession} className="button">Logout</button>
+            <button onClick={this.props.logoutDestroySession} className="logout-button">Logout</button>
           </section>
 
         </nav>
