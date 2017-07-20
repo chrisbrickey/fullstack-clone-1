@@ -14,7 +14,7 @@ import SignupContainer from './signup_container';
 
 export const App = ({store}) => (
   <div>
-    <div>
+    <div className="App">
       <Switch>
         <Route path="/signup" component={SignupContainer} />
         <Route path="/login" component={SignupContainer} />

@@ -89,74 +89,94 @@ class Signup extends React.Component {
 
     return (
 
-      <div className="signup-container">
-        <figure>Photo of iPhones</figure>
+      <div className="auth-container">
 
-        <section className="auth-form">
-          <br/>
-          <h1>Instagram</h1>
-          <br/>
-          <p>Sign up to see photos from your friends.</p>
+        <div className="auth-outer">
+          <div className="auth-inner">
 
-          <br/>
-          <input type="submit" value="Demo login" className="button" onClick={this.demoLogin}/>
-          <br/>
 
-        <p>--------------OR-------------------</p>
+            <div className="left">
+              <div className="iPhones">
+                <figure>Photo of iPhones</figure>
+              </div>
+            </div>
 
-          <form onSubmit={this.handleSubmit} className="auth-form">
-              <br/>
 
-              <label>Name:
-                <input type="text"
-                  name="name"
-                  value={this.state.user.name}
-                  onChange={this.updateUser}
-                  className="login-input"
-                />
-              </label>
-
-              <br/>
-
-              <label>Username:
-                <input type="text"
-                  name="username"
-                  value={this.state.user.username}
-                  onChange={this.updateUser}
-                  className="login-input"
-                />
-              </label>
-
-              <br/>
-
-              <label>Password:
-                <input type="password"
-                  name="password"
-                  value={this.state.user.password}
-                  onChange={this.updateUser}
-                  className="login-input"
-                />
-              </label>
-
-              <br/>
-              <br/>
-              <input type="submit" value={buttonText} className="button"/>
+            <div className="right">
+              <section className="auth-form">
+                <br/>
+                <h1>Instagram</h1>
+                <br/>
+                <p>Sign up to see photos from your friends.</p>
 
                 <br/>
-                <p>By signing up, you agree to our</p>
-                <p>Terms & Privacy Policy.</p>
-          </form>
-        </section>
+                <input type="submit" value="Demo login" className="button" onClick={this.demoLogin}/>
+                <br/>
 
-        <nav className="auth-toggle">
-          <p>{`${prefixText}`}
-            <Link className="auth-link-toggle" to={`${linkPath}`}>{linkText}</Link>
-          </p>
+                <p>--------------OR-------------------</p>
+
+                <form onSubmit={this.handleSubmit} className="auth-form">
+                    <br/>
+
+                    <label>Name:
+                      <input type="text"
+                        name="name"
+                        value={this.state.user.name}
+                        onChange={this.updateUser}
+                        className="login-input"
+                      />
+                    </label>
+
+                    <br/>
+
+                    <label>Username:
+                      <input type="text"
+                        name="username"
+                        value={this.state.user.username}
+                        onChange={this.updateUser}
+                        className="login-input"
+                      />
+                    </label>
+
+                    <br/>
+
+                    <label>Password:
+                      <input type="password"
+                        name="password"
+                        value={this.state.user.password}
+                        onChange={this.updateUser}
+                        className="login-input"
+                      />
+                    </label>
+
+                    <br/>
+                    <br/>
+                    <input type="submit" value={buttonText} className="button"/>
+
+                      <br/>
+                      <p>By signing up, you agree to our</p>
+                      <p>Terms & Privacy Policy.</p>
+                </form>
+              </section>
+
+              <nav className="auth-toggle">
+                <p>{`${prefixText}`}
+                  <Link className="auth-link-toggle" to={`${linkPath}`}>{linkText}</Link>
+                </p>
+              </nav>
+
+            </div>
+            
+          </div>
+        </div>
+
+
+        <nav className="footer">
+          <section className="button">
+            <button onClick={this.props.logoutDestroySession}>Logout</button>
+          </section>
         </nav>
 
-        <section className="button">
-          <button onClick={this.props.logoutDestroySession}>Logout</button>
-        </section>
 
       </div>
     );
