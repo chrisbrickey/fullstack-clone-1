@@ -65,6 +65,7 @@ body {
 }
 
 .subright {
+  margin: 10px;
   background-color: pink;
 }
 
@@ -96,20 +97,28 @@ body {
   margin: 10px;
   background-color: gray;
   height: 100px;
+  display: flex;
+  flex-direction: column;
 }
 
 ul {
+  background-color: orange;
   list-style: none;
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 li {
-  padding: 10px;
-  margin: 10px;
+  font-size: 75%;
+  font-weight: bold;
+  padding: 5px;
+  margin: 5px;
 }
 
-button {
+.button {
   text-align: center;
-  background-color: blue;
+  background-color: yellow;
+  box-shadow: none;
 }

@@ -105,7 +105,6 @@ class Signup extends React.Component {
 
 
             <div className="right">right
-
               <div className="subright">sub-right
 
                   <div className="auth-form-container">auth-form-container
@@ -183,9 +182,7 @@ class Signup extends React.Component {
 
 
         <nav className="footer">footer
-          <section className="button">
-            <button onClick={this.props.logoutDestroySession}>Logout</button>
-          </section>
+
           <ul className="navLinks">
             <li>ABOUT US</li>
             <li>SUPPORT</li>
@@ -199,6 +196,11 @@ class Signup extends React.Component {
             <li>LANGUAGE</li>
             <li id="copyright"> &copy; 2017 INSTAGRAM</li>
           </ul>
+
+          <section>
+            <button onClick={this.props.logoutDestroySession} className="button">Logout</button>
+          </section>
+
         </nav>
 
 
