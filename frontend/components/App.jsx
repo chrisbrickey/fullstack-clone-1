@@ -12,7 +12,7 @@ import { Route,
 import Signup from './signup';
 import SignupContainer from './signup_container';
 
-export const App = () => (
+export const App = ({store}) => (
   <div>
     <header>
       <p>...from App.jsx via Root.jsx, which was rendered in entry file</p>

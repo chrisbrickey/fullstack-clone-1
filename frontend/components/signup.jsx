@@ -24,6 +24,12 @@ class Signup extends React.Component {
     this.demoLogin = this.demoLogin.bind(this);
   }
 
+  // componentWillReceiveProps(newProps) {
+  //   if (this.props.formType !== newProps.formType) {
+  //     this.props.clearErrors();
+  //   }
+  // }
+
   updateUser(event) {
     let currentState = this.state.user;
     currentState[event.target.name] = event.target.value;
@@ -50,27 +56,30 @@ class Signup extends React.Component {
 
   //remember that errors might be null so render conditionally
   render() {
+    const prefixText = this.props.formType === ('login') ? "Don't have an account?" : "Have an account?";
+    const buttonText = this.props.formType === ('login') ? "Log in" : "Sign up";
 
     return (
       <div className="signup-container">
 
-        <header>
-          ...from signup top-level component
-        </header>
-
-        <figure>
-          Photo of iPhones
-        </figure>
+        <header>...from signup top-level component</header>
+        <figure>Photo of iPhones</figure>
 
         <section className="auth-form">
-          <input type="submit" value="Demo login" className="button" onClick={this.demoLogin}/>
+          <br/>
+          <h1>Instagram</h1>
+          <br/>
+          <p>Sign up to see photos from your friends.</p>
 
+          <br/>
+          <input type="submit" value="Demo login" className="button" onClick={this.demoLogin}/>
+          <br/>
+
+        <p>--------------OR-------------------</p>
 
           <form onSubmit={this.handleSubmit} className="login-form-box">
-            Sign up to see photos from your friends.
-            <br/>
-
               <br/>
+
               <label>Name:
                 <input type="text"
                   name="name"
@@ -103,9 +112,12 @@ class Signup extends React.Component {
               </label>
 
               <br/>
-              By signing up, you agree to our
-              Terms & Privacy Policy.
+              <br/>
               <input type="submit" value="Sign up" className="button"/>
+
+                <br/>
+                <p>By signing up, you agree to our</p>
+                <p>Terms & Privacy Policy.</p>
           </form>
 
           <section className="button">
