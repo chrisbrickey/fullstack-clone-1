@@ -4,17 +4,36 @@ import { Link, withRouter } from 'react-router-dom';
 
 console.log("on the signup.jsx");
 
+
+//if having trouble, remove errors from local state
 class Signup extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      username: '',
-      password: ''
+      user: {
+        name: '',
+        username: '',
+        password: ''
+      },
+      errors: {}
     };
-    //this.anyMethod = this. anyMethod.bind(this);
+
+    //this.anyMethod = this.anyMethod.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  myUpdate(field) {
+    return ( (event) => {
+      this.setState({
+        [field]: event.currentTarget.value
+      });
+    });
   }
 
 
+  handleSubmit(event) {
+    event.preventDefault();
+  }
 
   //remember that errors might be null so render conditionally
   render() {
@@ -23,12 +42,70 @@ class Signup extends React.Component {
     console.log(this.state);
 
     return (
-      <div>
-        <button onClick={this.props.logoutDestroySession}>Logout</button>
-        <p>...from signup top-level component</p>
-        <p>{this.props.errors[0]}</p>
-        <p>PhonePhoto</p>
-        <p>AuthForm</p>
+      <div className="signup-container">
+
+        <header>
+          ...from signup top-level component
+          Photo of iPhones
+        </header>
+
+        <figure>
+          Photo of iPhones
+        </figure>
+
+        <section className="auth-form">
+          <form onSubmit={this.handleSubmit} className="login-form-box">
+            Sign up to see photos from your friends.
+            <br/>
+
+              <br/>
+              <label>Password:
+                <input type="name"
+                  value={this.state.name}
+                  onChange={this.myUpdate('name')}
+                  className="login-input"
+                />
+              </label>
+
+              <br/>
+
+              <label>Username:
+                <input type="text"
+                  value={this.state.username}
+                  onChange={this.myUpdate('username')}
+                  className="login-input"
+                />
+              </label>
+
+              <br/>
+
+              <label>Password:
+                <input type="password"
+                  value={this.state.password}
+                  onChange={this.myUpdate('password')}
+                  className="login-input"
+                />
+              </label>
+
+              <br/>
+              By signing up, you agree to our
+              Terms & Privacy Policy.
+              <input type="submit" value="Submit" />
+          </form>
+          <section className="button">
+            <button onClick={this.props.signupCreateUser}>Sign up</button>
+            <button onClick={this.props.loginCreateSession}>Log in</button>
+          </section>
+        </section>
+
+        <section className="auth-toggle">
+          Have an account? Log in
+        </section>
+
+        <section className="button">
+          <button onClick={this.props.logoutDestroySession}>Logout</button>
+        </section>
+
       </div>
     );
   }

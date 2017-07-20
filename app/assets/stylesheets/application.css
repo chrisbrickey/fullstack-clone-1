@@ -15,6 +15,27 @@
  */
 
 
+
+ .signup-container {
+
+ }
+
+
+
+
+ .auth-form {
+   text-align: center;
+   border-style: dotted;
+   width: 500px;
+   display: inline-block;
+
+   font-size: 20px;
+   background-color: pink;
+ }
+
+
+/* directly below is from my work on Assessment06 */
+
  h1 {
    text-align: center;
  }
@@ -31,12 +52,14 @@
  }
 
 
- .deleteButton {
+ .button {
    border-radius: 10px;
    border-style: solid;
+   width: 75px;
    padding: 5px;
    margin: 10px;
    font-size: 15px;
+   background-color: lightgray;
  }
 
 
