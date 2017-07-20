@@ -95,7 +95,7 @@ class Signup extends React.Component {
               <br/>
               By signing up, you agree to our
               Terms & Privacy Policy.
-              <input type="submit" value="Submit" />
+              <input type="submit" value="Submit" className="button"/>
           </form>
 
           <section className="button">
