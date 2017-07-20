@@ -44,6 +44,7 @@ export const clearErrors = errors => {
 
 export const signupCreateUser = user => dispatch => {
   console.log("inside signupCreateUser");
+  console.log(user);
 
   ajaxSignup(user)
     .then( (returnedUser => dispatch(receiveCurrentUser(returnedUser))),

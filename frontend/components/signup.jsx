@@ -19,25 +19,28 @@ class Signup extends React.Component {
     };
 
     //this.anyMethod = this.anyMethod.bind(this);
-    this.handleChange = this.handleChange.bind(this);
+    this.updateUser = this.updateUser.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
 
   }
 
-  handleChange(event) {
-    this.setState({value: event.target.value});
+  updateUser(event) {
+    let oldUser = this.state.user;
+    oldUser[event.target.name] = event.target.value;
+
+    this.setState(
+      {user: oldUser}
+    );
   }
 
 
   handleSubmit(event) {
     event.preventDefault();
+    this.props.signupCreateUser(this.state.user);
   }
 
   //remember that errors might be null so render conditionally
   render() {
-
-    console.log(this.props);
-    console.log(this.state);
 
     return (
       <div className="signup-container">
@@ -59,8 +62,9 @@ class Signup extends React.Component {
               <br/>
               <label>Name:
                 <input type="text"
+                  name="name"
                   value={this.state.name}
-                  onChange={this.handleChange}
+                  onChange={this.updateUser}
                   className="login-input"
                 />
               </label>
@@ -69,8 +73,9 @@ class Signup extends React.Component {
 
               <label>Username:
                 <input type="text"
+                  name="username"
                   value={this.state.username}
-                  onChange={this.handleChange}
+                  onChange={this.updateUser}
                   className="login-input"
                 />
               </label>
@@ -79,8 +84,9 @@ class Signup extends React.Component {
 
               <label>Password:
                 <input type="text"
+                  name="password"
                   value={this.state.password}
-                  onChange={this.handleChange}
+                  onChange={this.updateUser}
                   className="login-input"
                 />
               </label>
@@ -90,10 +96,12 @@ class Signup extends React.Component {
               Terms & Privacy Policy.
               <input type="submit" value="Submit" />
           </form>
+
           <section className="button">
-            <button onClick={this.props.signupCreateUser}>Sign up</button>
+
             <button onClick={this.props.loginCreateSession}>Log in</button>
           </section>
+
         </section>
 
         <section className="auth-toggle">
