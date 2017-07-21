@@ -15,7 +15,8 @@ export const Root = ({ store }) => (
   <Provider store={ store }>
     <HashRouter>
       <div>on the root.jsx
-        <Route path="/" component={App}/>
+        <Route path="/" component={App}>
+        </Route>
       </div>
     </HashRouter>
   </Provider>
