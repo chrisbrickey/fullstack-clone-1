@@ -5,7 +5,7 @@ $instagram-blue-background: #3897f0;
 $instagram-blue-border: #3897f0;
 $instagram-white: #fff;
 $instagram-grey: #999;
-$instagram-light-gray: #c3c3c3;
+$instagram-light-gray: #e0e0e0;
 
 body {
   font-family: 'Montserrat', sans-serif;
@@ -93,7 +93,6 @@ body {
   padding: 10px;
   margin: 0 10px;
   color: $instagram-grey;
-  font-size: 100%;
   background-color: $instagram-white;
   display: flex;
   flex-direction: column;
@@ -101,7 +100,7 @@ body {
   align-items: center;
   border-width: 1px;
   border-style: solid;
-  border-color: #ededed;
+  border-color: $instagram-light-gray;
 }
 
 h1 {
@@ -162,23 +161,11 @@ input {
 
 #top {
   padding: 3px;
-  // text-align: center;
-  // line-height: 150%;
-  font-size: 100%;
-  font-weight: bold;
-  // color: gray;
-  // letter-spacing: 0.5px;
   margin-bottom: 10px;
 }
 
 #mid {
   padding: 3px;
-  // text-align: center;
-  // line-height: 150%;
-  font-size: 100%;
-  font-weight: bold;
-  // color: gray;
-  // letter-spacing: 0.5px;
   margin-bottom: 10px;
 }
 
@@ -186,11 +173,7 @@ input {
   padding: 5px;
   margin-top: 10px;
   margin-bottom: 10px;
-  // text-align: center;
-  // line-height: 150%;
   font-size: 90%;
-  // color: gray;
-  // letter-spacing: 0.5px;
 }
 
 #bold {
@@ -203,12 +186,12 @@ input {
 
 .toggle-contents {
   padding: 15px;
-  margin: 0 10px;
+  margin: 10px;
   text-align: center;
   background-color: white;
   border-width: 1px;
   border-style: solid;
-  border-color: #ededed;
+  border-color: $instagram-light-gray;
 }
 
 a.auth-link-toggle {
@@ -222,6 +205,7 @@ a.auth-link-toggle {
   height: 100px;
   display: flex;
   flex-direction: column;
+  font-weight: bold;
 }
 
 ul {

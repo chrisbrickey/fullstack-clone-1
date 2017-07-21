@@ -107,11 +107,11 @@ class Signup extends React.Component {
             </div>
 
 
-            <div className="right">right
-              <div className="subright">sub-right
+            <div className="right">
+              <div className="subright">
 
-                  <div className="auth-form-container">auth-form-container
-                    <section className="auth-form-contents">auth-form-contents
+                  <div className="auth-form-container">
+                    <section className="auth-form-contents">
 
                       <h1>Instagram</h1>
 
@@ -179,7 +179,7 @@ class Signup extends React.Component {
                         </div>
 
                     </section>
-                    auth-form-container
+
                   </div>
 
                   <section className="toggle-container">
@@ -189,9 +189,9 @@ class Signup extends React.Component {
                       </p>
                     </nav>
                   </section>
-                  sub-right
+
                 </div>
-                right
+
               </div>
           </div>
         </div>
