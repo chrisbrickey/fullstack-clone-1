@@ -86,6 +86,10 @@ class Signup extends React.Component {
     const linkText = this.props.formType === ('login') ? "Sign up" : "Log in";
     const linkPath = this.props.formType === ('login') ? "/signup" : "login";
 
+    console.log(`errors:  ${this.props.errors}`);
+    // const errorsToRender = this.props.errors[0] === "starting errors" ? "" : _______;\
+
+
 
     return (
 
