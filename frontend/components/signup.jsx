@@ -91,13 +91,18 @@ class Signup extends React.Component {
 
       <div className="auth-container">
 
-        <div className="auth-outer">outer
-          <div className="auth-inner">inner
+        <div className="auth-outer">
+          <div className="auth-inner">
 
 
-            <div className="left">left
+            <div className="left">
               <figure className="hero">hero
-                <img src={require('/images/succulent_hero.png')} alt="iPhone App" className="hero2"/>
+                <div className="heroTransition">
+                  <figure>transitionImg1</figure>
+                  <figure>transitionImg2</figure>
+                  <figure>transitionImg3</figure>
+                  <figure>transitionImg4</figure>
+                  </div>
               </figure>
             </div>
 
@@ -192,7 +197,7 @@ class Signup extends React.Component {
         </div>
 
 
-        <nav className="footer">footer
+        <nav className="footer">
 
           <ul className="navLinks">
             <li>ABOUT US</li>
