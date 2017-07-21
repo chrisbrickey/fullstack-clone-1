@@ -97,6 +97,8 @@ class Signup extends React.Component {
 
             <div className="left">
               <figure className="hero">hero
+
+                  <img src={'https://res.cloudinary.com/dckkkjkuz/image/upload/c_scale,w_250/v1500617152/succulent_hero_rp0rww.png'} alt="iPhone App"/>
                 <div className="heroTransition">
                   <figure>transitionImg1</figure>
                   <figure>transitionImg2</figure>
