@@ -120,7 +120,10 @@ class Signup extends React.Component {
                   <div className="auth-form-container">
                     <section className="auth-form-contents">
 
-                      <h1>Instagram</h1>
+                      <img
+                        src={'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500659742/InstagramLogo_kgliwu.png'}
+                        alt="Instagram Logo"
+                        className="logo"/>
 
                       <div className="copy" id="top" id="bold">
                         <p>Sign up to see photos </p>
