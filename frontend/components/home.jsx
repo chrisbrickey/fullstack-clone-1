@@ -29,8 +29,39 @@ class Home extends React.Component {
   //remember that errors might be null so render conditionally
   render() {
 
+    console.log(this.props.loggedIn); //this is working!!!
+
     return (
-      <div>rendering from home.jsx</div>
+      <div>rendering from home.jsx
+
+        <nav className="footer">
+
+          <ul className="navLinks">
+            <li>ABOUT US</li>
+            <li>SUPPORT</li>
+            <li>BLOG</li>
+            <li>PRESS</li>
+            <li>API</li>
+            <li>JOBS</li>
+            <li>PRIVACY</li>
+            <li>TERMS</li>
+            <li>DIRECTORY</li>
+            <li>LANGUAGE</li>
+            <li>{"      "}</li>
+            <li id="copyright"> &copy; 2017 INSTAGRAM</li>
+          </ul>
+
+          <section>
+            <button onClick={this.props.logoutDestroySession} className="logout-button">Logout</button>
+          </section>
+
+        </nav>
+
+
+
+
+
+      </div>
     );
 
   }

@@ -11,9 +11,9 @@ console.log("on the home_container.jsx");
 
 const mapStateToProps = ({ session }) => {
   return {
-    // loggedIn: Boolean(session.currentUser),
-    // currentUser: session.currentUser,
-    // errors: session.errors
+    loggedIn: Boolean(session.currentUser),
+    currentUser: session.currentUser,
+    errors: session.errors
   };
 };
 //
@@ -26,8 +26,8 @@ const mapDispatchToProps = (dispatch, { location }) => {
     // processForm: user => dispatch(processForm(user)),
     // formType,
     // loginCreateSession: (user) => dispatch(loginCreateSession(user)),
-    // logoutDestroySession: () => dispatch(logoutDestroySession()),
-    // clearErrors: () => dispatch(clearErrors())
+    logoutDestroySession: () => dispatch(logoutDestroySession()),
+    clearErrors: () => dispatch(clearErrors())
   };
 };
 
