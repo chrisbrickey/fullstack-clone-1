@@ -166,6 +166,7 @@ input:focus {
 
 #tied-to-form {
   width: 212px;
+  margin-bottom: 5px;
 }
 
 //below four selectors are the placeholder text in the fields
@@ -200,7 +201,7 @@ input:focus {
 
 #bottom {
   padding: 5px;
-  margin-top: 10px;
+  // margin-top: 10px;
   margin-bottom: 10px;
   font-size: 90%;
 }
@@ -208,7 +209,6 @@ input:focus {
 #bold {
   font-weight: bold;
 }
-
 
 .or-line {
   display: flex;
@@ -238,6 +238,12 @@ input:focus {
 .empty-box {
   width: 7px;
 }
+
+.errors {
+  padding: 5px;
+  color: red;
+}
+
 
 .toggle-container {
   // background-color: orange;

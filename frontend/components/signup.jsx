@@ -191,6 +191,10 @@ class Signup extends React.Component {
                             id="tied-to-form"/>
                         </form>
 
+                        <div className="errors">
+                          <p>Show errors here.</p>
+                        </div>
+
                         <div className="copy" id="bottom">
                           <p>By signing up, you agree to our</p>
                           <p id="bold" >Terms & Privacy Policy.</p>
