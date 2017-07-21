@@ -2,7 +2,8 @@ $instagram-blue-background: #3897f0;
 $instagram-blue-border: #3897f0;
 $instagram-white: #fff;
 $instagram-grey: #999;
-$instagram-light-gray: #e0e0e0;
+$instagram-light-grey: #e0e0e0;
+$instagram-grey-fullscreen: #fdfdfd;
 
 body {
   font-family: 'Montserrat', sans-serif;
@@ -13,7 +14,7 @@ body {
 
 
 .auth-container {
-  background-color: $instagram-white;
+  background-color: $instagram-grey-fullscreen;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -101,7 +102,7 @@ body {
 }
 
 .auth-form-container {
-  // background-color: gray;
+  // background-color: grey;
 }
 
 .auth-form-contents {
@@ -115,7 +116,7 @@ body {
   align-items: center;
   border-width: 1px;
   border-style: solid;
-  border-color: $instagram-light-gray;
+  border-color: $instagram-light-grey;
 }
 
 h1 {
@@ -134,28 +135,11 @@ input {
   border-radius: 3px;
   border-width: 1px;
   border-style: solid;
-  border-color: $instagram-light-gray;
+  border-color: $instagram-light-grey;
 }
 
 input:focus {
   border-color: $instagram-grey;
-}
-
-//below four selectors are the placeholder text in the fields
-::-webkit-input-placeholder {
-  color: rgb(175, 175, 175);
-}
-
-:-moz-placeholder {
-  color: rgb(175, 175, 175);
-}
-
-::-moz-placeholder {
-  color: rgb(175, 175, 175);
-}
-
-:-ms-input-placeholder {
-  color: rgb(175, 175, 175);
 }
 
 .auth-button {
@@ -175,11 +159,27 @@ input:focus {
   background-color: $instagram-white;
 }
 
+//below four selectors are the placeholder text in the fields
+::-webkit-input-placeholder {
+  color: rgb(175, 175, 175);
+}
+
+:-moz-placeholder {
+  color: rgb(175, 175, 175);
+}
+
+::-moz-placeholder {
+  color: rgb(175, 175, 175);
+}
+
+:-ms-input-placeholder {
+  color: rgb(175, 175, 175);
+}
 
 .copy{
   text-align: center;
   line-height: 150%;
-  color: gray;
+  color: grey;
   letter-spacing: 0.5px;
   margin-bottom: 10px;
 }
@@ -216,7 +216,7 @@ input:focus {
   background-color: white;
   border-width: 1px;
   border-style: solid;
-  border-color: $instagram-light-gray;
+  border-color: $instagram-light-grey;
 }
 
 a.auth-link-toggle {
@@ -250,7 +250,7 @@ li {
 }
 
 #copyright {
-  color: gray;
+  color: grey;
 }
 
 .logout-button {
