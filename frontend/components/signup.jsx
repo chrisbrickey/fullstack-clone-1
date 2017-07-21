@@ -108,7 +108,7 @@ class Signup extends React.Component {
                   <figure></figure>
                   <figure></figure>
                 </div>
-                
+
               </div>
 
             </div>
@@ -177,7 +177,11 @@ class Signup extends React.Component {
 
                           <br/>
                           <br/>
-                          <input type="submit" value={buttonText} className="auth-button"/>
+                          <input
+                            type="submit"
+                            value={buttonText}
+                            className="auth-button"
+                            id="tied-to-form"/>
                         </form>
 
                         <div className="copy" id="bottom">

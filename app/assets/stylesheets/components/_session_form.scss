@@ -159,6 +159,10 @@ input:focus {
   background-color: $instagram-white;
 }
 
+#tied-to-form {
+  width: 212px;
+}
+
 //below four selectors are the placeholder text in the fields
 ::-webkit-input-placeholder {
   color: rgb(175, 175, 175);
