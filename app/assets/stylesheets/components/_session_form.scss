@@ -1,6 +1,3 @@
-
-
-
 $instagram-blue-background: #3897f0;
 $instagram-blue-border: #3897f0;
 $instagram-white: #fff;
@@ -57,16 +54,34 @@ body {
 .hero {
   padding: 10px;
   margin: 10px;
-  background-color: gray;
+  background-color: transparent;
   height: 400px;
   width: 200px;
 }
 
-.heroTransition {
+// .heroTransition {
+//   position: relative;
+//   top: -346px;
+//   left: 66px;
+//   padding: 10px;
+//   margin: 10px;
+//   background-color: lightgreen;
+//   height: 160px;
+//   width: 140px;
+// }
+
+/*<img
+  src={"https://res.cloudinary.com/dckkkjkuz/image/upload/v1500618967/ballerina_ou2b0k.jpg"}
+  alt="backstage"
+  className="backstage"/>*/
+
+.backstage {
+  position: relative;
+  top: -30px;
+  right: 14px;
   padding: 10px;
   margin: 10px;
-  background-color: lightgreen;
-  height: 150px;
+  height: 260px;
 }
 
 .right {
