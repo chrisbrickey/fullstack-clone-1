@@ -161,6 +161,7 @@ input:focus {
 .auth-button {
   width: 100%;
   border-width: 0px;
+  transition: background-color 0.5s ease;
   background-color: $instagram-blue-background;
   font-weight: 600;
   font-size: 12px;
@@ -169,6 +170,11 @@ input:focus {
   margin-bottom: 0px;
   color: $instagram-white;
 }
+
+.auth-button:active {
+  background-color: $instagram-white;
+}
+
 
 .copy{
   text-align: center;
