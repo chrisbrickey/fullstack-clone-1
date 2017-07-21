@@ -4,6 +4,7 @@ $instagram-white: #fff;
 $instagram-grey: #999;
 $instagram-light-grey: #e0e0e0;
 $instagram-grey-fullscreen: #fdfdfd;
+$instagram-red: #f04752;
 
 body {
   font-family: 'Montserrat', sans-serif;
@@ -245,9 +246,18 @@ input:focus {
   padding: 5px;
   letter-spacing: 0.5px;
   line-height: 150%;
-  color: red;
+  color: $instagram-red;
 }
 
+.errors > li {
+  color: orange;
+  // font-size: 75%;
+  // font-weight: bold;
+  // padding: 5px;
+  // margin: 5px;
+  // width: 100%;
+  // white-space: nowrap;
+}
 
 .toggle-container {
   // background-color: orange;
@@ -286,7 +296,7 @@ ul {
   align-items: center;
 }
 
-li {
+.navLinks > li {
   font-size: 75%;
   font-weight: bold;
   padding: 5px;

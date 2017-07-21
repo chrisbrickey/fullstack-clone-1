@@ -80,6 +80,20 @@ class Signup extends React.Component {
   }
 
 
+  renderErrors() {
+    if (this.props.errors) {
+      return(
+        <ul className=".errors">
+          {this.props.errors.map((error, i) => (
+            <li key={`error-${i}`}>
+              {error}
+            </li>
+          ))}
+        </ul>
+      );
+    }
+  }
+
 
   //remember that errors might be null so render conditionally
   render() {
@@ -199,7 +213,7 @@ class Signup extends React.Component {
 
 
                         <div className="errors">
-                          <p>Show errors here.</p>
+                          {this.renderErrors()}
                         </div>
 
 
