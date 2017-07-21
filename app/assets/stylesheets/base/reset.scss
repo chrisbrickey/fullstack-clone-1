@@ -36,7 +36,10 @@ button {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  outline: none;
 }
+
+// textarea, input, button { outline: none; }
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
