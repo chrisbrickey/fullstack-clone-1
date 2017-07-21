@@ -153,6 +153,7 @@ input:focus {
   border-radius: 3px;
   margin-bottom: 0px;
   color: $instagram-white;
+  cursor:pointer;
 }
 
 .auth-button:active {
@@ -284,4 +285,5 @@ li {
 
 .logout-button {
   background-color: red;
+  cursor: pointer;
 }
