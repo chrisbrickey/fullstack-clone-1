@@ -147,7 +147,6 @@ class Signup extends React.Component {
 
 
                       <form onSubmit={this.handleSubmit} id="auth-button">
-                          <br/>
 
                           <label>
                             <input
@@ -160,8 +159,6 @@ class Signup extends React.Component {
                             />
                           </label>
 
-                          <br/>
-
                           <label>
                             <input
                               type="text"
@@ -173,7 +170,6 @@ class Signup extends React.Component {
                             />
                           </label>
 
-                          <br/>
 
                           <label>
                             <input
@@ -186,8 +182,7 @@ class Signup extends React.Component {
                             />
                           </label>
 
-                          <br/>
-                          <br/>
+
                           <input
                             type="submit"
                             value={buttonText}
@@ -195,9 +190,11 @@ class Signup extends React.Component {
                             id="tied-to-form"/>
                         </form>
 
+
                         <div className="errors">
                           <p>Show errors here.</p>
                         </div>
+
 
                         <div className="copy" id="bottom">
                           <p>By signing up, you agree to our</p>
