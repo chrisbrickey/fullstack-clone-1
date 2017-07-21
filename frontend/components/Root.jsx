@@ -1,13 +1,23 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import { HashRouter } from 'react-router-dom';
+
+import { Route,
+         Redirect,
+         Switch,
+         Link,
+         HashRouter } from 'react-router-dom';
 
 import { App } from './App';
+
+console.log("on the root.jsx");
 
 export const Root = ({ store }) => (
   <Provider store={ store }>
     <HashRouter>
-      <App />
+      <div>on the root.jsx
+        <Route path="/" component={App}>
+        </Route>
+      </div>
     </HashRouter>
   </Provider>
 );

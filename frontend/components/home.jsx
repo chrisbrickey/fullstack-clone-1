@@ -29,7 +29,7 @@ class Home extends React.Component {
   //remember that errors might be null so render conditionally
   render() {
 
-    console.log(this.props.loggedIn); //this is working!!!
+    console.log(this.props.loggedIn);
 
     return (
       <div>rendering from home.jsx
@@ -56,10 +56,6 @@ class Home extends React.Component {
           </section>
 
         </nav>
-
-
-
-
 
       </div>
     );
