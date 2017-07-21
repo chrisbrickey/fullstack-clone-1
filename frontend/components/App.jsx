@@ -14,6 +14,8 @@ import SignupContainer from './signup_container';
 import Home from './home';
 import HomeContainer from './home_container';
 
+console.log("on the App.jsx");
+
 export const App = ({store}) => (
   <div>
     <div className="App">
