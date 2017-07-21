@@ -7,6 +7,8 @@ import { Route,
          Link,
          HashRouter } from 'react-router-dom';
 
+import { AuthRoute,
+         ProtectedRoute } from '../util/route_util';
 
 //all container components!!
 import Signup from './signup';
@@ -22,15 +24,10 @@ export const App = ({store}) => (
   <div>on App.jsx
     <div className="App">
       <Switch>
-        <Route path="/signup" component={SignupContainer} />
-        <Route path="/login" component={SignupContainer} />
+        <AuthRoute path="/signup" component={SignupContainer} />
+        <AuthRoute path="/login" component={SignupContainer} />
+        <ProtectedRoute exact path="/" component={HomeContainer}/>
       </Switch>
-
-      <Route component={EnsureLoggedInContainer}>
-        <Switch>
-          <Route exact path="/" component={HomeContainer}/>
-        </Switch>
-      </Route>
     </div>
   </div>
 );

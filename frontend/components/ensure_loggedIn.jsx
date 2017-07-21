@@ -42,7 +42,8 @@ class EnsureLoggedIn extends React.Component {
     var isLoggedIn = this.props.loggedIn;
 
     if (isLoggedIn) {
-      return this.props.children;
+      return (<div>I'm showing because this.props.children is DEFINED!! so now setup route to those children</div>);
+      // return this.props.children;
     } else {
       return (<div>I'm showing because this.props.children is undefined</div>);
       // return null;
