@@ -11,17 +11,13 @@ import { AuthRoute,
          ProtectedRoute } from '../util/route_util';
 
 //all container components!!
-import Signup from './signup';
-import SignupContainer from './signup_container';
-import Home from './home';
-import HomeContainer from './home_container';
-import EnsureLoggedInContainer from './ensure_loggedIn_container';
-import EnsureLoggedIn from './ensure_loggedIn';
-
-console.log("on the App.jsx");
+import Signup from './Signup/signup';
+import SignupContainer from './Signup/signup_container';
+import Home from './Home/home';
+import HomeContainer from './Home/home_container';
 
 export const App = ({store}) => (
-  <div>on App.jsx
+  <div>
     <div className="App">
       <Switch>
         <AuthRoute path="/signup" component={SignupContainer} />

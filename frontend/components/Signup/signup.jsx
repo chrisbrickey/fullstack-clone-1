@@ -3,9 +3,6 @@ import { Link, withRouter } from 'react-router-dom';
 import merge from 'lodash/merge';
 
 
-console.log("on the signup.jsx");
-
-
 //if having trouble, remove errors from local state
 class Signup extends React.Component {
   constructor(props) {
@@ -240,10 +237,6 @@ class Signup extends React.Component {
             <li>{"      "}</li>
             <li id="copyright"> &copy; 2017 INSTAGRAM</li>
           </ul>
-
-          <section>
-            <button onClick={this.props.logoutDestroySession} className="logout-button">Logout</button>
-          </section>
 
         </nav>
 

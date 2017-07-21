@@ -3,11 +3,10 @@ import { connect } from 'react-redux';
 import { signupCreateUser ,
          loginCreateSession,
          logoutDestroySession,
-         clearErrors } from '../actions/session_actions';
+         clearErrors } from '../../actions/session_actions';
 
-import Home from './home';
+import Signup from './signup';
 
-console.log("on the home_container.jsx");
 
 const mapStateToProps = ({ session }) => {
   return {
@@ -19,13 +18,13 @@ const mapStateToProps = ({ session }) => {
 //
 //remember to send clear errors down to the presentational components
 const mapDispatchToProps = (dispatch, { location }) => {
-  // const formType = location.pathname.slice(1);
-  // const processForm = (formType === 'login') ? loginCreateSession : signupCreateUser;
+  const formType = location.pathname.slice(1);
+  const processForm = (formType === 'login') ? loginCreateSession : signupCreateUser;
 
   return {
-    // processForm: user => dispatch(processForm(user)),
-    // formType,
-    // loginCreateSession: (user) => dispatch(loginCreateSession(user)),
+    processForm: user => dispatch(processForm(user)),
+    formType,
+    loginCreateSession: (user) => dispatch(loginCreateSession(user)),
     logoutDestroySession: () => dispatch(logoutDestroySession()),
     clearErrors: () => dispatch(clearErrors())
   };
@@ -34,4 +33,4 @@ const mapDispatchToProps = (dispatch, { location }) => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Home);
+)(Signup);

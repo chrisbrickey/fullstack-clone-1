@@ -9,12 +9,11 @@ import { Route,
 
 import { App } from './App';
 
-console.log("on the root.jsx");
 
 export const Root = ({ store }) => (
   <Provider store={ store }>
     <HashRouter>
-      <div>on the root.jsx
+      <div>
         <Route path="/" component={App}>
         </Route>
       </div>
