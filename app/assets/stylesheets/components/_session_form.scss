@@ -60,14 +60,14 @@ body {
 }
 
 // .heroTransition {
-//   position: relative;
-//   top: -346px;
-//   left: 66px;
-//   padding: 10px;
-//   margin: 10px;
-//   background-color: lightgreen;
-//   height: 160px;
-//   width: 140px;
+  // position: relative;
+  // top: -346px;
+  // left: 66px;
+  // padding: 10px;
+  // margin: 10px;
+  // background-color: lightgreen;
+  // height: 160px;
+  // width: 140px;
 // }
 
 /*<img
@@ -130,12 +130,15 @@ input {
   padding: 5px;
   margin: 3px;
   font-size: 100%;
-  // font-weight: 60%;
   color: $instagram-white;
   border-radius: 3px;
   border-width: 1px;
   border-style: solid;
-  border-color: #ededed;
+  border-color: $instagram-light-gray;
+}
+
+input:focus {
+  border-color: $instagram-grey;
 }
 
 //below four selectors are the placeholder text in the fields
