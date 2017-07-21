@@ -175,17 +175,17 @@ class Signup extends React.Component {
 
                         <div className="copy-bottom">
                           <p>By signing up, you agree to our</p>
-                          <p>Terms & Privacy Policy.</p>
+                          <p className="copy-bold" >Terms & Privacy Policy.</p>
                         </div>
 
                     </section>
                     auth-form-container
                   </div>
 
-                  <section className="toggle-container">toggle-container
-                    <nav className="toggle-contents">toggle-contents
+                  <section className="toggle-container">
+                    <nav className="toggle-contents">
                       <p>{`${prefixText}`}
-                        <Link className="auth-link-toggle" to={`${linkPath}`}>{linkText}</Link>
+                        <Link className="auth-link-toggle" to={`${linkPath}`}>{' '}{linkText}</Link>
                       </p>
                     </nav>
                   </section>
