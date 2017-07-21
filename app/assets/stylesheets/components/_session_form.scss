@@ -193,11 +193,6 @@ input:focus {
   margin-bottom: 10px;
 }
 
-#mid {
-  padding: 3px;
-  margin-bottom: 10px;
-}
-
 #bottom {
   padding: 5px;
   margin-top: 10px;
@@ -207,6 +202,36 @@ input:focus {
 
 #bold {
   font-weight: bold;
+}
+
+
+.or-line {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.copy-mid{
+  text-align: center;
+  line-height: 150%;
+  color: grey;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+  padding: 3px;
+  font-weight: bold;
+  position: relative;
+  top: 5px;
+}
+
+.line {
+  width: 90px;
+  height: 1px;
+  background-color: $instagram-grey;
+}
+
+.empty-box {
+  width: 7px;
 }
 
 .toggle-container {

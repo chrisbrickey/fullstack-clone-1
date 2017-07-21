@@ -130,8 +130,12 @@ class Signup extends React.Component {
                       <input type="submit" value="Demo login" className="auth-button" onClick={this.demoLogin}/>
                       <br/>
 
-                        <div className="copy" id="mid" id="bold">
-                          <p>----------------OR-----------------</p>
+                        <div className="or-line">
+                          <div className="line"/>
+                          <div className="empty-box"/>
+                          <p className="copy-mid">{" "}OR{" "}</p>
+                          <div className="empty-box"/>
+                          <div className="line"/>
                         </div>
 
 
