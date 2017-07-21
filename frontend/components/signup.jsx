@@ -115,7 +115,7 @@ class Signup extends React.Component {
 
                       <h1>Instagram</h1>
 
-                      <div className="copy-top">
+                      <div className="copy" id="top" id="bold">
                         <p>Sign up to see photos </p>
                         <p>from your friends.</p>
                       </div>
@@ -123,12 +123,12 @@ class Signup extends React.Component {
                       <input type="submit" value="Demo login" className="auth-button" onClick={this.demoLogin}/>
                       <br/>
 
-                        <div className="copy-top">
+                        <div className="copy" id="mid" id="bold">
                           <p>----------------OR-----------------</p>
                         </div>
 
 
-                      <form onSubmit={this.handleSubmit} className="auth-form">
+                      <form onSubmit={this.handleSubmit} id="auth-button">
                           <br/>
 
                           <label>
@@ -173,9 +173,9 @@ class Signup extends React.Component {
                           <input type="submit" value={buttonText} className="auth-button"/>
                         </form>
 
-                        <div className="copy-bottom">
+                        <div className="copy" id="bottom">
                           <p>By signing up, you agree to our</p>
-                          <p className="copy-bold" >Terms & Privacy Policy.</p>
+                          <p id="bold" >Terms & Privacy Policy.</p>
                         </div>
 
                     </section>

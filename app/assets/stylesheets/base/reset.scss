@@ -27,6 +27,17 @@ time, mark, audio, video {
  text-decoration: none;
 }
 
+input[type="placeholder"],
+input[type="password"],
+input[type="text"],
+input[type="submit"],
+textarea,
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
