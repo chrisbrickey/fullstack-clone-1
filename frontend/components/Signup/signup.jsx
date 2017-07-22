@@ -162,28 +162,32 @@ class Signup extends React.Component {
                       <input type="submit" value="Demo login" className="auth-button" onClick={this.demoLogin}/>
                       <br/>
 
-                        <div className="or-line">
-                          <div className="line"/>
-                            <div className="empty-box"/>
-                             <p className="copy-mid">{" "}OR{" "}</p>
-                            <div className="empty-box"/>
-                          <div className="line"/>
-                        </div>
-
+                      <div className="or-line">
+                        <div className="line"/>
+                          <div className="empty-box"/>
+                           <p className="copy-mid">{" "}OR{" "}</p>
+                          <div className="empty-box"/>
+                        <div className="line"/>
+                      </div>
 
                       <form onSubmit={this.handleSubmit} id="auth-button">
                         <br/>
 
+                        {this.props.formType === ('signup') ? (
                           <label>
-                            <input
-                              type="text"
-                              placeholder="Full Name"
-                              name="name"
-                              value={this.state.user.name}
-                              onChange={this.updateUser}
-                              className="login-input"
-                            />
+                              <input
+                                type="text"
+                                placeholder="Full Name"
+                                name="name"
+                                value={this.state.user.name}
+                                onChange={this.updateUser}
+                                className="login-input"
+                              />
                           </label>
+                        ) : (
+                          <label></label>
+                        )}
+
 
                           <br/>
 
