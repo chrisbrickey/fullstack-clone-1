@@ -22,11 +22,11 @@ class Signup extends React.Component {
     this.demoLogin = this.demoLogin.bind(this);
   }
 
-  // componentWillReceiveProps(newProps) {
-  //   if (this.props.formType !== newProps.formType) {
-  //     this.props.clearErrors();
-  //   }
-  // }
+  componentWillReceiveProps(newProps) {
+    if (this.props.formType !== newProps.formType) {
+      this.props.clearErrors();
+    }
+  }
 
   updateUser(event) {
     const newState = merge({}, this.state);
@@ -171,7 +171,6 @@ class Signup extends React.Component {
                       </div>
 
                       <form onSubmit={this.handleSubmit} id="auth-button">
-                        <br/>
 
                         {this.props.formType === ('signup') ? (
                           <label>
