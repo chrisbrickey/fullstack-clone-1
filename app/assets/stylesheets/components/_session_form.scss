@@ -243,21 +243,21 @@ input:focus {
   width: 7px;
 }
 
-.errors {
+.errors-list {
+  // background-color: yellow;
   padding: 5px;
-  letter-spacing: 0.5px;
-  line-height: 150%;
-  color: $instagram-red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.errors > li {
-  color: orange;
-  // font-size: 75%;
-  // font-weight: bold;
-  // padding: 5px;
-  // margin: 5px;
-  // width: 100%;
-  // white-space: nowrap;
+.error-item {
+  // background-color: pink;
+  margin: 5px;
+  text-align: center;
+  color: $instagram-red;
+  font-size: 85%;
 }
 
 .toggle-container {

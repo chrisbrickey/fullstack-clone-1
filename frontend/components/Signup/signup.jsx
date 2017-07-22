@@ -91,14 +91,13 @@ class Signup extends React.Component {
   renderErrors() {
     if (this.props.errors) {
       return(
-
-        <ul className=".errors">
-          {this.props.errors.map((error, i) => (
-            <li key={`error-${i}`}>
-              {error}
-            </li>
-          ))}
-        </ul>
+          <div className="errors-list">
+            {this.props.errors.map((error, i) => (
+              <div className="error-item" key={`error-${i}`}>
+                {error}
+              </div>
+            ))}
+          </div>
       );
     }
   }
@@ -221,9 +220,7 @@ class Signup extends React.Component {
                         </form>
 
 
-                        <section className="errors">
                           {this.renderErrors()}
-                        </section>
 
 
                         <div className="copy" id="bottom">
