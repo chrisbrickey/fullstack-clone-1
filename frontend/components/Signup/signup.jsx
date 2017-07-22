@@ -154,18 +154,24 @@ class Signup extends React.Component {
                         alt="Instagram Logo"
                         className="logo"/>
 
-                      <div className="copy" id="top" id="bold">
-                        <p>Sign up to see photos </p>
-                        <p>from your friends.</p>
-                      </div>
+
+                        {this.props.formType === ('signup') ? (
+                          <div className="copy-top" id="bold">
+                            <p>Sign up to see photos </p>
+                            <p>from your friends.</p>
+                          </div>
+                        ) : (
+                          <div></div>
+                        )}
+
 
                       <input type="submit" value="Demo login" className="auth-button" onClick={this.demoLogin}/>
                       <br/>
 
-                      <div className="or-line">
+                      <div className="copy-mid">
                         <div className="line"/>
                           <div className="empty-box"/>
-                           <p className="copy-mid">{" "}OR{" "}</p>
+                           <p className="OR">{" "}OR{" "}</p>
                           <div className="empty-box"/>
                         <div className="line"/>
                       </div>
@@ -184,7 +190,7 @@ class Signup extends React.Component {
                               />
                           </label>
                         ) : (
-                          <label></label>
+                          <div id="conditional-input"></div>
                         )}
 
 
@@ -226,7 +232,7 @@ class Signup extends React.Component {
                           {this.renderErrors()}
 
 
-                        <div className="copy" id="bottom">
+                        <div className="copy-bottom">
                           <p>By signing up, you agree to our</p>
                           <p id="bold" >Terms & Privacy Policy.</p>
                         </div>
@@ -251,7 +257,6 @@ class Signup extends React.Component {
 
 
         <footer>
-
           <ul className="navLinks">
             <li>ABOUT US</li>
             <li>SUPPORT</li>
@@ -266,7 +271,6 @@ class Signup extends React.Component {
             <li>{"      "}</li>
             <li id="copyright"> &copy; 2017 INSTAGRAM</li>
           </ul>
-
         </footer>
 
 

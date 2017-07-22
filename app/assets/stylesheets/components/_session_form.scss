@@ -121,13 +121,17 @@ body {
 }
 
 .logo {
-  width: 175px;
+  width: 160px;
+  padding: 5px;
 }
 
 input {
   width: 200px;
   padding: 5px;
-  margin: 3px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  margin-right: 3px;
+  margin-left: 3px;
   font-size: 100%;
   color: $instagram-grey;
   border-radius: 3px;
@@ -138,6 +142,12 @@ input {
 
 input:focus {
   border-color: $instagram-grey;
+}
+
+#conditional-input {
+  height: 0px;
+  padding: 0px;
+  margin: 0px;
 }
 
 /*set width from 100% to 220px when errors made form grow horizontally*/
@@ -182,7 +192,12 @@ input:focus {
   color: rgb(175, 175, 175);
 }
 
-.copy{
+#bold {
+  font-weight: bold;
+}
+
+.copy-top {
+  padding: 3px;
   text-align: center;
   line-height: 150%;
   color: grey;
@@ -190,31 +205,14 @@ input:focus {
   margin-bottom: 10px;
 }
 
-#top {
-  padding: 3px;
-  margin-bottom: 10px;
-}
-
-#bottom {
-  padding: 5px;
-  // margin-top: 10px;
-  margin-bottom: 10px;
-  font-size: 90%;
-}
-
-#bold {
-  font-weight: bold;
-}
-
-.or-line {
+.copy-mid {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-bottom: 5px;
 }
 
-.copy-mid{
+.OR{
   text-align: center;
   line-height: 150%;
   color: grey;
@@ -250,6 +248,18 @@ input:focus {
   color: $instagram-red;
   font-size: 85%;
   width: 100%;
+  line-height: 125%;
+}
+
+.copy-bottom {
+  padding: 5px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-size: 90%;
+  text-align: center;
+  line-height: 150%;
+  color: grey;
+  letter-spacing: 0.5px;
 }
 
 .toggle-container {
@@ -276,18 +286,18 @@ footer {
   padding: 10px;
   margin: 10px;
   background-color: transparent;
-  height: 100px;
+  height: 50px;
   display: flex;
   flex-direction: column;
   font-weight: bold;
 }
 
-ul {
+.navLinks {
   background-color: transparent;
   list-style: none;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -297,6 +307,7 @@ ul {
   margin: 5px;
   width: 100%;
   white-space: nowrap;
+  text-align: center;
 }
 
 #copyright {
