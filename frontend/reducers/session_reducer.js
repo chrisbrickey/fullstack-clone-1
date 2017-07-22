@@ -8,7 +8,7 @@ import { RECEIVE_CURRENT_USER,
 
 const defaultState = Object.freeze({
     currentUser: null,
-    errors: ["starting errors"]
+    errors: null
   });
 
 
