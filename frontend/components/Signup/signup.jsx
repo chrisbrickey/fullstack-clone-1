@@ -51,19 +51,14 @@ class Signup extends React.Component {
     event.preventDefault();
     let newUser = this.state.user;
     this.props.processForm({ user: newUser })
-      .then(()=> {
-        console.log("inside submit callback upon success");
+      .then(
+        (()=> {
+          console.log("inside submit callback upon success");
+          this.setState({ user: { name: "", username: "", password: ""}, errors: null});
+        }),
 
-        // this.clearErrors();
-        this.setState({
-        user: {
-          name: "",
-          username: "",
-          password: ""
-        },
-        errors: null
-      });
-    });
+        (this.props.clearErrors())
+      );
 
 
   }
