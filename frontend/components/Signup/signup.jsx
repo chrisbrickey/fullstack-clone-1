@@ -123,7 +123,7 @@ class Signup extends React.Component {
 
               <div className="hero">
                 <img
-                  src={'https://res.cloudinary.com/dckkkjkuz/image/upload/c_scale,w_250/v1500617152/succulent_hero_rp0rww.png'}
+                  src={'https://res.cloudinary.com/dckkkjkuz/image/upload/c_scale,w_250/v1500759487/succulent_hero_pixlr_bestcrop_qiirow.png'}
                   alt="iPhone App"/>
 
                 <div className="heroTransition">
