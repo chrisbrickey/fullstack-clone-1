@@ -25,23 +25,14 @@ class User < ApplicationRecord
   has_many :followings #other users that this user is following
 
   attr_reader :password
+  
   after_initialize :ensure_session_token
+  before_validation :ensure_session_token_uniqueness
 
   def self.find_by_credentials(username, password)
     user = User.find_by_username(username)
     return nil if user.nil?
-
-    if user.is_password?(password)
-      return user
-    else
-      return nil
-    end
-  end
-
-  def reset_session_token!
-    self.session_token = SecureRandom::urlsafe_base64
-    self.save!
-    self.session_token
+    user.is_password?(password) ? user : nil
   end
 
   def password=(password)
@@ -53,8 +44,27 @@ class User < ApplicationRecord
     BCrypt::Password.new(self.password_digest).is_password?(password)
   end
 
+  def reset_session_token!
+    self.session_token = new_session_token
+    ensure_session_token_uniqueness
+    self.save!
+    self.session_token
+  end
+
+  private
+
+  def new_session_token
+    SecureRandom::urlsafe_base64
+  end
+
   def ensure_session_token
-    self.session_token ||= SecureRandom::urlsafe_base64
+    self.session_token ||= new_session_token
+  end
+
+  def ensure_session_token_uniqueness
+    while User.find_by(session_token: self.session_token)
+      self.session_token = new_session_token
+    end
   end
 
 end
