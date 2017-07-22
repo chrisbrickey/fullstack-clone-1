@@ -69,13 +69,20 @@ class Signup extends React.Component {
 
   demoLogin(event) {
     event.preventDefault();
+
     const demoUserArray = [
-      { user: {name: "Demo Login", username: "demologin1", password: "password"}},
-      { user: {name: "Demo Login", username: "demologin2", password: "password"}},
-      { user: {name: "Demo Login", username: "demologin3", password: "password"}},
-      { user: {name: "Demo Login", username: "demologin4", password: "password"}},
-      { user: {name: "Demo Login", username: "demologin5", password: "password"}},
+      { user: {username: 'demouser1', password: "123456"}},
+      { user: {username: "demouser2", password: "123456"}},
+      { user: {username: "demouser3", password: "123456"}},
+      { user: {username: "demouser4", password: "123456"}},
+      { user: {username: "demouser5", password: "123456"}},
+      { user: {username: 'demouser6', password: "123456"}},
+      { user: {username: "demouser7", password: "123456"}},
+      { user: {username: "demouser8", password: "123456"}},
+      { user: {username: "demouser9", password: "123456"}},
+      { user: {username: "demouser10", password: "123456"}}
     ];
+
     this.props.loginCreateSession(demoUserArray[Math.floor(Math.random() * demoUserArray.length)]);
   }
 
