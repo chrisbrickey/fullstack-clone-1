@@ -91,13 +91,13 @@ class Signup extends React.Component {
   renderErrors() {
     if (this.props.errors) {
       return(
-          <div className="errors-list">
+          <section className="errors-list">
             {this.props.errors.map((error, i) => (
               <div className="error-item" key={`error-${i}`}>
                 {error}
               </div>
             ))}
-          </div>
+          </section>
       );
     }
   }

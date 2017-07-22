@@ -99,11 +99,11 @@ body {
 
 .subright {
   margin: 10px;
-  // background-color: pink;
+  // background-color: green;
 }
 
 .auth-form-container {
-  // background-color: grey;
+  // background-color: lightgreen;
 }
 
 .auth-form-contents {
@@ -119,13 +119,6 @@ body {
   border-style: solid;
   border-color: $instagram-light-grey;
 }
-
-// h1 {
-//   font-weight: bold;
-//   padding: 10px;
-//   font-size: 200%;
-//   color: black;
-// }
 
 .logo {
   width: 175px;
@@ -244,8 +237,7 @@ input:focus {
 }
 
 .errors-list {
-  // background-color: yellow;
-  padding: 5px;
+  width: 210px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -253,11 +245,11 @@ input:focus {
 }
 
 .error-item {
-  // background-color: pink;
   margin: 5px;
   text-align: center;
   color: $instagram-red;
   font-size: 85%;
+  width: 100%;
 }
 
 .toggle-container {
@@ -301,7 +293,6 @@ ul {
 .navLinks > li {
   font-size: 75%;
   font-weight: bold;
-  padding: 5px;
   margin: 5px;
   width: 100%;
   white-space: nowrap;
