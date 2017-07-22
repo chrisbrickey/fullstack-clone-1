@@ -6,10 +6,10 @@ import { RECEIVE_CURRENT_USER,
           CLEAR_ERRORS } from '../actions/session_actions';
 
 
-const defaultState = {
+const defaultState = Object.freeze({
     currentUser: null,
     errors: ["starting errors"]
-  };
+  });
 
 
 //double check format of action.current user to make it sure merging will work
