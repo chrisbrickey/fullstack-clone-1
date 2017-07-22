@@ -13,7 +13,7 @@ class Signup extends React.Component {
         username: "",
         password: ""
       },
-      errors: {}
+      errors: null
     };
 
     //this.anyMethod = this.anyMethod.bind(this);
@@ -52,15 +52,16 @@ class Signup extends React.Component {
     let newUser = this.state.user;
     this.props.processForm({ user: newUser })
       .then(()=> {
-        console.log("hi there");
+        console.log("inside submit callback upon success");
 
+        // this.clearErrors();
         this.setState({
         user: {
           name: "",
           username: "",
           password: ""
         },
-        errors: {}
+        errors: null
       });
     });
 
@@ -90,6 +91,7 @@ class Signup extends React.Component {
   renderErrors() {
     if (this.props.errors) {
       return(
+
         <ul className=".errors">
           {this.props.errors.map((error, i) => (
             <li key={`error-${i}`}>
@@ -131,10 +133,10 @@ class Signup extends React.Component {
                   alt="iPhone App"/>
 
                 <div className="heroTransition">
-                  <figure></figure>
-                  <figure></figure>
-                  <figure></figure>
-                  <figure></figure>
+                    <figure></figure>
+                    <figure></figure>
+                    <figure></figure>
+                    <figure></figure>
                 </div>
 
               </div>
@@ -163,9 +165,9 @@ class Signup extends React.Component {
 
                         <div className="or-line">
                           <div className="line"/>
-                          <div className="empty-box"/>
-                          <p className="copy-mid">{" "}OR{" "}</p>
-                          <div className="empty-box"/>
+                            <div className="empty-box"/>
+                             <p className="copy-mid">{" "}OR{" "}</p>
+                            <div className="empty-box"/>
                           <div className="line"/>
                         </div>
 
@@ -219,9 +221,9 @@ class Signup extends React.Component {
                         </form>
 
 
-                        <div className="errors">
+                        <section className="errors">
                           {this.renderErrors()}
-                        </div>
+                        </section>
 
 
                         <div className="copy" id="bottom">
@@ -248,7 +250,7 @@ class Signup extends React.Component {
         </div>
 
 
-        <nav className="footer">
+        <footer>
 
           <ul className="navLinks">
             <li>ABOUT US</li>
@@ -265,7 +267,7 @@ class Signup extends React.Component {
             <li id="copyright"> &copy; 2017 INSTAGRAM</li>
           </ul>
 
-        </nav>
+        </footer>
 
 
       </div>

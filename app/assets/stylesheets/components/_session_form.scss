@@ -147,8 +147,9 @@ input:focus {
   border-color: $instagram-grey;
 }
 
+/*set width from 100% to 220px when errors made form grow horizontally*/
 .auth-button {
-  width: 100%;
+  width: 220px;
   border-width: 0px;
   transition: background-color 0.5s ease;
   background-color: $instagram-blue-background;
@@ -278,7 +279,7 @@ a.auth-link-toggle {
   color: $instagram-blue-background;
 }
 
-.footer {
+footer {
   padding: 10px;
   margin: 10px;
   background-color: transparent;
