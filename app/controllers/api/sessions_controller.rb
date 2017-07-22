@@ -12,7 +12,7 @@ class Api::SessionsController < ApplicationController
       render "api/users/show"
     else
       render(
-        json: { errors: ["Sorry, your password was incorrect. Please double-check your password."] },
+        json: ["Sorry, your password was incorrect. Please double-check your password."],
         status: 401
       )
     end
@@ -32,7 +32,7 @@ class Api::SessionsController < ApplicationController
 
     else
       render(
-        json: { errors: ["please sign up or log in"] },
+        json: ["please sign up or log in"],
         status: 404
       )
 
