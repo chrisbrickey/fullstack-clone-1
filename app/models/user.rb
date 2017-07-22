@@ -1,16 +1,16 @@
 class User < ApplicationRecord
 
   validates :username,
-              presence: true,
-              length: { minimum: 6 },
-              uniqueness: { case_sensitive: false }
+              presence: { message: "field is required."},
+              length: { minimum: 6, message: "must be at least 6 characters long." },
+              uniqueness: { message: "isn't available. Please try another." }
 
   validates :password,
-              length: { minimum: 6 },
+              length: { minimum: 6, message: "must be at least 6 characters long." },
               allow_nil: true
 
   validates :name,
-              presence: true
+              presence: { message: "field is required."}
 
   validates :session_token,
               presence: true,
@@ -25,7 +25,7 @@ class User < ApplicationRecord
   has_many :followings #other users that this user is following
 
   attr_reader :password
-  
+
   after_initialize :ensure_session_token
   before_validation :ensure_session_token_uniqueness
 
