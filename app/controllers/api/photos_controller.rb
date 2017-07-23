@@ -9,9 +9,11 @@ def show
   @photo = Photo.find(params[:id])
 end
 
+
+#commenting out current_user line for testing purposes
 def create
   @photo = Photo.create!(photo_params)
-  @photo.author_id = current_user.id
+  # @photo.author_id = current_user.id
 
   if @photo.save
     render "api/photos/show"
@@ -24,11 +26,13 @@ def create
 
 end
 
+#replaced line 32 with line 31 for testing purposes
 def update
-  @photo = current_user.photos.find(params[:id])
+  @photo = Photo.find(params[:id])
+  # @photo = current_user.photos.find(params[:id])
 
   #using update will return true/false depending on whether validations passed
-  if @user.update(user_params)
+  if @photo.update(photo_params)
     render "api/photos/show"
   else
     render(
@@ -39,20 +43,23 @@ def update
 
 end
 
+#replaced line 49 with line 48 for testing purposes
 def destroy
-  @photo = current_user.photos.find(params[:id])
+  @photo = Photo.find(params[:id])
+  # @photo = current_user.photos.find(params[:id])
   @photo.destroy
-  render "api/photos/index"
+  render "api/photos/show"
 end
 
 private
 
-#must populate author_id internally
+#must populate author_id internally but listed here so can test during development
 def photo_params
   params.require(:photo).permit(
     :photo_url,
     :caption,
-    :location)
+    :location,
+    :author_id)
 end
 
 end
