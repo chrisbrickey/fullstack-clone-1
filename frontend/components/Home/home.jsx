@@ -23,18 +23,48 @@ class Home extends React.Component {
   }
 
 
+  componentDidMount() {
+      this.props.fetchAllPhotos();
+    }
 
 
-
-  //remember that errors might be null so render conditionally
+  //remember that errors and other objects might be null so render conditionally
   render() {
 
-    console.log(this.props.loggedIn);
+    // console.log(this.props.loggedIn);
+    // console.log(this.props.photos);
+
+    const makeArray = (someObject) => {
+      return Object.keys(someObject).map( (id) => {
+        return someObject[id];
+      });
+    };
+
+    const photoFeedObject = this.props.photos.byId;
+    let photoFeedArray = [];
+    let photoFeedItems = null;
+
+    if (photoFeedObject) {
+      photoFeedArray = makeArray(photoFeedObject);
+      console.log(photoFeedArray);
+
+    }
+
 
     return (
       <div>rendering from home.jsx
 
-        <nav className="footer">
+        <header>
+          <p>header will go here</p>
+        </header>
+
+        <main className="photoFeed">
+          <p>picture feed will go here</p>
+        </main>
+
+
+
+        <footer>
 
           <ul className="navLinks">
             <li>ABOUT US</li>
@@ -55,7 +85,7 @@ class Home extends React.Component {
             <button onClick={this.props.logoutDestroySession} className="logout-button">Logout</button>
           </section>
 
-        </nav>
+        </footer>
 
       </div>
     );

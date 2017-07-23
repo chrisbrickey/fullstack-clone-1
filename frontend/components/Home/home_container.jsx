@@ -15,7 +15,8 @@ const mapStateToProps = (state) => {
   return {
     loggedIn: Boolean(state.session.currentUser),
     currentUser: state.session.currentUser,
-    errors: state.session.errors
+    errors: state.session.errors,
+    photos: state.photos
   };
 };
 //
@@ -28,6 +29,7 @@ const mapDispatchToProps = (dispatch, { location }) => {
     // processForm: user => dispatch(processForm(user)),
     // formType,
     // loginCreateSession: (user) => dispatch(loginCreateSession(user)),
+    fetchAllPhotos: () => dispatch(fetchAllPhotos()),
     logoutDestroySession: () => dispatch(logoutDestroySession()),
     clearErrors: () => dispatch(clearErrors())
   };

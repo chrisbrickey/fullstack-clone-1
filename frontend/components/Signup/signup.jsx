@@ -2,8 +2,6 @@ import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import merge from 'lodash/merge';
 
-
-//if having trouble, remove errors from local state
 class Signup extends React.Component {
   constructor(props) {
     super(props);
@@ -82,7 +80,7 @@ class Signup extends React.Component {
     this.props.loginCreateSession(demoUserArray[Math.floor(Math.random() * demoUserArray.length)]);
   }
 
-
+  //errors might be null so rendering conditionally
   renderErrors() {
     if (this.props.errors) {
       return(
@@ -98,7 +96,7 @@ class Signup extends React.Component {
   }
 
 
-  //remember that errors might be null so render conditionally
+
   render() {
     const prefixText = this.props.formType === ('login') ? "Don't have an account?" : "Have an account?";
     const buttonText = this.props.formType === ('login') ? "Log in" : "Sign up";
@@ -106,9 +104,7 @@ class Signup extends React.Component {
     const linkText = this.props.formType === ('login') ? "Sign up" : "Log in";
     const linkPath = this.props.formType === ('login') ? "/signup" : "login";
 
-    console.log(`errors:  ${this.props.errors}`);
-    // const errorsToRender = this.props.errors[0] === "starting errors" ? "" : _______;\
-
+    // console.log(`errors:  ${this.props.errors}`);
 
 
     return (
