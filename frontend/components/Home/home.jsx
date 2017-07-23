@@ -18,12 +18,21 @@ class Home extends React.Component {
     // };
 
     //this.anyMethod = this.anyMethod.bind(this);
+    this.cropPhoto = this.cropPhoto.bind(this);
   }
 
 
   componentDidMount() {
       this.props.fetchAllPhotos();
     }
+
+  cropPhoto(photoUrl) {
+    const cropText = "/upload/c_thumb,h_500,w_500/";
+    const photoUrlArray = photoUrl.split("/upload/");
+    const croppedUrl = photoUrlArray[0] + cropText + photoUrlArray[1];
+
+    return croppedUrl;
+  }
 
 
   //remember that errors and other objects might be null so render conditionally
@@ -43,7 +52,7 @@ class Home extends React.Component {
                     <p>{photo.username}</p>
                     <p>{photo.caption}</p>
                     <p>{photo.uploadDate}</p>
-                    <img src={photo.photoUrl} alt="photo"/>
+                    <img src={this.cropPhoto(photo.photoUrl)} alt="photo"/>
                 </li>
             );
         });
@@ -53,13 +62,31 @@ class Home extends React.Component {
     return (
       <div>rendering from home.jsx
 
-          <header>
-              <p>header will go here</p>
-          </header>
+              <div className="header-container">
+
+                <div className="navLinks-header">
+
+                    <div className="left-header">
+                        <p>header element 1</p>
+                        <p>header element 2</p>
+                        <p>header element 3</p>
+                    </div>
+                    <div className="mid-header">
+                        <p>header element 4</p>
+                    </div>
+                    <div className="right-header">
+                        <p>header element 5</p>
+                        <p>header element 6</p>
+                        <p>header element 7</p>
+                    </div>
+
+                </div>
+
+
+              </div>
 
           <main className="photoFeed">
 
-              <p>picture feed will go here</p>
               <ul>
                   {photoFeedList}
               </ul>
