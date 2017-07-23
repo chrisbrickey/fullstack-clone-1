@@ -6,6 +6,7 @@ json.uploadDate     photo.created_at
 
 json.userId         photo.author.id
 json.username       photo.author.username
+json.name           photo.author.name
 json.profileImgUrl  photo.author.profile_img_url
 
 
