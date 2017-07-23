@@ -1,6 +1,5 @@
 import merge from 'lodash/merge';
 import { RECEIVE_ALL_PHOTOS,
-         RECEIVE_ERRORS,
          RECEIVE_SINGLE_PHOTO } from '../actions/photo_actions';
 
 const defaultState = Object.freeze({
@@ -11,5 +10,19 @@ const defaultState = Object.freeze({
 
 export const photoReducer = (state = defaultState, action) => {
   Object.freeze(state);
-  return state;
+
+
+  switch(action.type) {
+
+    case RECEIVE_ALL_PHOTOS:
+    console.log("inside reducer at RECEIVE_ALL_PHOTOS");
+
+    return merge({}, state, {
+      byId: action.byId
+    });
+
+    default:
+      return state;
+
+  }
 };
