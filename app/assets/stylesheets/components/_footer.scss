@@ -1,0 +1,31 @@
+footer {
+  padding: 10px;
+  margin: 10px;
+  background-color: transparent;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+}
+
+.navLinks {
+  background-color: transparent;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navLinks > li {
+  font-size: 75%;
+  font-weight: bold;
+  margin: 5px;
+  width: 100%;
+  white-space: nowrap;
+  text-align: center;
+}
+
+#copyright {
+  color: grey;
+}
