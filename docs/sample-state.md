@@ -60,13 +60,14 @@
     byId: {
       1: {
         id: 1,
-        userId: 1,
-        username: 'xx',
-        profileImgUrl: 'xx.png',
         photoUrl: 'xx.png',
         description: "xx",
         location: "xx",
         uploadDate: 'xx',
+
+        userId: 1,
+        username: 'xx',
+        profileImgUrl: 'xx.png',
         comments: [2, ...],
         likesCount: 10,
         likers: ["xx", ...]  
