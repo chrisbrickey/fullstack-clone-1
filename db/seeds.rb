@@ -26,21 +26,21 @@ ActiveRecord::Base.transaction do
     photo_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500771271/fierce_xyjq3a.jpg',
     caption: "ballerina en pointe",
     location: "earth",
-    author_id: 1
+    author_id: demo1.id
     )
 
   photo2 = Photo.create!(
     photo_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500771420/infinity_neg30m.jpg',
     caption: "infinitely beautiful",
     location: "earth",
-    author_id: 1
+    author_id: demo1.id
     )
 
   photo3 = Photo.create!(
     photo_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500771107/mural_c8cg36.jpg',
     caption: "urban inspiration",
     location: "earth",
-    author_id: 1
+    author_id: demo1.id
     )
 
 end
