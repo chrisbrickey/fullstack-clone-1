@@ -67,6 +67,7 @@
 
         userId: 1,
         username: 'xx',
+        name: "xx",
         profileImgUrl: 'xx.png',
         comments: [2, ...],
         likesCount: 10,
