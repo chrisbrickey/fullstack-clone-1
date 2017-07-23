@@ -4,7 +4,7 @@ json.caption        photo.caption
 json.location       photo.location
 json.uploadDate     photo.created_at
 
-json.userID         photo.author.id
+json.userId         photo.author.id
 json.username       photo.author.username
 json.profileImgUrl  photo.author.profile_img_url
 
