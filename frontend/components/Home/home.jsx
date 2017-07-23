@@ -36,9 +36,14 @@ class Home extends React.Component {
 
     if (photoFeedObject) {
         photoFeedList = Object.keys(photoFeedObject).map( (id) => {
+            let photo = photoFeedObject[id];
+
             return (
-                <li key={photoFeedObject[id].id} className="feedItem-container">
-                    <img src={photoFeedObject[id].photoUrl} alt="photo"/>
+                <li key={photo.id} className="feedItem-container">
+                    <p>{photo.username}</p>
+                    <p>{photo.caption}</p>
+                    <p>{photo.uploadDate}</p>
+                    <img src={photo.photoUrl} alt="photo"/>
                 </li>
             );
         });
