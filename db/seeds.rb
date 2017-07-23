@@ -8,6 +8,7 @@
 
 #no seeds leftover from previous builds
 User.destroy_all
+Photo.destroy_all
 
 #will rollback all seeds if any issues; create! fails loudly so can get more information on errors
 ActiveRecord::Base.transaction do
