@@ -1,12 +1,59 @@
-header {
-  
+$instagram-blue-background: #3897f0;
+$instagram-blue-border: #3897f0;
+$instagram-white: #fff;
+$instagram-grey: #999;
+$instagram-light-grey: #e0e0e0;
+$instagram-grey-fullscreen: #fdfdfd;
+
+.header-container {
+  min-width: 100vw;
+  height: 75px;
+  background-color: orange;
+  padding: 5px;
+  display: flex;
+  flex-direction: columns;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.navLinks-header {
+  background-color: yellow;
+  width: 100%;
+  padding: 5px;
+  display: flex;
+  flex-direction: rows;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left-header {
+  background-color: lightgreen;
+  margin: 5px;
+}
+
+.mid-header {
+  background-color: pink;
+  margin: 5px;
+}
+
+.right-header {
+  background-color: lightblue;
+  margin: 5px;
 }
 
 main {
+  background-color: $instagram-grey-fullscreen;
+}
 
+.feedItem-container {
+  margin: 10px;
+  padding: 3px;
 }
 
 .logout-button {
   background-color: red;
   cursor: pointer;
+  padding: 10px;
+  margin: 5px;
 }

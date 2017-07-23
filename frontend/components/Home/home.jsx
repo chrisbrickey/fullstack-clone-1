@@ -27,7 +27,8 @@ class Home extends React.Component {
     }
 
   cropPhoto(photoUrl) {
-    const cropText = "/upload/c_thumb,h_500,w_500/";
+    const cropText = "/upload/c_thumb,w_500/";
+    // const cropText = "/upload/c_thumb,h_500,w_500/";
     const photoUrlArray = photoUrl.split("/upload/");
     const croppedUrl = photoUrlArray[0] + cropText + photoUrlArray[1];
 
@@ -62,28 +63,34 @@ class Home extends React.Component {
     return (
       <div>rendering from home.jsx
 
-              <div className="header-container">
+          <section className="header-container">
+            <div className="navLinks-header">
 
-                <div className="navLinks-header">
-
-                    <div className="left-header">
-                        <p>header element 1</p>
-                        <p>header element 2</p>
-                        <p>header element 3</p>
-                    </div>
-                    <div className="mid-header">
-                        <p>header element 4</p>
-                    </div>
-                    <div className="right-header">
-                        <p>header element 5</p>
-                        <p>header element 6</p>
-                        <p>header element 7</p>
-                    </div>
-
+                <div className="left-header">
+                    <p>header element 1</p>
+                    <p>header element 2</p>
+                    <p>header element 3</p>
                 </div>
 
+                <div className="mid-header">
+                    <p>header element 4</p>
+                </div>
+                
+                <div className="right-header">
+                    <p>header element 5</p>
+                    <p>header element 6</p>
+                    <p>header element 7</p>
+                </div>
 
-              </div>
+            </div>
+          </section>
+
+          <section>
+              <button
+                  onClick={this.props.logoutDestroySession}
+                  className="logout-button">Logout
+              </button>
+          </section>
 
           <main className="photoFeed">
 
@@ -95,7 +102,6 @@ class Home extends React.Component {
 
 
           <footer>
-
               <ul className="navLinks">
                   <li>ABOUT US</li>
                   <li>SUPPORT</li>
@@ -110,11 +116,6 @@ class Home extends React.Component {
                   <li>{"      "}</li>
                   <li id="copyright"> &copy; 2017 INSTAGRAM</li>
               </ul>
-
-              <section>
-                  <button onClick={this.props.logoutDestroySession} className="logout-button">Logout</button>
-              </section>
-
           </footer>
 
       </div>
