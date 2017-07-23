@@ -14,14 +14,12 @@ export const receiveCurrentUser = currentUser => {
   console.log(currentUser);
   return({
       type: RECEIVE_CURRENT_USER,
-      currentUser: currentUser,  //shorthand for currentUser: currentUser
-      errors: []  //I added this to clear the errors at log in.  Is this ok to do?
+      currentUser: currentUser,
+      errors: []
     });
 };
 
-//errors from the controller are formatted like this:
-    // json: { errors: ["invalid username/password combination"] },
-    // status: 401
+
 export const receiveErrors = errors => {
   console.log("inside sync receiveErrors");
   console.log(errors);
@@ -69,5 +67,5 @@ export const logoutDestroySession = () => dispatch => {
   ajaxLogout()
     .then( () => (dispatch(receiveCurrentUser(null)))
   );
-  //NEED TO ADD call to clear ERRORS here
+
 };
