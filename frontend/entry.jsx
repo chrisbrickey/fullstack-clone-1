@@ -5,25 +5,45 @@ import ReactDOM from 'react-dom';
 import { Root } from './components/Root';
 import { configureStore } from './store/store';
 
-import { ajaxSignup, ajaxLogin, ajaxLogout } from './util/session_api_util';
-import { receiveCurrentUser,
-         receiveErrors,
-         signupCreateUser,
-         loginCreateSession,
-         logoutDestroySession } from './actions/session_actions';
+
+//auth development
+// import { ajaxSignup,
+//          ajaxLogin,
+//          ajaxLogout } from './util/session_api_util';
+//
+// import { receiveCurrentUser,
+//          receiveErrors,
+//          signupCreateUser,
+//          loginCreateSession,
+//          logoutDestroySession } from './actions/session_actions';
+
+
+//photo development
+import { ajaxFetchAllPhotos } from './util/photo_api_util';
+
+import { receiveAllPhotos,
+         receiveSinglePhoto,
+         fetchAllPhotos } from './actions/photo_actions';
 
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  window.ajaxSignup = ajaxSignup;
-  window.ajaxLogin = ajaxLogin;
-  window.ajaxLogout = ajaxLogout;
+  // window.ajaxSignup = ajaxSignup;
+  // window.ajaxLogin = ajaxLogin;
+  // window.ajaxLogout = ajaxLogout;
+  //
+  // window.receiveCurrentUser = receiveCurrentUser;
+  // window.receiveErrors = receiveErrors;
+  // window.signupCreateUser = signupCreateUser;
+  // window.loginCreateSession = loginCreateSession;
+  // window.logoutDestroySession = logoutDestroySession;
 
-  window.receiveCurrentUser = receiveCurrentUser;
-  window.receiveErrors = receiveErrors;
-  window.signupCreateUser = signupCreateUser;
-  window.loginCreateSession = loginCreateSession;
-  window.logoutDestroySession = logoutDestroySession;
+
+  window.ajaxFetchAllPhotos = ajaxFetchAllPhotos;
+
+  window.receiveAllPhotos = receiveAllPhotos;
+  window.receiveSinglePhoto = receiveSinglePhoto;
+  window.fetchAllPhotos = fetchAllPhotos;
 
 
   const store = configureStore();
