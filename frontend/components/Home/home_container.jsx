@@ -5,15 +5,17 @@ import { signupCreateUser ,
          logoutDestroySession,
          clearErrors } from '../../actions/session_actions';
 
+import { fetchAllPhotos } from '../../actions/photo_actions';
+
 import Home from './home';
 
 console.log("on the home_container.jsx");
 
-const mapStateToProps = ({ session }) => {
+const mapStateToProps = (state) => {
   return {
-    loggedIn: Boolean(session.currentUser),
-    currentUser: session.currentUser,
-    errors: session.errors
+    loggedIn: Boolean(state.session.currentUser),
+    currentUser: state.session.currentUser,
+    errors: state.session.errors
   };
 };
 //
