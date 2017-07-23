@@ -7,14 +7,14 @@ Rails.application.routes.draw do
   namespace :api, defaults: { format: :json } do
 
     resources :comments, only: %i[destroy], shallow: true do
-      resources :likes, only: %i[create destroy]
+      resource :like, only: %i[create destroy]
     end
 
     resources :follows, only: %i[destroy]
 
     resources :photos, only: %i[index show create update destroy], shallow: true do
       resources :comments, only: %i[create]
-      resources :likes, only: %i[create destroy]
+      resource :like, only: %i[create destroy]
     end
 
     resource :session, only: %i[create destroy]

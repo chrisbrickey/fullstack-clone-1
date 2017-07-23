@@ -38,7 +38,8 @@
 - `POST /api/photos/:photo_id/likes` - add a like to a photo
 - `POST /api/comments/:comment_id/likes` - add a like to a comment
 
-- `DELETE /api/likes` - remove a like from a photo
+- `DELETE /api/photos/:photo_id/likes` - remove a like from a photo
+- `DELETE /api/comments/:comment_id/likes` - remove a like from a comment
 
 
 ### Comments
