@@ -3,6 +3,7 @@ class Api::PhotosController < ApplicationController
 #adjust to be only the photos of people that the curent user is following
 def index
   @photos = Photo.all
+  # render "api/photos"
 end
 
 def show
@@ -10,10 +11,10 @@ def show
 end
 
 
-#commenting out current_user line for testing purposes
 def create
-  @photo = Photo.create!(photo_params)
-  # @photo.author_id = current_user.id
+  #use below for testing without auth
+  # @photo = Photo.create!(photo_params)
+  @photo.author_id = current_user.id
 
   if @photo.save
     render "api/photos/show"
@@ -26,10 +27,11 @@ def create
 
 end
 
-#replaced line 32 with line 31 for testing purposes
+
 def update
-  @photo = Photo.find(params[:id])
-  # @photo = current_user.photos.find(params[:id])
+  #use below for testing without auth
+  # @photo = Photo.find(params[:id])
+  @photo = current_user.photos.find(params[:id])
 
   #using update will return true/false depending on whether validations passed
   if @photo.update(photo_params)
@@ -43,10 +45,11 @@ def update
 
 end
 
-#replaced line 49 with line 48 for testing purposes
+
 def destroy
-  @photo = Photo.find(params[:id])
-  # @photo = current_user.photos.find(params[:id])
+  #use below for testing without auth
+  # @photo = Photo.find(params[:id])
+  @photo = current_user.photos.find(params[:id])
   @photo.destroy
   render "api/photos/show"
 end
