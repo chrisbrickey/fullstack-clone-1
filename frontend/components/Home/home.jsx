@@ -42,12 +42,19 @@ class Home extends React.Component {
 
     const photoFeedObject = this.props.photos.byId;
     let photoFeedArray = [];
-    let photoFeedItems = null;
+    let photoFeedList = null;
 
     if (photoFeedObject) {
       photoFeedArray = makeArray(photoFeedObject);
       console.log(photoFeedArray);
 
+      photoFeedList = photoFeedArray.map( (photoObject) => {
+        return (
+          <li key={photoObject.id} className="feedItem-container">
+            <img src={photoObject.photoUrl} alt="photo"/>
+          </li>
+        );
+      });
     }
 
 
@@ -59,7 +66,12 @@ class Home extends React.Component {
         </header>
 
         <main className="photoFeed">
+          
           <p>picture feed will go here</p>
+          <ul>
+            {photoFeedList}
+          </ul>
+
         </main>
 
 
