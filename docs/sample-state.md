@@ -61,7 +61,7 @@
       1: {
         id: 1,
         photoUrl: 'xx.png',
-        description: "xx",
+        caption: "xx",
         location: "xx",
         uploadDate: 'xx',
 
