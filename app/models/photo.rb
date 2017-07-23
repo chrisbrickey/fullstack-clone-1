@@ -4,5 +4,6 @@ class Photo < ApplicationRecord
   belongs_to :author
   has_many :likes, as: :likable
   has_many :comments
+
   
 end
