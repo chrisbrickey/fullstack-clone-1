@@ -27,7 +27,7 @@ class Home extends React.Component {
     }
 
   cropPhoto(photoUrl) {
-    const cropText = "/upload/c_thumb,w_500/";
+    const cropText = "/upload/c_thumb,w_600/";
     // const cropText = "/upload/c_thumb,h_500,w_500/";
     const photoUrlArray = photoUrl.split("/upload/");
     const croppedUrl = photoUrlArray[0] + cropText + photoUrlArray[1];
@@ -75,7 +75,7 @@ class Home extends React.Component {
                 <div className="mid-header">
                     <p>header element 4</p>
                 </div>
-                
+
                 <div className="right-header">
                     <p>header element 5</p>
                     <p>header element 6</p>
