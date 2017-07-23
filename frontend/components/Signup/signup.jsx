@@ -142,7 +142,7 @@ class Signup extends React.Component {
                                 <img
                                   src={'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500659742/InstagramLogo_kgliwu.png'}
                                   alt="Instagram Logo"
-                                  className="logo"/>
+                                  className="login-logo"/>
 
                                 {this.props.formType === ('signup') ? (
                                   <div className="copy-top" id="bold">
