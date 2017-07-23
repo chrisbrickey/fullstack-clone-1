@@ -18,7 +18,13 @@ class User < ApplicationRecord
 
   validates :password_digest, presence: true
 
-  has_many :photos
+  has_many :photos,
+    primary_key: :id,
+    foreign_key: :author_id,
+    class_name: "Photo"
+
+
+
   has_many :likes      #no route specified for this because the like is actually made onto a photo, comment, etc. (see polymorphic structure of Likes table)
   has_many :comments   #no route specified for this because the comment is actually made onto a photo, user_id foreign key creates association
   has_many :followers  #other users that are following this user
