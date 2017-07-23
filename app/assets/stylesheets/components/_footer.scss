@@ -6,6 +6,7 @@ footer {
   display: flex;
   flex-direction: column;
   font-weight: bold;
+  background-color: red;
 }
 
 .navLinks {
@@ -15,15 +16,17 @@ footer {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  background-color: orange;
 }
 
 .navLinks > li {
   font-size: 75%;
   font-weight: bold;
   margin: 5px;
-  width: 100%;
+  // width: 100%;
   white-space: nowrap;
   text-align: center;
+  background-color: yellow;
 }
 
 #copyright {
