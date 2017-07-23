@@ -29,17 +29,49 @@ $instagram-grey-fullscreen: #fdfdfd;
 
 .left-header {
   background-color: lightgreen;
-  margin: 5px;
+  margin: 5px 5px 5px 20px;
+  width: 200px;
+  display: flex;
+  flex-direction: rows;
+  justify-content: right;
+  align-items: center;
+}
+
+
+.camera-icon {
+    width: 35px;
+}
+
+.vertical-line {
+  width: 1px;
+  height: 35px;
+  background-color: $instagram-grey;
+  margin: 0px 15px 0px 15px;
+}
+
+.header-logo {
+  width: 110px;
+  padding: 5px;
 }
 
 .mid-header {
   background-color: pink;
-  margin: 5px;
+  margin: 5px 15px 5px 15px;
 }
 
 .right-header {
   background-color: lightblue;
-  margin: 5px;
+  margin: 5px 20px 5px 5px;
+  width: 200px;
+  display: flex;
+  flex-direction: rows;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.header-icon {
+  width: 37px;
+  margin: 0px 9px 0px 9px;
 }
 
 main {
@@ -55,9 +87,15 @@ main {
   padding: 3px;
 }
 
+.feedItem-container > img {
+  width: 600px;
+}
+
+
+
 .logout-button {
   background-color: red;
   cursor: pointer;
   padding: 10px;
-  margin: 5px;
+  margin: 10px;
 }

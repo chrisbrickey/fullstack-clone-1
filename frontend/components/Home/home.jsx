@@ -18,7 +18,7 @@ class Home extends React.Component {
     // };
 
     //this.anyMethod = this.anyMethod.bind(this);
-    this.cropPhoto = this.cropPhoto.bind(this);
+    // this.cropPhoto = this.cropPhoto.bind(this);
   }
 
 
@@ -26,14 +26,14 @@ class Home extends React.Component {
       this.props.fetchAllPhotos();
     }
 
-  cropPhoto(photoUrl) {
-    const cropText = "/upload/c_thumb,w_600/";
-    // const cropText = "/upload/c_thumb,h_500,w_500/";
-    const photoUrlArray = photoUrl.split("/upload/");
-    const croppedUrl = photoUrlArray[0] + cropText + photoUrlArray[1];
-
-    return croppedUrl;
-  }
+  // cropPhoto(photoUrl) {
+  //   const cropText = "/upload/c_thumb,w_600/";
+  //   // const cropText = "/upload/c_thumb,h_500,w_500/";
+  //   const photoUrlArray = photoUrl.split("/upload/");
+  //   const croppedUrl = photoUrlArray[0] + cropText + photoUrlArray[1];
+  //
+  //   return croppedUrl;
+  // }
 
 
   //remember that errors and other objects might be null so render conditionally
@@ -53,7 +53,10 @@ class Home extends React.Component {
                     <p>{photo.username}</p>
                     <p>{photo.caption}</p>
                     <p>{photo.uploadDate}</p>
-                    <img src={this.cropPhoto(photo.photoUrl)} alt="photo"/>
+                    <img
+                        src={photo.photoUrl}
+                        alt="photo"
+                    />
                 </li>
             );
         });
@@ -61,25 +64,50 @@ class Home extends React.Component {
 
 
     return (
-      <div>rendering from home.jsx
+      <div className="home-page-container">
 
           <section className="header-container">
             <div className="navLinks-header">
 
                 <div className="left-header">
-                    <p>header element 1</p>
-                    <p>header element 2</p>
-                    <p>header element 3</p>
+                    <img
+                        src={'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500614262/camera_jmhdl8.png'}
+                        alt="Instagram Camera Icon"
+                        className="camera-icon"
+                    />
+
+                    <div className="vertical-line"></div>
+
+                      <img
+                          src={'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500659742/InstagramLogo_kgliwu.png'}
+                          alt="Instagram Logo"
+                          className="header-logo"
+                      />
                 </div>
 
                 <div className="mid-header">
-                    <p>header element 4</p>
+                    <p>upload placeholder</p>
                 </div>
 
                 <div className="right-header">
-                    <p>header element 5</p>
-                    <p>header element 6</p>
-                    <p>header element 7</p>
+                    <img
+                        src={'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500614263/compass_chujqx.svg'}
+                        alt="user-icon"
+                        className="header-icon"
+                    />
+
+                    <img
+                        src={'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500614263/heart_sqbqyf.svg'}
+                        alt="user-icon"
+                        className="header-icon"
+                    />
+
+                    <img
+                        src={'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500614263/user_nu2dc8.svg'}
+                        alt="user-icon"
+                        className="header-icon"
+                    />
+
                 </div>
 
             </div>
@@ -92,12 +120,10 @@ class Home extends React.Component {
               </button>
           </section>
 
-          <main className="photoFeed">
-
-              <ul>
+          <main>
+              <ul className="photoFeed">
                   {photoFeedList}
               </ul>
-
           </main>
 
 
