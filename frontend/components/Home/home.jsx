@@ -79,11 +79,14 @@ class Home extends React.Component {
 
                     <div className="vertical-line"></div>
 
-                      <img
-                          src={'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500659742/InstagramLogo_kgliwu.png'}
-                          alt="Instagram Logo"
-                          className="header-logo"
-                      />
+                      <Link className="profile-link" to={`/`}>
+                          <img
+                              src={'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500659742/InstagramLogo_kgliwu.png'}
+                              alt="Instagram Logo"
+                              className="header-logo"
+                          />
+                      </Link>
+                      
                 </div>
 
 
