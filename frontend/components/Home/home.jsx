@@ -3,6 +3,7 @@ import { Link, withRouter } from 'react-router-dom';
 import merge from 'lodash/merge';
 
 import FooterXXX from '../Navigation/footer';
+import HeaderXXX from '../Navigation/header';
 
 
 console.log("on the home.jsx");
@@ -68,6 +69,8 @@ class Home extends React.Component {
 
     return (
       <div className="home-page-container">
+
+        <HeaderXXX userId={this.props.currentUser.id}/>
 
           <section className="header-container">
             <div className="navLinks-header">

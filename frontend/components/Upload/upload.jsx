@@ -3,6 +3,7 @@ import { Link, withRouter } from 'react-router-dom';
 import merge from 'lodash/merge';
 
 import FooterXXX from '../Navigation/footer';
+import HeaderXXX from '../Navigation/header';
 
 
 console.log("on the upload.jsx");
@@ -43,6 +44,8 @@ class Upload extends React.Component {
 
     return (
       <div className="profile-page-container">on the upload.jsx
+
+        <HeaderXXX userId={this.props.currentUser.id}/>
 
           <section className="header-container">
             <div className="navLinks-header">

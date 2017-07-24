@@ -4,6 +4,7 @@ import merge from 'lodash/merge';
 
 
 import FooterXXX from '../Navigation/footer';
+import HeaderXXX from '../Navigation/header';
 
 console.log("on the profile.jsx");
 
@@ -43,6 +44,8 @@ class Profile extends React.Component {
 
     return (
       <div className="profile-page-container">on the profile.jsx
+
+          <HeaderXXX userId={this.props.currentUser.id}/>
 
           <section className="header-container">
             <div className="navLinks-header">
