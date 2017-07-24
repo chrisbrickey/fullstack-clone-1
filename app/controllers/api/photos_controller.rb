@@ -1,18 +1,18 @@
 class Api::PhotosController < ApplicationController
 
-
+#add if else statement that pulls only photos for a certain user if [:author_id] is in the params
 def index
 
-  #add if else statement that pulls only photos for a certain user if [:id] is in the params
-
-  
-  #adjust to be only the photos of people that the curent user is following
-  @photos = Photo.all
-  # render "api/photos"
-
-
+  if params[:author_id]
+    @photos = User.find(params[:author_id]).photos
+  else
+    #adjust to be only the photos of people that the curent user is following
+    @photos = Photo.all
+    # render "api/photos"
+  end
 
 end
+
 
 def show
   @photo = Photo.find(params[:id])
