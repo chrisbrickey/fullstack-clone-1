@@ -42,6 +42,44 @@ class Profile extends React.Component {
   //remember that errors and other objects might be null so render conditionally
   render() {
 
+    console.log("in the render method of profile.jsx")
+
+    const photoFeedObject = this.props.photos.byId;
+    let userPhotoList = [];
+
+    if (photoFeedObject) {
+      // console.log("photoFeedObject exists b/c I'm in the if statement");
+
+        // userPhotoList = Object.keys(photoFeedObject).filter( (id) => {
+        //     let photo = photoFeedObject[id];
+        //     return photo;
+        // });
+        //
+        // console.log(userPhotoList);
+
+      Object.keys(photoFeedObject).forEach( (id) => {
+          let photo = photoFeedObject[id];
+
+          if (photo.userId === this.props.currentUser.id) {
+            userPhotoList.push(photo);
+          }
+
+      });
+
+    }
+
+    let photoListRender = userPhotoList.map((photo) => {
+      return (
+          <li key={photo.id} className="photoItem-container">
+              <img
+                  src={photo.photoUrl}
+                  alt="photo"
+              />
+          </li>
+      );
+    });
+
+
     return (
       <div className="profile-page-container">on the profile.jsx
 
@@ -55,8 +93,8 @@ class Profile extends React.Component {
           </section>
 
           <main>
-              <ul className="userFeed">
-                  {}
+              <ul className="userPhotoAlbum">
+                  {photoListRender}
               </ul>
           </main>
 
