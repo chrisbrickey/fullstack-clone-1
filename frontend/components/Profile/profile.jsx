@@ -42,42 +42,49 @@ class Profile extends React.Component {
   //remember that errors and other objects might be null so render conditionally
   render() {
 
-    console.log("in the render method of profile.jsx")
+    console.log("in the render method of profile.jsx");
 
     const photoFeedObject = this.props.photos.byId;
     let userPhotoList = [];
 
     if (photoFeedObject) {
-      // console.log("photoFeedObject exists b/c I'm in the if statement");
+        Object.keys(photoFeedObject).forEach( (id) => {
+            let photo = photoFeedObject[id];
 
-        // userPhotoList = Object.keys(photoFeedObject).filter( (id) => {
-        //     let photo = photoFeedObject[id];
-        //     return photo;
-        // });
-        //
-        // console.log(userPhotoList);
+            if (photo.userId === this.props.currentUser.id) {
+                userPhotoList.push(photo);
+            }
 
-      Object.keys(photoFeedObject).forEach( (id) => {
-          let photo = photoFeedObject[id];
-
-          if (photo.userId === this.props.currentUser.id) {
-            userPhotoList.push(photo);
-          }
-
-      });
+        });
 
     }
 
-    let photoListRender = userPhotoList.map((photo) => {
-      return (
-          <li key={photo.id} className="photoItem-container">
-              <img
-                  src={photo.photoUrl}
-                  alt="photo"
-              />
-          </li>
-      );
-    });
+    let photoListRender = null;
+
+    if (userPhotoList.length > 0) {
+        photoListRender = userPhotoList.map((photo) => {
+          return (
+              <li key={photo.id} className="photoItem-container">
+                  <img
+                      src={photo.photoUrl}
+                      alt="photo"
+                      className="userPhoto"/>
+              </li>
+          );
+        });
+
+    } else {
+        photoListRender = (
+            <li className="noPhoto-container">
+                <p>You don't have any photos. Upload some by clicking on</p>
+                <img
+                    src={'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500855174/001-cloud-computing_gjhr1n.png'}
+                    alt="upload icon"
+                    className="upload-icon-large"/>
+            </li>
+        );
+
+    }
 
 
     return (
