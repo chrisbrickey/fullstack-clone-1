@@ -15,6 +15,8 @@ import Signup from './Signup/signup';
 import SignupContainer from './Signup/signup_container';
 import Home from './Home/home';
 import HomeContainer from './Home/home_container';
+import Profile from './Profile/profile';
+import ProfileContainer from './Profile/profile_container';
 
 export const App = ({store}) => (
   <div>
@@ -23,6 +25,7 @@ export const App = ({store}) => (
         <AuthRoute path="/signup" component={SignupContainer} />
         <AuthRoute path="/login" component={SignupContainer} />
         <ProtectedRoute exact path="/" component={HomeContainer}/>
+        <ProtectedRoute path="/users" component={ProfileContainer}/>
       </Switch>
     </div>
   </div>
