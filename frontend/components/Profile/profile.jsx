@@ -127,9 +127,15 @@ class Profile extends React.Component {
 
 
           <section className="portfolio-container">
-              <ul className="portfolio">
-                  {photoListRender}
-              </ul>
+              <div className="portfolio-subcontainer">
+
+
+                  <ul className="portfolio">
+                      {photoListRender}
+                  </ul>
+
+
+              </div>
           </section>
 
 

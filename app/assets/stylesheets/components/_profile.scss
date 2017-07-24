@@ -87,11 +87,16 @@ $instagram-red: #f04752;
 
 
 .portfolio-container {
+  // background-color: blue;
   background-color: $instagram-grey-fullscreen;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   padding: 20px;
+  margin: 0px 100px 0px 100px;
+}
+
+.portofolio-subcontainer {
 }
 
 .portfolio {
