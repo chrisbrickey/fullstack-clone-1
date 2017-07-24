@@ -4,21 +4,24 @@ $instagram-white: #fff;
 $instagram-grey: #999;
 $instagram-light-grey: #e0e0e0;
 $instagram-grey-fullscreen: #fdfdfd;
+$instagram-header-icon: #4a4a4a;
 
 .header-container {
   min-width: 100vw;
-  height: 75px;
-  background-color: orange;
+  height: 65px;
+  background-color: $instagram-white;
   padding: 5px;
   display: flex;
   flex-direction: columns;
   justify-content: center;
   align-items: center;
-
+  border-width: 1px;
+  border-style: solid;
+  border-color: $instagram-light-grey;
 }
 
 .navLinks-header {
-  background-color: yellow;
+  // background-color: yellow;
   width: 100%;
   padding: 5px;
   display: flex;
@@ -28,7 +31,7 @@ $instagram-grey-fullscreen: #fdfdfd;
 }
 
 .left-header {
-  background-color: lightgreen;
+  // background-color: lightgreen;
   margin: 5px 5px 5px 20px;
   width: 200px;
   display: flex;
@@ -55,12 +58,16 @@ $instagram-grey-fullscreen: #fdfdfd;
 }
 
 .mid-header {
-  background-color: pink;
+  // background-color: pink;
   margin: 5px 15px 5px 15px;
 }
 
+.upload-icon {
+  width: 25px;
+}
+
 .right-header {
-  background-color: lightblue;
+  // background-color: lightblue;
   margin: 5px 20px 5px 5px;
   width: 200px;
   display: flex;

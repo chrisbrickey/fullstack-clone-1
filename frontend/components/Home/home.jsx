@@ -86,25 +86,29 @@ class Home extends React.Component {
                 </div>
 
                 <div className="mid-header">
-                    <p>upload placeholder</p>
+                    <img
+                        src={'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500855174/001-cloud-computing_gjhr1n.png'}
+                        alt="upload icon"
+                        className="upload-icon"
+                    />
                 </div>
 
                 <div className="right-header">
                     <img
                         src={'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500614263/compass_chujqx.svg'}
-                        alt="user-icon"
+                        alt="explore icon"
                         className="header-icon"
                     />
 
                     <img
                         src={'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500614263/heart_sqbqyf.svg'}
-                        alt="user-icon"
+                        alt="follows icon"
                         className="header-icon"
                     />
 
                     <img
                         src={'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500614263/user_nu2dc8.svg'}
-                        alt="user-icon"
+                        alt="user icon"
                         className="header-icon"
                     />
 
