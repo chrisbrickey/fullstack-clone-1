@@ -23,7 +23,7 @@ export const receiveSinglePhoto = photo => {
   return({
     type: RECEIVE_SINGLE_PHOTO,
     currentPhoto: photo.id,
-    byId: photo
+    byId: {[photo.id]: photo}
   });
 };
 
