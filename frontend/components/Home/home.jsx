@@ -45,6 +45,7 @@ class Home extends React.Component {
     let photoFeedList = null;
 
     if (photoFeedObject) {
+
         photoFeedList = Object.keys(photoFeedObject).map( (id) => {
             let photo = photoFeedObject[id];
 
@@ -106,11 +107,14 @@ class Home extends React.Component {
                         className="header-icon"
                     />
 
-                    <img
-                        src={'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500614263/user_nu2dc8.svg'}
-                        alt="user icon"
-                        className="header-icon"
-                    />
+                  <Link className="profile-link" to={`users/${this.props.currentUser.id}`}>
+                      <img
+                          src={'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500614263/user_nu2dc8.svg'}
+                          alt="user icon"
+                          className="header-icon"
+                      />
+                  </Link>
+
 
                 </div>
 
