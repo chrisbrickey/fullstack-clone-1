@@ -11,12 +11,12 @@ export const ajaxFetchAllPhotos = () => {
   );
 };
 
-// export const ajaxFetchAllPhotos = () => {
-//   console.log("in ajaxFetchAllPhotos");
-//   return(
-//     $.ajax({
-//       method: 'GET',
-//       url: '/api/photos'
-//     })
-//   );
-// };
+export const ajaxFetchSinglePhoto = (id) => {
+  console.log("in ajaxFetchSinglePhoto");
+  return(
+    $.ajax({
+      method: 'GET',
+      url: `/api/photos/${id}`
+    })
+  );
+};
