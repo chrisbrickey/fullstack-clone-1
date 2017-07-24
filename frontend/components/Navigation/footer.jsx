@@ -26,21 +26,12 @@ class FooterXXX extends React.Component {
       // this.props.fetchAllPhotos();
     }
 
-  // cropPhoto(photoUrl) {
-  //   const cropText = "/upload/c_thumb,w_600/";
-  //   // const cropText = "/upload/c_thumb,h_500,w_500/";
-  //   const photoUrlArray = photoUrl.split("/upload/");
-  //   const croppedUrl = photoUrlArray[0] + cropText + photoUrlArray[1];
-  //
-  //   return croppedUrl;
-  // }
-
 
   //remember that errors and other objects might be null so render conditionally
   render() {
 
     return (
-      <div className="footer-container">on the footer.jsx
+      <div className="footer-container">
 
           <section className="footer-section">
               <footer>
