@@ -23,11 +23,12 @@ class Upload extends React.Component {
 
     //this.anyMethod = this.anyMethod.bind(this);
     // this.cropPhoto = this.cropPhoto.bind(this);
+    this.postPhoto = this.postPhoto.bind(this);
   }
 
 
   componentDidMount() {
-      // this.props.fetchAllPhotos();
+      this.props.fetchAllPhotos();
     }
 
   // cropPhoto(photoUrl) {
@@ -39,6 +40,27 @@ class Upload extends React.Component {
   //   return croppedUrl;
   // }
 
+  //receives photoUrl as argument and adds photo to db on backend AND shows this photo on the front end (so user an edit)
+  postPhoto(photoUrl) {
+    console.log("inside postPhoto on upload.jsx");
+    let newPhoto = {photo_url: photoUrl, author_id: this.props.currentUser.id};
+    console.log(newPhoto);
+
+    //move this ajax call to util folder and trigger action to carry out the success function
+    $.ajax({
+      method: 'POST',
+      url: '/api/photos',
+      //not sure if 'photo' is the right key to use, or if it matters
+      data: {photo: newPhoto},
+      //adds newPhoto to front end AFTER it comes back from backend, couldn't I just call fetchAllPhotos here??
+      // success: ((newPhotoFromBackend) => {
+      //   var photos = this.state.photos.byId;
+      //   photos.newPhotoFromBackend.id = newPhotoFromBackend;
+      //   photos.currentPhoto = newPhotoFromBackend.id;
+      //   this.setState({photos: photos});
+      // })
+    });
+  }
 
   //remember that errors and other objects might be null so render conditionally
   render() {
@@ -57,7 +79,7 @@ class Upload extends React.Component {
 
 
           <section>
-            <UploadButton/>
+            <UploadButton postPhoto={this.postPhoto}/>
           </section>
 
           <main>

@@ -36,15 +36,24 @@ class UploadButton extends React.Component {
   // }
 
   upload(event) {
+    console.log("inside upload fxn on uploadButton.jsx");
     event.preventDefault();
 
     //calling this method with 2 arguments: the options we configured and the success callback
     cloudinary.openUploadWidget(
         window.cloudinary_options,
+        //the method returns the following 2 arguments:
         ((error, images) => {
+            //if error argument is null, upload was successful
             if (error === null) {
-              //upload successful
-              //need to post to rails here
+              //post the newPhoto to backend; Uploaded photos are an array...
+              //...if we only let user upload one, it will be the first element of the array;
+              //url is the key for it's actual url on cloudinary
+              console.log("there were no errors during upload");
+              console.log(images[0].url);
+              console.log(typeof images[0].url);
+
+              this.props.postPhoto(images[0].url);
             } else {
               //currently not doing anything if upload does not succeed
             }
