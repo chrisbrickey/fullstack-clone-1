@@ -1,8 +1,6 @@
 import { connect } from 'react-redux';
 
-import { signupCreateUser ,
-         loginCreateSession,
-         logoutDestroySession,
+import { logoutDestroySession,
          clearErrors } from '../../actions/session_actions';
 
 import { fetchAllPhotos } from '../../actions/photo_actions';
@@ -22,13 +20,8 @@ const mapStateToProps = (state) => {
 //
 //remember to send clear errors down to the presentational components
 const mapDispatchToProps = (dispatch, { location }) => {
-  // const formType = location.pathname.slice(1);
-  // const processForm = (formType === 'login') ? loginCreateSession : signupCreateUser;
 
   return {
-    // processForm: user => dispatch(processForm(user)),
-    // formType,
-    // loginCreateSession: (user) => dispatch(loginCreateSession(user)),
     fetchAllPhotos: () => dispatch(fetchAllPhotos()),
     logoutDestroySession: () => dispatch(logoutDestroySession()),
     clearErrors: () => dispatch(clearErrors())
