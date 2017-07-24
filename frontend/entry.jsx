@@ -29,7 +29,9 @@ import {ajaxFetchAllUsers,
 import { receiveAllPhotos,
          receiveSinglePhoto,
          fetchAllPhotos,
-         fetchSinglePhoto } from './actions/photo_actions';
+         fetchSinglePhoto,
+         createPhoto,
+         updatePhoto} from './actions/photo_actions';
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -52,9 +54,12 @@ document.addEventListener('DOMContentLoaded', () => {
   window.receiveSinglePhoto = receiveSinglePhoto;
   window.fetchAllPhotos = fetchAllPhotos;
   window.fetchSinglePhoto = fetchSinglePhoto;
+  window.createPhoto = createPhoto;
+  window.updatePhoto = updatePhoto;
 
   window.ajaxFetchAllUsers = ajaxFetchAllUsers;
   window.ajaxFetchSingleUser = ajaxFetchSingleUser;
+
 
   let store;
   if (window.currentUser) {
