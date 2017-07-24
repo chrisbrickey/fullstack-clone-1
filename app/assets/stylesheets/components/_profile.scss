@@ -108,18 +108,23 @@ $instagram-red: #f04752;
 }
 
 .noPhoto-container {
-  background-color: orange;
+  // background-color: orange;
   display: flex;
+  flex-direction: rows;
   justify-content: center;
   align-items: left;
-  flex-direction: rows;
-  min-height: 900px;
+  min-height: 800px;
+  padding: 10px;
 }
 
+
+.noPhoto-container > p {
+  font-size: 150%;
+}
 .space {
-  width: 10px;
+  width: 20px;
 }
 
 .noPhoto-container > img {
-  width: 50px;
+  width: 35px;
 }
