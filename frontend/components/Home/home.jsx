@@ -70,13 +70,6 @@ class Home extends React.Component {
 
           <HeaderXXX userId={this.props.currentUser.id}/>
 
-          <section>
-              <button
-                  onClick={this.props.logoutDestroySession}
-                  className="logout-button">Logout
-              </button>
-          </section>
-
           <main>
               <ul className="photoFeed">
                   {photoFeedList}
