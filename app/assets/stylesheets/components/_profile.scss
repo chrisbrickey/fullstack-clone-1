@@ -70,10 +70,18 @@ $instagram-red: #f04752;
 }
 
 .logout-button {
-  background-color: $instagram-red;
-  cursor: pointer;
   padding: 10px;
   margin: 5px 50px 5px 50px;
+  border-width: 0px;
+  transition: background-color 0.5s ease;
+  background-color: $instagram-blue-background;
+  font-weight: 600;
+  font-size: 120%;
+  line-height: 15px;
+  border-radius: 3px;
+  margin-bottom: 0px;
+  color: $instagram-white;
+  cursor:pointer;
 }
 
 .tagline {
