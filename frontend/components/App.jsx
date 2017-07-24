@@ -17,6 +17,8 @@ import Home from './Home/home';
 import HomeContainer from './Home/home_container';
 import Profile from './Profile/profile';
 import ProfileContainer from './Profile/profile_container';
+import Upload from './Upload/upload';
+import UploadContainer from './Upload/upload_container';
 
 export const App = ({store}) => (
   <div>
@@ -25,6 +27,7 @@ export const App = ({store}) => (
         <AuthRoute path="/signup" component={SignupContainer} />
         <AuthRoute path="/login" component={SignupContainer} />
         <ProtectedRoute exact path="/" component={HomeContainer}/>
+        <ProtectedRoute exact path="/upload" component={UploadContainer}/>
         <ProtectedRoute path="/users" component={ProfileContainer}/>
       </Switch>
     </div>
