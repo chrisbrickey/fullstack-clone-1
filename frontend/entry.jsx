@@ -62,8 +62,6 @@ document.addEventListener('DOMContentLoaded', () => {
     store = configureStore();
   }
 
-
-  // const store = configureStore();
   window.getState = store.getState;
   window.dispatch = store.dispatch;
 
