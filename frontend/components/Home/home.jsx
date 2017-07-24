@@ -86,13 +86,19 @@ class Home extends React.Component {
                       />
                 </div>
 
+
+
                 <div className="mid-header">
-                    <img
-                        src={'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500855174/001-cloud-computing_gjhr1n.png'}
-                        alt="upload icon"
-                        className="upload-icon"
-                    />
+                    <Link className="profile-link" to="/upload">
+                        <img
+                            src={'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500855174/001-cloud-computing_gjhr1n.png'}
+                            alt="upload icon"
+                            className="upload-icon"
+                        />
+                    </Link>
                 </div>
+
+
 
                 <div className="right-header">
                     <img
