@@ -33,3 +33,15 @@ export const ajaxCreatePhoto = (data) => {
     })
   );
 };
+
+
+export const ajaxUpdatePhoto = (photo) => {
+  console.log("in ajaxUpdatePhoto");
+  return(
+    $.ajax({
+      method: 'PATCH',
+      url: `/api/photos/${photo.id}`,
+      photo
+    })
+  );
+};
