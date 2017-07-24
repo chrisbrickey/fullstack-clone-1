@@ -45,70 +45,7 @@ class Upload extends React.Component {
     return (
       <div className="profile-page-container">on the upload.jsx
 
-        <HeaderXXX userId={this.props.currentUser.id}/>
-
-          <section className="header-container">
-            <div className="navLinks-header">
-
-                <div className="left-header">
-                    <img
-                        src={'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500614262/camera_jmhdl8.png'}
-                        alt="Instagram Camera Icon"
-                        className="camera-icon"
-                    />
-
-                    <div className="vertical-line"></div>
-
-                      <Link className="profile-link" to={`/`}>
-                          <img
-                              src={'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500659742/InstagramLogo_kgliwu.png'}
-                              alt="Instagram Logo"
-                              className="header-logo"
-                          />
-                      </Link>
-
-                </div>
-
-
-
-                <div className="mid-header">
-                    <Link className="profile-link" to="/upload">
-                        <img
-                            src={'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500855174/001-cloud-computing_gjhr1n.png'}
-                            alt="upload icon"
-                            className="upload-icon"
-                        />
-                    </Link>
-                </div>
-
-
-
-                <div className="right-header">
-                    <img
-                        src={'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500614263/compass_chujqx.svg'}
-                        alt="explore icon"
-                        className="header-icon"
-                    />
-
-                    <img
-                        src={'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500614263/heart_sqbqyf.svg'}
-                        alt="follows icon"
-                        className="header-icon"
-                    />
-
-                  <Link className="profile-link" to={`users/${this.props.currentUser.id}`}>
-                      <img
-                          src={'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500614263/user_nu2dc8.svg'}
-                          alt="user icon"
-                          className="header-icon"
-                      />
-                  </Link>
-
-
-                </div>
-
-            </div>
-          </section>
+          <HeaderXXX userId={this.props.currentUser.id}/>
 
           <section>
               <button

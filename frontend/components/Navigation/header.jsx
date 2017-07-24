@@ -3,7 +3,7 @@ import { Link, withRouter } from 'react-router-dom';
 import merge from 'lodash/merge';
 
 
-console.log("on the footer.jsx");
+console.log("on the header.jsx");
 
 class HeaderXXX extends React.Component {
   constructor(props) {
@@ -18,7 +18,6 @@ class HeaderXXX extends React.Component {
     // };
 
     //this.anyMethod = this.anyMethod.bind(this);
-    // this.cropPhoto = this.cropPhoto.bind(this);
   }
 
 
@@ -33,7 +32,8 @@ class HeaderXXX extends React.Component {
     console.log(this.props);
 
     return (
-      <section className="header-container">on the refactored header
+
+      <section className="header-container">
         <div className="navLinks-header">
 
             <div className="left-header">
@@ -95,10 +95,7 @@ class HeaderXXX extends React.Component {
 
         </div>
       </section>
-
-
     );
-
 
   }
 
