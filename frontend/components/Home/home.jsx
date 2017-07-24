@@ -42,8 +42,6 @@ class Home extends React.Component {
   //remember that errors and other objects might be null so render conditionally
   render() {
 
-    // console.log(this.props.loggedIn);
-    // console.log(this.props.photos);
     const photoFeedObject = this.props.photos.byId;
     let photoFeedList = null;
 
@@ -84,7 +82,6 @@ class Home extends React.Component {
                   {photoFeedList}
               </ul>
           </main>
-
 
           <FooterXXX/>
 
