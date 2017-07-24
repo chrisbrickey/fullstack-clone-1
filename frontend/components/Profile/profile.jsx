@@ -3,6 +3,9 @@ import { Link, withRouter } from 'react-router-dom';
 import merge from 'lodash/merge';
 
 
+import Footer from '../Navigation/footer';
+
+
 console.log("on the profile.jsx");
 
 class Profile extends React.Component {
@@ -136,6 +139,8 @@ class Profile extends React.Component {
               </ul>
           </footer>
           </section>
+
+          <Footer/>
 
       </div>
     );
