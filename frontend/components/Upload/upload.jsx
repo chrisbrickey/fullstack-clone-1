@@ -4,6 +4,7 @@ import merge from 'lodash/merge';
 
 import FooterXXX from '../Navigation/footer';
 import HeaderXXX from '../Navigation/header';
+import UploadButton from './uploadButton';
 
 
 console.log("on the upload.jsx");
@@ -54,8 +55,13 @@ class Upload extends React.Component {
               </button>
           </section>
 
+
+          <section>
+            <UploadButton/>
+          </section>
+
           <main>
-              <ul className="userFeed">
+              <ul className="whatevs">
                   {}
               </ul>
           </main>
