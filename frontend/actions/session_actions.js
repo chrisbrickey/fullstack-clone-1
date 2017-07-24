@@ -11,7 +11,7 @@ export const CLEAR_ERRORS = 'CLEAR_ERRORS';
 
 export const receiveCurrentUser = currentUser => {
   console.log("inside sync receiveCurrentUser");
-  console.log(currentUser);
+  // console.log(currentUser);
   return({
       type: RECEIVE_CURRENT_USER,
       currentUser: currentUser,
@@ -22,7 +22,7 @@ export const receiveCurrentUser = currentUser => {
 
 export const receiveErrors = errors => {
   console.log("inside sync receiveErrors");
-  console.log(errors);
+  // console.log(errors);
   return ({
     type: RECEIVE_ERRORS,
     errors

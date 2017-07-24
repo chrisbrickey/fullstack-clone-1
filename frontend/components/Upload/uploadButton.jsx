@@ -49,9 +49,9 @@ class UploadButton extends React.Component {
               //post the newPhoto to backend; Uploaded photos are an array...
               //...if we only let user upload one, it will be the first element of the array;
               //url is the key for it's actual url on cloudinary
-              console.log("there were no errors during upload");
-              console.log(images[0].url);
-              console.log(typeof images[0].url);
+              // console.log("there were no errors during upload");
+              // console.log(images[0].url);
+              // console.log(typeof images[0].url);
 
               this.props.postPhoto(images[0].url);
             } else {

@@ -45,13 +45,13 @@ class Upload extends React.Component {
     console.log("inside postPhoto on upload.jsx");
     let newPhoto = {photo_url: photoUrl};
     console.log(newPhoto);
+    this.props.createPhoto({photo: newPhoto});
 
-    //move this ajax call to util folder and trigger action to carry out the success function
-    $.ajax({
-      method: 'POST',
-      url: '/api/photos',
-      //not sure if 'photo' is the right key to use, or if it matters
-      data: {photo: newPhoto}
+    //replacing this ajax with asynchronous call above which includes ajax call
+    // $.ajax({
+    //   method: 'POST',
+    //   url: '/api/photos',
+    //   data: {photo: newPhoto}
 
       //below adds newPhoto to frontend AFTER it comes back from backend, but app already does this via fetchAllPhotos
       // success: ((newPhotoFromBackend) => {
@@ -60,11 +60,13 @@ class Upload extends React.Component {
       //   photos.currentPhoto = newPhotoFromBackend.id;
       //   this.setState({photos: photos});
       // })
-    });
+    // });
   }
 
   //remember that errors and other objects might be null so render conditionally
   render() {
+
+    console.log("rendering on upload.jsx");
 
     return (
       <div className="profile-page-container">on the upload.jsx
@@ -79,7 +81,7 @@ class Upload extends React.Component {
           </section>
 
 
-          <section>
+          <section className="cloudinary-container">
             <UploadButton postPhoto={this.postPhoto}/>
           </section>
 

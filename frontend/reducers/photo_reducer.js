@@ -15,14 +15,22 @@ export const photoReducer = (state = defaultState, action) => {
   switch(action.type) {
 
     case RECEIVE_ALL_PHOTOS:
-    console.log("inside reducer at RECEIVE_ALL_PHOTOS");
+        console.log("inside reducer at RECEIVE_ALL_PHOTOS");
 
-    return merge({}, state, {
-      byId: action.byId
-    });
+        return merge({}, state, {
+          byId: action.byId
+        });
+
+    case RECEIVE_SINGLE_PHOTO:
+        console.log("inside reducer at RECEIVE_SINGLE_PHOTO");
+
+        return merge({}, state, {
+          currentPhoto: action.currentPhoto,
+          byId: action.byId
+        });
 
     default:
-      return state;
+        return state;
 
   }
 };

@@ -1,5 +1,6 @@
 import { ajaxFetchAllPhotos,
-         ajaxFetchSinglePhoto } from "../util/photo_api_util";
+         ajaxFetchSinglePhoto,
+         ajaxCreatePhoto } from "../util/photo_api_util";
 
 export const RECEIVE_ALL_PHOTOS = 'RECEIVE_ALL_PHOTOS';
 export const RECEIVE_SINGLE_PHOTO = 'RECEIVE_SINGLE_PHOTO';
@@ -21,7 +22,8 @@ export const receiveSinglePhoto = photo => {
   console.log(photo);
   return({
     type: RECEIVE_SINGLE_PHOTO,
-    photo: photo
+    currentPhoto: photo.id,
+    byId: photo
   });
 };
 
@@ -38,10 +40,19 @@ export const fetchAllPhotos = () => dispatch => {
 };
 
 
-export const fetchSinglePhoto = () => dispatch => {
-  console.log("in async fetchSinglePhotos");
+export const fetchSinglePhoto = (id) => dispatch => {
+  console.log("in async fetchSinglePhoto");
 
-  return ajaxFetchSinglePhoto()
+  return ajaxFetchSinglePhoto(id)
+    .then( returnedPhoto => (dispatch(receiveSinglePhoto(returnedPhoto)))
+  );
+};
+
+
+export const createPhoto = (data) => dispatch => {
+  console.log("in async createPhoto");
+
+  return ajaxCreatePhoto(data)
     .then( returnedPhoto => (dispatch(receiveSinglePhoto(returnedPhoto)))
   );
 };
