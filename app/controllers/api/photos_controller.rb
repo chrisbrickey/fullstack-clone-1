@@ -1,9 +1,17 @@
 class Api::PhotosController < ApplicationController
 
-#adjust to be only the photos of people that the curent user is following
+
 def index
+
+  #add if else statement that pulls only photos for a certain user if [:id] is in the params
+
+  
+  #adjust to be only the photos of people that the curent user is following
   @photos = Photo.all
   # render "api/photos"
+
+
+
 end
 
 def show
