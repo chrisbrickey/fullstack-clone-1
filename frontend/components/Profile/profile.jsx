@@ -27,6 +27,7 @@ class Profile extends React.Component {
 
   componentDidMount() {
       // this.props.fetchAllPhotos();
+      //BUT...fetch only this users photo
     }
 
   // cropPhoto(photoUrl) {
