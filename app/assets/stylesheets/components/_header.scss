@@ -1,0 +1,82 @@
+$instagram-blue-background: #3897f0;
+$instagram-blue-border: #3897f0;
+$instagram-white: #fff;
+$instagram-grey: #999;
+$instagram-light-grey: #e0e0e0;
+$instagram-grey-fullscreen: #fdfdfd;
+$instagram-header-icon: #4a4a4a;
+$instagram-red: #f04752;
+
+.header-container {
+  min-width: 100vw;
+  height: 65px;
+  background-color: $instagram-white;
+  padding: 5px;
+  display: flex;
+  flex-direction: columns;
+  justify-content: center;
+  align-items: center;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $instagram-light-grey;
+}
+
+.navLinks-header {
+  // background-color: yellow;
+  min-width: 75%;
+  padding: 5px;
+  display: flex;
+  flex-direction: rows;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left-header {
+  // background-color: lightgreen;
+  margin: 5px 5px 5px 20px;
+  width: 200px;
+  display: flex;
+  flex-direction: rows;
+  justify-content: right;
+  align-items: center;
+}
+
+.camera-icon {
+    width: 35px;
+}
+
+.vertical-line {
+  width: 1px;
+  height: 35px;
+  background-color: $instagram-grey;
+  margin: 0px 15px 0px 15px;
+}
+
+.header-logo {
+  width: 110px;
+  padding: 5px;
+}
+
+.mid-header {
+  // background-color: pink;
+  margin: 5px 15px 5px 15px;
+}
+
+.upload-icon {
+  width: 25px;
+}
+
+.right-header {
+  // background-color: lightblue;
+  margin: 5px 20px 5px 5px;
+  width: 200px;
+  display: flex;
+  flex-direction: rows;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.header-icon {
+  width: 37px;
+  margin: 0px 9px 0px 9px;
+}
