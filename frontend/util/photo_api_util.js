@@ -11,6 +11,14 @@ export const ajaxFetchAllPhotos = () => {
   );
 };
 
+export const ajaxCreatePhoto = (data) => (
+  $.ajax({
+    method: 'POST',
+    url: 'api/photos',
+    data
+  })
+);
+
 export const ajaxFetchSinglePhoto = (id) => {
   console.log("in ajaxFetchSinglePhoto");
   return(

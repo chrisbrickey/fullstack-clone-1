@@ -20,6 +20,7 @@ import { configureStore } from './store/store';
 
 //photo development
 import { ajaxFetchAllPhotos,
+         ajaxCreatePhoto,
          ajaxFetchSinglePhoto } from './util/photo_api_util';
 
 import {ajaxFetchAllUsers,
@@ -27,7 +28,8 @@ import {ajaxFetchAllUsers,
 
 import { receiveAllPhotos,
          receiveSinglePhoto,
-         fetchAllPhotos } from './actions/photo_actions';
+         fetchAllPhotos,
+         fetchSinglePhoto } from './actions/photo_actions';
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -49,6 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.receiveAllPhotos = receiveAllPhotos;
   window.receiveSinglePhoto = receiveSinglePhoto;
   window.fetchAllPhotos = fetchAllPhotos;
+  window.fetchSinglePhoto = fetchSinglePhoto;
 
   window.ajaxFetchAllUsers = ajaxFetchAllUsers;
   window.ajaxFetchSingleUser = ajaxFetchSingleUser;
