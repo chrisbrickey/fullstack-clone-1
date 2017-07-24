@@ -7,6 +7,11 @@ $instagram-grey-fullscreen: #fdfdfd;
 $instagram-header-icon: #4a4a4a;
 $instagram-red: #f04752;
 
+.profile-page-container{
+  max-height: 100vh;
+  max-width: 100vw;
+}
+
 
 .bio-container {
   background-color: blue;
@@ -126,7 +131,7 @@ $instagram-red: #f04752;
   flex-direction: rows;
   justify-content: center;
   align-items: left;
-  min-height: 800px;
+  min-height: 600px;
   padding: 10px;
 }
 
