@@ -77,7 +77,8 @@ class Profile extends React.Component {
         photoListRender = (
             <li className="noPhoto-container">
                 <p>You don't have any photos. Upload some by clicking on</p>
-                <img
+              <div className="space"></div>
+              <img
                     src={'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500855174/001-cloud-computing_gjhr1n.png'}
                     alt="upload icon"
                     className="upload-icon-large"/>
@@ -86,24 +87,50 @@ class Profile extends React.Component {
 
     }
 
-
+    //replace link to profile pic and tagline so pulls dynamically based on user
     return (
-      <div className="profile-page-container">on the profile.jsx
+      <div className="profile-page-container">
 
           <HeaderXXX userId={this.props.currentUser.id}/>
 
-          <section>
-              <button
-                  onClick={this.props.logoutDestroySession}
-                  className="logout-button">Logout
-              </button>
+
+          <section className="bio-container">
+              <div className="bio-subcontainer">
+
+                  <div className="pic-container">
+                      <img
+                          src="https://res.cloudinary.com/dckkkjkuz/image/upload/v1500775805/headshot_crop2_owq402.jpg"
+                          alt="photo"
+                          className="profilePhoto"/>
+                  </div>
+
+                  <div className="bio-sub-sub">
+                      <div className="userAttributes">
+
+                          <div className="whichUser">
+                              <p className="username">{this.props.currentUser.username}</p>
+
+                              <button
+                                  onClick={this.props.logoutDestroySession}
+                                  className="logout-button">
+                                  Logout
+                              </button>
+                          </div>
+
+
+                          <p className="tagline">always be dancing</p>
+                      </div>
+                  </div>
+
+              </div>
           </section>
 
-          <main>
-              <ul className="userPhotoAlbum">
+
+          <section className="portfolio-container">
+              <ul className="portfolio">
                   {photoListRender}
               </ul>
-          </main>
+          </section>
 
 
           <FooterXXX/>
