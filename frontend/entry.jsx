@@ -53,8 +53,17 @@ document.addEventListener('DOMContentLoaded', () => {
   window.ajaxFetchAllUsers = ajaxFetchAllUsers;
   window.ajaxFetchSingleUser = ajaxFetchSingleUser;
 
+  let store;
+  if (window.currentUser) {
+    const preloadedState = { session: { currentUser: window.currentUser } };
+    store = configureStore(preloadedState);
+    delete window.currentUser;
+  } else {
+    store = configureStore();
+  }
 
-  const store = configureStore();
+
+  // const store = configureStore();
   window.getState = store.getState;
   window.dispatch = store.dispatch;
 
