@@ -29,7 +29,7 @@ class HeaderXXX extends React.Component {
   //remember that errors and other objects might be null so render conditionally
   render() {
 
-    console.log(this.props);
+    // console.log(this.props);
 
     return (
 
