@@ -12,16 +12,16 @@ Photo.destroy_all
 
 #will rollback all seeds if any issues; create! fails loudly so can get more information on errors
 ActiveRecord::Base.transaction do
-  demo1 = User.create!(name: 'Chris', username: 'chrisbrickey1', password: '123456', profile_img_url: "https://res.cloudinary.com/dckkkjkuz/image/upload/v1500775805/headshot_crop2_owq402.jpg", tagline: 'always be dancing')
-  demo2 = User.create!(name: 'Chris', username: 'chrisbrickey2', password: '123456', profile_img_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500775805/headshot_crop2_owq402.jpg', tagline: 'always be dancing')
-  demo3 = User.create!(name: 'Chris', username: 'chrisbrickey3', password: '123456', profile_img_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500775805/headshot_crop2_owq402.jpg', tagline: 'always be dancing')
-  demo4 = User.create!(name: 'Chris', username: 'chrisbrickey4', password: '123456', profile_img_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500775805/headshot_crop2_owq402.jpg', tagline: 'always be dancing')
-  demo5 = User.create!(name: 'Chris', username: 'chrisbrickey5', password: '123456', profile_img_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500775805/headshot_crop2_owq402.jpg', tagline: 'always be dancing')
-  demo6 = User.create!(name: 'Chris', username: 'chrisbrickey6', password: '123456', profile_img_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500775805/headshot_crop2_owq402.jpg', tagline: 'always be dancing')
-  demo7 = User.create!(name: 'Chris', username: 'chrisbrickey7', password: '123456', profile_img_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500775805/headshot_crop2_owq402.jpg', tagline: 'always be dancing')
-  demo8 = User.create!(name: 'Chris', username: 'chrisbrickey8', password: '123456', profile_img_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500775805/headshot_crop2_owq402.jpg', tagline: 'always be dancing')
-  demo9 = User.create!(name: 'Chris', username: 'chrisbrickey9', password: '123456', profile_img_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500775805/headshot_crop2_owq402.jpg', tagline: 'always be dancing')
-  demo10 = User.create!(name: 'Chris', username: 'chrisbrickey10', password: '123456', profile_img_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500775805/headshot_crop2_owq402.jpg', tagline: 'always be dancing')
+  demo1 = User.create!(name: 'Chris', username: 'chri5brickey1', password: '123456', profile_img_url: "https://res.cloudinary.com/dckkkjkuz/image/upload/v1500775805/headshot_crop2_owq402.jpg", tagline: 'always be dancing')
+  demo2 = User.create!(name: 'Chris', username: 'chri5brickey2', password: '123456', profile_img_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500775805/headshot_crop2_owq402.jpg', tagline: 'always be dancing')
+  demo3 = User.create!(name: 'Chris', username: 'chri5brickey3', password: '123456', profile_img_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500775805/headshot_crop2_owq402.jpg', tagline: 'always be dancing')
+  demo4 = User.create!(name: 'Chris', username: 'chri5brickey4', password: '123456', profile_img_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500775805/headshot_crop2_owq402.jpg', tagline: 'always be dancing')
+  demo5 = User.create!(name: 'Chris', username: 'chri5brickey5', password: '123456', profile_img_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500775805/headshot_crop2_owq402.jpg', tagline: 'always be dancing')
+  demo6 = User.create!(name: 'Chris', username: 'chri5brickey6', password: '123456', profile_img_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500775805/headshot_crop2_owq402.jpg', tagline: 'always be dancing')
+  demo7 = User.create!(name: 'Chris', username: 'chri5brickey7', password: '123456', profile_img_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500775805/headshot_crop2_owq402.jpg', tagline: 'always be dancing')
+  demo8 = User.create!(name: 'Chris', username: 'chri5brickey8', password: '123456', profile_img_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500775805/headshot_crop2_owq402.jpg', tagline: 'always be dancing')
+  demo9 = User.create!(name: 'Chris', username: 'chri5brickey9', password: '123456', profile_img_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500775805/headshot_crop2_owq402.jpg', tagline: 'always be dancing')
+  demo10 = User.create!(name: 'Chris', username: 'chri5brickey10', password: '123456', profile_img_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500775805/headshot_crop2_owq402.jpg', tagline: 'always be dancing')
 
   otheruser1 = User.create!(name: 'Alice Chen', username: 'alice_chen', password: '123456')
   otheruser2 = User.create!(name: 'Arvind Ravi', username: 'arvind', password: '123456')
