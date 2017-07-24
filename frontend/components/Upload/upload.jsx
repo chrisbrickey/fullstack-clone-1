@@ -43,7 +43,7 @@ class Upload extends React.Component {
   //receives photoUrl as argument and adds photo to db on backend AND shows this photo on the front end (so user an edit)
   postPhoto(photoUrl) {
     console.log("inside postPhoto on upload.jsx");
-    let newPhoto = {photo_url: photoUrl, author_id: this.props.currentUser.id};
+    let newPhoto = {photo_url: photoUrl};
     console.log(newPhoto);
 
     //move this ajax call to util folder and trigger action to carry out the success function
