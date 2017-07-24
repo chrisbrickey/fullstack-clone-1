@@ -37,11 +37,13 @@ export const ajaxCreatePhoto = (data) => {
 
 export const ajaxUpdatePhoto = (photo) => {
   console.log("in ajaxUpdatePhoto");
+  console.log(photo);
+  console.log(photo.id);
   return(
     $.ajax({
       method: 'PATCH',
       url: `/api/photos/${photo.id}`,
-      photo
+      data: { photo }
     })
   );
 };

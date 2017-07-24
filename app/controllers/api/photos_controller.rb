@@ -35,6 +35,7 @@ end
 
 
 def update
+  debugger
   #use below for testing without auth
   # @photo = Photo.find(params[:id])
   @photo = current_user.photos.find(params[:id])
