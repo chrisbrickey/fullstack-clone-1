@@ -1,6 +1,5 @@
 class Api::PhotosController < ApplicationController
 
-#add if else statement that pulls only photos for a certain user if [:author_id] is in the params
 def index
 
   if params[:author_id]
@@ -20,9 +19,11 @@ end
 
 
 def create
-  #use below for testing without auth
-  # @photo = Photo.create!(photo_params)
-  @photo.author_id = current_user.id
+  # @photo = Photo.new(photo_params)
+  @photo = Photo.create!(photo_params)
+
+  #neither of above works; @photo is always nil when I try to assign author_id here, works fine if I send author_id from front-end
+  # @photo.author_id = current_user.id
 
   if @photo.save
     render "api/photos/show"
