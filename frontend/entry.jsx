@@ -19,7 +19,11 @@ import { configureStore } from './store/store';
 
 
 //photo development
-import { ajaxFetchAllPhotos } from './util/photo_api_util';
+import { ajaxFetchAllPhotos,
+         ajaxFetchSinglePhoto } from './util/photo_api_util';
+
+import {ajaxFetchAllUsers,
+        ajaxFetchSingleUser } from './util/user_api.util';
 
 import { receiveAllPhotos,
          receiveSinglePhoto,
@@ -39,11 +43,15 @@ document.addEventListener('DOMContentLoaded', () => {
   // window.logoutDestroySession = logoutDestroySession;
 
 
-  window.ajaxFetchAllPhotos = ajaxFetchAllPhotos;
+  // window.ajaxFetchAllPhotos = ajaxFetchAllPhotos;
+  window.ajaxFetchSinglePhoto = ajaxFetchSinglePhoto;
 
   window.receiveAllPhotos = receiveAllPhotos;
   window.receiveSinglePhoto = receiveSinglePhoto;
   window.fetchAllPhotos = fetchAllPhotos;
+
+  window.ajaxFetchAllUsers = ajaxFetchAllUsers;
+  window.ajaxFetchSingleUser = ajaxFetchSingleUser;
 
 
   const store = configureStore();
