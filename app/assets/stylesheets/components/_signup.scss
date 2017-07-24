@@ -18,7 +18,8 @@ body {
   background-color: $instagram-grey-fullscreen;
   display: flex;
   flex-direction: column;
-  width: 100%;
+  min-width: 100vw;
+  // width: 100%;
   min-height: 100vh;
   padding: 10px;
   margin: 10px;

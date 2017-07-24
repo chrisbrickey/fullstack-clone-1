@@ -1,12 +1,25 @@
+
+.footer-section {
+  width: 100%;
+  background-color: purple;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 footer {
   padding: 10px;
   margin: 10px;
+  // max-width: 75%;
+  width: 75%;
   background-color: transparent;
   height: 50px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   font-weight: bold;
-  // background-color: red;
+  background-color: red;
 }
 
 .navLinks {
@@ -16,7 +29,7 @@ footer {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  // background-color: orange;
+  background-color: orange;
 }
 
 .navLinks > li {
@@ -26,7 +39,7 @@ footer {
   // width: 100%;
   white-space: nowrap;
   text-align: center;
-  // background-color: yellow;
+  background-color: yellow;
 }
 
 #copyright {

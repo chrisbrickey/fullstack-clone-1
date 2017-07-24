@@ -130,7 +130,7 @@ class Home extends React.Component {
               </ul>
           </main>
 
-
+          <section className="footer-section">
           <footer>
               <ul className="navLinks">
                   <li>ABOUT US</li>
@@ -147,6 +147,7 @@ class Home extends React.Component {
                   <li id="copyright"> &copy; 2017 INSTAGRAM</li>
               </ul>
           </footer>
+          </section>
 
       </div>
     );
