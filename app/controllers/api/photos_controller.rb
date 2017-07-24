@@ -19,11 +19,8 @@ end
 
 
 def create
-  # @photo = Photo.new(photo_params)
-  @photo = Photo.create!(photo_params)
-
-  #neither of above works; @photo is always nil when I try to assign author_id here, works fine if I send author_id from front-end
-  # @photo.author_id = current_user.id
+  @photo = Photo.new(photo_params)
+  @photo.author_id = current_user.id
 
   if @photo.save
     render "api/photos/show"
@@ -70,8 +67,7 @@ def photo_params
   params.require(:photo).permit(
     :photo_url,
     :caption,
-    :location,
-    :author_id)
+    :location)
 end
 
 end
