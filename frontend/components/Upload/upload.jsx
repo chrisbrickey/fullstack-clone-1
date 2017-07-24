@@ -51,8 +51,9 @@ class Upload extends React.Component {
       method: 'POST',
       url: '/api/photos',
       //not sure if 'photo' is the right key to use, or if it matters
-      data: {photo: newPhoto},
-      //adds newPhoto to front end AFTER it comes back from backend, couldn't I just call fetchAllPhotos here??
+      data: {photo: newPhoto}
+
+      //below adds newPhoto to frontend AFTER it comes back from backend, but app already does this via fetchAllPhotos
       // success: ((newPhotoFromBackend) => {
       //   var photos = this.state.photos.byId;
       //   photos.newPhotoFromBackend.id = newPhotoFromBackend;
