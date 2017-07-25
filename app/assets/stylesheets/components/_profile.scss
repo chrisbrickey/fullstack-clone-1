@@ -86,6 +86,10 @@ $instagram-red: #f04752;
   cursor:pointer;
 }
 
+.logout-button:active {
+  background-color: black;
+}
+
 .userAttributes {
   // background-color: yellow;
   display: flex;
