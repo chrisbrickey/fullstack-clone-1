@@ -1,4 +1,4 @@
-json.extract! user, :id, :username
+json.extract! user, :id, :username, :profile_img_url, :name, :tagline, :photos
 #returns {id:  , username:  }
 
 # add these after auth setup :name, :profile_img_url, :tagline

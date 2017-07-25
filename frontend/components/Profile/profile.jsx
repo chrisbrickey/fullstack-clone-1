@@ -45,6 +45,14 @@ class Profile extends React.Component {
 
     console.log("in the render method of profile.jsx");
 
+    let profilePicture;
+
+    if (this.props.currentUser.profileImgUrl === "") {
+      profilePicture = "https://res.cloudinary.com/dckkkjkuz/image/upload/c_scale,w_590/v1500953840/instagram-color-fade_pvpssi.png";
+    } else {
+      profilePicture = this.props.currentUser.profileImgUrl;
+    }
+
     const photoFeedObject = this.props.photos.byId;
     let userPhotoList = [];
 
@@ -107,7 +115,7 @@ class Profile extends React.Component {
 
                   <div className="pic-container">
                       <img
-                          src="https://res.cloudinary.com/dckkkjkuz/image/upload/c_scale,w_590/v1500953840/instagram-color-fade_pvpssi.png"
+                          src={profilePicture}
                           alt="photo"
                           className="profilePhoto"/>
                   </div>
@@ -126,8 +134,8 @@ class Profile extends React.Component {
 
                       <div className="userAttributes">
 
-                        <p className="name">Full Name Placeholder</p>
-                        <p className="tagline">tagline placeholder</p>
+                        <p className="name">{this.props.currentUser.name}</p>
+                        <p className="tagline">{this.props.currentUser.tagline}</p>
                       </div>
 
                   </div>
