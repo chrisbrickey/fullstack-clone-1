@@ -30,15 +30,12 @@ export const receiveSinglePhoto = photo => {
   });
 };
 
-//not sure about structure of payload here (do I need to be more specific with currentPhoto and byId)
 export const removePhoto = photo => {
   console.log("inside sync removePhoto");
   console.log(photo);
   return({
     type: REMOVE_PHOTO,
     photo
-    // currentPhoto: null,
-    // byId: {[photo.id]: photo}
   });
 };
 
@@ -82,7 +79,7 @@ export const updatePhoto = (data) => dispatch => {
 };
 
 export const destroyPhoto = (photo) => dispatch => {
-  console.log("in async destoryPhoto");
+  console.log("in async destroyPhoto");
 
   return ajaxDestroyPhoto(photo)
     .then( photoItDeleted => (dispatch(removePhoto(photoItDeleted)))

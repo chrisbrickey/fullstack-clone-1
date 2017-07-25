@@ -35,8 +35,6 @@ end
 
 
 def update
-  #use below for testing without auth
-  # @photo = Photo.find(params[:id])
   @photo = current_user.photos.find(params[:id])
 
   #using update will return true/false depending on whether validations passed
@@ -53,8 +51,6 @@ end
 
 
 def destroy
-  #use below for testing without auth
-  # @photo = Photo.find(params[:id])
   @photo = current_user.photos.find(params[:id])
   @photo.destroy
   render "api/photos/show"

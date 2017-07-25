@@ -37,8 +37,7 @@ export const ajaxCreatePhoto = (data) => {
 
 export const ajaxUpdatePhoto = (photo) => {
   console.log("in ajaxUpdatePhoto");
-  // console.log(photo);
-  // console.log(photo.id);
+
   return(
     $.ajax({
       method: 'PATCH',
@@ -51,7 +50,7 @@ export const ajaxUpdatePhoto = (photo) => {
 
 export const ajaxDestroyPhoto = (photo) => {
   console.log("in ajaxDestroyPhoto");
-  // console.log(id);
+
   return(
     $.ajax({
       method: 'DELETE',

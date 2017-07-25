@@ -31,14 +31,8 @@ export const photoReducer = (state = defaultState, action) => {
           byId: action.byId
         });
 
-    //Is this the right way to reset currentPhoto to null?
     case REMOVE_PHOTO:
         console.log("inside reducer at REMOVE_PHOTO");
-
-        // return merge({}, state, {
-        //   currentPhoto: action.currentPhoto,
-        //   byId: action.byId
-        // });
 
         newState = merge({}, state);
         delete newState.byId[action.photo.id];
