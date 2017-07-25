@@ -1,0 +1,134 @@
+$instagram-blue-background: #3897f0;
+$instagram-blue-border: #3897f0;
+$instagram-white: #fff;
+$instagram-grey: #999;
+$instagram-light-grey: #e0e0e0;
+$instagram-grey-fullscreen: #fdfdfd;
+$instagram-header-icon: #4a4a4a;
+$instagram-red: #f04752;
+
+
+.photo-page-container {
+  background-color: pink;
+  // background-color: $instagram-grey-fullscreen;
+  display: flex;
+  flex-direction: column;
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.photo-outer {
+  background-color: lightgreen;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  padding: 10px;
+
+}
+
+.photo-inner {
+  background-color: green;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  max-width: 80%;
+}
+
+.photo-container {
+  background-color: yellow;
+  margin: 10px 0px 10px 10px;
+  padding: 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 2;
+}
+
+//I think this will go away and photo will fill above container
+.photo-container > img {
+  width: 600px;
+  background-color: grey;
+}
+
+.detail-container {
+  background-color: lightblue;
+  margin: 10px 10px 10px 0px;
+  padding: 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+
+
+.box1 {
+  color: black;
+  // color: $instagram-grey;
+  background-color: grey;
+
+  // background-color: $instagram-white;
+  margin: 10px;
+  padding: 10px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $instagram-light-grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.another-container {
+  background-color: orange;
+  margin: 10px;
+  padding: 10px;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.optionalText {
+  background-color: pink;
+  color: black;
+  font-size: 120%;
+  padding: 10px;
+  margin: 10px;
+  white-space: nowrap;
+  font-weight: 300;
+  flex: 1;
+}
+
+.box2 {
+  background-color: blue;
+  // background-color: $instagram-white;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $instagram-light-grey;
+  color: $instagram-grey;
+
+}
+
+.yet-another-container {
+  background-color: red;
+  flex: 4;
+  padding: 0px 0px 10px 0px;
+}

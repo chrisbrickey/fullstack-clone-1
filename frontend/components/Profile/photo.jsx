@@ -5,7 +5,7 @@ import merge from 'lodash/merge';
 import FooterXXX from '../Navigation/footer';
 import HeaderXXX from '../Navigation/header';
 
-
+//grab current photo from url....then just need to link to it from pics on profile page
 console.log("on the photo.jsx");
 
 class Photo extends React.Component {
@@ -35,31 +35,36 @@ class Photo extends React.Component {
     console.log(this.props);
 
     return (
-      <div className="upload-page-container">
+      <div className="photo-page-container">
 
           <HeaderXXX userId={this.props.currentUser.id}/>
 
 
-          <section className="upload-sub-container">
-              <div className="sub-sub-container">
-                  <div className="upload-form-container">
+          <section className="photo-outer">
+              <div className="photo-inner">
 
 
-                      <div className="option1-box">
-                          <div className="optionText">placeholder text</div>
-                          <div className="cloudinary-container"/>
-                      </div>
-
-
-                      <div className="option2-box">
-                          <div className="optionText">placeholder text</div>
-
-                          <div className="option2-form-container">
-                          </div>
-                      </div>
-
+                  <div className="photo-container">
+                    <p>placeholder image</p>
 
                   </div>
+
+
+                  <div className="detail-container">
+                    <div className="box1">
+                        <div className="optionalText">placeholder text</div>
+                        <div className="another-container"/>
+                    </div>
+
+
+                    <div className="box2">
+                        <div className="optionalText">placeholder text</div>
+
+                        <div className="yet-another-container">
+                        </div>
+                    </div>
+                  </div>
+
               </div>
           </section>
 

@@ -15,7 +15,7 @@ $instagram-red: #f04752;
 
 .bio-container {
   padding: 5px 150px 5px 150px;
-  background-color: blue;
+  // background-color: blue;
   background-color: $instagram-grey-fullscreen;
   // border-width: 1px;
   // border-style: solid;
@@ -110,14 +110,23 @@ $instagram-red: #f04752;
   font-weight: 200;
 }
 
+
+
+
+
+
+
+//////////////////////////
+
 .portfolio-container {
-  // background-color: blue;
+  // background-color: green;
   background-color: $instagram-grey-fullscreen;
   display: flex;
   justify-content: left;
   align-items: center;
   padding: 20px;
   margin: 0px 100px 0px 100px;
+  min-width: 100vw;
 }
 
 .portofolio-subcontainer {
@@ -137,7 +146,7 @@ $instagram-red: #f04752;
 }
 
 .noPhoto-container {
-  // background-color: orange;
+  background-color: orange;
   display: flex;
   flex-direction: rows;
   justify-content: center;
