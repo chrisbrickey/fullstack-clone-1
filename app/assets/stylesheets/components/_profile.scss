@@ -153,22 +153,44 @@ $instagram-red: #f04752;
   // width: 250px;
 }
 
+.detailButton-container {
+  display: flex;
+  flex-direction: column;
+  // background-color: orange;
+  width: 250px;
+  background-color: $instagram-white;
+  // margin: 10px;
+  // padding: 10px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $instagram-light-grey;
+}
+
 .userPhoto {
   width: 250px;
 }
 
-.detailButton-container {
-  display: flex;
-  flex-direction: column;
-  background-color: orange;
-  width: 400px;
-  height: 400px
-}
+
 
 .detailButton {
-  background-color: red;
-  width: 100px;
-  height: 100px;
+  // background-color: red;
+  color: black;
+  background-color: $instagram-white;
+  height: 30px;
+  transition: background-color 0.5s ease;
+  font-weight: 600;
+  font-size: 120%;
+  cursor:pointer;
+}
+
+.detailButton:active {
+  background-color: black;
+}
+
+#tied-to-form {
+  width: 261px;
+  margin-top: 10px;
+  margin-bottom: 5px;
 }
 
 .noPhoto-container {
