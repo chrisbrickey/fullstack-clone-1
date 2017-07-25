@@ -11,7 +11,7 @@ import { fetchAllPhotos,
 
 import PhotoDetail from './photo_detail';
 
-console.log("on the photo_container.jsx");
+console.log("on the photo__detail_container.jsx");
 
 const mapStateToProps = (state) => {
 
