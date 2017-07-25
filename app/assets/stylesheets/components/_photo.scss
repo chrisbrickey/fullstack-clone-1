@@ -10,13 +10,13 @@ $instagram-red: #f04752;
 
 .photo-modal-outer {
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.7);
+  // background-color: rgba(0, 0, 0, 0.7);
   display: flex;
   margin-top: 340px;
   // margin-left: 400px;
   width: 100%;
   // min-width: 100vw;
-  min-height: 100vh;
+  // min-height: 1000vh;
   display: flex;
   flex-direction: column;
 }
@@ -48,7 +48,8 @@ $instagram-red: #f04752;
 }
 
 .inner-main {
-  background-color: green;
+  // background-color: green;
+  background-color: transparent;
   margin: 10px;
   padding: 10px;
   display: flex;
@@ -65,7 +66,7 @@ $instagram-red: #f04752;
 
 .sectionContainer {
   background-color: orange;
-  margin: 10px 10px 0px 10px;
+  margin: 0px 10px 0px 10px;
   padding: 10px;
   display: flex;
   flex-direction: row;
@@ -147,27 +148,6 @@ $instagram-red: #f04752;
   flex: 1;
 }
 
-.box2 {
-  background-color: blue;
-  // background-color: $instagram-white;
-  margin: 10px;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-width: 1px;
-  border-style: solid;
-  border-color: $instagram-light-grey;
-  color: $instagram-grey;
-
-}
-
-.yet-another-container {
-  background-color: red;
-  flex: 4;
-  padding: 0px 0px 10px 0px;
-}
 
 .deleteButton {
   border-radius: 3px;
@@ -197,6 +177,9 @@ $instagram-red: #f04752;
   cursor:pointer;
   white-space:nowrap;
   width: 82%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $instagram-light-grey;
 }
 
 .closeModalButton:active {

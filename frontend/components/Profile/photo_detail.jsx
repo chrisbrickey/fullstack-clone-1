@@ -194,29 +194,12 @@ class PhotoDetail extends React.Component {
 
                               </form>
 
-
-
-
-
-
-
-
-
                             </div>
 
                         </div>
+                      <br/>
+                      <br/>
 
-
-                        <div className="box2">
-                            <div className="optionalText">work in progress</div>
-
-                            <div className="yet-another-container">
-
-
-
-
-                            </div>
-                        </div>
 
                         <button
                           onClick={this.props.destroyPhoto}
