@@ -14,23 +14,22 @@ $instagram-red: #f04752;
 
 
 .bio-container {
-  background-color: blue;
   padding: 5px 150px 5px 150px;
+  background-color: blue;
   background-color: $instagram-grey-fullscreen;
-  border-width: 1px;
-  border-style: solid;
-  border-color: $instagram-light-grey;
+  // border-width: 1px;
+  // border-style: solid;
+  // border-color: $instagram-light-grey;
 }
 
 .bio-subcontainer {
   // background-color: green;
-
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-direction: rows;
-  height: 200px;
-  padding: 0px 50px 0px 50px;
+  height: 220px;
+  padding: 0px 60px 0px 60px;
 }
 
 .pic-container {
@@ -51,14 +50,12 @@ $instagram-red: #f04752;
   // background-color: pink;
   padding: 10px;
   flex: 3;
+  display: flex;
+  flex-direction: column;
 }
 
-.userAttributes {
-  // background-color: yellow;
-  width: 60%;
-}
 
-.whichUser {
+.title {
   // background-color: orange;
   display: flex;
   flex-direction: rows;
@@ -68,37 +65,50 @@ $instagram-red: #f04752;
 
 .username {
   // background-color: lightgreen;
-  // font-weight: bold;
+	font-weight: 100;
   font-size: 200%;
   padding: 5px;
-  margin: 5px 50px 5px 5px;
+  margin: 5px 25px 5px 5px;
 }
 
 .logout-button {
   padding: 7px 35px 7px 35px;
-  margin: 5px 50px 5px 50px;
+  margin: 5px 50px 5px 0px;
   border-width: 1px;
   border-style: solid;
   border-color: $instagram-light-grey;
   transition: background-color 0.5s ease;
   background-color: $instagram-white;
   font-size: 120%;
+  font-weight: 400;
   line-height: 15px;
   border-radius: 3px;
-  margin-bottom: 0px;
-  color: black;
   cursor:pointer;
 }
 
-.tagline {
-  // background-color: lightblue;
-  font-size: 150%;
-  padding: 5px;
-  margin: 5px;
+.userAttributes {
+  // background-color: yellow;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  padding: 15px 0px 10px 0px;
 }
 
+.userAttributes > p {
+  // background-color: lightblue;
+  font-size: 120%;
+  padding: 10px;
+  margin: 0px 10px 0px 10px;
+  white-space: nowrap;
+}
 
-
+.name {
+  font-weight: 400;
+}
+.tagline {
+  font-weight: 200;
+}
 
 .portfolio-container {
   // background-color: blue;
@@ -123,7 +133,7 @@ $instagram-red: #f04752;
 }
 
 .photoItem-container > img {
-  width: 200px;
+  width: 250px;
 }
 
 .noPhoto-container {

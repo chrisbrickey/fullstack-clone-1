@@ -106,21 +106,23 @@ class Profile extends React.Component {
                   </div>
 
                   <div className="bio-sub-sub">
+
+                      <div className="title">
+                          <p className="username">{this.props.currentUser.username}</p>
+
+                          <button
+                              onClick={this.props.logoutDestroySession}
+                              className="logout-button">
+                              Logout
+                          </button>
+                      </div>
+
                       <div className="userAttributes">
 
-                          <div className="whichUser">
-                              <p className="username">{this.props.currentUser.username}</p>
-
-                              <button
-                                  onClick={this.props.logoutDestroySession}
-                                  className="logout-button">
-                                  Logout
-                              </button>
-                          </div>
-
-
-                          <p className="tagline">always be dancing</p>
+                        <p className="name">Full Name Placeholder</p>
+                        <p className="tagline">always be dancing</p>
                       </div>
+                      
                   </div>
 
               </div>
