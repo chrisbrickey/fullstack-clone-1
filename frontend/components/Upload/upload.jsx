@@ -144,25 +144,18 @@ class Upload extends React.Component {
                                         />
                                     </label>
                                   <br/>
+                                  <br/>
 
-                                  <input
-                                      type="submit"
-                                      value="Don't use me"
-                                      className="auth-button"
-                                      id="tied-to-form"
-                                  />
+
+                                  <button
+                                    onClick={this.handleSubmit}
+                                    type="submit"
+                                    value="Submit"
+                                    className="manual-submit">
+                                    Submit
+                                  </button>
 
                               </form>
-
-
-                              <button
-                                onClick={this.handleSubmit}
-                                type="submit"
-                                value="Submit"
-                                className="auth-button"
-                                id="tied-to-form">
-                                Submit
-                              </button>
 
                           </div>
 

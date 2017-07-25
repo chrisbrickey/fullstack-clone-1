@@ -52,6 +52,8 @@ $instagram-red: #f04752;
 
 }
 
+
+
 .option1-box {
   color: $instagram-grey;
   background-color: $instagram-white;
@@ -110,6 +112,26 @@ $instagram-red: #f04752;
 }
 
 .dropzone-button:active {
+  background-color: $instagram-white;
+}
+
+.manual-submit {
+  height: 30px;
+  width: 100%;
+  border-width: 0px;
+  transition: background-color 0.5s ease;
+  background-color: $instagram-blue-background;
+  font-weight: 600;
+  font-size: 120%;
+  line-height: 15px;
+  border-radius: 3px;
+  margin: 10px 0px, 10px 0px;
+  // margin-bottom: 0px;
+  color: $instagram-white;
+  cursor:pointer;
+}
+
+.manual-submit:active {
   background-color: $instagram-white;
 }
 
