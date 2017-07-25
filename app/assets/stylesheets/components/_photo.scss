@@ -12,7 +12,8 @@ $instagram-red: #f04752;
   position: absolute;
   // background-color: rgba(0, 0, 0, 0.7);
   display: flex;
-  margin-top: 340px;
+  margin-top: 90px;
+  // margin-top: 340px;
   // margin-left: 400px;
   width: 100%;
   // min-width: 100vw;
@@ -24,8 +25,9 @@ $instagram-red: #f04752;
 .photo-modal-inner{
   position: relative;
   margin: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
   // background-color: pink;
-  background-color: transparent;
+  // background-color: transparent;
   display: flex;
   flex-direction: column;
   // width: 600px;
@@ -65,25 +67,26 @@ $instagram-red: #f04752;
 }
 
 .sectionContainer {
-  background-color: orange;
+  // background-color: orange;
   margin: 0px 10px 0px 10px;
-  padding: 10px;
+  // padding: 10px;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
-  width: 80%;
+  align-items: right;
+  max-width: 80%;
 }
 
 .photo-container {
   background-color: yellow;
-  margin: 10px 0px 10px 10px;
-  padding: 3px;
+  // margin: 10px 0px 10px 10px;
+  // padding: 3px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex: 2
+  flex: 2;
+  min-width: 600px;
   // width: 600px;
 }
 
@@ -94,7 +97,7 @@ $instagram-red: #f04752;
 }
 
 .detail-container {
-  background-color: lightblue;
+  // background-color: lightblue;
   margin: 10px 10px 10px 0px;
   padding: 3px;
   display: flex;
@@ -127,7 +130,7 @@ $instagram-red: #f04752;
 
 
 .another-container {
-  background-color: orange;
+  // background-color: orange;
   margin: 10px;
   padding: 10px;
   height: 100px;
@@ -138,7 +141,7 @@ $instagram-red: #f04752;
 }
 
 .optionalText {
-  background-color: pink;
+  // background-color: pink;
   color: black;
   font-size: 120%;
   padding: 10px;
@@ -146,6 +149,22 @@ $instagram-red: #f04752;
   white-space: nowrap;
   font-weight: 300;
   flex: 1;
+}
+
+.spacer {
+  // background-color: red;
+  padding: 10px;
+  margin: 10px;
+}
+
+.deleteContainer {
+  // background: orange;
+  margin: 10px;
+  padding: 10px;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -159,7 +178,7 @@ $instagram-red: #f04752;
   font-size: 120%;
   cursor:pointer;
   white-space:nowrap;
-  width: 82%;
+  padding: 10px;
 }
 
 .deleteButton:active {
@@ -176,7 +195,7 @@ $instagram-red: #f04752;
   font-size: 120%;
   cursor:pointer;
   white-space:nowrap;
-  width: 82%;
+  width: 80%;
   border-width: 1px;
   border-style: solid;
   border-color: $instagram-light-grey;

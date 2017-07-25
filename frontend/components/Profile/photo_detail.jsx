@@ -130,7 +130,7 @@ class PhotoDetail extends React.Component {
                 <main className="inner-main">
 
                     <div className="sectionContainer">
-                      <section className="photo-container">photo-container
+                      <section className="photo-container">
 
                         <img
                             src={this.props.currentPhoto.photoUrl}
@@ -142,7 +142,8 @@ class PhotoDetail extends React.Component {
 
 
                       <section className="detail-container">
-                        <div className="box1">
+
+                        <section className="box1">
                             <div className="optionalText">work in progress</div>
                             <div className="another-container">
 
@@ -186,6 +187,8 @@ class PhotoDetail extends React.Component {
                                   <br/>
 
 
+
+
                                   <button
                                     onClick={this.handleSubmit}
                                     type="submit"
@@ -198,16 +201,19 @@ class PhotoDetail extends React.Component {
 
                             </div>
 
-                        </div>
-                      <br/>
-                      <br/>
+                        </section>
 
 
-                        <button
-                          onClick={this.props.destroyPhoto}
-                          className="deleteButton">
-                          Delete Photo
-                        </button>
+
+                        <section className="spacer">i'm a spacer</section>
+
+                        <section className="deleteContainer">
+                            <button
+                              onClick={this.props.destroyPhoto}
+                              className="deleteButton">
+                              Delete Photo
+                            </button>
+                        </section>
 
                       </section>
 
