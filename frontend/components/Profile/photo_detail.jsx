@@ -120,9 +120,8 @@ class PhotoDetail extends React.Component {
     // const pulledPhoto = this.props.photos[paramId];
     if (this.state.modalOpen) {
       return (
-        <div className="photo-page-container">
-
-            <HeaderXXX userId={this.props.currentUser.id}/>
+        <div className="photo-modal-outer">
+          <div className="photo-modal-inner">
 
 
             <section className="photo-outer">
@@ -196,6 +195,13 @@ class PhotoDetail extends React.Component {
                             </form>
 
 
+                            <button
+                              onClick={this.closeModal}
+                              type="submit"
+                              value="Submit"
+                              className="manual-submit">
+                              Close
+                            </button>
 
 
                             <button
@@ -205,13 +211,6 @@ class PhotoDetail extends React.Component {
                               className="manual-submit">
                               Delete Post
                             </button>
-
-
-
-
-
-
-
 
 
 
@@ -236,8 +235,7 @@ class PhotoDetail extends React.Component {
             </section>
 
 
-            <FooterXXX/>
-
+            </div>
         </div>
       );
     } else {

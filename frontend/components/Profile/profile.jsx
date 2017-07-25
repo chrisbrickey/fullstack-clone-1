@@ -5,6 +5,8 @@ import merge from 'lodash/merge';
 
 import FooterXXX from '../Navigation/footer';
 import HeaderXXX from '../Navigation/header';
+
+import PhotoDetailContainer from './photo_detail_container';
 import PhotoDetail from './photo_detail';
 
 
@@ -57,6 +59,8 @@ class Profile extends React.Component {
 
   //remember that errors and other objects might be null so render conditionally
   render() {
+
+
 
     console.log("in the render method of profile.jsx");
 
