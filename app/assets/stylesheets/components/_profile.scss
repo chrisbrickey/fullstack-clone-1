@@ -68,24 +68,25 @@ $instagram-red: #f04752;
 
 .username {
   // background-color: lightgreen;
-  font-weight: bold;
+  // font-weight: bold;
   font-size: 200%;
   padding: 5px;
   margin: 5px 50px 5px 5px;
 }
 
 .logout-button {
-  padding: 10px;
+  padding: 7px 35px 7px 35px;
   margin: 5px 50px 5px 50px;
-  border-width: 0px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $instagram-light-grey;
   transition: background-color 0.5s ease;
-  background-color: $instagram-blue-background;
-  font-weight: 600;
+  background-color: $instagram-white;
   font-size: 120%;
   line-height: 15px;
   border-radius: 3px;
   margin-bottom: 0px;
-  color: $instagram-white;
+  color: black;
   cursor:pointer;
 }
 
