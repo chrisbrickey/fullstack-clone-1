@@ -163,18 +163,30 @@ $instagram-red: #f04752;
   flex-direction: rows;
   justify-content: center;
   align-items: left;
-  min-height: 600px;
+  min-height: 400px;
   padding: 10px;
 }
 
+.noPhoto-inner {
+  // background-color: yellow;
+  margin: 10px;
+  padding: 10px;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 
-.noPhoto-container > p {
+
+.noPhotoText {
   font-size: 150%;
+  // background-color: pink;
 }
 .space {
   width: 20px;
+  // background-color: red;
 }
 
-.noPhoto-container > img {
-  width: 35px;
+.upload-icon-large {
+  width: 50px;
 }

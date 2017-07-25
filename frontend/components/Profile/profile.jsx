@@ -79,12 +79,17 @@ class Profile extends React.Component {
     } else {
         photoListRender = (
             <li className="noPhoto-container">
-                <p>You don't have any photos. Upload some by clicking on</p>
-              <div className="space"></div>
-              <img
-                    src={'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500855174/001-cloud-computing_gjhr1n.png'}
-                    alt="upload icon"
-                    className="upload-icon-large"/>
+              <div className="noPhoto-inner">
+
+                  <div className="noPhotoText">You don't have any photos. Upload some by clicking on</div>
+                  <div className="space"></div>
+
+                  <img
+                      src={'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500855174/001-cloud-computing_gjhr1n.png'}
+                      alt="upload icon"
+                      className="upload-icon-large"/>
+
+                </div>
             </li>
         );
 
