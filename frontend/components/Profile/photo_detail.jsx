@@ -8,12 +8,13 @@ import FooterXXX from '../Navigation/footer';
 import HeaderXXX from '../Navigation/header';
 
 //grab current photo from url....then just need to link to it from pics on profile page
-console.log("on the photo.jsx");
+console.log("on the photo_detail.jsx");
 
 class PhotoDetail extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      modalOpen: false,
       photo: {
         caption: "",
         location: "",
@@ -22,8 +23,11 @@ class PhotoDetail extends React.Component {
     };
 
     //this.anyMethod = this.anyMethod.bind(this);
+    this.closeModal = this.closeModal.bind(this);
+    this.openModal = this.openModal.bind(this);
+    this.editPhoto = this.editPhoto.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.updatePhoto = this.editPhoto.bind(this);
+
   }
 
 
@@ -32,37 +36,57 @@ class PhotoDetail extends React.Component {
       this.props.fetchSinglePhoto(this.props.match.params.photoId);
     }
 
-    componentWillReceiveProps(nextProps) {
+  componentWillReceiveProps(nextProps) {
     if (this.props.match.params.photoId !== nextProps.match.params.photoId) {
       this.props.fetchSinglePhoto(nextProps.match.params.photoId);
     }
   }
 
-    editPhoto(event) {
-      console.log("inside updatePhoto on upload page");
-      const newPhoto = merge({}, this.state);
-      newPhoto.photo[event.target.name] = event.target.value;
-      this.setState(newPhoto);
-    }
+  closeModal() {
+    this.setState({ modalOpen: false });
+    // this.setState({ photo: { modalOpen: false, caption: "", location: "", photo_url: ""} });
+  }
 
-    handleSubmit(event) {
-      console.log("inside handleSubmit on photo page");
+  openModal() {
+    this.setState({ modalOpen: true });
+    // this.setState({ photo: { modalOpen: true, caption: "", location: "", photo_url: ""} });
+  }
 
-      let testPhoto = this.state.photo;
-      console.log(testPhoto);
-      console.log({ photo: testPhoto });
 
-      event.preventDefault();
 
-      let newPhoto = this.state.photo;
-      this.props.updatePhoto({ photo: testPhoto })
-        .then(
-          (()=> {
-            console.log("inside handleSubmit callback on photo page upon success");
-            this.setState({ photo: { caption: "", location: "", photo_url: ""} });
-          })
-        );
-    }
+
+
+  editPhoto(event) {
+    console.log("inside updatePhoto on photoDetail page");
+    const newPhoto = merge({}, this.state);
+    newPhoto.photo[event.target.name] = event.target.value;
+    this.setState(newPhoto);
+  }
+
+
+  handleSubmit(event) {
+    console.log("inside handleSubmit on photoDetail page");
+
+    event.preventDefault();
+
+    let testPhoto = this.state.photo;
+    console.log(testPhoto);
+    console.log({ photo: testPhoto });
+
+    let newPhoto = this.state.photo;
+    this.props.updatePhoto({ photo: newPhoto });
+      // .then(
+      //   (()=> {
+      //     console.log("inside handleSubmit callback on photoDetail upon success");
+      //     this.closeModal();
+      //     this.setState({ photo: { caption: "", location: "", photo_url: ""} });
+      //   })
+      // );
+
+    this.closeModal();
+    this.setState({ photo: { caption: "", location: "", photo_url: ""} });
+    hashHistory.push(`/users/${this.props.currentUser.id}`);
+  }
 
 
   //remember that errors and other objects might be null so render conditionally
@@ -70,9 +94,10 @@ class PhotoDetail extends React.Component {
 
     console.log("rendering on photo.jsx");
     console.log(this.props);
+    console.log(this.props.match.params);
 
-    const paramId = this.props.match.params.photoId;
-    const pulledPhoto = this.props.photos[paramId];
+    // const paramId = this.props.match.params.photoId;
+    // const pulledPhoto = this.props.photos[paramId];
 
     return (
       <div className="photo-page-container">
