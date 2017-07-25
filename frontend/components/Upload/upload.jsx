@@ -12,18 +12,19 @@ console.log("on the upload.jsx");
 class Upload extends React.Component {
   constructor(props) {
     super(props);
-    // this.state = {
-    //   user: {
-    //     name: "",
-    //     username: "",
-    //     password: ""
-    //   },
-    //   errors: {}
-    // };
+    this.state = {
+      photo: {
+        caption: "",
+        location: "",
+        photoUrl: ""
+      },
+    };
 
     //this.anyMethod = this.anyMethod.bind(this);
     // this.cropPhoto = this.cropPhoto.bind(this);
     this.postPhoto = this.postPhoto.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.updatePhoto = this.updatePhoto.bind(this);
   }
 
 
@@ -39,6 +40,14 @@ class Upload extends React.Component {
   //
   //   return croppedUrl;
   // }
+
+
+  updatePhoto(event) {
+    const newPhoto = merge({}, this.state);
+    newPhoto.photo[event.target.name] = event.target.value;
+    this.setState(newPhoto);
+  }
+
 
   //receives photoUrl as argument and adds photo to db on backend AND shows this photo on the front end (so user an edit)
   postPhoto(photoUrl) {
@@ -63,10 +72,33 @@ class Upload extends React.Component {
     // });
   }
 
+  handleSubmit(event) {
+    console.log("inside handleSubmit on upload page");
+
+    // let testUser = this.state.user;
+    // console.log(testUser);
+    // console.log({user: testUser});
+    //
+    // event.preventDefault();
+    // let newUser = this.state.user;
+    // this.props.processForm({ user: newUser })
+    //   .then(
+    //     (()=> {
+    //       console.log("inside submit callback upon success");
+    //       this.setState({ user: { name: "", username: "", password: ""}, errors: null});
+    //     }),
+    //
+    //     (this.props.clearErrors())
+    //   );
+
+
+  }
+
   //remember that errors and other objects might be null so render conditionally
   render() {
 
     console.log("rendering on upload.jsx");
+    console.log(this.props);
 
     return (
       <div className="upload-page-container">
@@ -79,31 +111,75 @@ class Upload extends React.Component {
                   <div className="upload-form-container">
 
 
-                      <div className="textInput">
+                      <div className="option1-box">
+                          <div className="optionText">Option 1: drag/drop or select file here</div>
+
+                          <div className="cloudinary-container">
+                            <Dropzone postPhoto={this.postPhoto}/>
+                          </div>
+                      </div>
+
+
+                      <div className="option2-box">
+
+                          <div className="optionText">Option 2: enter information manually</div>
+
+                          <div className="option2-form-container">
+                              <form onSubmit={this.handleSubmit} id="upload-form">
+
+                                  <label>
+                                      <input
+                                        type="text"
+                                        placeholder="caption (optional)"
+                                        name="caption"
+                                        value={this.state.photo.caption}
+                                        onChange={this.updatePhoto}
+                                        className="upload-input"
+                                      />
+                                  </label>
+                                  <br/>
+
+                                  <label>
+                                      <input
+                                          type="text"
+                                          placeholder="location (optional)"
+                                          name="location"
+                                          value={this.state.photo.location}
+                                          onChange={this.updatePhoto}
+                                          className="upload-input"
+                                      />
+                                  </label>
+                                  <br/>
+
+                                    <label>
+                                        <input
+                                            type="text"
+                                            placeholder="photo's url (required)"
+                                            name="photoUrl"
+                                            value={this.state.photo.location}
+                                            onChange={this.updatePhoto}
+                                            className="upload-input"
+                                        />
+                                    </label>
+                                  <br/>
+
+                                  <input
+                                      type="submit"
+                                      value="Submit"
+                                      className="auth-button"
+                                      id="tied-to-form"
+                                  />
+
+                              </form>
+                          </div>
 
 
                       </div>
-
-                      <div className="cloudinary-container">
-                        <Dropzone postPhoto={this.postPhoto}/>
-                      </div>
-
-
-                      <div className="submit-container">
-                      </div>
-
 
 
                   </div>
               </div>
           </section>
-
-
-          <button
-              className="logout-button"
-              onClick={this.props.logoutDestroySession}>
-              Logout
-          </button>
 
 
           <FooterXXX/>

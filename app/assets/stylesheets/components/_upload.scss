@@ -9,8 +9,8 @@ $instagram-red: #f04752;
 
 
 .upload-page-container {
-  background-color: pink;
-  // background-color: $instagram-grey-fullscreen;
+  // background-color: pink;
+  background-color: $instagram-grey-fullscreen;
   display: flex;
   flex-direction: column;
   min-width: 100vw;
@@ -21,7 +21,7 @@ $instagram-red: #f04752;
 }
 
 .upload-sub-container {
-  background-color: lightgreen;
+  // background-color: lightgreen;
   // background-color: $instagram-grey-fullscreen;
   flex: 1;
   display: flex;
@@ -31,7 +31,7 @@ $instagram-red: #f04752;
 }
 
 .sub-sub-container {
-  background-color: green;
+  // background-color: green;
   margin: 10px;
   padding: 10px;
   display: flex;
@@ -43,27 +43,44 @@ $instagram-red: #f04752;
 
 .upload-form-container {
   background-color: lightblue;
-  margin: 10px;
-  padding: 10px;
+  margin: 5px;
+  padding: 3px;
   width: 40%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: top;
+  align-items: center;
+
+}
+
+.option1-box {
+  color: $instagram-grey;
+  background-color: $instagram-white;
+  margin: 10px;
+  padding: 10px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $instagram-light-grey;
+  // flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  // width: 100%;
 
 }
 
 .textInput {
-  background-color: blue;
-  flex: 2;
+  // background-color: blue;
+  // flex: 2;
 }
 
 
 .cloudinary-container {
   background-color: orange;
-  // width: 50%;
-  // height: 50%;
-  flex: 3;
+  margin: 10px;
+  padding: 10px;
+  // flex: 4;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -71,11 +88,49 @@ $instagram-red: #f04752;
 
 .dropzone-container{
   background-color: red;
-  width: 50%;
-  height: 50%;
+  width: 90%;
+  height: 90%;
 }
 
 .submit-container {
+  // background-color: yellow;
+  // flex: 1;
+}
+
+.option2-box {
+  background-color: grey;
+  margin: 10px;
+  padding: 10px;
+  // width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $instagram-light-grey;
+  color: $instagram-grey;
+  background-color: $instagram-white;
+  // flex: 1;
+}
+
+.optionText {
   background-color: yellow;
+  color: black;
+  font-size: 120%;
+  padding: 10px;
+  margin: 10px;
+  white-space: nowrap;
+  font-weight: 300;
   flex: 1;
+}
+
+.option2-form-container {
+  background-color: grey;
+  flex: 4;
+}
+
+.upload-form {
+  margin: 10px;
+  padding: 10px;
 }
