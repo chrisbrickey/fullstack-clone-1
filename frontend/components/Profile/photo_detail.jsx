@@ -20,6 +20,11 @@ class PhotoDetail extends React.Component {
         location: "",
         photo_url: ""
       },
+
+    };
+
+    window.globalPhotoModal = () => {
+      this.setState({ modalOpen: true });
     };
 
     //this.anyMethod = this.anyMethod.bind(this);
@@ -27,6 +32,7 @@ class PhotoDetail extends React.Component {
     this.openModal = this.openModal.bind(this);
     this.editPhoto = this.editPhoto.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    window.globalPhotoModal = window.globalPhotoModal.bind(this);
 
   }
 

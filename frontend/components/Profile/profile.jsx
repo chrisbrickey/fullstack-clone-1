@@ -25,10 +25,12 @@ class Profile extends React.Component {
     //this.anyMethod = this.anyMethod.bind(this);
     // this.cropPhoto = this.cropPhoto.bind(this);
     this.showDetail = this.showDetail.bind(this);
+    <PhotoDetail />
   }
 
 
   componentDidMount() {
+    <PhotoDetail />
       // this.props.fetchAllPhotos();
       //BUT...fetch only this users photo
     }
@@ -42,8 +44,9 @@ class Profile extends React.Component {
   //   return croppedUrl;
   // }
 
-  showDetail(photoId) {
-    return <PhotoDetail photoId={photoId}/>;
+  showDetail() {
+    console.log("inside showDetail fxn");
+    window.globalPhotoModal();
   }
 
 
@@ -90,7 +93,7 @@ class Profile extends React.Component {
 
 
                         <button
-                          onClick={this.showDetail(photo.id)}
+                          onClick={this.showDetail}
                           className="detailButton"
                           value="see detail/edit">Edit</button>
                     </div>
