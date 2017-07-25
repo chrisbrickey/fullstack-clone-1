@@ -6,6 +6,7 @@ import merge from 'lodash/merge';
 import FooterXXX from '../Navigation/footer';
 import HeaderXXX from '../Navigation/header';
 
+
 console.log("on the profile.jsx");
 
 class Profile extends React.Component {
@@ -75,6 +76,7 @@ class Profile extends React.Component {
           return (
               <li key={photo.id} className="photoItem-container">
                   <Link to={`/photos/${photo.id}`}>
+
                       <img
                           src={photo.photoUrl}
                           alt="photo"

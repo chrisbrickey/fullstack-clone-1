@@ -26,7 +26,7 @@ export const App = ({store}) => (
         <AuthRoute path="/login" component={SignupContainer} />
         <ProtectedRoute exact path="/upload" component={UploadContainer}/>
         <ProtectedRoute path="/users" component={ProfileContainer}/>
-        <ProtectedRoute path="/photos" component={PhotoContainer}/>
+        <ProtectedRoute path="/photos/:id" component={PhotoContainer}/>
         <ProtectedRoute exact path="/" component={HomeContainer}/>
 
       </Switch>

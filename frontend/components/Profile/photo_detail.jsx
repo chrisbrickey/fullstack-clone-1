@@ -30,15 +30,15 @@ class PhotoDetail extends React.Component {
 
   }
 
-
+  ///now the photos in state has a new key...currentPhoto and the value is id of the photo we are rendering
   componentDidMount() {
       this.props.fetchAllPhotos();
-      this.props.fetchSinglePhoto(this.props.match.params.photoId);
+      this.props.fetchSinglePhoto(this.props.match.params.id);
     }
 
   componentWillReceiveProps(nextProps) {
-    if (this.props.match.params.photoId !== nextProps.match.params.photoId) {
-      this.props.fetchSinglePhoto(nextProps.match.params.photoId);
+    if (this.props.match.params.id !== nextProps.match.params.id) {
+      this.props.fetchSinglePhoto(nextProps.match.params.id);
     }
   }
 
@@ -53,16 +53,12 @@ class PhotoDetail extends React.Component {
   }
 
 
-
-
-
   editPhoto(event) {
     console.log("inside updatePhoto on photoDetail page");
     const newPhoto = merge({}, this.state);
     newPhoto.photo[event.target.name] = event.target.value;
     this.setState(newPhoto);
   }
-
 
   handleSubmit(event) {
     console.log("inside handleSubmit on photoDetail page");
@@ -94,7 +90,21 @@ class PhotoDetail extends React.Component {
 
     console.log("rendering on photo.jsx");
     console.log(this.props);
-    console.log(this.props.match.params);
+    console.log(this.props.match.params.id);
+
+
+    let allPhotos = this.props.photos;
+    let thisId = this.props.match.params.id;
+    let thisPhoto = allPhotos[thisId];
+    console.log(allPhotos[thisId]);
+
+    let workingURL;
+
+    if (this.props.photos[thisId]) {
+      workingURL = thisPhoto.photoUrl;
+    } else {
+      workingURL = "xx";
+    }
 
     // const paramId = this.props.match.params.photoId;
     // const pulledPhoto = this.props.photos[paramId];
@@ -109,15 +119,20 @@ class PhotoDetail extends React.Component {
               <div className="photo-inner">
 
 
-                  <div className="photo-container">
-                    <p>placeholder image</p>
+                  <div className="photo-container">photo-container
+
+                    <img
+                        src={workingURL}
+                        alt="photo"
+                        className=""/>
+
 
                   </div>
 
 
                   <div className="detail-container">
                     <div className="box1">
-                        <div className="optionalText">placeholder text</div>
+                        <div className="optionalText">work in progress</div>
                         <div className="another-container">
 
                           <form onSubmit={this.handleSubmit} id="upload-form">
@@ -196,7 +211,7 @@ class PhotoDetail extends React.Component {
 
 
                     <div className="box2">
-                        <div className="optionalText">placeholder text</div>
+                        <div className="optionalText">work in progress</div>
 
                         <div className="yet-another-container">
 
