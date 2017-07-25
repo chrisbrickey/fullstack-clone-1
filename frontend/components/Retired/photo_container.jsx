@@ -37,7 +37,7 @@ const mapDispatchToProps = (dispatch, { location }) => {
   };
 };
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(PhotoDetail);
+// export default connect(
+//   mapStateToProps,
+//   mapDispatchToProps
+// )(PhotoDetail);

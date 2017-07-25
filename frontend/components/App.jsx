@@ -15,7 +15,6 @@ import SignupContainer from './Signup/signup_container';
 import HomeContainer from './Home/home_container';
 import ProfileContainer from './Profile/profile_container';
 import UploadContainer from './Upload/upload_container';
-import PhotoContainer from './Profile/photo_container';
 
 
 

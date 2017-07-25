@@ -5,7 +5,6 @@ import merge from 'lodash/merge';
 
 import FooterXXX from '../Navigation/footer';
 import HeaderXXX from '../Navigation/header';
-import PhotoContainer from './photo_container';
 import PhotoDetail from './photo_detail';
 
 
@@ -44,7 +43,7 @@ class Profile extends React.Component {
   // }
 
   showDetail(photoId) {
-    <PhotoContainer photoId={photoId}/>;
+    return <PhotoDetail photoId={photoId}/>;
   }
 
 
