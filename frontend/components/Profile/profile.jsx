@@ -100,7 +100,7 @@ class Profile extends React.Component {
 
                   <div className="pic-container">
                       <img
-                          src="https://res.cloudinary.com/dckkkjkuz/image/upload/v1500775805/headshot_crop2_owq402.jpg"
+                          src="https://res.cloudinary.com/dckkkjkuz/image/upload/c_scale,w_590/v1500953840/instagram-color-fade_pvpssi.png"
                           alt="photo"
                           className="profilePhoto"/>
                   </div>
@@ -120,9 +120,9 @@ class Profile extends React.Component {
                       <div className="userAttributes">
 
                         <p className="name">Full Name Placeholder</p>
-                        <p className="tagline">always be dancing</p>
+                        <p className="tagline">tagline placeholder</p>
                       </div>
-                      
+
                   </div>
 
               </div>
