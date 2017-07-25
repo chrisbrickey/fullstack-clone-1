@@ -41,35 +41,19 @@ class Upload extends React.Component {
   //   return croppedUrl;
   // }
 
-
-  updatePhoto(event) {
-    const newPhoto = merge({}, this.state);
-    newPhoto.photo[event.target.name] = event.target.value;
-    this.setState(newPhoto);
-  }
-
-
-  //receives photoUrl as argument and adds photo to db on backend AND shows this photo on the front end (so user an edit)
+  //for upload via cloudinary
   postPhoto(photoUrl) {
     console.log("inside postPhoto on upload.jsx");
     let newPhoto = {photo_url: photoUrl};
     console.log(newPhoto);
     this.props.createPhoto({photo: newPhoto});
+  }
 
-    //replacing this ajax with asynchronous call above which includes ajax call
-    // $.ajax({
-    //   method: 'POST',
-    //   url: '/api/photos',
-    //   data: {photo: newPhoto}
 
-      //below adds newPhoto to frontend AFTER it comes back from backend, but app already does this via fetchAllPhotos
-      // success: ((newPhotoFromBackend) => {
-      //   var photos = this.state.photos.byId;
-      //   photos.newPhotoFromBackend.id = newPhotoFromBackend;
-      //   photos.currentPhoto = newPhotoFromBackend.id;
-      //   this.setState({photos: photos});
-      // })
-    // });
+  updatePhoto(event) {
+    const newPhoto = merge({}, this.state);
+    newPhoto.photo[event.target.name] = event.target.value;
+    this.setState(newPhoto);
   }
 
   handleSubmit(event) {
