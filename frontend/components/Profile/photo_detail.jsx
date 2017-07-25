@@ -29,6 +29,7 @@ class PhotoDetail extends React.Component {
     this.editPhoto = this.editPhoto.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     window.globalPhotoModal = this.globalPhotoModal.bind(this);
+    this.destroyMe = this.destroyMe.bind(this);
 
   }
 
@@ -62,6 +63,12 @@ class PhotoDetail extends React.Component {
   openModal() {
     this.setState({ modalOpen: true });
     // this.setState({ photo: { modalOpen: true, caption: "", location: "", photo_url: ""} });
+  }
+
+  destroyMe(event) {
+    console.log("inside destroyMe on photoDetail page");
+    console.log(this.props.currentPhoto);
+    this.props.destroyPhoto(this.props.currentPhoto);
   }
 
 
@@ -154,7 +161,7 @@ class PhotoDetail extends React.Component {
                                         type="text"
                                         placeholder="caption (optional)"
                                         name="caption"
-                                        value={this.state.photo.caption}
+                                        value={this.props.currentPhoto.caption}
                                         onChange={this.editPhoto}
                                         className="upload-input"
                                       />
@@ -166,7 +173,7 @@ class PhotoDetail extends React.Component {
                                           type="text"
                                           placeholder="location (optional)"
                                           name="location"
-                                          value={this.state.photo.location}
+                                          value={this.props.currentPhoto.location}
                                           onChange={this.editPhoto}
                                           className="upload-input"
                                       />
@@ -178,7 +185,7 @@ class PhotoDetail extends React.Component {
                                             type="text"
                                             placeholder="photo's url (required)"
                                             name="photo_url"
-                                            value={this.state.photo.photo_url}
+                                            value={this.props.currentPhoto.photo_url}
                                             onChange={this.editPhoto}
                                             className="upload-input"
                                         />
@@ -209,7 +216,7 @@ class PhotoDetail extends React.Component {
 
                         <section className="deleteContainer">
                             <button
-                              onClick={this.props.destroyPhoto}
+                              onClick={this.destroyMe}
                               className="deleteButton">
                               Delete Photo
                             </button>
