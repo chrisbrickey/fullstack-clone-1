@@ -36,7 +36,7 @@ class Profile extends React.Component {
 
 
   componentDidMount() {
-    return(<PhotoDetail />);
+    // return(<PhotoDetail />);
       // this.props.fetchAllPhotos();
       //BUT...fetch only this users photo
     }
@@ -52,6 +52,7 @@ class Profile extends React.Component {
 
   showDetail() {
     console.log("inside showDetail fxn");
+    // this.props.fetchSinglePhoto(photo.id); ///can't do this because don't know photo here, only in render
     window.globalPhotoModal();
     // return(<PhotoDetail />);
   }

@@ -16,6 +16,7 @@ console.log("on the photo__detail_container.jsx");
 const mapStateToProps = (state) => {
 
 //insert logic to conditionally pass photo only if it is not null
+//but now it is always null
   let thisPhoto;
   if (state.photos.currentPhoto) {
     thisPhoto = state.photos.byId[state.photos.currentPhoto];
