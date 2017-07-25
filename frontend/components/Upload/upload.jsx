@@ -75,25 +75,26 @@ class Upload extends React.Component {
 
 
           <section className="upload-sub-container">
-              <div className="upload-form-container">
+              <div className="sub-sub-container">
+                  <div className="upload-form-container">
 
 
-                  <div className="textInput">
+                      <div className="textInput">
+
+
+                      </div>
+
+                      <div className="cloudinary-container">
+                        <Dropzone postPhoto={this.postPhoto}/>
+                      </div>
+
+
+                      <div className="submit-container">
+                      </div>
+
 
 
                   </div>
-
-                  <div className="cloudinary-container">
-                    <Dropzone postPhoto={this.postPhoto}/>
-                  </div>
-
-
-                  <div className="formSubmitButton">
-                  </div>
-
-
-
-
               </div>
           </section>
 
