@@ -69,29 +69,48 @@ main {
 }
 
 .info-bottom {
-  background-color: lightblue;
+  // background-color: lightblue;
   margin: 5px;
-  padding: 3px 3px 3px 3px;
+  padding: 0px 3px 0px 3px;
   display: flex;
   flex-direction: column;
   // align-items: left;
 }
 
 .item-at-bottom {
-  margin: 5px;
+  margin: 3px;
   padding: 5px;
-  background-color: yellow;
+  // background-color: yellow;
+  display: flex;
+  flex-direction: column;
+  font-size: 110%;
+  color: black;
+  font-weight: bold;
+}
+
+#caption {
+  font-size: 110%;
+  color: black;
+  font-weight: bold;
+}
+
+#location {
+
 }
 
 #info-uploadDate {
   color: $instagram-grey;
-  font-size: 100%;
+  font-size: 95%;
+  margin-bottom: 0px;
 }
 
-.line {
+#line {
   height: 1px;
-  width: 100%;
-  // margin: 5px;
-  padding: 0px;
-  background-color: $instagram-grey;
+  background-color: $instagram-light-grey;
+}
+
+#info-addComment {
+  color: $instagram-grey;
+  font-size: 110%;
+  margin: 5px 0px 5px 0px;
 }
