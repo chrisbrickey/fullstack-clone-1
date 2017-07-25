@@ -1,6 +1,7 @@
 import merge from 'lodash/merge';
 import { RECEIVE_ALL_PHOTOS,
-         RECEIVE_SINGLE_PHOTO } from '../actions/photo_actions';
+         RECEIVE_SINGLE_PHOTO,
+         REMOVE_PHOTO } from '../actions/photo_actions';
 
 const defaultState = Object.freeze({
   currentPhoto: null,
@@ -10,6 +11,7 @@ const defaultState = Object.freeze({
 
 export const photoReducer = (state = defaultState, action) => {
   Object.freeze(state);
+  let newState;
 
 
   switch(action.type) {
@@ -28,6 +30,20 @@ export const photoReducer = (state = defaultState, action) => {
           currentPhoto: action.currentPhoto,
           byId: action.byId
         });
+
+    //Is this the right way to reset currentPhoto to null?
+    case REMOVE_PHOTO:
+        console.log("inside reducer at REMOVE_PHOTO");
+
+        // return merge({}, state, {
+        //   currentPhoto: action.currentPhoto,
+        //   byId: action.byId
+        // });
+
+        newState = merge({}, state);
+        delete newState.byId[action.photo.id];
+        newState.currentPhoto = null;
+        return newState;
 
     default:
         return state;

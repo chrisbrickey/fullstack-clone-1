@@ -31,7 +31,8 @@ import { receiveAllPhotos,
          fetchAllPhotos,
          fetchSinglePhoto,
          createPhoto,
-         updatePhoto} from './actions/photo_actions';
+         updatePhoto,
+         destroyPhoto } from './actions/photo_actions';
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -56,6 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.fetchSinglePhoto = fetchSinglePhoto;
   window.createPhoto = createPhoto;
   window.updatePhoto = updatePhoto;
+  window.destroyPhoto = destroyPhoto;
 
   window.ajaxFetchAllUsers = ajaxFetchAllUsers;
   window.ajaxFetchSingleUser = ajaxFetchSingleUser;
