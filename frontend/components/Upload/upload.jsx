@@ -16,7 +16,7 @@ class Upload extends React.Component {
       photo: {
         caption: "",
         location: "",
-        photoUrl: ""
+        photo_url: ""
       },
     };
 
@@ -51,6 +51,7 @@ class Upload extends React.Component {
 
 
   updatePhoto(event) {
+    console.log("inside updatePhoto on upload page");
     const newPhoto = merge({}, this.state);
     newPhoto.photo[event.target.name] = event.target.value;
     this.setState(newPhoto);
@@ -59,23 +60,20 @@ class Upload extends React.Component {
   handleSubmit(event) {
     console.log("inside handleSubmit on upload page");
 
-    // let testUser = this.state.user;
-    // console.log(testUser);
-    // console.log({user: testUser});
-    //
-    // event.preventDefault();
-    // let newUser = this.state.user;
-    // this.props.processForm({ user: newUser })
-    //   .then(
-    //     (()=> {
-    //       console.log("inside submit callback upon success");
-    //       this.setState({ user: { name: "", username: "", password: ""}, errors: null});
-    //     }),
-    //
-    //     (this.props.clearErrors())
-    //   );
+    let testPhoto = this.state.photo;
+    console.log(testPhoto);
+    console.log({ photo: testPhoto });
 
+    event.preventDefault();
 
+    let newPhoto = this.state.photo;
+    this.props.createPhoto({ photo: testPhoto })
+      .then(
+        (()=> {
+          console.log("inside handleSubmit callback upon success");
+          this.setState({ photo: { caption: "", location: "", photo_url: ""} });
+        })
+      );
   }
 
   //remember that errors and other objects might be null so render conditionally
@@ -139,8 +137,8 @@ class Upload extends React.Component {
                                         <input
                                             type="text"
                                             placeholder="photo's url (required)"
-                                            name="photoUrl"
-                                            value={this.state.photo.photoUrl}
+                                            name="photo_url"
+                                            value={this.state.photo.photo_url}
                                             onChange={this.updatePhoto}
                                             className="upload-input"
                                         />
@@ -149,12 +147,23 @@ class Upload extends React.Component {
 
                                   <input
                                       type="submit"
-                                      value="Submit"
+                                      value="Don't use me"
                                       className="auth-button"
                                       id="tied-to-form"
                                   />
 
                               </form>
+
+
+                              <button
+                                onClick={this.handleSubmit}
+                                type="submit"
+                                value="Submit"
+                                className="auth-button"
+                                id="tied-to-form">
+                                Submit
+                              </button>
+
                           </div>
 
 
