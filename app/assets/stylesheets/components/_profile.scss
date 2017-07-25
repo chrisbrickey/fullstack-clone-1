@@ -126,13 +126,21 @@ $instagram-red: #f04752;
   align-items: center;
   padding: 20px;
   margin: 0px 100px 0px 100px;
-  min-width: 100vw;
+  // max-width: 100vw;
 }
 
 .portofolio-subcontainer {
+  // margin: 0px;
+  // padding: 0px;
+  // border: 0px;
+  //
+  // background-color: pink;
 }
 
 .portfolio {
+
+  // background-color: lightblue;
+  // width: 80%;
 
 }
 
@@ -142,11 +150,15 @@ $instagram-red: #f04752;
 }
 
 .photoItem-container > img {
+  // width: 250px;
+}
+
+.userPhoto {
   width: 250px;
 }
 
 .noPhoto-container {
-  background-color: orange;
+  // background-color: orange;
   display: flex;
   flex-direction: rows;
   justify-content: center;

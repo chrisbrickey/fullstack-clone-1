@@ -66,10 +66,12 @@ class Profile extends React.Component {
         photoListRender = userPhotoList.map((photo) => {
           return (
               <li key={photo.id} className="photoItem-container">
-                  <img
-                      src={photo.photoUrl}
-                      alt="photo"
-                      className="userPhoto"/>
+                  <Link to={`/photos/${photo.id}`}>
+                      <img
+                          src={photo.photoUrl}
+                          alt="photo"
+                          className="userPhoto"/>
+                  </Link>
               </li>
           );
         });
