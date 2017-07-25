@@ -69,29 +69,43 @@ class Upload extends React.Component {
     console.log("rendering on upload.jsx");
 
     return (
-      <div className="profile-page-container">on the upload.jsx
+      <div className="upload-page-container">
 
           <HeaderXXX userId={this.props.currentUser.id}/>
 
-          <section>
-              <button
-                  onClick={this.props.logoutDestroySession}
-                  className="logout-button">Logout
-              </button>
+
+          <section className="upload-sub-container">
+              <div className="upload-form-container">
+
+
+                  <div className="textInput">
+
+
+                  </div>
+
+                  <div className="cloudinary-container">
+                    <UploadButton postPhoto={this.postPhoto}/>
+                  </div>
+
+
+                  <div className="formSubmitButton">
+                  </div>
+
+
+
+
+              </div>
           </section>
 
 
-          <section className="cloudinary-container">
-            <UploadButton postPhoto={this.postPhoto}/>
-          </section>
+          <button
+              className="logout-button"
+              onClick={this.props.logoutDestroySession}>
+              Logout
+          </button>
 
-          <main>
-              <ul className="whatevs">
-                  {}
-              </ul>
-          </main>
 
-        <FooterXXX/>
+          <FooterXXX/>
 
       </div>
     );

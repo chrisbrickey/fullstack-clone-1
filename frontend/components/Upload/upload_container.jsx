@@ -6,7 +6,8 @@ import { logoutDestroySession,
 import { fetchAllPhotos,
          fetchSinglePhoto,
          createPhoto,
-         updatePhoto } from '../../actions/photo_actions';
+         updatePhoto,
+         destroyPhoto } from '../../actions/photo_actions';
 
 import Upload from './upload';
 import UploadButton from './uploadButton';
@@ -30,6 +31,8 @@ const mapDispatchToProps = (dispatch, { location }) => {
     fetchSinglePhoto: (id) => dispatch(fetchSinglePhoto(id)),
     createPhoto: (data) => dispatch(createPhoto(data)),
     updatePhoto: (data) => dispatch(updatePhoto(data)),
+    destroyPhoto: (photo) => dispatch(destroyPhoto(photo)),
+
     logoutDestroySession: () => dispatch(logoutDestroySession()),
     clearErrors: () => dispatch(clearErrors())
   };

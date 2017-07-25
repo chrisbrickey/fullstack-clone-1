@@ -67,7 +67,7 @@ class UploadButton extends React.Component {
   render() {
 
     return (
-      <div className="uploadButton-container">on the uploadButton.jsx
+      <div className="dropzone-container">on the uploadButton.jsx
           <section>
 
 
