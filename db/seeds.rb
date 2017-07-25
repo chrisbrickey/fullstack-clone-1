@@ -90,7 +90,7 @@ ActiveRecord::Base.transaction do
     )
 
   photo8 = Photo.create!(
-    photo_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/e_auto_brightness/v1500771452/redandwhite_vfwbxy.jpg',
+    photo_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500933186/fif8afswdavqfxnwomtu.jpg',
     caption: '',
     location: '',
     author_id: demo4.id
