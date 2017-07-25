@@ -4,7 +4,7 @@ import merge from 'lodash/merge';
 
 console.log("on the uploadButton.jsx");
 
-class UploadButton extends React.Component {
+class Dropzone extends React.Component {
   constructor(props) {
     super(props);
     // this.state = {
@@ -87,5 +87,5 @@ class UploadButton extends React.Component {
 
 }
 
-export default UploadButton;
-// export default withRouter(UploadButton);
+export default Dropzone;
+// export default withRouter(Dropzone);

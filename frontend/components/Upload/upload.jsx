@@ -4,7 +4,7 @@ import merge from 'lodash/merge';
 
 import FooterXXX from '../Navigation/footer';
 import HeaderXXX from '../Navigation/header';
-import UploadButton from './uploadButton';
+import Dropzone from './dropzone';
 
 
 console.log("on the upload.jsx");
@@ -84,7 +84,7 @@ class Upload extends React.Component {
                   </div>
 
                   <div className="cloudinary-container">
-                    <UploadButton postPhoto={this.postPhoto}/>
+                    <Dropzone postPhoto={this.postPhoto}/>
                   </div>
 
 

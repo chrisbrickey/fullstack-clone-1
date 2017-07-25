@@ -10,7 +10,7 @@ import { fetchAllPhotos,
          destroyPhoto } from '../../actions/photo_actions';
 
 import Upload from './upload';
-import UploadButton from './uploadButton';
+import Dropzone from './dropzone';
 
 console.log("on the upload_container.jsx");
 
