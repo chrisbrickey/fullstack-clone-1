@@ -70,9 +70,15 @@ class Home extends React.Component {
                     />
 
                     <div className="info-bottom">
-                        <div id="info-caption">{photo.caption}</div>
-                        <div id="info-location">{photo.location}</div>
-                        <div id="info-uploadDate">{photo.uploadDate} ago</div>
+                        <div className="item-at-bottom" id="info-caption">{photo.caption}</div>
+                        <div className="item-at-bottom" id="info-location">{photo.location}</div>
+                        <div className="item-at-bottom" id="info-uploadDate">{photo.uploadDate} ago</div>
+
+                        <div className="item-at-bottom" id="info-uploadDate">
+                          <div className="line"></div>  
+                        </div>
+
+                        <div className="item-at-bottom" id="info-addComment">placeholder for comments</div>
                     </div>
                 </li>
             );
