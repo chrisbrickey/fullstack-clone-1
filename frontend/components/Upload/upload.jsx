@@ -99,6 +99,49 @@ class Upload extends React.Component {
                           <div className="cloudinary-container">
                             <Dropzone postPhoto={this.postPhoto}/>
                           </div>
+
+
+                          <div className="options-form-container">
+                              <form onSubmit={this.handleSubmit} id="upload-form">
+
+                                  <label>
+                                      <input
+                                        type="text"
+                                        placeholder="caption (optional)"
+                                        name="caption"
+                                        value={this.state.photo.caption}
+                                        onChange={this.updatePhoto}
+                                        className="upload-input"
+                                      />
+                                  </label>
+                                  <br/>
+
+                                  <label>
+                                      <input
+                                          type="text"
+                                          placeholder="location (optional)"
+                                          name="location"
+                                          value={this.state.photo.location}
+                                          onChange={this.updatePhoto}
+                                          className="upload-input"
+                                      />
+                                  </label>
+                                  <br/>
+                                  <br/>
+
+
+                                  <button
+                                    onClick={this.handleSubmit}
+                                    type="submit"
+                                    value="Submit"
+                                    className="manual-submit">
+                                    Submit
+                                  </button>
+
+                              </form>
+                          </div>
+
+
                       </div>
 
 
@@ -106,7 +149,7 @@ class Upload extends React.Component {
 
                           <div className="optionText">Option 2: enter information manually</div>
 
-                          <div className="option2-form-container">
+                          <div className="options-form-container">
                               <form onSubmit={this.handleSubmit} id="upload-form">
 
                                   <label>
