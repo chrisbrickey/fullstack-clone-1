@@ -8,8 +8,8 @@ $instagram-header-icon: #4a4a4a;
 $instagram-red: #f04752;
 
 .profile-page-container{
-  max-height: 100vh;
-  max-width: 100vw;
+  min-height: 100vh;
+  min-width: 100vw;
 }
 
 
@@ -163,8 +163,9 @@ $instagram-red: #f04752;
   flex-direction: rows;
   justify-content: center;
   align-items: left;
-  min-height: 400px;
+  min-height: 600px;
   padding: 10px;
+  margin: 0px 0px 0px 100px;
 }
 
 .noPhoto-inner {
