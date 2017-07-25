@@ -9,7 +9,7 @@ import { fetchAllPhotos,
          updatePhoto,
          destroyPhoto } from '../../actions/photo_actions';
 
-import Photo from './photo';
+import PhotoDetail from './photo_detail';
 
 console.log("on the photo_container.jsx");
 
@@ -40,4 +40,4 @@ const mapDispatchToProps = (dispatch, { location }) => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Photo);
+)(PhotoDetail);

@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import merge from 'lodash/merge';
+import Modal from 'react-modal';
+import {hashHistory} from 'react-router';
 
 import FooterXXX from '../Navigation/footer';
 import HeaderXXX from '../Navigation/header';
@@ -8,7 +10,7 @@ import HeaderXXX from '../Navigation/header';
 //grab current photo from url....then just need to link to it from pics on profile page
 console.log("on the photo.jsx");
 
-class Photo extends React.Component {
+class PhotoDetail extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -194,5 +196,5 @@ class Photo extends React.Component {
 
 }
 
-export default Photo;
-// export default withRouter(Photo);
+export default PhotoDetail;
+// export default withRouter(PhotoDetail);
