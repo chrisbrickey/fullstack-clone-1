@@ -12,7 +12,7 @@ Photo.destroy_all
 
 #will rollback all seeds if any issues; create! fails loudly so can get more information on errors
 ActiveRecord::Base.transaction do
-  demo1 = User.create!(name: 'Chris', username: 'chri5brickey1', password: '123456', profile_img_url: "https://res.cloudinary.com/dckkkjkuz/image/upload/v1500775805/headshot_crop2_owq402.jpg", tagline: 'always be dancing | www.chrisbrickey.com')
+  demo1 = User.create!(name: 'Chris', username: 'chri5brickey1', password: '123456', profile_img_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500775805/headshot_crop2_owq402.jpg', tagline: 'always be dancing | www.chrisbrickey.com')
   demo2 = User.create!(name: 'Chris', username: 'chri5brickey2', password: '123456', profile_img_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500775805/headshot_crop2_owq402.jpg', tagline: 'always be dancing | www.chrisbrickey.com')
   demo3 = User.create!(name: 'Chris', username: 'chri5brickey3', password: '123456', profile_img_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500775805/headshot_crop2_owq402.jpg', tagline: 'always be dancing | www.chrisbrickey.com')
   demo4 = User.create!(name: 'Chris', username: 'chri5brickey4', password: '123456', profile_img_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500775805/headshot_crop2_owq402.jpg', tagline: 'always be dancing | www.chrisbrickey.com')
@@ -42,23 +42,88 @@ ActiveRecord::Base.transaction do
 
   photo1 = Photo.create!(
     photo_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500771271/fierce_xyjq3a.jpg',
-    caption: "ballerina en pointe",
-    location: "earth",
+    caption: 'ballerina en pointe',
+    location: 'earth',
     author_id: demo1.id
     )
 
   photo2 = Photo.create!(
     photo_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500771420/infinity_neg30m.jpg',
-    caption: "infinitely beautiful",
-    location: "earth",
+    caption: 'infinitely beautiful',
+    location: 'earth',
     author_id: demo1.id
     )
 
   photo3 = Photo.create!(
     photo_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500771107/mural_c8cg36.jpg',
-    caption: "urban inspiration",
-    location: "earth",
+    caption: 'urban inspiration',
+    location: 'earth',
     author_id: demo1.id
     )
+
+  photo4 = Photo.create!(
+    photo_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500771188/coat_omguom.jpg',
+    caption: '',
+    location: '',
+    author_id: demo2.id
+    )
+
+  photo5 = Photo.create!(
+    photo_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500771455/shadows_r0laa1.jpg',
+    caption: '',
+    location: '',
+    author_id: demo2.id
+    )
+
+  photo6 = Photo.create!(
+    photo_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500771443/trio_wfx6xb.jpg',
+    caption: '',
+    location: '',
+    author_id: demo3.id
+    )
+
+  photo7 = Photo.create!(
+    photo_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500771234/arabesque_biogdk.jpg',
+    caption: '',
+    location: '',
+    author_id: demo3.id
+    )
+
+  photo8 = Photo.create!(
+    photo_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/e_auto_brightness/v1500771452/redandwhite_vfwbxy.jpg',
+    caption: '',
+    location: '',
+    author_id: demo4.id
+    )
+
+  photo9 = Photo.create!(
+    photo_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500771443/trio_wfx6xb.jpg',
+    caption: '',
+    location: '',
+    author_id: demo4.id
+    )
+
+  photo10 = Photo.create!(
+    photo_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500771428/coral_nvemtt.jpg',
+    caption: '',
+    location: '',
+    author_id: demo5.id
+    )
+
+  photo11 = Photo.create!(
+    photo_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500771634/sunset_oqve3y.jpg',
+    caption: '',
+    location: '',
+    author_id: demo5.id
+    )
+
+  photo12 = Photo.create!(
+    photo_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500771579/dark_red_l5qojp.jpg',
+    caption: '',
+    location: '',
+    author_id: demo5.id
+    )
+
+
 
 end
