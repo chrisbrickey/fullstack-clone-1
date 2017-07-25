@@ -18,6 +18,9 @@ import UploadContainer from './Upload/upload_container';
 import PhotoContainer from './Profile/photo_container';
 
 
+
+
+// removed         <ProtectedRoute path="/photos/:id" component={PhotoContainer}/>
 export const App = ({store}) => (
   <div>
     <div className="App">
@@ -26,7 +29,7 @@ export const App = ({store}) => (
         <AuthRoute path="/login" component={SignupContainer} />
         <ProtectedRoute exact path="/upload" component={UploadContainer}/>
         <ProtectedRoute path="/users" component={ProfileContainer}/>
-        <ProtectedRoute path="/photos/:id" component={PhotoContainer}/>
+
         <ProtectedRoute exact path="/" component={HomeContainer}/>
 
       </Switch>

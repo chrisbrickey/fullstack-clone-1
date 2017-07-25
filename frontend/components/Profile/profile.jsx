@@ -5,6 +5,8 @@ import merge from 'lodash/merge';
 
 import FooterXXX from '../Navigation/footer';
 import HeaderXXX from '../Navigation/header';
+import PhotoContainer from './photo_container';
+import PhotoDetail from './photo_detail';
 
 
 console.log("on the profile.jsx");
@@ -23,6 +25,7 @@ class Profile extends React.Component {
 
     //this.anyMethod = this.anyMethod.bind(this);
     // this.cropPhoto = this.cropPhoto.bind(this);
+    this.showDetail = this.showDetail.bind(this);
   }
 
 
@@ -39,6 +42,10 @@ class Profile extends React.Component {
   //
   //   return croppedUrl;
   // }
+
+  showDetail(photoId) {
+    <PhotoContainer photoId={photoId}/>;
+  }
 
 
   //remember that errors and other objects might be null so render conditionally
@@ -75,13 +82,20 @@ class Profile extends React.Component {
         photoListRender = userPhotoList.map((photo) => {
           return (
               <li key={photo.id} className="photoItem-container">
-                  <Link to={`/photos/${photo.id}`}>
 
-                      <img
-                          src={photo.photoUrl}
-                          alt="photo"
-                          className="userPhoto"/>
-                  </Link>
+                    <div className="detailButton-container">
+                        <img
+                            src={photo.photoUrl}
+                            alt="photo"
+                            className="userPhoto"/>
+
+
+                        <button
+                          onClick={this.showDetail(photo.id)}
+                          className="detailButton"
+                          value="see detail/edit">Detail Button</button>
+                    </div>
+
               </li>
           );
         });

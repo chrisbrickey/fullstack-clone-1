@@ -33,14 +33,15 @@ class PhotoDetail extends React.Component {
   ///now the photos in state has a new key...currentPhoto and the value is id of the photo we are rendering
   componentDidMount() {
       this.props.fetchAllPhotos();
-      this.props.fetchSinglePhoto(this.props.match.params.id);
+      // this.props.fetchSinglePhoto(this.props.match.params.id);
+      this.props.fetchSinglePhoto(photoId);
     }
-
-  componentWillReceiveProps(nextProps) {
-    if (this.props.match.params.id !== nextProps.match.params.id) {
-      this.props.fetchSinglePhoto(nextProps.match.params.id);
-    }
-  }
+  //
+  // componentWillReceiveProps(nextProps) {
+  //   if (this.props.match.params.id !== nextProps.match.params.id) {
+  //     this.props.fetchSinglePhoto(nextProps.match.params.id);
+  //   }
+  // }
 
   closeModal() {
     this.setState({ modalOpen: false });
@@ -90,21 +91,21 @@ class PhotoDetail extends React.Component {
 
     console.log("rendering on photo.jsx");
     console.log(this.props);
-    console.log(this.props.match.params.id);
+    // console.log(this.props.match.params.id);
 
 
-    let allPhotos = this.props.photos;
-    let thisId = this.props.match.params.id;
-    let thisPhoto = allPhotos[thisId];
-    console.log(allPhotos[thisId]);
-
-    let workingURL;
-
-    if (this.props.photos[thisId]) {
-      workingURL = thisPhoto.photoUrl;
-    } else {
-      workingURL = "xx";
-    }
+    // let allPhotos = this.props.photos;
+    // let thisId = this.props.match.params.id;
+    // let thisPhoto = allPhotos[thisId];
+    // console.log(allPhotos[thisId]);
+    //
+    // let workingURL;
+    //
+    // if (this.props.photos[thisId]) {
+    //   workingURL = thisPhoto.photoUrl;
+    // } else {
+    //   workingURL = "xx";
+    // }
 
     // const paramId = this.props.match.params.photoId;
     // const pulledPhoto = this.props.photos[paramId];
@@ -122,7 +123,7 @@ class PhotoDetail extends React.Component {
                   <div className="photo-container">photo-container
 
                     <img
-                        src={workingURL}
+                        src="change this back to {workingURL} if pulling from query string"
                         alt="photo"
                         className=""/>
 

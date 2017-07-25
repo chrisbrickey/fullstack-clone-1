@@ -157,6 +157,20 @@ $instagram-red: #f04752;
   width: 250px;
 }
 
+.detailButton-container {
+  display: flex;
+  flex-direction: column;
+  background-color: orange;
+  width: 400px;
+  height: 400px
+}
+
+.detailButton {
+  background-color: red;
+  width: 100px;
+  height: 100px;
+}
+
 .noPhoto-container {
   // background-color: orange;
   display: flex;
