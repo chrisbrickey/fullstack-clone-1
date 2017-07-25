@@ -47,10 +47,10 @@ class Profile extends React.Component {
 
     let profilePicture;
 
-    if (this.props.currentUser.profileImgUrl === "") {
-      profilePicture = "https://res.cloudinary.com/dckkkjkuz/image/upload/c_scale,w_590/v1500953840/instagram-color-fade_pvpssi.png";
-    } else {
+    if (this.props.currentUser.profileImgUrl) {
       profilePicture = this.props.currentUser.profileImgUrl;
+    } else {
+      profilePicture = "https://res.cloudinary.com/dckkkjkuz/image/upload/c_scale,w_590/v1500953840/instagram-color-fade_pvpssi.png";
     }
 
     const photoFeedObject = this.props.photos.byId;
