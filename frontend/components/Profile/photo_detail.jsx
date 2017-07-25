@@ -43,7 +43,9 @@ class PhotoDetail extends React.Component {
 
   globalPhotoModal () {
     console.log("inside globalPhotoModal");
+    this.props.fetchSinglePhoto(this.props.currentPhotoId);
     this.setState({ modalOpen: !this.state.modalOpen });
+
   }
   //
   // componentWillReceiveProps(nextProps) {
@@ -118,7 +120,7 @@ class PhotoDetail extends React.Component {
 
     // const paramId = this.props.match.params.photoId;
     // const pulledPhoto = this.props.photos[paramId];
-    if (this.state.modalOpen) {
+    if (this.state.modalOpen && this.props.currentPhoto) {
       return (
         <div className="photo-modal-outer">
           <div className="photo-modal-inner">
@@ -131,7 +133,7 @@ class PhotoDetail extends React.Component {
                       <section className="photo-container">photo-container
 
                         <img
-                            src="change this back to {workingURL} if pulling from query string"
+                            src={this.props.currentPhoto.photoUrl}
                             alt="photo"
                             className=""/>
 

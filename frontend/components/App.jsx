@@ -24,7 +24,7 @@ import PhotoDetailContainer from './Profile/photo_detail_container';
 export const App = ({store}) => (
   <div>
     <div className="App">
-      <PhotoDetailContainer/>
+
       <Switch>
         <AuthRoute path="/signup" component={SignupContainer} />
         <AuthRoute path="/login" component={SignupContainer} />

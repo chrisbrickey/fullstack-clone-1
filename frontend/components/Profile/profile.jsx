@@ -7,7 +7,6 @@ import FooterXXX from '../Navigation/footer';
 import HeaderXXX from '../Navigation/header';
 
 import PhotoDetailContainer from './photo_detail_container';
-import PhotoDetail from './photo_detail';
 
 
 console.log("on the profile.jsx");
@@ -15,14 +14,9 @@ console.log("on the profile.jsx");
 class Profile extends React.Component {
   constructor(props) {
     super(props);
-    // this.state = {
-    //   user: {
-    //     name: "",
-    //     username: "",
-    //     password: ""
-    //   },
-    //   errors: {}
-    // };
+    this.state = {
+      currentPhotoId: null
+    };
 
     // window.globalPhotoModal = () => {
     //   this.setState({ modalOpen: true });
@@ -50,10 +44,12 @@ class Profile extends React.Component {
   //   return croppedUrl;
   // }
 
-  showDetail() {
+  showDetail(id) {
     console.log("inside showDetail fxn");
     // this.props.fetchSinglePhoto(photo.id); ///can't do this because don't know photo here, only in render
-    window.globalPhotoModal();
+    this.setState({currentPhotoId: id}, () => {
+      window.globalPhotoModal();
+    });
     // return(<PhotoDetail />);
   }
 
@@ -103,7 +99,7 @@ class Profile extends React.Component {
 
 
                         <button
-                          onClick={this.showDetail}
+                          onClick={ () => this.showDetail(photo.id) }
                           className="detailButton"
                           value="see detail/edit">Edit</button>
                     </div>
@@ -133,8 +129,9 @@ class Profile extends React.Component {
 
     //replace link to profile pic and tagline so pulls dynamically based on user
     return (
-      <div className="profile-page-container">
 
+      <div className="profile-page-container">
+        <PhotoDetailContainer currentPhotoId={this.state.currentPhotoId}/>
           <HeaderXXX userId={this.props.currentUser.id}/>
 
 

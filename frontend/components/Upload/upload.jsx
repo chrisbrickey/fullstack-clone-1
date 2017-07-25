@@ -96,13 +96,26 @@ class Upload extends React.Component {
                       <div className="option1-box">
                           <div className="optionText">Option 1: drag/drop or select file here</div>
 
-                          <div className="cloudinary-container">
-                            <Dropzone postPhoto={this.postPhoto}/>
-                          </div>
+                            <div className="cloudinary-container">
+                              <Dropzone postPhoto={this.postPhoto}/>
+                            </div>
+                            <br/>
+                              <br/>
+                                <br/>
 
 
+
+
+
+                          <div className="optionText">Option WIP: drag/drop or select file here</div>
                           <div className="options-form-container">
                               <form onSubmit={this.handleSubmit} id="upload-form">
+
+
+                                  <div className="cloudinary-container">
+                                    <Dropzone postPhoto={this.postPhoto}/>
+                                  </div>
+
 
                                   <label>
                                       <input
@@ -143,6 +156,11 @@ class Upload extends React.Component {
 
 
                       </div>
+
+
+
+
+
 
 
                       <div className="option2-box">
