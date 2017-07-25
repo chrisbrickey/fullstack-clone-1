@@ -14,11 +14,21 @@ import PhotoDetail from './photo_detail';
 console.log("on the photo_container.jsx");
 
 const mapStateToProps = (state) => {
+
+//insert logic to conditionally pass photo only if it is not null
+  let thisPhoto;
+  if (state.photos.currentPhoto) {
+    thisPhoto = state.photos.byId[state.photos.currentPhoto];
+  } else {
+    thisPhoto = null;
+  }
+
   return {
     loggedIn: Boolean(state.session.currentUser),
     currentUser: state.session.currentUser,
     errors: state.session.errors,
-    photos: state.photos
+    photos: state.photos,
+    currentPhoto: thisPhoto
   };
 };
 //
@@ -37,7 +47,7 @@ const mapDispatchToProps = (dispatch, { location }) => {
   };
 };
 
-// export default connect(
-//   mapStateToProps,
-//   mapDispatchToProps
-// )(PhotoDetail);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(PhotoDetail);

@@ -23,25 +23,28 @@ class PhotoDetail extends React.Component {
 
     };
 
-    window.globalPhotoModal = () => {
-      this.setState({ modalOpen: true });
-    };
-
     //this.anyMethod = this.anyMethod.bind(this);
     this.closeModal = this.closeModal.bind(this);
     this.openModal = this.openModal.bind(this);
     this.editPhoto = this.editPhoto.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    window.globalPhotoModal = window.globalPhotoModal.bind(this);
+    window.globalPhotoModal = this.globalPhotoModal.bind(this);
 
   }
 
   ///now the photos in state has a new key...currentPhoto and the value is id of the photo we are rendering
   componentDidMount() {
       this.props.fetchAllPhotos();
+
+
       // this.props.fetchSinglePhoto(this.props.match.params.id);
-      this.props.fetchSinglePhoto(photoId);
+      // this.props.fetchSinglePhoto(photoId);
     }
+
+  globalPhotoModal () {
+    console.log("inside globalPhotoModal");
+    this.setState({ modalOpen: !this.state.modalOpen });
+  }
   //
   // componentWillReceiveProps(nextProps) {
   //   if (this.props.match.params.id !== nextProps.match.params.id) {
@@ -115,128 +118,132 @@ class PhotoDetail extends React.Component {
 
     // const paramId = this.props.match.params.photoId;
     // const pulledPhoto = this.props.photos[paramId];
+    if (this.state.modalOpen) {
+      return (
+        <div className="photo-page-container">
 
-    return (
-      <div className="photo-page-container">
-
-          <HeaderXXX userId={this.props.currentUser.id}/>
-
-
-          <section className="photo-outer">
-              <div className="photo-inner">
+            <HeaderXXX userId={this.props.currentUser.id}/>
 
 
-                  <div className="photo-container">photo-container
-
-                    <img
-                        src="change this back to {workingURL} if pulling from query string"
-                        alt="photo"
-                        className=""/>
+            <section className="photo-outer">
+                <div className="photo-inner">
 
 
-                  </div>
+                    <div className="photo-container">photo-container
+
+                      <img
+                          src="change this back to {workingURL} if pulling from query string"
+                          alt="photo"
+                          className=""/>
 
 
-                  <div className="detail-container">
-                    <div className="box1">
-                        <div className="optionalText">work in progress</div>
-                        <div className="another-container">
+                    </div>
 
-                          <form onSubmit={this.handleSubmit} id="upload-form">
 
-                              <label>
-                                  <input
-                                    type="text"
-                                    placeholder="caption (optional)"
-                                    name="caption"
-                                    value={this.state.photo.caption}
-                                    onChange={this.editPhoto}
-                                    className="upload-input"
-                                  />
-                              </label>
-                              <br/>
+                    <div className="detail-container">
+                      <div className="box1">
+                          <div className="optionalText">work in progress</div>
+                          <div className="another-container">
 
-                              <label>
-                                  <input
+                            <form onSubmit={this.handleSubmit} id="upload-form">
+
+                                <label>
+                                    <input
                                       type="text"
-                                      placeholder="location (optional)"
-                                      name="location"
-                                      value={this.state.photo.location}
+                                      placeholder="caption (optional)"
+                                      name="caption"
+                                      value={this.state.photo.caption}
                                       onChange={this.editPhoto}
                                       className="upload-input"
-                                  />
-                              </label>
-                              <br/>
+                                    />
+                                </label>
+                                <br/>
 
                                 <label>
                                     <input
                                         type="text"
-                                        placeholder="photo's url (required)"
-                                        name="photo_url"
-                                        value={this.state.photo.photo_url}
+                                        placeholder="location (optional)"
+                                        name="location"
+                                        value={this.state.photo.location}
                                         onChange={this.editPhoto}
                                         className="upload-input"
                                     />
                                 </label>
-                              <br/>
-                              <br/>
+                                <br/>
+
+                                  <label>
+                                      <input
+                                          type="text"
+                                          placeholder="photo's url (required)"
+                                          name="photo_url"
+                                          value={this.state.photo.photo_url}
+                                          onChange={this.editPhoto}
+                                          className="upload-input"
+                                      />
+                                  </label>
+                                <br/>
+                                <br/>
 
 
-                              <button
-                                onClick={this.handleSubmit}
-                                type="submit"
-                                value="Submit"
-                                className="manual-submit">
-                                Submit Changes
-                              </button>
+                                <button
+                                  onClick={this.handleSubmit}
+                                  type="submit"
+                                  value="Submit"
+                                  className="manual-submit">
+                                  Submit Changes
+                                </button>
 
-                          </form>
-
-
-
-
-                          <button
-                            onClick={this.props.destroyPhoto}
-                            type="submit"
-                            value="Submit"
-                            className="manual-submit">
-                            Delete Post
-                          </button>
-
-
-
-
+                            </form>
 
 
 
 
+                            <button
+                              onClick={this.props.destroyPhoto}
+                              type="submit"
+                              value="Submit"
+                              className="manual-submit">
+                              Delete Post
+                            </button>
 
 
-                        </div>
 
+
+
+
+
+
+
+
+                          </div>
+
+                      </div>
+
+
+                      <div className="box2">
+                          <div className="optionalText">work in progress</div>
+
+                          <div className="yet-another-container">
+
+
+
+
+                          </div>
+                      </div>
                     </div>
 
-
-                    <div className="box2">
-                        <div className="optionalText">work in progress</div>
-
-                        <div className="yet-another-container">
+                </div>
+            </section>
 
 
+            <FooterXXX/>
 
+        </div>
+      );
+    } else {
+      return (<div></div>);
+    }
 
-                        </div>
-                    </div>
-                  </div>
-
-              </div>
-          </section>
-
-
-          <FooterXXX/>
-
-      </div>
-    );
 
   }
 
