@@ -20,7 +20,7 @@ class PhotoDetail extends React.Component {
         location: "",
         photo_url: ""
       },
-
+      id: this.props.currentPhotoId,
     };
 
     //this.anyMethod = this.anyMethod.bind(this);
@@ -75,21 +75,19 @@ class PhotoDetail extends React.Component {
   editPhoto(event) {
     console.log("inside updatePhoto on photoDetail page");
     const newPhoto = merge({}, this.state);
+    console.log(this.state);
     newPhoto.photo[event.target.name] = event.target.value;
+    console.log(newPhoto);
     this.setState(newPhoto);
+    console.log(this.state);
   }
 
   handleSubmit(event) {
     console.log("inside handleSubmit on photoDetail page");
+    console.log(this.state.photo);
 
     event.preventDefault();
-
-    let testPhoto = this.state.photo;
-    console.log(testPhoto);
-    console.log({ photo: testPhoto });
-
-    let newPhoto = this.state.photo;
-    this.props.updatePhoto({ photo: newPhoto });
+    this.props.updatePhoto({ photo: this.state.photo });
       // .then(
       //   (()=> {
       //     console.log("inside handleSubmit callback on photoDetail upon success");
@@ -100,7 +98,7 @@ class PhotoDetail extends React.Component {
 
     this.closeModal();
     this.setState({ photo: { caption: "", location: "", photo_url: ""} });
-    hashHistory.push(`/users/${this.props.currentUser.id}`);
+    // hashHistory.push(`/users/${this.props.currentUser.id}`);
   }
 
 
@@ -159,7 +157,7 @@ class PhotoDetail extends React.Component {
                                   <label>
                                       <input
                                         type="text"
-                                        placeholder="caption (optional)"
+                                        placeholder="caption"
                                         name="caption"
                                         value={this.props.currentPhoto.caption}
                                         onChange={this.editPhoto}
@@ -171,7 +169,7 @@ class PhotoDetail extends React.Component {
                                   <label>
                                       <input
                                           type="text"
-                                          placeholder="location (optional)"
+                                          placeholder="location"
                                           name="location"
                                           value={this.props.currentPhoto.location}
                                           onChange={this.editPhoto}
@@ -183,7 +181,7 @@ class PhotoDetail extends React.Component {
                                     <label>
                                         <input
                                             type="text"
-                                            placeholder="photo's url (required)"
+                                            placeholder="photo's url"
                                             name="photo_url"
                                             value={this.props.currentPhoto.photo_url}
                                             onChange={this.editPhoto}
