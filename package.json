@@ -12,6 +12,7 @@
     "npm": "^5.3.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "react-dropzone": "^3.13.3",
     "react-modal": "^2.2.2",
     "react-redux": "^5.0.5",
     "react-router": "^4.1.2",
@@ -19,6 +20,7 @@
     "redux": "^3.7.2",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.2.0",
+    "superagent": "^3.5.2",
     "webpack": "^3.3.0"
   },
   "description": "See design docs for development README.  This production README will be WIP during development.",
