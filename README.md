@@ -1,4 +1,4 @@
-# Étoile (working title)
+# insta-étoile
 
 See design docs for development README.  This production README will be WIP during development.
 
