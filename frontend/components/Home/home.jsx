@@ -52,13 +52,28 @@ class Home extends React.Component {
 
             return (
                 <li key={photo.id} className="feedItem-container">
-                    <p>{photo.username}</p>
-                    <p>{photo.caption}</p>
-                    <p>{photo.uploadDate}</p>
+                    <div className="info-top">
+                        <div className="thumbnailPic-container">
+                              <img
+                                  id="thumbnail"
+                                  src="https://res.cloudinary.com/dckkkjkuz/image/upload/c_scale,w_590/v1500953840/instagram-color-fade_pvpssi.png"
+                                  alt="photo"
+                              />
+                          </div>
+                        <div id="info-username">{photo.username}</div>
+
+                      </div>
+
                     <img
                         src={photo.photoUrl}
                         alt="photo"
                     />
+
+                    <div className="info-bottom">
+                        <div id="info-caption">{photo.caption}</div>
+                        <div id="info-location">{photo.location}</div>
+                        <div id="info-uploadDate">{photo.uploadDate} ago</div>
+                    </div>
                 </li>
             );
         });

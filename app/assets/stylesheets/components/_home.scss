@@ -16,10 +16,61 @@ main {
 }
 
 .feedItem-container {
+  // background-color: orange;
+  background-color: $instagram-white;
   margin: 10px;
-  padding: 3px;
+  padding: 0px;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $instagram-light-grey;
+}
+
+.info-top {
+  // background-color: lightgreen;
+  // margin: 5px;
+  padding: 0px 3px 0px 3px;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+}
+
+.thumbnailPic-container {
+  height: 50px;
+  width: 50px;
+  // background-color: orange;
+  margin: 5px 0px 5px 0px;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.thumbnailPic-container > img {
+  border-radius: 100%;
+  height: 35px;
+  width: 35px;
+  // margin: 5px 50px 5px 50px;
+}
+
+
+#info-username {
+  font-weight: bold;
+  margin: 5px 0px 5px 0px;
 }
 
 .feedItem-container > img {
   width: 600px;
+}
+
+.info-bottom {
+  background-color: lightblue;
+  margin: 5px;
+  padding: 0px 3px 0px 3px;
+  display: flex;
+  flex-direction: column;
+  // align-items: left;
 }
