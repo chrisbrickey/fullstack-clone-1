@@ -57,7 +57,7 @@ $instagram-red: #f04752;
 .option1-box {
   color: $instagram-grey;
   background-color: $instagram-white;
-  margin: 10px;
+  margin: 10px 10px 40px 10px;
   padding: 10px;
   border-width: 1px;
   border-style: solid;
@@ -66,6 +66,7 @@ $instagram-red: #f04752;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  min-width: 300px;
 }
 
 .upload-input {
@@ -149,8 +150,8 @@ $instagram-red: #f04752;
 .option2-box {
   // background-color: grey;
   background-color: $instagram-white;
-  margin: 10px;
   padding: 10px;
+  margin: 10px 10px 40px 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -93,77 +93,19 @@ class Upload extends React.Component {
                   <div className="upload-form-container">
 
 
-                      <div className="option1-box">
-                          <div className="optionText">Option 1: drag/drop or select file here</div>
+                      <section className="option1-box">
 
-                            <div className="cloudinary-container">
-                              <Dropzone postPhoto={this.postPhoto}/>
-                            </div>
-                            <br/>
-                              <br/>
-                                <br/>
+                          <div className="optionText">Option 1: select file here</div>
 
-
-
-
-
-                          <div className="optionText">Option WIP: drag/drop or select file here</div>
-                          <div className="options-form-container">
-                              <form onSubmit={this.handleSubmit} id="upload-form">
-
-
-                                  <div className="cloudinary-container">
-                                    <Dropzone postPhoto={this.postPhoto}/>
-                                  </div>
-
-
-                                  <label>
-                                      <input
-                                        type="text"
-                                        placeholder="caption (optional)"
-                                        name="caption"
-                                        value={this.state.photo.caption}
-                                        onChange={this.updatePhoto}
-                                        className="upload-input"
-                                      />
-                                  </label>
-                                  <br/>
-
-                                  <label>
-                                      <input
-                                          type="text"
-                                          placeholder="location (optional)"
-                                          name="location"
-                                          value={this.state.photo.location}
-                                          onChange={this.updatePhoto}
-                                          className="upload-input"
-                                      />
-                                  </label>
-                                  <br/>
-                                  <br/>
-
-
-                                  <button
-                                    onClick={this.handleSubmit}
-                                    type="submit"
-                                    value="Submit"
-                                    className="manual-submit">
-                                    Submit
-                                  </button>
-
-                              </form>
+                          <div className="cloudinary-container">
+                            <Dropzone postPhoto={this.postPhoto}/>
                           </div>
 
-
-                      </div>
-
+                      </section>
 
 
 
-
-
-
-                      <div className="option2-box">
+                      <section className="option2-box">
 
                           <div className="optionText">Option 2: enter information manually</div>
 
@@ -221,7 +163,62 @@ class Upload extends React.Component {
                           </div>
 
 
-                      </div>
+                      </section>
+
+
+
+                      <section className="option1-box">
+
+                          <div className="optionText">WIP: drag/drop or select file here</div>
+                          <div className="options-form-container">
+
+                              <form onSubmit={this.handleSubmit} id="upload-form-WIP">
+
+
+                                  <div className="cloudinary-container">
+                                    <Dropzone postPhoto={this.postPhoto}/>
+                                  </div>
+
+
+                                  <label>
+                                      <input
+                                        type="text"
+                                        placeholder="caption (optional)"
+                                        name="caption"
+                                        value={this.state.photo.caption}
+                                        onChange={this.updatePhoto}
+                                        className="upload-input"
+                                      />
+                                  </label>
+                                  <br/>
+
+                                  <label>
+                                      <input
+                                          type="text"
+                                          placeholder="location (optional)"
+                                          name="location"
+                                          value={this.state.photo.location}
+                                          onChange={this.updatePhoto}
+                                          className="upload-input"
+                                      />
+                                  </label>
+                                  <br/>
+                                  <br/>
+
+                                  <button
+                                    onClick={this.handleSubmit}
+                                    type="submit"
+                                    value="Submit"
+                                    className="manual-submit">
+                                    Submit
+                                  </button>
+                              </form>
+
+                          </div>
+
+
+                      </section>
+
 
 
                   </div>
