@@ -22,15 +22,20 @@ class Profile extends React.Component {
     //   errors: {}
     // };
 
+    window.globalPhotoModal = () => {
+      this.setState({ modalOpen: true });
+    };
+
     //this.anyMethod = this.anyMethod.bind(this);
     // this.cropPhoto = this.cropPhoto.bind(this);
     this.showDetail = this.showDetail.bind(this);
+    window.globalPhotoModal = window.globalPhotoModal.bind(this);
     <PhotoDetail />
   }
 
 
   componentDidMount() {
-    <PhotoDetail />
+    return(<PhotoDetail />);
       // this.props.fetchAllPhotos();
       //BUT...fetch only this users photo
     }
@@ -47,6 +52,7 @@ class Profile extends React.Component {
   showDetail() {
     console.log("inside showDetail fxn");
     window.globalPhotoModal();
+    return(<PhotoDetail />);
   }
 
 
