@@ -156,7 +156,7 @@ class Upload extends React.Component {
                                             type="text"
                                             placeholder="photo's url (required)"
                                             name="photoUrl"
-                                            value={this.state.photo.location}
+                                            value={this.state.photo.photoUrl}
                                             onChange={this.updatePhoto}
                                             className="upload-input"
                                         />

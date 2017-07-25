@@ -67,18 +67,14 @@ class Dropzone extends React.Component {
   render() {
 
     return (
-      <div className="dropzone-container">on the uploadButton.jsx
-          <section>
-
+      <div className="dropzone-container">
 
             <button
-                className="uploadButton"
+                className="dropzone-button"
                 onClick={this.upload}>
-                uploadButton
+                Select File
             </button>
 
-
-          </section>
       </div>
     );
 
