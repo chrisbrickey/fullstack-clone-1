@@ -10,8 +10,6 @@ class HeaderXXX extends React.Component {
 
 
   render() {
-    console.log("on the header render");
-    console.log(this.props);
 
     return (
 
