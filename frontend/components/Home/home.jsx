@@ -34,7 +34,7 @@ class Home extends React.Component {
                         <div className="thumbnailPic-container">
                               <img
                                   id="thumbnail"
-                                  src="https://res.cloudinary.com/dckkkjkuz/image/upload/c_scale,w_590/v1500953840/instagram-color-fade_pvpssi.png"
+                                  src={photo.profileImgUrl}
                                   alt="photo"
                               />
                           </div>
