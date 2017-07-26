@@ -37,11 +37,13 @@ class HeaderXXX extends React.Component {
         <div className="navLinks-header">
 
             <div className="left-header">
-                <img
-                    src={'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500614262/camera_jmhdl8.png'}
-                    alt="Instagram Camera Icon"
-                    className="camera-icon"
-                />
+                <Link className="profile-link" to={`/`}>
+                    <img
+                        src={'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500614262/camera_jmhdl8.png'}
+                        alt="Instagram Camera Icon"
+                        className="camera-icon"
+                    />
+                </Link>
 
                 <div className="vertical-line"></div>
 
