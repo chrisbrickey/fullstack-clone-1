@@ -90,97 +90,91 @@ class PhotoDetail extends React.Component {
     if (this.state.modalOpen && this.props.currentPhoto) {
       return (
 
-        <div className="photo-modal-outer">
-          <div className="photo-modal-inner">
+          <div className="photo-modal-outer">
+              <div className="photo-modal-inner">
 
+                  <form onSubmit={this.handleSubmit} className="edit-form">
 
+                      <input
+                          type="text"
+                          name={this.props.currentPhoto.id}
+                          value={this.props.currentPhoto.id}
+                          onChange={this.editPhoto}
+                          className="edit-input"
+                      />
+                    <br/>
 
+                    <label>
+                        <input
+                          type="text"
+                          placeholder="caption"
+                          name="caption"
+                          value={this.props.currentPhoto.caption}
+                          onChange={this.editPhoto}
+                          className="edit-input"
+                        />
+                    </label>
+                    <br/>
 
+                    <label>
+                        <input
+                            type="text"
+                            placeholder="location"
+                            name="location"
+                            value={this.props.currentPhoto.location}
+                            onChange={this.editPhoto}
+                            className="edit-input"
+                        />
+                    </label>
+                    <br/>
 
-
-
-                            <form onSubmit={this.handleSubmit} className="edit-form">
-
-                                <input
-                                    type="text"
-                                    name={this.props.currentPhoto.id}
-                                    value={this.props.currentPhoto.id}
-                                    onChange={this.editPhoto}
-                                    className="edit-input"
-                                />
-                              <br/>
-
-                              <label>
-                                  <input
-                                    type="text"
-                                    placeholder="caption"
-                                    name="caption"
-                                    value={this.props.currentPhoto.caption}
-                                    onChange={this.editPhoto}
-                                    className="edit-input"
-                                  />
-                              </label>
-                              <br/>
-
-                              <label>
-                                  <input
-                                      type="text"
-                                      placeholder="location"
-                                      name="location"
-                                      value={this.props.currentPhoto.location}
-                                      onChange={this.editPhoto}
-                                      className="edit-input"
-                                  />
-                              </label>
-                              <br/>
-
-                                <label>
-                                    <input
-                                        type="text"
-                                        placeholder="photo's url"
-                                        name="photo_url"
-                                        value={this.props.currentPhoto.photo_url}
-                                        onChange={this.editPhoto}
-                                        className="edit-input"
-                                    />
-                                </label>
-                              <br/>
-
-
-                              <button
-                                onClick={this.handleSubmit}
-                                type="submit"
-                                value="Submit"
-                                className="edit-submit">
-                                Submit Changes
-                              </button>
-
-                          </form>
-
-                          <div className="picture-box">
-                                  <img
-                                      src={this.props.currentPhoto.photoUrl}
-                                      alt="photo"
-                                      className="actualPhoto"/>
-
-                                  <button
-                                      onClick={this.destroyMe}
-                                      className="deleteButton">
-                                      Delete Photo
-                                  </button>
-
-                          </div>
+                      <label>
+                          <input
+                              type="text"
+                              placeholder="photo's url"
+                              name="photo_url"
+                              value={this.props.currentPhoto.photo_url}
+                              onChange={this.editPhoto}
+                              className="edit-input"
+                          />
+                      </label>
+                    <br/>
 
 
                     <button
-                        onClick={this.closeModal}
-                        className="closeModalButton">
-                        Close
+                      onClick={this.handleSubmit}
+                      type="submit"
+                      value="Submit"
+                      className="edit-submit">
+                      Submit Changes
                     </button>
 
+                </form>
 
-              </div>
+
+                <div className="picture-box">
+                    <img
+                        src={this.props.currentPhoto.photoUrl}
+                        alt="photo"
+                        className="actualPhoto"/>
+
+                    <button
+                        onClick={this.destroyMe}
+                        className="deleteButton">
+                        Delete Photo
+                    </button>
+                </div>
+
+
+                <button
+                    onClick={this.closeModal}
+                    className="closeModalButton">
+                    Close
+                </button>
+
+
           </div>
+      </div>
 
 
       );
