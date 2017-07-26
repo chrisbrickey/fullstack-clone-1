@@ -42,7 +42,7 @@ def update
     render "api/photos/show"
   else
     render(
-      json: @user.errors.full_messages,
+      json: @photo.errors.full_messages,
       status: 422
     )
   end

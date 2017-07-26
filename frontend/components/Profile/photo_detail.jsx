@@ -15,14 +15,13 @@ class PhotoDetail extends React.Component {
       myId = null;
     }
 
-    console.log("myID", myId)
+    console.log("myID", myId);
 
     this.state = {
       modalOpen: false,
       photo: {
         caption: "",
         location: "",
-        photo_url: "",
         id: myId,
       }
     };
@@ -38,15 +37,27 @@ class PhotoDetail extends React.Component {
       this.props.fetchAllPhotos();
     }
 
-    componentWillReceiveProps(nextProps) {
+  componentWillReceiveProps(nextProps) {
 
 
-      if (nextProps.currentPhoto && this.state.photo.id !== nextProps.currentPhoto.id){
-        const newState = merge({}, this.state);
-        newState.photo.id = nextProps.currentPhoto.id;
-        this.setState(newState);
-      }
+    if (nextProps.currentPhoto && this.state.photo.id !== nextProps.currentPhoto.id){
+      const newState = merge({}, this.state);
+      newState.photo.id = nextProps.currentPhoto.id;
+      newState.photo.caption = nextProps.currentPhoto.caption;
+      newState.photo.location = nextProps.currentPhoto.location;
+      this.setState(newState);
     }
+
+
+  }
+
+  componentDidUpdate( _ , prevState) {
+    if (this.props.currentPhoto && Object.keys(this.props.currentPhoto) && !prevState.modalOpen && this.state.modalOpen) {
+      const newState = merge({}, this.state);
+      newState.photo.caption = this.props.currentPhoto.caption;
+      this.setState(newState);
+    }
+  }
 
   globalPhotoModal () {
     console.log("inside globalPhotoModal");
@@ -66,26 +77,31 @@ class PhotoDetail extends React.Component {
   }
 
   editPhoto(event) {
-    console.log("inside updatePhoto on photoDetail page");
+    console.log("INSIDE LIVE EDITPHOTO FXN on photoDetail page");
+
     const newPhoto = merge({}, this.state);
-    console.log(event.target.name);
+
+    console.log("field name", event.target.name);
+    console.log("current value at field name", newPhoto.photo[event.target.name]);
+    console.log("new value at field name", event.target.value);
+
     newPhoto.photo[event.target.name] = event.target.value;
     this.setState(newPhoto);
   }
 
   handleSubmit(event) {
     console.log("inside handleSubmit on photoDetail page");
-    // console.log(this.state.photo);
-    this.closeModal();
 
     event.preventDefault();
-    console.log("hELLO")
-  console.log(  this.state.photo)
+    this.closeModal();
+
+    console.log("THIS.STATE.PHOTO", this.state.photo);
+
     this.props.updatePhoto(this.state.photo)
       .then(
         ( () => {
           console.log("inside submit callback for updating photo upon success");
-          this.setState({ photo: { caption: "", location: "", photo_url: "", id: ""} });
+          this.setState({ photo: { caption: "", location: ""} });
         })
       );
 
@@ -93,9 +109,6 @@ class PhotoDetail extends React.Component {
 
 
   render() {
-
-    // console.log("rendering on photo.jsx");
-    // console.log(this.props);
 
     if (this.state.modalOpen && this.props.currentPhoto) {
       return (
@@ -108,9 +121,9 @@ class PhotoDetail extends React.Component {
                     <label>
                         <input
                           type="text"
-                          placeholder="caption"
+                          placeholder="caption xxx"
                           name="caption"
-                          value={this.props.currentPhoto.caption}
+                          value={this.state.photo.caption}
                           onChange={this.editPhoto}
                           className="edit-input"
                         />
@@ -120,25 +133,13 @@ class PhotoDetail extends React.Component {
                     <label>
                         <input
                             type="text"
-                            placeholder="location"
+                            placeholder="location xxx"
                             name="location"
-                            value={this.props.currentPhoto.location}
+                            value={this.state.photo.location}
                             onChange={this.editPhoto}
                             className="edit-input"
                         />
                     </label>
-                    <br/>
-
-                      <label>
-                          <input
-                              type="text"
-                              placeholder="photo's url"
-                              name="photo_url"
-                              value={this.props.currentPhoto.photo_url}
-                              onChange={this.editPhoto}
-                              className="edit-input"
-                          />
-                      </label>
                     <br/>
 
 

@@ -30,10 +30,15 @@ export const photoReducer = (state = defaultState, action) => {
     case RECEIVE_SINGLE_PHOTO:
         console.log("inside reducer at RECEIVE_SINGLE_PHOTO");
 
-        return merge({}, state, {
-          currentPhoto: action.currentPhoto,
-          byId: action.byId
-        });
+        // return merge({}, state, {
+        //   currentPhoto: action.currentPhoto,
+        //   byId: action.byId
+        // });
+
+        newState = merge({}, state);
+        newState.currentPhoto = action.currentPhoto;
+        newState.byId[action.currentPhoto] = action.byId[action.currentPhoto];
+        return newState;
 
     case REMOVE_PHOTO:
         console.log("inside reducer at REMOVE_PHOTO");
