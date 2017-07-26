@@ -64,7 +64,8 @@ def photo_params
   params.require(:photo).permit(
     :photo_url,
     :caption,
-    :location)
+    :location,
+    :id)
 end
 
 end
