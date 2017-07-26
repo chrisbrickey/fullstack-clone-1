@@ -3,31 +3,12 @@ import { Link, withRouter } from 'react-router-dom';
 import merge from 'lodash/merge';
 
 
-console.log("on the footer.jsx");
-
 class FooterXXX extends React.Component {
   constructor(props) {
     super(props);
-    // this.state = {
-    //   user: {
-    //     name: "",
-    //     username: "",
-    //     password: ""
-    //   },
-    //   errors: {}
-    // };
-
-    //this.anyMethod = this.anyMethod.bind(this);
-    // this.cropPhoto = this.cropPhoto.bind(this);
   }
 
 
-  componentDidMount() {
-      // this.props.fetchAllPhotos();
-    }
-
-
-  //remember that errors and other objects might be null so render conditionally
   render() {
 
     return (
@@ -61,4 +42,3 @@ class FooterXXX extends React.Component {
 }
 
 export default FooterXXX;
-// export default withRouter(FooterXXX);

@@ -3,30 +3,12 @@ import { Link, withRouter } from 'react-router-dom';
 import merge from 'lodash/merge';
 
 
-console.log("on the header.jsx");
-
 class HeaderXXX extends React.Component {
   constructor(props) {
     super(props);
-    // this.state = {
-    //   user: {
-    //     name: "",
-    //     username: "",
-    //     password: ""
-    //   },
-    //   errors: {}
-    // };
-
-    //this.anyMethod = this.anyMethod.bind(this);
   }
 
 
-  componentDidMount() {
-      // this.props.fetchAllPhotos();
-    }
-
-
-  //remember that errors and other objects might be null so render conditionally
   render() {
     console.log("on the header render");
     console.log(this.props);
@@ -69,7 +51,7 @@ class HeaderXXX extends React.Component {
                 </Link>
             </div>
 
-            
+
 
 
 
@@ -107,4 +89,3 @@ class HeaderXXX extends React.Component {
 }
 
 export default HeaderXXX;
-// export default withRouter(HeaderXXX);
