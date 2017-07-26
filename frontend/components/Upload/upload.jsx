@@ -1,10 +1,12 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import merge from 'lodash/merge';
+import Dropzone from 'react-dropzone';
+import request from 'superagent';
 
 import FooterXXX from '../Navigation/footer';
 import HeaderXXX from '../Navigation/header';
-import Dropzone from './dropzone';
+import CloudWidget from './cloudwidget';
 
 
 console.log("on the upload.jsx");
@@ -98,7 +100,7 @@ class Upload extends React.Component {
                           <div className="optionText">Option 1: select file here</div>
 
                           <div className="cloudinary-container">
-                            <Dropzone postPhoto={this.postPhoto}/>
+                            <CloudWidget postPhoto={this.postPhoto}/>
                           </div>
 
                       </section>
@@ -176,7 +178,7 @@ class Upload extends React.Component {
 
 
                                   <div className="cloudinary-container">
-                                    <Dropzone postPhoto={this.postPhoto}/>
+                                    <CloudWidget postPhoto={this.postPhoto}/>
                                   </div>
 
 

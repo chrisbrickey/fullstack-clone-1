@@ -4,7 +4,7 @@ import merge from 'lodash/merge';
 
 console.log("on the uploadButton.jsx");
 
-class Dropzone extends React.Component {
+class CloudWidget extends React.Component {
   constructor(props) {
     super(props);
     // this.state = {
@@ -83,5 +83,4 @@ class Dropzone extends React.Component {
 
 }
 
-export default Dropzone;
-// export default withRouter(Dropzone);
+export default CloudWidget;

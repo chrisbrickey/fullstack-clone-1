@@ -10,7 +10,7 @@ import { fetchAllPhotos,
          destroyPhoto } from '../../actions/photo_actions';
 
 import Upload from './upload';
-import Dropzone from './dropzone';
+import CloudWidget from './cloudwidget';
 
 console.log("on the upload_container.jsx");
 
