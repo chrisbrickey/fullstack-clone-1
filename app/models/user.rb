@@ -77,4 +77,8 @@ class User < ApplicationRecord
     end
   end
 
+  def set_default_profile_pic
+    self.profile_img_url = "https://res.cloudinary.com/dckkkjkuz/image/upload/v1500953840/instagram-color-fade_pvpssi.png"
+  end
+
 end
