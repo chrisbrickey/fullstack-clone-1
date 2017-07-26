@@ -25,151 +25,44 @@ $instagram-red: #f04752;
 .photo-modal-inner{
   position: relative;
   margin: 20px;
-  background-color: rgba(0, 0, 0, 0.7);
-  // background-color: pink;
+  // background-color: rgba(0, 0, 0, 0.7);
+  background-color: pink;
   // background-color: transparent;
   display: flex;
-  flex-direction: column;
-  // width: 600px;
-  // height: 400px;
+  justify-content: center;
   min-width: 100vw;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
 }
 
-.outer-main {
-  // background-color: lightgreen;
-  background-color: transparent;
-  flex: 1;
-  display: flex;
-  justify-content: center;
+.myBox {
+  background-color: green;
   margin: 10px;
-  padding: 10px;
-
-}
-
-.inner-main {
-  // background-color: green;
-  background-color: transparent;
-  margin: 10px;
-  padding: 10px;
-  display: flex;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: top;
-  max-width: 80%;
-  // border-width: 1px;
-  // border-style: solid;
-  // border-color: $instagram-light-grey;
-}
-
-.sectionContainer {
-  // background-color: orange;
-  margin: 0px 10px 0px 10px;
-  // padding: 10px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: right;
-  max-width: 80%;
-}
-
-.photo-container {
-  background-color: yellow;
-  // margin: 10px 0px 10px 10px;
-  // padding: 3px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex: 2;
-  min-width: 600px;
-  // width: 600px;
+
 }
 
-//I think this will go away and photo will fill above container
-.photo-container > img {
-  width: 100%;
-  background-color: grey;
+.actualPhoto {
+
 }
+
 
 .detail-container {
-  // background-color: lightblue;
-  margin: 10px 10px 10px 0px;
+  background-color: lightblue;
+  // margin: 10px 10px 10px 0px;
   padding: 3px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   // flex: 1;
-  width: 300px;
-}
-
-
-
-.box1 {
-  color: black;
-  // color: $instagram-grey;
-  background-color: grey;
-
-  // background-color: $instagram-white;
-  margin: 10px;
-  padding: 10px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: $instagram-light-grey;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 80%;
-}
-
-
-.another-container {
-  // background-color: orange;
-  margin: 10px;
-  padding: 10px;
-  height: 100px;
-  width: 80%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.optionalText {
-  // background-color: pink;
-  color: black;
-  font-size: 120%;
-  padding: 10px;
-  margin: 10px;
-  white-space: nowrap;
-  font-weight: 300;
-  flex: 1;
-}
-
-.spacer {
-  // background-color: red;
-  padding: 10px;
-  margin: 10px;
-}
-
-.deleteContainer {
-  // background: orange;
-  margin: 10px;
-  padding: 10px;
-  width: 80%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  // width: 300px;
 }
 
 
 .deleteButton {
-  border-radius: 3px;
   color: black;
   background-color: $instagram-white;
   height: 30px;
@@ -178,16 +71,23 @@ $instagram-red: #f04752;
   font-size: 120%;
   cursor:pointer;
   white-space:nowrap;
-  padding: 10px;
+  width: 100%;
 }
 
 .deleteButton:active {
   background-color: black;
 }
 
+
 .closeModalButton {
+  position: relative;
+  top: 0;
+  right: 0;
   // border-radius: 3px;
   color: black;
+  // background-color: red;
+  margin: 10px;
+  padding: 10px;
   background-color: $instagram-white;
   height: 30px;
   transition: background-color 0.5s ease;
@@ -195,7 +95,6 @@ $instagram-red: #f04752;
   font-size: 120%;
   cursor:pointer;
   white-space:nowrap;
-  width: 80%;
   border-width: 1px;
   border-style: solid;
   border-color: $instagram-light-grey;

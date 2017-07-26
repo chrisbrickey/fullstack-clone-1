@@ -89,122 +89,105 @@ class PhotoDetail extends React.Component {
 
     if (this.state.modalOpen && this.props.currentPhoto) {
       return (
+
         <div className="photo-modal-outer">
           <div className="photo-modal-inner">
 
-            <main className="outer-main">
-                <main className="inner-main">
-
-                    <div className="sectionContainer">
-                      <section className="photo-container">
-
-                        <img
-                            src={this.props.currentPhoto.photoUrl}
-                            alt="photo"
-                            className=""/>
-
-                      </section>
 
 
-                      <section className="detail-container">
-
-                        <section className="box1">
-                            <div className="optionalText">work in progress</div>
-                            <div className="another-container">
-
-                              <form onSubmit={this.handleSubmit} id="upload-form">
+                    <div className="myBox">
 
 
-                                    <input
-                                        type="text"
-                                        name={this.props.currentPhoto.id}
-                                        value={this.props.currentPhoto.id}
-                                        onChange={this.editPhoto}
-                                    />
-
-
-                                  <label>
-                                      <input
-                                        type="text"
-                                        placeholder="caption"
-                                        name="caption"
-                                        value={this.props.currentPhoto.caption}
-                                        onChange={this.editPhoto}
-                                        className="upload-input"
-                                      />
-                                  </label>
-                                  <br/>
-
-                                  <label>
-                                      <input
-                                          type="text"
-                                          placeholder="location"
-                                          name="location"
-                                          value={this.props.currentPhoto.location}
-                                          onChange={this.editPhoto}
-                                          className="upload-input"
-                                      />
-                                  </label>
-                                  <br/>
-
-                                    <label>
-                                        <input
-                                            type="text"
-                                            placeholder="photo's url"
-                                            name="photo_url"
-                                            value={this.props.currentPhoto.photo_url}
-                                            onChange={this.editPhoto}
-                                            className="upload-input"
-                                        />
-                                    </label>
-                                  <br/>
-                                  <br/>
-
-
-                                  <button
-                                    onClick={this.handleSubmit}
-                                    type="submit"
-                                    value="Submit"
-                                    className="manual-submit">
-                                    Submit Changes
-                                  </button>
-
-                              </form>
-
-                            </div>
-
-                        </section>
+                            <img
+                                src={this.props.currentPhoto.photoUrl}
+                                alt="photo"
+                                className="actualPhoto"/>
 
 
 
-                        <section className="spacer">i'm a spacer</section>
-
-                        <section className="deleteContainer">
                             <button
-                              onClick={this.destroyMe}
-                              className="deleteButton">
-                              Delete Photo
+                                onClick={this.destroyMe}
+                                className="deleteButton">
+                                Delete Photo
                             </button>
-                        </section>
-
-                      </section>
 
 
-
+                        myBox
                     </div>
 
+
+
+                            <form onSubmit={this.handleSubmit} id="upload-form">
+
+                                <input
+                                    type="text"
+                                    name={this.props.currentPhoto.id}
+                                    value={this.props.currentPhoto.id}
+                                    onChange={this.editPhoto}
+                                />
+
+                              <label>
+                                  <input
+                                    type="text"
+                                    placeholder="caption"
+                                    name="caption"
+                                    value={this.props.currentPhoto.caption}
+                                    onChange={this.editPhoto}
+                                    className="upload-input"
+                                  />
+                              </label>
+                              <br/>
+
+                              <label>
+                                  <input
+                                      type="text"
+                                      placeholder="location"
+                                      name="location"
+                                      value={this.props.currentPhoto.location}
+                                      onChange={this.editPhoto}
+                                      className="upload-input"
+                                  />
+                              </label>
+                              <br/>
+
+                                <label>
+                                    <input
+                                        type="text"
+                                        placeholder="photo's url"
+                                        name="photo_url"
+                                        value={this.props.currentPhoto.photo_url}
+                                        onChange={this.editPhoto}
+                                        className="upload-input"
+                                    />
+                                </label>
+                              <br/>
+                              <br/>
+
+
+                              <button
+                                onClick={this.handleSubmit}
+                                type="submit"
+                                value="Submit"
+                                className="manual-submit">
+                                Submit Changes
+                              </button>
+
+                          </form>
+
+
+
+
                     <button
-                      onClick={this.closeModal}
-                      className="closeModalButton">
-                      Close
+                        onClick={this.closeModal}
+                        className="closeModalButton">
+                        Close
                     </button>
 
 
-                    </main>
-                </main>
+              </div>
+          </div>
 
-            </div>
-        </div>
+
       );
     } else {
       return (<div></div>);
