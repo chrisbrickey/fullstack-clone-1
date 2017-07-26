@@ -8,6 +8,9 @@ import FooterXXX from '../Navigation/footer';
 import HeaderXXX from '../Navigation/header';
 import CloudWidget from './cloudwidget';
 
+const CLOUDINARY_UPLOAD_PRESET = 'n440adct';
+const CLOUDINARY_UPLOAD_URL = 'https://api.cloudinary.com/v1_1/dckkkjkuz/image/upload';
+
 
 console.log("on the upload.jsx");
 
@@ -18,8 +21,9 @@ class Upload extends React.Component {
       photo: {
         caption: "",
         location: "",
-        photo_url: ""
+        photo_url: "placeholder"
       },
+      // uploadedFileCloudinaryUrl: "filler"
     };
 
     //this.anyMethod = this.anyMethod.bind(this);
@@ -27,12 +31,45 @@ class Upload extends React.Component {
     this.postPhoto = this.postPhoto.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.updatePhoto = this.updatePhoto.bind(this);
+    // this.onImageDrop = this.onImageDrop.bind(this);
+    // this.handleImageUpload = this.handleImageUpload.bind(this);
   }
 
 
   componentDidMount() {
       this.props.fetchAllPhotos();
     }
+
+  onImageDrop(files) {
+    console.log("inside ImageDrop");
+    console.log(files);
+    this.handleImageUpload(files[0]);
+
+  }
+
+
+  handleImageUpload(file) {
+    console.log("inside handleImageUpload");
+    console.log(file);
+
+    let upload = request.post(CLOUDINARY_UPLOAD_URL)
+                          .field('upload_preset', CLOUDINARY_UPLOAD_PRESET)
+                          .field('file', file);
+
+      upload.end((err, response) => {
+        if (err) {
+          console.log(`error resulting from cloudinary upload: ${err}`);
+        }
+
+        console.log("not throwing errors");
+
+        if (response.body.secure_url !== 'placeholder') {
+          this.setState({ photo: { photo_url: response.body.secure_url}});
+          console.log(this.state);
+        }
+
+      });
+  }
 
   // cropPhoto(photoUrl) {
   //   const cropText = "/upload/c_thumb,w_600/";
@@ -93,6 +130,28 @@ class Upload extends React.Component {
           <section className="upload-sub-container">
               <div className="sub-sub-container">
                   <div className="upload-form-container">
+
+
+
+                    <section className="option1-box">
+
+                        <div className="optionText">Option Dropzone: working on this</div>
+
+                        <div className="cloudinary-container">
+
+                            <Dropzone
+                                multiple={false}
+                                accept="image/*"
+                                onDrop={this.onImageDrop.bind(this)}>
+                                <p>Drop an image or click to select a file to upload.</p>
+                            </Dropzone>
+
+                        </div>
+
+                    </section>
+
+
+
 
 
                       <section className="option1-box">
@@ -239,4 +298,3 @@ class Upload extends React.Component {
 }
 
 export default Upload;
-// export default withRouter(Upload);
