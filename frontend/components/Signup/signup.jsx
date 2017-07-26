@@ -116,7 +116,7 @@ class Signup extends React.Component {
                       <div className="hero-container">
 
                           <img
-                              src={'https://res.cloudinary.com/dckkkjkuz/image/upload/c_scale,w_250/v1500759487/succulent_hero_pixlr_bestcrop_qiirow.png'}
+                              src={'https://res.cloudinary.com/dckkkjkuz/image/upload/r_0/v1501055489/iphones_gkom5h.png'}
                               alt="iPhone App"
                               className="hero-photo"
                           />
