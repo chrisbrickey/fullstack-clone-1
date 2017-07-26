@@ -8,6 +8,8 @@ json.userId         photo.author.id
 json.username       photo.author.username
 json.name           photo.author.name
 json.profileImgUrl  photo.author.profile_img_url
+json.likesCount     photo.count_of_likes
+json.usersWhoLike   photo.users_who_like
 
 
 
