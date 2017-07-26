@@ -169,7 +169,6 @@ class PhotoDetail extends React.Component {
                                       Delete Photo
                                   </button>
 
-                              picture-box
                           </div>
 
 
