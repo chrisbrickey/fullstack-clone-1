@@ -32,14 +32,6 @@ class Signup extends React.Component {
     const newState = merge({}, this.state);
     newState.user[event.target.name] = event.target.value;
     this.setState(newState);
-
-    // let currentState = this.state.user;
-    // currentState[event.target.name] = event.target.value;
-    //
-    // this.setState(
-    //   {user: currentState}
-    // );
-
   }
 
   handleSubmit(event) {
@@ -100,8 +92,6 @@ class Signup extends React.Component {
 
     const linkText = this.props.formType === ('login') ? "Sign up" : "Log in";
     const linkPath = this.props.formType === ('login') ? "/signup" : "login";
-
-    // console.log(`errors:  ${this.props.errors}`);
 
 
     return (
@@ -256,4 +246,3 @@ class Signup extends React.Component {
 }
 
 export default Signup;
-// export default withRouter(Signup);

@@ -11,35 +11,13 @@ console.log("on the home.jsx");
 class Home extends React.Component {
   constructor(props) {
     super(props);
-    // this.state = {
-    //   user: {
-    //     name: "",
-    //     username: "",
-    //     password: ""
-    //   },
-    //   errors: {}
-    // };
-
-    //this.anyMethod = this.anyMethod.bind(this);
-    // this.cropPhoto = this.cropPhoto.bind(this);
   }
 
 
   componentDidMount() {
       this.props.fetchAllPhotos();
-    }
+  }
 
-  // cropPhoto(photoUrl) {
-  //   const cropText = "/upload/c_thumb,w_600/";
-  //   // const cropText = "/upload/c_thumb,h_500,w_500/";
-  //   const photoUrlArray = photoUrl.split("/upload/");
-  //   const croppedUrl = photoUrlArray[0] + cropText + photoUrlArray[1];
-  //
-  //   return croppedUrl;
-  // }
-
-
-  //remember that errors and other objects might be null so render conditionally
   render() {
 
     const photoFeedObject = this.props.photos.byId;
@@ -108,4 +86,3 @@ class Home extends React.Component {
 }
 
 export default Home;
-// export default withRouter(Home);

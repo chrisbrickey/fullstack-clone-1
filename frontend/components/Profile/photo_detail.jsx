@@ -29,7 +29,6 @@ class PhotoDetail extends React.Component {
       }
     };
 
-    // console.log("I AM HERE");
     this.closeModal = this.closeModal.bind(this);
     this.editPhoto = this.editPhoto.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);

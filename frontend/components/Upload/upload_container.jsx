@@ -10,9 +10,7 @@ import { fetchAllPhotos,
          destroyPhoto } from '../../actions/photo_actions';
 
 import Upload from './upload';
-import CloudWidget from './cloudwidget';
 
-console.log("on the upload_container.jsx");
 
 const mapStateToProps = (state) => {
   return {
@@ -22,8 +20,8 @@ const mapStateToProps = (state) => {
     photos: state.photos
   };
 };
-//
-//remember to send clear errors down to the presentational components
+
+
 const mapDispatchToProps = (dispatch, { location }) => {
 
   return {

@@ -2,7 +2,6 @@ import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import merge from 'lodash/merge';
 
-console.log("on the uploadButton.jsx");
 
 class CloudWidget extends React.Component {
   constructor(props) {

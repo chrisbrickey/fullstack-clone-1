@@ -7,7 +7,6 @@ import { fetchAllPhotos } from '../../actions/photo_actions';
 
 import Home from './home';
 
-console.log("on the home_container.jsx");
 
 const mapStateToProps = (state) => {
   return {
@@ -17,8 +16,8 @@ const mapStateToProps = (state) => {
     photos: state.photos
   };
 };
-//
-//remember to send clear errors down to the presentational components
+
+
 const mapDispatchToProps = (dispatch, { location }) => {
 
   return {

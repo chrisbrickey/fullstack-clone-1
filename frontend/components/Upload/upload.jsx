@@ -6,7 +6,6 @@ import request from 'superagent';
 
 import FooterXXX from '../Navigation/footer';
 import HeaderXXX from '../Navigation/header';
-import CloudWidget from './cloudwidget';
 
 const CLOUDINARY_UPLOAD_PRESET = 'n440adct';
 const CLOUDINARY_UPLOAD_URL = 'https://api.cloudinary.com/v1_1/dckkkjkuz/image/upload';

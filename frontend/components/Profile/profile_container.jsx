@@ -11,7 +11,6 @@ import { fetchAllPhotos,
 
 import Profile from './profile';
 
-console.log("on the profile_container.jsx");
 
 const mapStateToProps = (state) => {
   return {

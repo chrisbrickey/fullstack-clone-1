@@ -15,8 +15,8 @@ const mapStateToProps = ({ session }) => {
     errors: session.errors
   };
 };
-//
-//remember to send clear errors down to the presentational components
+
+
 const mapDispatchToProps = (dispatch, { location }) => {
   const formType = location.pathname.slice(1);
   const processForm = (formType === 'login') ? loginCreateSession : signupCreateUser;
