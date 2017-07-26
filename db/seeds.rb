@@ -43,47 +43,47 @@ ActiveRecord::Base.transaction do
   photo1 = Photo.create!(
     photo_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500771271/fierce_xyjq3a.jpg',
     caption: 'ballerina en pointe',
-    location: 'earth',
+    location: '',
     author_id: demo1.id
     )
 
   photo2 = Photo.create!(
     photo_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500771420/infinity_neg30m.jpg',
     caption: 'infinitely beautiful',
-    location: 'earth',
+    location: '',
     author_id: demo1.id
     )
 
   photo3 = Photo.create!(
     photo_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500771107/mural_c8cg36.jpg',
     caption: 'urban inspiration',
-    location: 'earth',
+    location: '',
     author_id: demo1.id
     )
 
   photo4 = Photo.create!(
     photo_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500771188/coat_omguom.jpg',
-    caption: '',
+    caption: 'en l\'air',
     location: '',
     author_id: demo2.id
     )
 
   photo5 = Photo.create!(
-    photo_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500771455/shadows_r0laa1.jpg',
-    caption: '',
+    photo_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1501054164/couple_izifdx.jpg',
+    caption: 'love',
     location: '',
     author_id: demo2.id
     )
 
   photo6 = Photo.create!(
-    photo_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500771443/trio_wfx6xb.jpg',
-    caption: '',
+    photo_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500771455/shadows_r0laa1.jpg',
+    caption: 'long shadows',
     location: '',
-    author_id: demo3.id
+    author_id: demo2.id
     )
 
   photo7 = Photo.create!(
-    photo_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500771234/arabesque_biogdk.jpg',
+    photo_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1501053260/leap_z9x4xf.jpg',
     caption: '',
     location: '',
     author_id: demo3.id
@@ -93,36 +93,59 @@ ActiveRecord::Base.transaction do
     photo_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500933186/fif8afswdavqfxnwomtu.jpg',
     caption: '',
     location: '',
-    author_id: demo4.id
+    author_id: demo3.id
     )
 
   photo9 = Photo.create!(
     photo_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500771443/trio_wfx6xb.jpg',
-    caption: '',
+    caption: 'trio',
     location: '',
-    author_id: demo4.id
+    author_id: demo3.id
     )
 
   photo10 = Photo.create!(
     photo_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500771428/coral_nvemtt.jpg',
     caption: '',
     location: '',
-    author_id: demo5.id
+    author_id: demo4.id
     )
 
   photo11 = Photo.create!(
     photo_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500771634/sunset_oqve3y.jpg',
     caption: '',
     location: '',
-    author_id: demo5.id
+    author_id: demo4.id
     )
 
   photo12 = Photo.create!(
     photo_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500771579/dark_red_l5qojp.jpg',
     caption: '',
     location: '',
+    author_id: demo4.id
+    )
+
+  photo13 = Photo.create!(
+    photo_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500932608/bi1vxhx96gsndgh1rbxd.jpg',
+    caption: 'the studio',
+    location: '',
     author_id: demo5.id
     )
+
+  photo14 = Photo.create!(
+    photo_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1501053244/golden_vxtdsu.jpg',
+    caption: 'golden',
+    location: '',
+    author_id: demo5.id
+    )
+
+  photo15 = Photo.create!(
+    photo_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1501053595/swan_lake_inls3n.jpg',
+    caption: 'swans',
+    location: '',
+    author_id: demo5.id
+    )
+
+
 
 
 
