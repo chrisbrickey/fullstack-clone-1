@@ -4,10 +4,6 @@ import merge from 'lodash/merge';
 import Modal from 'react-modal';
 import {hashHistory} from 'react-router';
 
-import FooterXXX from '../Navigation/footer';
-import HeaderXXX from '../Navigation/header';
-
-
 class PhotoDetail extends React.Component {
   constructor(props) {
     super(props);

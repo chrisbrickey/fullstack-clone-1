@@ -3,7 +3,7 @@ import { Link, withRouter } from 'react-router-dom';
 import merge from 'lodash/merge';
 
 
-class FooterXXX extends React.Component {
+class theFooter extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -41,4 +41,4 @@ class FooterXXX extends React.Component {
 
 }
 
-export default FooterXXX;
+export default theFooter;

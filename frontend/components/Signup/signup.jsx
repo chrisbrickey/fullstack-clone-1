@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import merge from 'lodash/merge';
 
-import FooterXXX from '../Navigation/footer';
+import theFooter from '../Navigation/footer';
 
 class Signup extends React.Component {
   constructor(props) {
@@ -236,7 +236,7 @@ class Signup extends React.Component {
           </div>
 
 
-          <FooterXXX/>
+          <theFooter/>
 
       </div>
     );

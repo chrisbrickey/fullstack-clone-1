@@ -3,7 +3,7 @@ import { Link, withRouter } from 'react-router-dom';
 import merge from 'lodash/merge';
 
 
-import FooterXXX from '../Navigation/footer';
+import theFooter from '../Navigation/footer';
 import HeaderXXX from '../Navigation/header';
 
 import PhotoDetailContainer from './photo_detail_container';
@@ -153,7 +153,7 @@ class Profile extends React.Component {
           </section>
 
 
-          <FooterXXX de/>
+          <theFooter/>
 
       </div>
     );
