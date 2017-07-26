@@ -34,6 +34,9 @@ import { receiveAllPhotos,
          updatePhoto,
          destroyPhoto } from './actions/photo_actions';
 
+import { ajaxCreateLike,
+         ajaxDestroyLike } from './util/like_api_util';
+
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -49,18 +52,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   // window.ajaxFetchAllPhotos = ajaxFetchAllPhotos;
-  window.ajaxFetchSinglePhoto = ajaxFetchSinglePhoto;
+  // window.ajaxFetchSinglePhoto = ajaxFetchSinglePhoto;
+  //
+  // window.receiveAllPhotos = receiveAllPhotos;
+  // window.receiveSinglePhoto = receiveSinglePhoto;
+  // window.fetchAllPhotos = fetchAllPhotos;
+  // window.fetchSinglePhoto = fetchSinglePhoto;
+  // window.createPhoto = createPhoto;
+  // window.updatePhoto = updatePhoto;
+  // window.destroyPhoto = destroyPhoto;
+  //
+  // window.ajaxFetchAllUsers = ajaxFetchAllUsers;
+  // window.ajaxFetchSingleUser = ajaxFetchSingleUser;
 
-  window.receiveAllPhotos = receiveAllPhotos;
-  window.receiveSinglePhoto = receiveSinglePhoto;
-  window.fetchAllPhotos = fetchAllPhotos;
-  window.fetchSinglePhoto = fetchSinglePhoto;
-  window.createPhoto = createPhoto;
-  window.updatePhoto = updatePhoto;
-  window.destroyPhoto = destroyPhoto;
-
-  window.ajaxFetchAllUsers = ajaxFetchAllUsers;
-  window.ajaxFetchSingleUser = ajaxFetchSingleUser;
+    window.ajaxCreateLike = ajaxCreateLike;
+    window.ajaxDestroyLike = ajaxDestroyLike;
 
 
   let store;
