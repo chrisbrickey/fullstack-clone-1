@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170718191732) do
+ActiveRecord::Schema.define(version: 20170726170111) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -61,7 +61,7 @@ ActiveRecord::Schema.define(version: 20170718191732) do
   create_table "users", force: :cascade do |t|
     t.string "username", null: false
     t.string "name", null: false
-    t.text "profile_img_url"
+    t.text "profile_img_url", default: "https://res.cloudinary.com/dckkkjkuz/image/upload/v1500953840/instagram-color-fade_pvpssi.png"
     t.string "tagline"
     t.string "password_digest", null: false
     t.string "session_token", null: false
