@@ -247,7 +247,21 @@ class Upload extends React.Component {
 
 
                                   <div className="cloudinary-container">
-                                    <CloudWidget postPhoto={this.postPhoto}/>
+
+                                      <Dropzone
+                                          multiple={false}
+                                          accept="image/*"
+                                          onDrop={this.onImageDrop.bind(this)}>
+                                          <p>Drop an image or click to select a file to upload.</p>
+                                      </Dropzone>
+
+                                      <div>
+                                          {this.state.photo.photo_url === 'placeholder' ? null :
+                                              (<div>
+                                                  <img src={this.state.photo.photo_url} />
+                                               </div>)}
+                                      </div>
+
                                   </div>
 
 
