@@ -137,6 +137,7 @@ class Upload extends React.Component {
 
                         <div className="optionText">Option Dropzone: working on this</div>
 
+
                         <div className="cloudinary-container">
 
                             <Dropzone
@@ -146,7 +147,16 @@ class Upload extends React.Component {
                                 <p>Drop an image or click to select a file to upload.</p>
                             </Dropzone>
 
+                            <div>
+                                {this.state.photo.photo_url === 'placeholder' ? null :
+                                    (<div>
+                                        <img src={this.state.photo.photo_url} />
+                                     </div>)}
+                            </div>
+
                         </div>
+
+
 
                     </section>
 
