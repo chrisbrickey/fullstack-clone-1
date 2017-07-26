@@ -31,6 +31,8 @@ class Profile extends React.Component {
 
   render() {
     console.log("in the render method of profile.jsx");
+    console.log(this.props);
+    console.log(this.state);
 
     let profilePicture;
     if (this.props.currentUser.profileImgUrl) {
@@ -140,19 +142,18 @@ class Profile extends React.Component {
 
 
           <section className="portfolio-container">
-              <div className="portfolio-subcontainer">
+              <div className="portfolio-outer">
 
 
-                  <ul className="portfolio">
-                      {photoListRender}
-                  </ul>
-
+                      <ul className="portfolio">
+                          {photoListRender}
+                      </ul>
 
               </div>
           </section>
 
 
-          <FooterXXX/>
+          <FooterXXX de/>
 
       </div>
     );

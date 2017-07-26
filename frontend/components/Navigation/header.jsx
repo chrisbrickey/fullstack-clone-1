@@ -28,8 +28,8 @@ class HeaderXXX extends React.Component {
 
   //remember that errors and other objects might be null so render conditionally
   render() {
-
-    // console.log(this.props);
+    console.log("on the header render");
+    console.log(this.props);
 
     return (
 
@@ -68,6 +68,8 @@ class HeaderXXX extends React.Component {
                     />
                 </Link>
             </div>
+
+            
 
 
 
