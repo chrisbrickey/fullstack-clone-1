@@ -24,7 +24,7 @@ import { ajaxFetchAllPhotos,
          ajaxFetchSinglePhoto } from './util/photo_api_util';
 
 import {ajaxFetchAllUsers,
-        ajaxFetchSingleUser } from './util/user_api.util';
+        ajaxFetchSingleUser } from './util/user_api_util';
 
 import { receiveAllPhotos,
          receiveSinglePhoto,
