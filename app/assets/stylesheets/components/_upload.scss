@@ -55,7 +55,7 @@ $instagram-red: #f04752;
 
 
 
-.options-form-container {
+.details-container {
   // background-color: red;
   align-items: center;
   width: 230px;
@@ -117,9 +117,12 @@ $instagram-red: #f04752;
   background-color: $instagram-grey;
   margin: 0px 10px 0px 20px;
   padding: 10px;
-  width: 200px;
   display: flex;
   flex: 2;
   justify-content: center;
   align-items: center;
+}
+
+.downloaded-photo {
+  width: 300px;
 }

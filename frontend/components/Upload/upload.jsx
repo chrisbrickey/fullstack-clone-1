@@ -98,7 +98,7 @@ class Upload extends React.Component {
 
 
 
-                          <div className="options-form-container">
+                          <div className="details-container">
 
 
                             <div className="dropZone">
@@ -107,7 +107,7 @@ class Upload extends React.Component {
                                     accept="image/*"
                                     onDrop={this.onImageDrop.bind(this)}>
                                     <div className="insideDropZone">
-                                        Drag/drop an image here or click to select a file to upload
+                                        Drag/drop an image here or double-click to select a file to upload
                                     </div>
                                 </Dropzone>
                             </div>
@@ -157,7 +157,10 @@ class Upload extends React.Component {
                       <div>
                           {this.state.photo.photo_url === 'placeholder' ? null :
                               (<div>
-                                  <img src={this.state.photo.photo_url} />
+                                  <img
+                                    src={this.state.photo.photo_url}
+                                    className="downloaded-photo"
+                                    />
                                </div>)}
                       </div>
                       </section>
