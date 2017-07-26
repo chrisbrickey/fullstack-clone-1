@@ -100,14 +100,15 @@ class Upload extends React.Component {
 
                           <div className="options-form-container">
 
-                              <div className="instruction">WIP: drag/drop or select file here</div>
 
                             <div className="dropZone">
                                 <Dropzone
                                     multiple={false}
                                     accept="image/*"
                                     onDrop={this.onImageDrop.bind(this)}>
-                                    <p>Drop an image or click to select a file to upload.</p>
+                                    <div className="insideDropZone">
+                                        Drag/drop an image here or click to select a file to upload
+                                    </div>
                                 </Dropzone>
                             </div>
 
@@ -120,7 +121,7 @@ class Upload extends React.Component {
                                         name="caption"
                                         value={this.state.photo.caption}
                                         onChange={this.updatePhoto}
-                                        className="upload-input"
+                                        className="input-field"
                                       />
                                   </label>
                                   <br/>
@@ -132,7 +133,7 @@ class Upload extends React.Component {
                                           name="location"
                                           value={this.state.photo.location}
                                           onChange={this.updatePhoto}
-                                          className="upload-input"
+                                          className="input-field"
                                       />
                                   </label>
                                   <br/>
