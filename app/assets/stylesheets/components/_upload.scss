@@ -9,8 +9,8 @@ $instagram-red: #f04752;
 
 
 .upload-page-container {
-  // background-color: pink;
-  background-color: $instagram-grey-fullscreen;
+  background-color: pink;
+  // background-color: $instagram-grey-fullscreen;
   display: flex;
   flex-direction: column;
   min-width: 100vw;
@@ -21,52 +21,65 @@ $instagram-red: #f04752;
 }
 
 .upload-sub-container {
-  // background-color: lightgreen;
+  background-color: lightgreen;
   flex: 1;
   display: flex;
   margin: 10px;
   padding: 10px;
-
 }
 
 .sub-sub-container {
-  // background-color: green;
+  background-color: green;
   margin: 10px;
   padding: 10px;
   display: flex;
-  flex: 1;
-  display: flex;
   justify-content: center;
-  align-items: top;
+  align-items: center;
+  width: 80%;
 }
 
 .upload-form-container {
-  // background-color: lightblue;
+  background-color: lightblue;
   margin: 5px;
   padding: 3px;
-  width: 40%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
-  align-items: center;
-
+  align-items: top;
+  width: 100%;
 }
 
-
-
-.option1-box {
+.formBox {
+  flex: 1;
   color: $instagram-grey;
   background-color: $instagram-white;
-  margin: 10px 10px 40px 10px;
+  margin: 10px;
   padding: 10px;
   border-width: 1px;
   border-style: solid;
   border-color: $instagram-light-grey;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: right;
+  // min-width: 300px;
+}
+
+.instruction {
+  background-color: yellow;
+  color: black;
+  font-size: 120%;
+  padding: 10px;
+  margin: 10px;
+  white-space: nowrap;
+  font-weight: 300;
+  flex: 1;
+}
+
+.options-form-container {
+  background-color: grey;
+  // flex: 4;
+  padding: 0px 0px 10px 0px;
   align-items: center;
-  min-width: 300px;
 }
 
 .upload-input {
@@ -75,45 +88,27 @@ $instagram-red: #f04752;
   font-weight: 300;
 }
 
-.cloudinary-container {
-  // background-color: orange;
+.dropZone {
+  background-color: orange;
   margin: 10px;
   padding: 10px;
-  height: 100px;
+  height: 300px;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-//this keeps the size of the drop-zone button from collapsing
-.dropzone-container{
-  // background-color: purple;
-  width: 87%;
-  height: 95%;
+
+.newPhotoBox {
+  background-color: $instagram-grey;
+  margin: 10px;
+  padding: 10px;
+  width: 200px;
   display: flex;
+  flex: 2;
   justify-content: center;
   align-items: center;
-  padding: 0px;
-}
-
-.dropzone-button {
-  height: 100%;
-  width: 100%;
-  border-width: 0px;
-  transition: background-color 0.5s ease;
-  background-color: $instagram-blue-background;
-  font-weight: 600;
-  font-size: 120%;
-  line-height: 15px;
-  border-radius: 5px;
-  margin-bottom: 0px;
-  color: $instagram-white;
-  cursor:pointer;
-}
-
-.dropzone-button:active {
-  background-color: $instagram-white;
 }
 
 .manual-submit {
@@ -134,37 +129,4 @@ $instagram-red: #f04752;
 
 .manual-submit:active {
   background-color: $instagram-white;
-}
-
-.optionText {
-  // background-color: yellow;
-  color: black;
-  font-size: 120%;
-  padding: 10px;
-  margin: 10px;
-  white-space: nowrap;
-  font-weight: 300;
-  flex: 1;
-}
-
-.option2-box {
-  // background-color: grey;
-  background-color: $instagram-white;
-  padding: 10px;
-  margin: 10px 10px 40px 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-width: 1px;
-  border-style: solid;
-  border-color: $instagram-light-grey;
-  color: $instagram-grey;
-
-}
-
-.options-form-container {
-  // background-color: grey;
-  flex: 4;
-  padding: 0px 0px 10px 0px;
 }

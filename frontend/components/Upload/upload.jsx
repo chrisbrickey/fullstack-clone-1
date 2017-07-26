@@ -87,37 +87,32 @@ class Upload extends React.Component {
           <HeaderXXX userId={this.props.currentUser.id}/>
 
 
-          <section className="upload-sub-container">
+          <main className="upload-sub-container">
               <div className="sub-sub-container">
+
+
                   <div className="upload-form-container">
 
-                      <section className="option1-box">
+                      <section className="formBox">
 
-                          <div className="optionText">WIP: drag/drop or select file here</div>
+
+
+
                           <div className="options-form-container">
 
-                              <form onSubmit={this.handleSubmit} id="upload-form-WIP">
+                              <div className="instruction">WIP: drag/drop or select file here</div>
+
+                            <div className="dropZone">
+                                <Dropzone
+                                    multiple={false}
+                                    accept="image/*"
+                                    onDrop={this.onImageDrop.bind(this)}>
+                                    <p>Drop an image or click to select a file to upload.</p>
+                                </Dropzone>
+                            </div>
 
 
-                                  <div className="cloudinary-container">
-
-                                      <Dropzone
-                                          multiple={false}
-                                          accept="image/*"
-                                          onDrop={this.onImageDrop.bind(this)}>
-                                          <p>Drop an image or click to select a file to upload.</p>
-                                      </Dropzone>
-
-                                      <div>
-                                          {this.state.photo.photo_url === 'placeholder' ? null :
-                                              (<div>
-                                                  <img src={this.state.photo.photo_url} />
-                                               </div>)}
-                                      </div>
-
-                                  </div>
-
-
+                            <form onSubmit={this.handleSubmit} id="upload-form-WIP">
                                   <label>
                                       <input
                                         type="text"
@@ -150,23 +145,42 @@ class Upload extends React.Component {
                                     className="manual-submit">
                                     Post it
                                   </button>
-                              </form>
+                            </form>
 
                           </div>
 
 
                       </section>
 
+                      <section className="newPhotoBox">
+                      <div>
+                          {this.state.photo.photo_url === 'placeholder' ? null :
+                              (<div>
+                                  <img src={this.state.photo.photo_url} />
+                               </div>)}
+                      </div>
+                      </section>
+
+
 
 
                   </div>
               </div>
-          </section>
+          </main>
 
 
           <theFooter/>
 
       </div>
+
+
+
+
+
+
+
+
+
     );
 
   }
