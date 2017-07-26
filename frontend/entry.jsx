@@ -27,6 +27,9 @@ import { configureStore } from './store/store';
 import { ajaxCreatePhotoLike,
          ajaxDestroyPhotoLike } from './util/like_api_util';
 
+import { createPhotoLike,
+         destroyPhotoLike } from './actions/photo_like_actions';
+
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -57,6 +60,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.ajaxCreatePhotoLike = ajaxCreatePhotoLike;
   window.ajaxDestroyPhotoLike = ajaxDestroyPhotoLike;
+  window.createPhotoLike = createPhotoLike;
+  window.destroyPhotoLike = destroyPhotoLike;
 
 
   let store;

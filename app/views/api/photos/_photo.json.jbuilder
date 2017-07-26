@@ -10,6 +10,7 @@ json.name           photo.author.name
 json.profileImgUrl  photo.author.profile_img_url
 json.likesCount     photo.count_of_likes
 json.usersWhoLike   photo.users_who_like
+json.likedByCurrentUser          logged_in? && Like.exists?(user_id: current_user.id, likable_id: photo.id, likable_type: "Photo")
 
 
 

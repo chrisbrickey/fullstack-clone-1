@@ -21,6 +21,7 @@ const mapStateToProps = (state) => {
   } else {
     thisPhoto = null;
   }
+  console.log("HERE I AM", thisPhoto)
 
   return {
     loggedIn: Boolean(state.session.currentUser),

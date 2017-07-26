@@ -3,6 +3,10 @@ import { RECEIVE_ALL_PHOTOS,
          RECEIVE_SINGLE_PHOTO,
          REMOVE_PHOTO } from '../actions/photo_actions';
 
+import { RECEIVE_PHOTO_LIKE,
+         REMOVE_PHOTO_LIKE } from '../actions/photo_like_actions';
+
+
 const defaultState = Object.freeze({
   currentPhoto: null,
   byPopularity: [],
@@ -38,6 +42,28 @@ export const photoReducer = (state = defaultState, action) => {
         delete newState.byId[action.photo.id];
         newState.currentPhoto = null;
         return newState;
+
+
+
+
+    case RECEIVE_PHOTO_LIKE:
+      console.log("inside photo reducer at RECEIVE_PHOTO_LIKE");
+
+      newState = merge({}, state);
+      const photo = newState.byId[action.photoLike.likableId];
+      photo.likesCount += 1;
+      photo.usersWhoLike.push(action.photoLike.userId);
+      photo.likedByCurrentUser = true;
+
+      return newState;
+
+
+    case REMOVE_PHOTO_LIKE:
+      console.log("inside photo reducer at REMOVE_PHOTO_LIKE");
+
+      newState = merge({}, state);
+
+
 
     default:
         return state;

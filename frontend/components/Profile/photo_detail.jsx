@@ -15,6 +15,8 @@ class PhotoDetail extends React.Component {
       myId = null;
     }
 
+    console.log("myID", myId)
+
     this.state = {
       modalOpen: false,
       photo: {
@@ -34,6 +36,16 @@ class PhotoDetail extends React.Component {
 
   componentDidMount() {
       this.props.fetchAllPhotos();
+    }
+
+    componentWillReceiveProps(nextProps) {
+
+
+      if (nextProps.currentPhoto && this.state.photo.id !== nextProps.currentPhoto.id){
+        const newState = merge({}, this.state);
+        newState.photo.id = nextProps.currentPhoto.id;
+        this.setState(newState);
+      }
     }
 
   globalPhotoModal () {
@@ -56,6 +68,7 @@ class PhotoDetail extends React.Component {
   editPhoto(event) {
     console.log("inside updatePhoto on photoDetail page");
     const newPhoto = merge({}, this.state);
+    console.log(event.target.name);
     newPhoto.photo[event.target.name] = event.target.value;
     this.setState(newPhoto);
   }
@@ -66,6 +79,8 @@ class PhotoDetail extends React.Component {
     this.closeModal();
 
     event.preventDefault();
+    console.log("hELLO")
+  console.log(  this.state.photo)
     this.props.updatePhoto(this.state.photo)
       .then(
         ( () => {
@@ -89,15 +104,6 @@ class PhotoDetail extends React.Component {
               <div className="photo-modal-inner">
 
                   <form onSubmit={this.handleSubmit} className="edit-form">
-
-                      <input
-                          type="text"
-                          name={this.props.currentPhoto.id}
-                          value={this.props.currentPhoto.id}
-                          onChange={this.editPhoto}
-                          className="edit-input"
-                      />
-                    <br/>
 
                     <label>
                         <input

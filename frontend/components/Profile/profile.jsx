@@ -23,6 +23,7 @@ class Profile extends React.Component {
 
   showDetail(id) {
     console.log("inside showDetail fxn");
+    console.log(id);
     this.setState({currentPhotoId: id}, () => {
       window.globalPhotoModal();
     });
