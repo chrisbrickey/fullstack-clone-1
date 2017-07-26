@@ -56,9 +56,9 @@ def destroy
   render "api/photos/show"
 end
 
+
 private
 
-#must populate author_id internally but listed here so can test during development
 def photo_params
   params.require(:photo).permit(
     :photo_url,

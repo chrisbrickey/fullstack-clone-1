@@ -20,15 +20,19 @@ export const receiveAllPhotos = photos => {
   });
 };
 
+
 export const receiveSinglePhoto = photo => {
   console.log("inside sync receiveSinglePhoto");
   console.log(photo);
+  console.log(photo.id);
+
   return({
     type: RECEIVE_SINGLE_PHOTO,
     currentPhoto: photo.id,
     byId: {[photo.id]: photo}
   });
 };
+
 
 export const removePhoto = photo => {
   console.log("inside sync removePhoto");
@@ -72,11 +76,13 @@ export const createPhoto = (data) => dispatch => {
 
 export const updatePhoto = (data) => dispatch => {
   console.log("in async updatePhoto");
+  console.log (data);
 
   return ajaxUpdatePhoto(data)
     .then( returnedPhoto => (dispatch(receiveSinglePhoto(returnedPhoto)))
   );
 };
+
 
 export const destroyPhoto = (photo) => dispatch => {
   console.log("in async destroyPhoto");

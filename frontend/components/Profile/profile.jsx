@@ -9,8 +9,6 @@ import HeaderXXX from '../Navigation/header';
 import PhotoDetailContainer from './photo_detail_container';
 
 
-console.log("on the profile.jsx");
-
 class Profile extends React.Component {
   constructor(props) {
     super(props);
@@ -18,51 +16,23 @@ class Profile extends React.Component {
       currentPhotoId: null
     };
 
-    // window.globalPhotoModal = () => {
-    //   this.setState({ modalOpen: true });
-    // };
-
     //this.anyMethod = this.anyMethod.bind(this);
-    // this.cropPhoto = this.cropPhoto.bind(this);
     this.showDetail = this.showDetail.bind(this);
-    // <PhotoDetail />
+
   }
-
-
-  componentDidMount() {
-    // return(<PhotoDetail />);
-      // this.props.fetchAllPhotos();
-      //BUT...fetch only this users photo
-    }
-
-  // cropPhoto(photoUrl) {
-  //   const cropText = "/upload/c_thumb,w_600/";
-  //   // const cropText = "/upload/c_thumb,h_500,w_500/";
-  //   const photoUrlArray = photoUrl.split("/upload/");
-  //   const croppedUrl = photoUrlArray[0] + cropText + photoUrlArray[1];
-  //
-  //   return croppedUrl;
-  // }
 
   showDetail(id) {
     console.log("inside showDetail fxn");
-    // this.props.fetchSinglePhoto(photo.id); ///can't do this because don't know photo here, only in render
     this.setState({currentPhotoId: id}, () => {
       window.globalPhotoModal();
     });
-    // return(<PhotoDetail />);
   }
 
 
-  //remember that errors and other objects might be null so render conditionally
   render() {
-
-
-
     console.log("in the render method of profile.jsx");
 
     let profilePicture;
-
     if (this.props.currentUser.profileImgUrl) {
       profilePicture = this.props.currentUser.profileImgUrl;
     } else {
@@ -101,7 +71,7 @@ class Profile extends React.Component {
                         <button
                           onClick={ () => this.showDetail(photo.id) }
                           className="detailButton"
-                          value="see detail/edit">Edit</button>
+                          value="see detail/edit">View / Edit</button>
                     </div>
 
               </li>
@@ -127,7 +97,7 @@ class Profile extends React.Component {
 
     }
 
-    //replace link to profile pic and tagline so pulls dynamically based on user
+
     return (
 
       <div className="profile-page-container">
@@ -193,4 +163,3 @@ class Profile extends React.Component {
 }
 
 export default Profile;
-// export default withRouter(Profile);

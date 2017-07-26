@@ -7,129 +7,90 @@ import {hashHistory} from 'react-router';
 import FooterXXX from '../Navigation/footer';
 import HeaderXXX from '../Navigation/header';
 
-//grab current photo from url....then just need to link to it from pics on profile page
-console.log("on the photo_detail.jsx");
 
 class PhotoDetail extends React.Component {
   constructor(props) {
     super(props);
+
+    let myId;
+    if (this.props.currentPhoto) {
+      myId = this.props.currentPhoto.id;
+    } else {
+      myId = null;
+    }
+
     this.state = {
       modalOpen: false,
       photo: {
         caption: "",
         location: "",
-        photo_url: ""
-      },
-      id: this.props.currentPhotoId,
+        photo_url: "",
+        id: myId,
+      }
     };
 
-    //this.anyMethod = this.anyMethod.bind(this);
+    // console.log("I AM HERE");
     this.closeModal = this.closeModal.bind(this);
-    this.openModal = this.openModal.bind(this);
     this.editPhoto = this.editPhoto.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     window.globalPhotoModal = this.globalPhotoModal.bind(this);
     this.destroyMe = this.destroyMe.bind(this);
-
   }
 
-  ///now the photos in state has a new key...currentPhoto and the value is id of the photo we are rendering
   componentDidMount() {
       this.props.fetchAllPhotos();
-
-
-      // this.props.fetchSinglePhoto(this.props.match.params.id);
-      // this.props.fetchSinglePhoto(photoId);
     }
 
   globalPhotoModal () {
     console.log("inside globalPhotoModal");
     this.props.fetchSinglePhoto(this.props.currentPhotoId);
     this.setState({ modalOpen: !this.state.modalOpen });
-
   }
-  //
-  // componentWillReceiveProps(nextProps) {
-  //   if (this.props.match.params.id !== nextProps.match.params.id) {
-  //     this.props.fetchSinglePhoto(nextProps.match.params.id);
-  //   }
-  // }
 
   closeModal() {
     this.setState({ modalOpen: false });
-    // this.setState({ photo: { modalOpen: false, caption: "", location: "", photo_url: ""} });
+    // this.setState({ photo: { modalOpen: false, caption: "", location: "", photo_url: "", id: this.props.currentPhotoId} });
   }
 
-  openModal() {
-    this.setState({ modalOpen: true });
-    // this.setState({ photo: { modalOpen: true, caption: "", location: "", photo_url: ""} });
-  }
 
   destroyMe(event) {
     console.log("inside destroyMe on photoDetail page");
-    console.log(this.props.currentPhoto);
     this.props.destroyPhoto(this.props.currentPhoto);
   }
-
 
   editPhoto(event) {
     console.log("inside updatePhoto on photoDetail page");
     const newPhoto = merge({}, this.state);
-    console.log(this.state);
     newPhoto.photo[event.target.name] = event.target.value;
-    console.log(newPhoto);
     this.setState(newPhoto);
-    console.log(this.state);
   }
 
   handleSubmit(event) {
     console.log("inside handleSubmit on photoDetail page");
-    console.log(this.state.photo);
+    // console.log(this.state.photo);
+    this.closeModal();
 
     event.preventDefault();
-    this.props.updatePhoto({ photo: this.state.photo });
-      // .then(
-      //   (()=> {
-      //     console.log("inside handleSubmit callback on photoDetail upon success");
-      //     this.closeModal();
-      //     this.setState({ photo: { caption: "", location: "", photo_url: ""} });
-      //   })
-      // );
+    this.props.updatePhoto(this.state.photo)
+      .then(
+        ( () => {
+          console.log("inside submit callback for updating photo upon success");
+          this.setState({ photo: { caption: "", location: "", photo_url: "", id: ""} });
+        })
+      );
 
-    this.closeModal();
-    this.setState({ photo: { caption: "", location: "", photo_url: ""} });
-    // hashHistory.push(`/users/${this.props.currentUser.id}`);
   }
 
 
-  //remember that errors and other objects might be null so render conditionally
   render() {
 
-    console.log("rendering on photo.jsx");
-    console.log(this.props);
-    // console.log(this.props.match.params.id);
+    // console.log("rendering on photo.jsx");
+    // console.log(this.props);
 
-
-    // let allPhotos = this.props.photos;
-    // let thisId = this.props.match.params.id;
-    // let thisPhoto = allPhotos[thisId];
-    // console.log(allPhotos[thisId]);
-    //
-    // let workingURL;
-    //
-    // if (this.props.photos[thisId]) {
-    //   workingURL = thisPhoto.photoUrl;
-    // } else {
-    //   workingURL = "xx";
-    // }
-
-    // const paramId = this.props.match.params.photoId;
-    // const pulledPhoto = this.props.photos[paramId];
     if (this.state.modalOpen && this.props.currentPhoto) {
       return (
         <div className="photo-modal-outer">
           <div className="photo-modal-inner">
-
 
             <main className="outer-main">
                 <main className="inner-main">
@@ -142,7 +103,6 @@ class PhotoDetail extends React.Component {
                             alt="photo"
                             className=""/>
 
-
                       </section>
 
 
@@ -153,6 +113,15 @@ class PhotoDetail extends React.Component {
                             <div className="another-container">
 
                               <form onSubmit={this.handleSubmit} id="upload-form">
+
+
+                                    <input
+                                        type="text"
+                                        name={this.props.currentPhoto.id}
+                                        value={this.props.currentPhoto.id}
+                                        onChange={this.editPhoto}
+                                    />
+
 
                                   <label>
                                       <input
@@ -190,8 +159,6 @@ class PhotoDetail extends React.Component {
                                     </label>
                                   <br/>
                                   <br/>
-
-
 
 
                                   <button
@@ -250,4 +217,3 @@ class PhotoDetail extends React.Component {
 }
 
 export default PhotoDetail;
-// export default withRouter(PhotoDetail);

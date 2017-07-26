@@ -35,6 +35,7 @@ export const ajaxCreatePhoto = (data) => {
 };
 
 
+//when dispatched from frontend, photo.id is not available
 export const ajaxUpdatePhoto = (photo) => {
   console.log("in ajaxUpdatePhoto");
 
