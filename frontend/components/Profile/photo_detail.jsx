@@ -95,36 +95,20 @@ class PhotoDetail extends React.Component {
 
 
 
-                    <div className="myBox">
-
-
-                            <img
-                                src={this.props.currentPhoto.photoUrl}
-                                alt="photo"
-                                className="actualPhoto"/>
 
 
 
-                            <button
-                                onClick={this.destroyMe}
-                                className="deleteButton">
-                                Delete Photo
-                            </button>
 
-
-                        myBox
-                    </div>
-
-
-
-                            <form onSubmit={this.handleSubmit} id="upload-form">
+                            <form onSubmit={this.handleSubmit} className="edit-form">
 
                                 <input
                                     type="text"
                                     name={this.props.currentPhoto.id}
                                     value={this.props.currentPhoto.id}
                                     onChange={this.editPhoto}
+                                    className="edit-input"
                                 />
+                              <br/>
 
                               <label>
                                   <input
@@ -133,7 +117,7 @@ class PhotoDetail extends React.Component {
                                     name="caption"
                                     value={this.props.currentPhoto.caption}
                                     onChange={this.editPhoto}
-                                    className="upload-input"
+                                    className="edit-input"
                                   />
                               </label>
                               <br/>
@@ -145,7 +129,7 @@ class PhotoDetail extends React.Component {
                                       name="location"
                                       value={this.props.currentPhoto.location}
                                       onChange={this.editPhoto}
-                                      className="upload-input"
+                                      className="edit-input"
                                   />
                               </label>
                               <br/>
@@ -157,10 +141,9 @@ class PhotoDetail extends React.Component {
                                         name="photo_url"
                                         value={this.props.currentPhoto.photo_url}
                                         onChange={this.editPhoto}
-                                        className="upload-input"
+                                        className="edit-input"
                                     />
                                 </label>
-                              <br/>
                               <br/>
 
 
@@ -168,13 +151,26 @@ class PhotoDetail extends React.Component {
                                 onClick={this.handleSubmit}
                                 type="submit"
                                 value="Submit"
-                                className="manual-submit">
+                                className="edit-submit">
                                 Submit Changes
                               </button>
 
                           </form>
 
+                          <div className="picture-box">
+                                  <img
+                                      src={this.props.currentPhoto.photoUrl}
+                                      alt="photo"
+                                      className="actualPhoto"/>
 
+                                  <button
+                                      onClick={this.destroyMe}
+                                      className="deleteButton">
+                                      Delete Photo
+                                  </button>
+
+                              picture-box
+                          </div>
 
 
                     <button

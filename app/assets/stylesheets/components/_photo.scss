@@ -10,32 +10,24 @@ $instagram-red: #f04752;
 
 .photo-modal-outer {
   position: absolute;
-  // background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.7);
   display: flex;
-  margin-top: 90px;
-  // margin-top: 340px;
-  // margin-left: 400px;
-  width: 100%;
-  // min-width: 100vw;
-  // min-height: 1000vh;
+  margin-top: 300px;
+  min-width: 100vw;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
-.photo-modal-inner{
-  position: relative;
-  margin: 20px;
-  // background-color: rgba(0, 0, 0, 0.7);
-  background-color: pink;
-  // background-color: transparent;
+.photo-modal-inner {
   display: flex;
   justify-content: center;
   min-width: 100vw;
-  min-height: 100vh;
 }
 
-.myBox {
-  background-color: green;
+.picture-box {
+  background-color: black;
+  color: white;
   margin: 10px;
   display: flex;
   flex-direction: column;
@@ -45,22 +37,53 @@ $instagram-red: #f04752;
 }
 
 .actualPhoto {
-
+  max-width: 800px;
 }
 
 
 .detail-container {
   background-color: lightblue;
-  // margin: 10px 10px 10px 0px;
   padding: 3px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  // flex: 1;
-  // width: 300px;
 }
 
+.edit-form {
+  // background-color: yellow;
+  display: flex;
+  justify-content: bottom;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.edit-input {
+  color: black;
+  font-size: 120%;
+  font-weight: 300;
+  width: 200px;
+}
+
+.edit-submit {
+  height: 30px;
+  background-color: $instagram-blue-background;
+  transition: background-color 0.5s ease;
+  color: $instagram-white;
+  font-weight: 600;
+  font-size: 120%;
+  line-height: 15px;
+  border-width: 0px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.edit-submit:active {
+  background-color: $instagram-white;
+}
+
+
+///////BUTTONS/////////
 
 .deleteButton {
   color: black;
@@ -80,20 +103,20 @@ $instagram-red: #f04752;
 
 
 .closeModalButton {
-  position: relative;
+  position: absolute;
   top: 0;
-  right: 0;
-  // border-radius: 3px;
+  right: 10px;
+  border-radius: 3px;
   color: black;
-  // background-color: red;
+  padding: 7px 35px 7px 35px;
   margin: 10px;
-  padding: 10px;
-  background-color: $instagram-white;
   height: 30px;
+  background-color: $instagram-white;
   transition: background-color 0.5s ease;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 120%;
-  cursor:pointer;
+  line-height: 15px;
+  cursor: pointer;
   white-space:nowrap;
   border-width: 1px;
   border-style: solid;
