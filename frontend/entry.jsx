@@ -6,36 +6,26 @@ import { Root } from './components/Root';
 import { configureStore } from './store/store';
 
 
-//auth development
-// import { ajaxSignup,
-//          ajaxLogin,
-//          ajaxLogout } from './util/session_api_util';
-//
-// import { receiveCurrentUser,
-//          receiveErrors,
-//          signupCreateUser,
-//          loginCreateSession,
-//          logoutDestroySession } from './actions/session_actions';
-
-
 //photo development
-import { ajaxFetchAllPhotos,
-         ajaxCreatePhoto,
-         ajaxFetchSinglePhoto } from './util/photo_api_util';
+// import { ajaxFetchAllPhotos,
+//          ajaxCreatePhoto,
+//          ajaxFetchSinglePhoto } from './util/photo_api_util';
+//
+// import {ajaxFetchAllUsers,
+//         ajaxFetchSingleUser } from './util/user_api_util';
+//
+// import { receiveAllPhotos,
+//          receiveSinglePhoto,
+//          fetchAllPhotos,
+//          fetchSinglePhoto,
+//          createPhoto,
+//          updatePhoto,
+//          destroyPhoto } from './actions/photo_actions';
 
-import {ajaxFetchAllUsers,
-        ajaxFetchSingleUser } from './util/user_api_util';
 
-import { receiveAllPhotos,
-         receiveSinglePhoto,
-         fetchAllPhotos,
-         fetchSinglePhoto,
-         createPhoto,
-         updatePhoto,
-         destroyPhoto } from './actions/photo_actions';
-
-import { ajaxCreateLike,
-         ajaxDestroyLike } from './util/like_api_util';
+//like development
+import { ajaxCreatePhotoLike,
+         ajaxDestroyPhotoLike } from './util/like_api_util';
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -49,8 +39,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // window.signupCreateUser = signupCreateUser;
   // window.loginCreateSession = loginCreateSession;
   // window.logoutDestroySession = logoutDestroySession;
-
-
+  //
+  //
   // window.ajaxFetchAllPhotos = ajaxFetchAllPhotos;
   // window.ajaxFetchSinglePhoto = ajaxFetchSinglePhoto;
   //
@@ -65,8 +55,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // window.ajaxFetchAllUsers = ajaxFetchAllUsers;
   // window.ajaxFetchSingleUser = ajaxFetchSingleUser;
 
-    window.ajaxCreateLike = ajaxCreateLike;
-    window.ajaxDestroyLike = ajaxDestroyLike;
+  window.ajaxCreatePhotoLike = ajaxCreatePhotoLike;
+  window.ajaxDestroyPhotoLike = ajaxDestroyPhotoLike;
 
 
   let store;

@@ -1,23 +1,27 @@
-export const ajaxCreateLike = (data) => {
-  console.log("in ajaxCreateLike");
+export const ajaxCreatePhotoLike = (photoId) => {
+  console.log("in ajaxCreatePhotoLike");
+  console.log(photoId);
+
   return(
     $.ajax({
       method: 'POST',
-      url: 'api/likes',
-      data
-    })
+      url: `api/photos/${photoId}/like`,
+      data: {like: { likable_id: photoId, likable_type: "Photo"}}
+      })
   );
 };
 
 
-export const ajaxDestroyLike = (data) => {
-  console.log("in ajaxDestroyLike");
+export const ajaxDestroyPhotoLike = (photoId) => {
+  console.log("in ajaxDestroyPhotoLike");
 
   return(
     $.ajax({
       method: 'DELETE',
-      url: '/api/likes',
-      data
+      url: `api/photos/${photoId}/like`,
+      data: {like: { likable_id: photoId, likable_type: "Photo"}}
     })
   );
 };
+
+//likable_type MUST be exact spelling of model we are referencing, e.g. "Photo" or "Comment"
