@@ -59,6 +59,7 @@ end
 
 private
 
+#considering allowing id to be passed in and changing line 38 to take the id from within the photo object
 def photo_params
   params.require(:photo).permit(
     :photo_url,
