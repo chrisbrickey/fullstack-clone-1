@@ -25,9 +25,10 @@ const mapDispatchToProps = (dispatch, { location }) => {
 
   return {
     fetchAllPhotos: () => dispatch(fetchAllPhotos()),
+    createPhotoLike: (photoId) => dispatch(createPhotoLike(photoId)),
+    destroyPhotoLike: (photoId) => dispatch(destroyPhotoLike(photoId)),
 
 
-    
     logoutDestroySession: () => dispatch(logoutDestroySession()),
     clearErrors: () => dispatch(clearErrors())
   };

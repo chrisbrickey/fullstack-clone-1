@@ -6,6 +6,7 @@ import _ from 'lodash';
 
 import FooterXXX from '../Navigation/footer';
 import HeaderXXX from '../Navigation/header';
+import LikesContainer from '../Likes/likes_container';
 
 
 console.log("on the home.jsx");
@@ -14,7 +15,6 @@ class Home extends React.Component {
   constructor(props) {
     super(props);
   }
-
 
   componentDidMount() {
       this.props.fetchAllPhotos();
@@ -86,32 +86,9 @@ class Home extends React.Component {
                     <section className="info-bottom">
                         <div className="item-at-bottom" >
 
-
                             <div className="likes-container">
-
-
-                              <button
-                                  onClick={this.props.logoutDestroySession}
-                                  className="logout-button">
-
-                              </button>
-
-
-                                <div className="likes-button">
-                                    <img
-                                        src={'https://res.cloudinary.com/dckkkjkuz/image/upload/v1501188966/007-favorite_t5zsnu.png'}
-                                        alt="heart icon"
-                                        id="heart-icon"
-                                    />
-                                </div>
-
-                                <div className="likes-count-container">
-                                    <div id="info-likes">{photo.likesCount}</div>
-                                        <div id="caption-spacer"></div>
-                                    <div id="info-likes">likes</div>
-                                </div>
+                                <LikesContainer thisPhoto={photo} thisPhotoId={photo.id}/>
                             </div>
-
 
                             <div id="info-caption">{photo.username}</div>
                                 <div id="caption-spacer"></div>
