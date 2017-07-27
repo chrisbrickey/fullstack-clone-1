@@ -98,27 +98,36 @@ class Signup extends React.Component {
 
       <div className="auth-container">
 
+
+          <div className="hero-adds">
+              <img
+                  src={'https://res.cloudinary.com/dckkkjkuz/image/upload/v1501142225/sunset_cropped_lbii4h.png'}
+                  alt="sunset"
+                  className="secondaryImg"
+              />
+
+              <img
+                  src={'https://res.cloudinary.com/dckkkjkuz/image/upload/v1501142222/stage_cropped_pcsgrt.png'}
+                  alt="ballerina on stage"
+                  className="primaryImg"
+              />
+          </div>
+
+
           <div className="auth-outer">
               <div className="auth-inner">
 
 
                   <div className="left">
-                      <div className="hero-container">
-
-                          <img
-                              src={'https://res.cloudinary.com/dckkkjkuz/image/upload/r_0/v1501055489/iphones_gkom5h.png'}
-                              alt="iPhone App"
-                              className="hero-photo"
-                          />
-
-                          <div className="heroTransition">
-                              <figure></figure>
-                              <figure></figure>
-                              <figure></figure>
-                              <figure></figure>
-                          </div>
-
+                      <div className="hero-original">
+                            <img
+                                src={'https://res.cloudinary.com/dckkkjkuz/image/upload/r_0/v1501055489/iphones_gkom5h.png'}
+                                alt="iPhone App"
+                                className="hero-photo"
+                            />
                       </div>
+
+
                   </div>
 
 
