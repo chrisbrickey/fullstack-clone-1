@@ -8,15 +8,15 @@ $instagram-header-icon: #4a4a4a;
 $instagram-red: #f04752;
 
 .header-container {
-  min-width: 100vw;
+  width: 100vw;
   height: 65px;
   background-color: $instagram-white;
-  padding: 5px;
+  // padding: 5px;
   display: flex;
   flex-direction: columns;
   justify-content: center;
   align-items: center;
-  border-width: 1px;
+  border-bottom: 1px solid;
   border-style: solid;
   border-color: $instagram-light-grey;
 }
