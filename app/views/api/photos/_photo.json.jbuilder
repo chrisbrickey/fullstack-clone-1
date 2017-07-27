@@ -3,6 +3,7 @@ json.photoUrl       photo.photo_url
 json.caption        photo.caption
 json.location       photo.location
 json.uploadDate     time_ago_in_words(photo.created_at)
+json.exactTime      photo.created_at
 
 json.userId         photo.author.id
 json.username       photo.author.username

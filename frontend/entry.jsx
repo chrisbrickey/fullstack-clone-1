@@ -14,13 +14,13 @@ import { configureStore } from './store/store';
 // import {ajaxFetchAllUsers,
 //         ajaxFetchSingleUser } from './util/user_api_util';
 //
-// import { receiveAllPhotos,
-//          receiveSinglePhoto,
-//          fetchAllPhotos,
-//          fetchSinglePhoto,
-//          createPhoto,
-//          updatePhoto,
-//          destroyPhoto } from './actions/photo_actions';
+import { receiveAllPhotos,
+         receiveSinglePhoto,
+         fetchAllPhotos,
+         fetchSinglePhoto,
+         createPhoto,
+         updatePhoto,
+         destroyPhoto } from './actions/photo_actions';
 
 
 //like development
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // window.fetchSinglePhoto = fetchSinglePhoto;
   // window.createPhoto = createPhoto;
   // window.updatePhoto = updatePhoto;
-  // window.destroyPhoto = destroyPhoto;
+  window.destroyPhoto = destroyPhoto;
   //
   // window.ajaxFetchAllUsers = ajaxFetchAllUsers;
   // window.ajaxFetchSingleUser = ajaxFetchSingleUser;

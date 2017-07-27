@@ -28,36 +28,29 @@ class Home extends React.Component {
 
     if (photoFeedObject) {
         console.log("original photoFeedObject", photoFeedObject);
-        console.log("keys", Object.keys(photoFeedObject));
 
         ////===================NEW CODE=====================
         let photoFeedArrayValues = Object.values(photoFeedObject);
         console.log("new photoFeedArrayValues", photoFeedArrayValues);
 
         //this appears to sort from most recent to oldest
-        let sortedFeedObjects = sortBy(photoFeedArrayValues, 'uploadDate');
+        let sortedFeedObjects = sortBy(photoFeedArrayValues, 'exactTime').reverse();
         console.log("sortedFeedObjects", sortedFeedObjects);
 
 
         sortedFeedObjects.forEach( (photo1) => {
-          // console.log("photo from sorted array", photo1);
-          // console.log("photo's id from sorted array", photo1.id);
           arrayOfIdsOrderedByTimePosted.push((photo1.id).toString());
         });
 
-        console.log("arrayOfIdsOrderedByTimePosted", arrayOfIdsOrderedByTimePosted);
-        console.log("original keys that I was mapping over", Object.keys(photoFeedObject));
-
-        // photoFeedList = sortedFeedObjects.map( (id) => {
-        //     let photo = sortedFeedObjects[id];
-        //     console.log("photo in the loop", photo);
+        // console.log("arrayOfIdsOrderedByTimePosted", arrayOfIdsOrderedByTimePosted);
+        // console.log("original keys that I was mapping over", Object.keys(photoFeedObject));
         ////==================NEW CODE=====================
 
 
         photoFeedList = arrayOfIdsOrderedByTimePosted.map( (id) => {
         // photoFeedList = Object.keys(photoFeedObject).map( (id) => {
             let photo = photoFeedObject[id];
-            console.log("photo in main loop", photo);
+            // console.log("photo in main loop", photo);
 
             return (
                 <li key={photo.id} className="feedItem-container">
