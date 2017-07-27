@@ -69,6 +69,16 @@ class PhotoDetail extends React.Component {
   destroyMe(event) {
     console.log("inside destroyMe on photoDetail page");
     this.props.destroyPhoto(this.props.currentPhoto);
+
+    /////=======================NEW CODE===================
+    // .then(
+    //   ( () => {
+    //     console.log("inside callback for destroyPhoto");
+    //     this.setState({ photo: { caption: "", location: ""} });
+    //   })
+    // );
+    /////=======================NEW CODE===================
+
   }
 
   editPhoto(event) {
