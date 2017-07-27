@@ -75,11 +75,14 @@ class Upload extends React.Component {
         (()=> {
           console.log("inside handleSubmit callback upon success");
           this.setState({ photo: { caption: "", location: "", photo_url: ""} });
+          this.props.history.push(`/`);
         })
       );
   }
 
   render() {
+
+    console.log("this.props", this.props);
 
     return (
       <div className="upload-page-container">
