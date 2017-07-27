@@ -147,27 +147,28 @@ class PhotoDetail extends React.Component {
 
 
                                   <form onSubmit={this.handleSubmit} className="edit-form">
-                                      <label>
-                                          <input
+
+                                    <label>
+                                        <input
                                             type="text"
-                                            placeholder="add caption"
-                                            name="caption"
-                                            value={this.state.photo.caption}
+                                            placeholder="add location"
+                                            name="location"
+                                            value={this.state.photo.location}
                                             onChange={this.editPhoto}
                                             className="edit-input"
-                                          />
-                                      </label>
+                                        />
+                                    </label>
 
-                                      <label>
-                                          <input
-                                              type="text"
-                                              placeholder="add location"
-                                              name="location"
-                                              value={this.state.photo.location}
-                                              onChange={this.editPhoto}
-                                              className="edit-input"
-                                          />
-                                      </label>
+                                    <label>
+                                        <input
+                                          type="text"
+                                          placeholder="add caption"
+                                          name="caption"
+                                          value={this.state.photo.caption}
+                                          onChange={this.editPhoto}
+                                          className="edit-input"
+                                        />
+                                    </label>
 
                                       <button
                                         onClick={this.handleSubmit}
