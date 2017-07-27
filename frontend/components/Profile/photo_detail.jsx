@@ -108,6 +108,38 @@ class PhotoDetail extends React.Component {
           <main className="photo-modal-outer">
               <main className="photo-modal-inner">
 
+                <button>
+                    <img
+                        src="https://res.cloudinary.com/dckkkjkuz/image/upload/v1501126203/forbidden-mark_l01ir1.png"
+                        alt="close mark"
+                        className="closeMark"
+                        onClick={this.closeModal}/>
+                </button>
+
+
+
+
+
+
+                <div className="picture-box">
+                    <img
+                        src={this.props.currentPhoto.photoUrl}
+                        alt="photo"
+                        className="actualPhoto"/>
+
+                    <button
+                        onClick={this.destroyMe}
+                        className="deleteButton">
+                        Delete Photo
+                    </button>
+                </div>
+
+
+
+
+
+
+
                   <form onSubmit={this.handleSubmit} className="edit-form">
 
                     <label>
@@ -146,25 +178,6 @@ class PhotoDetail extends React.Component {
                 </form>
 
 
-                <div className="picture-box">
-                    <img
-                        src={this.props.currentPhoto.photoUrl}
-                        alt="photo"
-                        className="actualPhoto"/>
-
-                    <button
-                        onClick={this.destroyMe}
-                        className="deleteButton">
-                        Delete Photo
-                    </button>
-                </div>
-
-
-                <button
-                    onClick={this.closeModal}
-                    className="closeModalButton">
-                    Close
-                </button>
 
 
           </main>
