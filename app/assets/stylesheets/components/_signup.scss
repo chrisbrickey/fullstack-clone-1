@@ -14,36 +14,9 @@ body {
   font-size: 12px;
 }
 
-
-
-
-.hero-adds {
-  position: absolute;
-}
-
-.primaryImg {
-  position: absolute;
-  // position: relative;
-  // top: -515px;
-  // right: 22px;
-  height: 440px;
-  width: 249px;
-}
-
-.secondaryImg {
-  position: absolute;
-  // position: relative;
-  // top: -983px;
-  // right: 288px;
-  height: 460px;
-  width: 82px;
-}
-
-
-
 .auth-container {
-  background-color: black;
-  // background-color: #fbfbfb;
+  // background-color: black;
+  background-color: #fbfbfb;
   display: flex;
   min-width: 100vw;
   min-height: 100vh;
@@ -51,8 +24,8 @@ body {
 
 
 .auth-outer {
-  background-color: red;
-  // background-color: transparent;
+  // background-color: red;
+  background-color: transparent;
   padding: 10px;
   margin: 10px;
   flex: 1;
@@ -91,11 +64,36 @@ body {
 }
 
 
+.hero-adds {
+  position: absolute;
+}
+
+.primaryImg {
+  position: absolute;
+  top: 85px;
+  left: 112px;
+  height: 440px;
+  width: 249px;
+}
+
+.secondaryImg {
+  position: absolute;
+  // position: relative;
+  // top: -983px;
+  // right: 288px;
+  height: 460px;
+  width: 82px;
+}
+
+
 
 .hero-photo {
   position: relative;
   height: 600px;
 }
+
+
+
 
 
 

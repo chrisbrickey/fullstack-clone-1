@@ -99,19 +99,7 @@ class Signup extends React.Component {
       <div className="auth-container">
 
 
-          <div className="hero-adds">
-              <img
-                  src={'https://res.cloudinary.com/dckkkjkuz/image/upload/v1501142225/sunset_cropped_lbii4h.png'}
-                  alt="sunset"
-                  className="secondaryImg"
-              />
 
-              <img
-                  src={'https://res.cloudinary.com/dckkkjkuz/image/upload/v1501142222/stage_cropped_pcsgrt.png'}
-                  alt="ballerina on stage"
-                  className="primaryImg"
-              />
-          </div>
 
 
           <div className="auth-outer">
@@ -125,6 +113,20 @@ class Signup extends React.Component {
                                 alt="iPhone App"
                                 className="hero-photo"
                             />
+
+                            <div className="hero-adds">
+                                <img
+                                    src={'https://res.cloudinary.com/dckkkjkuz/image/upload/v1501142225/sunset_cropped_lbii4h.png'}
+                                    alt="sunset"
+                                    className="secondaryImg"
+                                />
+
+                                <img
+                                    src={'https://res.cloudinary.com/dckkkjkuz/image/upload/v1501142222/stage_cropped_pcsgrt.png'}
+                                    alt="ballerina on stage"
+                                    className="primaryImg"
+                                />
+                            </div>
                       </div>
 
 
