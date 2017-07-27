@@ -5,6 +5,9 @@ import { logoutDestroySession,
 
 import { fetchAllPhotos } from '../../actions/photo_actions';
 
+import { createPhotoLike,
+         destroyPhotoLike } from '../../actions/photo_like_actions';
+
 import Home from './home';
 
 
@@ -22,6 +25,9 @@ const mapDispatchToProps = (dispatch, { location }) => {
 
   return {
     fetchAllPhotos: () => dispatch(fetchAllPhotos()),
+
+
+    
     logoutDestroySession: () => dispatch(logoutDestroySession()),
     clearErrors: () => dispatch(clearErrors())
   };

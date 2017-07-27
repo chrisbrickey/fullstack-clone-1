@@ -22,6 +22,8 @@ class Home extends React.Component {
 
   render() {
 
+    console.log("this.props", this.props);
+
     const photoFeedObject = this.props.photos.byId;
     let photoFeedList = null;
     let arrayOfIdsOrderedByTimePosted = [];
@@ -86,7 +88,16 @@ class Home extends React.Component {
 
 
                             <div className="likes-container">
-                                <div className="likes-icon">
+
+
+                              <button
+                                  onClick={this.props.logoutDestroySession}
+                                  className="logout-button">
+
+                              </button>
+
+
+                                <div className="likes-button">
                                     <img
                                         src={'https://res.cloudinary.com/dckkkjkuz/image/upload/v1501188966/007-favorite_t5zsnu.png'}
                                         alt="heart icon"
