@@ -32,8 +32,6 @@ class Profile extends React.Component {
 
   render() {
     console.log("in the render method of profile.jsx");
-    console.log(this.props);
-    console.log(this.state);
 
     let profilePicture;
     if (this.props.currentUser.profileImgUrl) {

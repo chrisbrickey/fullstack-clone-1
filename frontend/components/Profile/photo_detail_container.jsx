@@ -13,15 +13,16 @@ import { fetchAllPhotos,
 import PhotoDetail from './photo_detail';
 
 
+
 const mapStateToProps = (state) => {
 
   let thisPhoto;
+
   if (state.photos.currentPhoto) {
     thisPhoto = state.photos.byId[state.photos.currentPhoto];
   } else {
     thisPhoto = null;
   }
-  console.log("HERE I AM", thisPhoto)
 
   return {
     loggedIn: Boolean(state.session.currentUser),
@@ -31,6 +32,7 @@ const mapStateToProps = (state) => {
     currentPhoto: thisPhoto
   };
 };
+
 
 
 const mapDispatchToProps = (dispatch, { location }) => {

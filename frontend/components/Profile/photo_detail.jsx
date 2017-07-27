@@ -15,8 +15,6 @@ class PhotoDetail extends React.Component {
       myId = null;
     }
 
-    console.log("myID", myId);
-
     this.state = {
       modalOpen: false,
       photo: {
@@ -39,7 +37,6 @@ class PhotoDetail extends React.Component {
 
   componentWillReceiveProps(nextProps) {
 
-
     if (nextProps.currentPhoto && this.state.photo.id !== nextProps.currentPhoto.id){
       const newState = merge({}, this.state);
       newState.photo.id = nextProps.currentPhoto.id;
@@ -47,7 +44,6 @@ class PhotoDetail extends React.Component {
       newState.photo.location = nextProps.currentPhoto.location;
       this.setState(newState);
     }
-
 
   }
 
@@ -67,9 +63,7 @@ class PhotoDetail extends React.Component {
 
   closeModal() {
     this.setState({ modalOpen: false });
-    // this.setState({ photo: { modalOpen: false, caption: "", location: "", photo_url: "", id: this.props.currentPhotoId} });
   }
-
 
   destroyMe(event) {
     console.log("inside destroyMe on photoDetail page");
@@ -77,13 +71,13 @@ class PhotoDetail extends React.Component {
   }
 
   editPhoto(event) {
-    console.log("INSIDE LIVE EDITPHOTO FXN on photoDetail page");
+    console.log("inside editPhoto on photoDetail page");
 
     const newPhoto = merge({}, this.state);
 
-    console.log("field name", event.target.name);
-    console.log("current value at field name", newPhoto.photo[event.target.name]);
-    console.log("new value at field name", event.target.value);
+    // console.log("field name", event.target.name);
+    // console.log("current value at field name", newPhoto.photo[event.target.name]);
+    // console.log("new value at field name", event.target.value);
 
     newPhoto.photo[event.target.name] = event.target.value;
     this.setState(newPhoto);
@@ -95,12 +89,10 @@ class PhotoDetail extends React.Component {
     event.preventDefault();
     this.closeModal();
 
-    console.log("THIS.STATE.PHOTO", this.state.photo);
-
     this.props.updatePhoto(this.state.photo)
       .then(
         ( () => {
-          console.log("inside submit callback for updating photo upon success");
+          console.log("inside callback for updatePhoto");
           this.setState({ photo: { caption: "", location: ""} });
         })
       );
