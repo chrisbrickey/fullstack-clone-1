@@ -42,7 +42,7 @@ body {
 }
 
 .left {
-  background-color: green;
+  // background-color: green;
   padding: 10px 0px 10px 10px;
   margin: 10px 0px 10px 10px;
   flex: 1;
@@ -55,11 +55,8 @@ body {
 .hero-original {
   padding: 10px;
   margin: 10px 0px 10px 10px;
-  background-color: lightgreen;
-  // height: 75%;
-  // width: 75%;
+  // background-color: lightgreen;
   display: flex;
-  // justify-content: bottom;
 
 }
 
@@ -78,9 +75,8 @@ body {
 
 .secondaryImg {
   position: absolute;
-  // position: relative;
-  // top: -983px;
-  // right: 288px;
+  top: 57px;
+  left: 13px;
   height: 460px;
   width: 82px;
 }
@@ -98,7 +94,7 @@ body {
 
 
 .right {
-  background-color: blue;
+  // background-color: blue;
   padding: 10px 10px 10px 0px;
   margin: 10px 10px 10px 0px;
   flex: 1;
@@ -110,7 +106,7 @@ body {
 
 .subright {
   margin: 10px 10px 10px 0px;
-  background-color: lightblue;
+  // background-color: lightblue;
   height: 75%;
   width: 350px;
   padding: 10px 10px 10px 5px;
