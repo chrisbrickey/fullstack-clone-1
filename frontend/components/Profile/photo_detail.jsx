@@ -117,24 +117,18 @@ class PhotoDetail extends React.Component {
                   </button>
 
                   <div className="duo-container">
-                  duo
+
 
                       <div className="picture-box">
                           <img
                               src={this.props.currentPhoto.photoUrl}
                               alt="photo"
                               className="actualPhoto"/>
-
-                          <button
-                              onClick={this.destroyMe}
-                              className="deleteButton">
-                              Delete Photo
-                          </button>
                       </div>
 
 
                       <div className="detail-container">
-                        <div className='fromHome'>
+
 
 
                           <div className="feedItem-container2">
@@ -150,35 +144,29 @@ class PhotoDetail extends React.Component {
                                   <div id="info-username2">{this.props.currentPhoto.username}</div>
                                   </div>
 
-                                  <div className="item-at-bottom">
-                                    <div id="line"></div>
-                                  </div>
 
                                   <form onSubmit={this.handleSubmit} className="edit-form">
                                       <label>
                                           <input
                                             type="text"
-                                            placeholder="caption"
+                                            placeholder="add caption"
                                             name="caption"
                                             value={this.state.photo.caption}
                                             onChange={this.editPhoto}
                                             className="edit-input"
                                           />
                                       </label>
-                                      <br/>
 
                                       <label>
                                           <input
                                               type="text"
-                                              placeholder="location"
+                                              placeholder="add location"
                                               name="location"
                                               value={this.state.photo.location}
                                               onChange={this.editPhoto}
                                               className="edit-input"
                                           />
                                       </label>
-                                      <br/>
-
 
                                       <button
                                         onClick={this.handleSubmit}
@@ -187,7 +175,6 @@ class PhotoDetail extends React.Component {
                                         className="edit-submit">
                                         Submit Changes
                                       </button>
-                                      <br/>
 
                                       <button
                                           onClick={this.destroyMe}
@@ -198,9 +185,7 @@ class PhotoDetail extends React.Component {
 
                               </div>
 
-                              <div className="info-middle">
-                                hello
-                              </div>
+                              <div className="info-middle"></div>
 
 
                               <div className="info-bottom2">
@@ -226,12 +211,12 @@ class PhotoDetail extends React.Component {
 
 
 
-                          </div>
+
 
 
                       </div>
 
-                duo
+
                 </div>
           </main>
       </main>

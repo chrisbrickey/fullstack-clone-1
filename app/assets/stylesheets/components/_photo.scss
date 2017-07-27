@@ -7,7 +7,12 @@ $instagram-grey-fullscreen: #fdfdfd;
 $instagram-header-icon: #4a4a4a;
 $instagram-red: #f04752;
 
-
+.closeMark {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  width: 20px;
+}
 
 .photo-modal-outer {
   overflow: scroll;
@@ -35,62 +40,51 @@ $instagram-red: #f04752;
   flex-direction: row;
   // justify-content: center;
   // align-items: right;
-  background-color: orange;
+  // background-color: orange;
 }
 
 .duo-container {
-  background-color: green;
+  // background-color: green;
   display: flex;
-  margin: 10px;
+  // margin: 2px;
 }
 
 .picture-box {
-  background-color: black;
-  color: white;
-  margin: 10px;
+  // background-color: black;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 10px;
+  // padding: 10px;
 }
 
 .actualPhoto {
-  max-width: 800px;
+  max-width: 325px;
 }
 
 .detail-container {
-  background-color: lightgreen;
-  padding: 10px;
+  max-width: 400px;
+  background-color: $instagram-white;
+  padding: 2px;
   display: flex;
   flex-direction: column;
-  justify-content: top;
-  align-items: center;
-  margin: 10px 0px 10px 0px;
-}
+  // margin: 10px 0px 10px 0px;
 
-.fromHome {
-  background-color: purple;
-  margin: 10px;
-  padding: 10px;
-}
-
-
-.feedItem-container2 {
-  background-color: orange;
-  // background-color: $instagram-white;
-  margin: 60px 0px 60px 0px;
-  padding: 0px;
-  width: 600px;
-  display: flex;
-  flex-direction: column;
   border-width: 1px;
   border-style: solid;
   border-color: $instagram-light-grey;
 }
 
+
+.feedItem-container2 {
+  // background-color: orange;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+
+}
+
 .info-top2 {
-  // background-color: lightgreen;
   // margin: 5px;
   padding: 0px 3px 0px 3px;
   display: flex;
@@ -103,8 +97,7 @@ $instagram-red: #f04752;
 .thumbnailPic-container2 {
   height: 50px;
   width: 50px;
-  // background-color: orange;
-  margin: 5px 0px 5px 0px;
+  // margin: 5px 0px 5px 0px;
   padding: 0px;
   display: flex;
   justify-content: center;
@@ -129,34 +122,34 @@ $instagram-red: #f04752;
 
 
 .edit-form {
-  background-color: yellow;
+  // background-color: yellow;
   display: flex;
   flex-direction: column;
-  // justify-content: bottom;
-
-  padding: 10px;
-  // margin: 10px;
+  margin: 0px 5px 0px 5px;
 }
 
 .edit-input {
   color: black;
-  font-size: 120%;
+  font-size: 90%;
   font-weight: 300;
-  width: 200px;
-  margin: 0px;
+  margin: 2px 0px 2px 0px;
+  height: 10px;
+  width: 94%;
 }
 
 .edit-submit {
-  height: 30px;
+  height: 17px;
   background-color: $instagram-blue-background;
   transition: background-color 0.5s ease;
   color: $instagram-white;
   font-weight: 600;
-  font-size: 120%;
+  font-size: 90%;
   line-height: 15px;
   border-width: 0px;
   border-radius: 3px;
   cursor: pointer;
+  margin: 2px 0px 2px 0px;
+
 }
 
 .edit-submit:active {
@@ -164,16 +157,17 @@ $instagram-red: #f04752;
 }
 
 .deleteButton2 {
-  height: 30px;
+  height: 15px;
   background-color: $instagram-red;
   transition: background-color 0.5s ease;
   color: $instagram-white;
   font-weight: 600;
-  font-size: 120%;
+  font-size: 90%;
   line-height: 15px;
   border-width: 0px;
   border-radius: 3px;
   cursor: pointer;
+  margin: 2px 0px 2px 0px;
 }
 
 .deleteButton2:active {
@@ -183,36 +177,32 @@ $instagram-red: #f04752;
 
 
 .info-middle {
-  height: 200px;
-  background-color: black;
-  color: white;
+  flex: 1;
 }
 
 
 .info-bottom2 {
-  background-color: grey;
-  margin: 5px;
-  padding: 0px 3px 0px 3px;
+  // background-color: grey;
   display: flex;
+  margin: 5px;
   flex-direction: column;
-  // align-items: left;
   cursor:default;
 }
 
-.item-at-bottom {
-  margin: 3px;
-  padding: 5px;
-  // background-color: yellow;
-  display: flex;
-  flex-direction: column;
-  font-size: 110%;
-  color: black;
-  font-weight: bold;
-}
+// .item-at-bottom {
+//   margin: 3px;
+//   padding: 5px;
+//   // background-color: yellow;
+//   display: flex;
+//   flex-direction: column;
+//   // font-size: 110%;
+//   color: black;
+//   font-weight: bold;
+// }
 
 #info-uploadDate2 {
   color: $instagram-grey;
-  font-size: 95%;
+  font-size: 90%;
   margin-bottom: 0px;
 }
 
@@ -223,62 +213,5 @@ $instagram-red: #f04752;
 
 #info-addComment2 {
   color: $instagram-grey;
-  font-size: 110%;
-  margin: 5px 0px 5px 0px;
-}
-
-
-
-
-
-
-///////BUTTONS/////////
-
-.deleteButton {
-  color: black;
-  background-color: $instagram-white;
-  height: 30px;
-  transition: background-color 0.5s ease;
-  font-weight: 600;
-  font-size: 120%;
-  cursor:pointer;
-  white-space:nowrap;
-  width: 100%;
-}
-
-.deleteButton:active {
-  background-color: black;
-}
-
-.closeMark {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  width: 20px;
-}
-
-
-.closeModalButton {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  border-radius: 3px;
-  color: black;
-  padding: 7px 35px 7px 35px;
-  margin: 20px;
-  height: 30px;
-  background-color: $instagram-white;
-  transition: background-color 0.5s ease;
-  font-weight: 400;
-  font-size: 120%;
-  line-height: 15px;
-  cursor: pointer;
-  white-space:nowrap;
-  border-width: 1px;
-  border-style: solid;
-  border-color: $instagram-light-grey;
-}
-
-.closeModalButton:active {
-  background-color: black;
+  font-size: 95%;
 }
