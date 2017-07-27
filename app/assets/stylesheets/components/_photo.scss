@@ -8,21 +8,39 @@ $instagram-header-icon: #4a4a4a;
 $instagram-red: #f04752;
 
 
+
 .photo-modal-outer {
-  position: absolute;
+  overflow: scroll;
   background-color: rgba(0, 0, 0, 0.7);
-  display: flex;
-  margin-top: 300px;
-  min-width: 100vw;
+
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+
+  padding:0;
+  margin:0;
+
+  width: 100vw;
+  height: 100%;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 .photo-modal-inner {
+  // overflow: scroll;
+  // height: 100%;
+
   display: flex;
   justify-content: center;
   min-width: 100vw;
+  max-height: 100vh;
+
+  background-color: orange;
+  margin: 10px;
 }
 
 .picture-box {
@@ -33,11 +51,10 @@ $instagram-red: #f04752;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
 }
 
 .actualPhoto {
-  max-width: 800px;
+  // max-width: 800px;
 }
 
 
@@ -48,10 +65,12 @@ $instagram-red: #f04752;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  margin: 10px;
 }
 
 .edit-form {
-  // background-color: yellow;
+  background-color: yellow;
   display: flex;
   justify-content: bottom;
   flex-direction: column;

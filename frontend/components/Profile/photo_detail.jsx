@@ -105,8 +105,8 @@ class PhotoDetail extends React.Component {
     if (this.state.modalOpen && this.props.currentPhoto) {
       return (
 
-          <div className="photo-modal-outer">
-              <div className="photo-modal-inner">
+          <main className="photo-modal-outer">
+              <main className="photo-modal-inner">
 
                   <form onSubmit={this.handleSubmit} className="edit-form">
 
@@ -167,8 +167,8 @@ class PhotoDetail extends React.Component {
                 </button>
 
 
-          </div>
-      </div>
+          </main>
+      </main>
 
 
       );

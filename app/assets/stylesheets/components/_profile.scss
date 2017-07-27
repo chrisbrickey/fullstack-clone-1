@@ -8,8 +8,9 @@ $instagram-header-icon: #4a4a4a;
 $instagram-red: #f04752;
 
 .profile-page-container{
-  min-height: 100vh;
-  min-width: 100vw;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
 }
 
 
