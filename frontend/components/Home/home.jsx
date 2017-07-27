@@ -82,27 +82,37 @@ class Home extends React.Component {
 
 
                     <section className="info-bottom">
-
-                        <div className="likes-container">
-                            <div className="likes-icon">
-                                <img
-                                    src={'https://res.cloudinary.com/dckkkjkuz/image/upload/v1501188966/007-favorite_t5zsnu.png'}
-                                    alt="heart icon"
-                                    className="heart-icon"
-                                />
-                            </div>
-
-                            <div className="likes-count">
-
-                            </div>
-                        </div>
-
-
                         <div className="item-at-bottom" >
+
+
+                            <div className="likes-container">
+                                <div className="likes-icon">
+                                    <img
+                                        src={'https://res.cloudinary.com/dckkkjkuz/image/upload/v1501188966/007-favorite_t5zsnu.png'}
+                                        alt="heart icon"
+                                        id="heart-icon"
+                                    />
+                                </div>
+
+                                <div className="likes-count-container">
+                                    <div id="info-likes">{photo.likesCount}</div>
+                                        <div id="caption-spacer"></div>
+                                    <div id="info-likes">likes</div>
+                                </div>
+                            </div>
+
 
                             <div id="info-caption">{photo.username}</div>
                                 <div id="caption-spacer"></div>
                             <div id="info-caption">{photo.caption}</div>
+
+                              <div className="item-at-bottom">
+                                <div id="comment-spacer"></div>
+                              </div>
+
+                            <div className="item-at-bottom">
+                              <div id="line"></div>
+                            </div>
 
 
                             <div className="item-at-bottom" id="info-uploadDate">{photo.uploadDate} ago</div>
@@ -113,11 +123,9 @@ class Home extends React.Component {
 
                             <div className="item-at-bottom" id="info-addComment">Add a comment... (placeholder)</div>
 
-                          </div>
 
 
-
-
+                        </div>
                     </section>
 
                 </li>

@@ -69,6 +69,12 @@ main {
   width: 600px;
 }
 
+
+
+
+
+
+
 .info-bottom {
   // background-color: lightblue;
   margin: 5px;
@@ -79,21 +85,34 @@ main {
   cursor:default;
 }
 
-
-.heart-icon {
-  width: 23px;
-  height: 21px;
-}
-
 .item-at-bottom {
   margin: 3px;
   padding: 5px;
-  // background-color: yellow;
+  background-color: yellow;
   display: flex;
   flex-direction: column;
   font-size: 110%;
   color: black;
   font-weight: bold;
+}
+
+
+.likes-count-container {
+  background-color: pink;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+}
+
+#heart-icon {
+  width: 23px;
+  height: 21px;
+}
+
+#caption-spacer {
+  background-color: red;
+  width: 3px;
+  height: 10px;
 }
 
 #caption {
@@ -102,19 +121,20 @@ main {
   font-weight: bold;
 }
 
-#location {
+#line {
+  height: 1px;
+  background-color: $instagram-light-grey;
+}
 
+#comment-spacer {
+  background-color: orange;
+  height: 40px;
 }
 
 #info-uploadDate {
   color: $instagram-grey;
   font-size: 95%;
   margin-bottom: 0px;
-}
-
-#line {
-  height: 1px;
-  background-color: $instagram-light-grey;
 }
 
 #info-addComment {
