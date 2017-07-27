@@ -11,42 +11,23 @@ import { fetchAllPhotos,
          destroyPhoto } from '../../actions/photo_actions';
 
 import LikesDetail from './likes_detail';
+// thisPhoto, thisPhotoId, createPhotoLike, destroyPhotoLike are being passed in from Home where this container is rendered
 
-// const mapStateToProps = (state) => {
+
+const mapStateToProps = (state) => {
+
+  return {
+
+  };
+};
+
+
+const mapDispatchToProps = (dispatch, { location }) => {
 //
-//   let thisPhoto;
-//
-//   if (state.photos.currentPhoto) {
-//     thisPhoto = state.photos.byId[state.photos.currentPhoto];
-//   } else {
-//     thisPhoto = null;
-//   }
-//
-//   return {
-//     loggedIn: Boolean(state.session.currentUser),
-//     currentUser: state.session.currentUser,
-//     errors: state.session.errors,
-//     photos: state.photos,
-//     currentPhoto: thisPhoto
-//   };
-// };
-//
-//
-//
-// const mapDispatchToProps = (dispatch, { location }) => {
-//
-//   return {
-//     fetchAllPhotos: () => dispatch(fetchAllPhotos()),
-//     receiveSinglePhoto: (id) => dispatch(receiveSinglePhoto(id)),
-//     fetchSinglePhoto: (id) => dispatch(fetchSinglePhoto(id)),
-//     createPhoto: (data) => dispatch(createPhoto(data)),
-//     updatePhoto: (data) => dispatch(updatePhoto(data)),
-//     destroyPhoto: (photo) => dispatch(destroyPhoto(photo)),
-//
-//     logoutDestroySession: () => dispatch(logoutDestroySession()),
-//     clearErrors: () => dispatch(clearErrors())
-//   };
-// };
+  return {
+
+  };
+};
 
 export default connect(
   mapStateToProps,

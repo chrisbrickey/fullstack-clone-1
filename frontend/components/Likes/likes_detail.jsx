@@ -1,8 +1,8 @@
 import React from 'react';
-// import { Link, withRouter } from 'react-router-dom';
 import merge from 'lodash/merge';
-// import Modal from 'react-modal';
 import {hashHistory} from 'react-router';
+
+// thisPhoto, thisPhotoId, createPhotoLike, destroyPhotoLike are being passed in from Home where this component's container is rendered
 
 class LikesDetail extends React.Component {
   constructor(props) {
@@ -32,24 +32,19 @@ class LikesDetail extends React.Component {
   //   }
 
 
-
   likeThisPhoto(event) {
-    this.props.createPhotoLike(photoId);
+    this.props.createPhotoLike(this.props.thisPhotoId);
   }
 
 
   render() {
+      console.log(this.props);
+    // console.log(this.props.thisPhoto);
+    // console.log(this.props.thisPhotoId);
 
     return(
 
         <div className="innerLikeContainer">
-
-            <button
-                onClick={this.props.logoutDestroySession}
-                className="logout-button">
-                why is logout button here?
-            </button>
-
 
             <div className="likes-button">
                 <button>
@@ -64,12 +59,12 @@ class LikesDetail extends React.Component {
 
 
             <div className="likes-count-container">
-                <div id="info-likes">{photo.likesCount}</div>
+                <div id="info-likes">{this.props.thisPhoto.likesCount}</div>
                     <div id="caption-spacer"></div>
                 <div id="info-likes">likes</div>
             </div>
 
-        
+
         </div>
 
     );

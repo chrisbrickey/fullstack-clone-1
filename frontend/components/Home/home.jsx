@@ -29,30 +29,21 @@ class Home extends React.Component {
     let arrayOfIdsOrderedByTimePosted = [];
 
     if (photoFeedObject) {
-        console.log("original photoFeedObject", photoFeedObject);
+        // console.log("original photoFeedObject", photoFeedObject);
 
-        ////===================NEW CODE=====================
         let photoFeedArrayValues = Object.values(photoFeedObject);
-        console.log("new photoFeedArrayValues", photoFeedArrayValues);
+        // console.log("new photoFeedArrayValues", photoFeedArrayValues);
 
-        //this appears to sort from most recent to oldest
         let sortedFeedObjects = sortBy(photoFeedArrayValues, 'exactTime').reverse();
-        console.log("sortedFeedObjects", sortedFeedObjects);
+        // console.log("sortedFeedObjects", sortedFeedObjects);
 
 
         sortedFeedObjects.forEach( (photo1) => {
           arrayOfIdsOrderedByTimePosted.push((photo1.id).toString());
         });
 
-        // console.log("arrayOfIdsOrderedByTimePosted", arrayOfIdsOrderedByTimePosted);
-        // console.log("original keys that I was mapping over", Object.keys(photoFeedObject));
-        ////==================NEW CODE=====================
-
-
         photoFeedList = arrayOfIdsOrderedByTimePosted.map( (id) => {
-        // photoFeedList = Object.keys(photoFeedObject).map( (id) => {
             let photo = photoFeedObject[id];
-            // console.log("photo in main loop", photo);
 
             return (
                 <li key={photo.id} className="feedItem-container">
@@ -87,7 +78,12 @@ class Home extends React.Component {
                         <div className="item-at-bottom" >
 
                             <div className="likes-container">
-                                <LikesContainer thisPhoto={photo} thisPhotoId={photo.id}/>
+                                <LikesContainer
+                                  thisPhoto={photo}
+                                  thisPhotoId={photo.id}
+                                  createPhotoLike={this.props.createPhotoLike}
+                                  destroyPhotoLike={this.props.destroyPhotoLike}
+                                  />
                             </div>
 
                             <div id="info-caption">{photo.username}</div>
