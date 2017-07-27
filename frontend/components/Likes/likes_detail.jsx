@@ -9,22 +9,7 @@ class LikesDetail extends React.Component {
     super(props);
 
     this.likeThisPhoto = this.likeThisPhoto.bind(this);
-
-    // let theId;
-    // if (this.props.currentPhoto) {
-    //   theId = this.props.currentPhoto.id;
-    // } else {
-    //   theId = null;
-    // }
-
-    // this.state = {
-    //   modalOpen: false,
-    //   photo: {
-    //     caption: "",
-    //     location: "",
-    //     id: theId,
-    //   }
-    // };
+    this.unlikeThisPhoto = this.unlikeThisPhoto.bind(this);
   }
 
   // componentDidMount() {
@@ -34,6 +19,10 @@ class LikesDetail extends React.Component {
 
   likeThisPhoto(event) {
     this.props.createPhotoLike(this.props.thisPhotoId);
+  }
+
+  unlikeThisPhoto(event) {
+    this.props.destroyPhotoLike(this.props.thisPhotoId);
   }
 
 
@@ -55,6 +44,17 @@ class LikesDetail extends React.Component {
                         onClick={this.likeThisPhoto}
                     />
                 </button>
+
+                <button>
+                    <img
+                        src={'https://res.cloudinary.com/dckkkjkuz/image/upload/v1501199362/011-hearts_c0p7ac.png'}
+                        alt="heart icon"
+                        id="heart-icon"
+                        onClick={this.unlikeThisPhoto}
+                    />
+                </button>
+
+
             </div>
 
 
