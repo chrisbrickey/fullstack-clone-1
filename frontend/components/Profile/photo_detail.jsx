@@ -168,6 +168,13 @@ class PhotoDetail extends React.Component {
                               className="edit-submit">
                               Submit Changes
                             </button>
+                                <br/>
+
+                            <button
+                                onClick={this.destroyMe}
+                                className="deleteButton2">
+                                Delete Photo
+                            </button>
 
                         </form>
                     </div>

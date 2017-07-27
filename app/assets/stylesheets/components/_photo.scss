@@ -38,6 +38,12 @@ $instagram-red: #f04752;
   background-color: orange;
 }
 
+.duo-container {
+  background-color: green;
+  display: flex;
+  margin: 10px;
+}
+
 .picture-box {
   background-color: black;
   color: white;
@@ -46,19 +52,11 @@ $instagram-red: #f04752;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   padding: 10px;
 }
 
 .actualPhoto {
   max-width: 800px;
-  margin: 10px;
-}
-
-
-.duo-container {
-  background-color: green;
-  display: flex;
   margin: 10px;
 }
 
@@ -104,6 +102,23 @@ $instagram-red: #f04752;
 }
 
 .edit-submit:active {
+  background-color: $instagram-white;
+}
+
+.deleteButton2 {
+  height: 30px;
+  background-color: $instagram-red;
+  transition: background-color 0.5s ease;
+  color: $instagram-white;
+  font-weight: 600;
+  font-size: 120%;
+  line-height: 15px;
+  border-width: 0px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.deleteButton2:active {
   background-color: $instagram-white;
 }
 
