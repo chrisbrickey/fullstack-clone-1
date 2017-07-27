@@ -38,39 +38,27 @@ class HeaderXXX extends React.Component {
             </div>
 
 
+            <div className="right-header">
 
-            <div className="mid-header">
                 <Link className="profile-link" to="/upload">
                     <img
                         src={'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500855174/001-cloud-computing_gjhr1n.png'}
-                        alt="upload icon"
+                        alt="upload"
                         className="upload-icon"
                     />
                 </Link>
-            </div>
-
-
-
-
-
-            <div className="right-header">
-                <img
-                    src={'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500614263/compass_chujqx.svg'}
-                    alt="explore icon"
-                    className="header-icon"
-                />
 
                 <img
                     src={'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500614263/heart_sqbqyf.svg'}
-                    alt="follows icon"
-                    className="header-icon"
+                    alt="likes and follows"
+                    className="header-icons"
                 />
 
               <Link className="profile-link" to={`users/${this.props.userId}`}>
                   <img
                       src={'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500614263/user_nu2dc8.svg'}
-                      alt="user icon"
-                      className="header-icon"
+                      alt="user profile"
+                      className="header-icons"
                   />
               </Link>
 

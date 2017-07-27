@@ -56,15 +56,11 @@ $instagram-red: #f04752;
   width: 110px;
   padding: 5px;
 }
-
-.mid-header {
-  // background-color: pink;
-  margin: 5px 15px 5px 15px;
-}
-
-.upload-icon {
-  width: 25px;
-}
+//
+// .mid-header {
+//   background-color: pink;
+//   margin: 5px 15px 5px 15px;
+// }
 
 .right-header {
   // background-color: lightblue;
@@ -76,7 +72,18 @@ $instagram-red: #f04752;
   align-items: center;
 }
 
-.header-icon {
-  width: 37px;
+
+.header-icons {
   margin: 0px 9px 0px 9px;
+  // background-color: pink;
+}
+
+.upload-icon {
+  // background-color: yellow;
+  width: 27px;
+  // margin-right: 9px;
+  // margin-top: 7px;
+  position: relative;
+  right: 15px;
+  top: 3px;
 }
