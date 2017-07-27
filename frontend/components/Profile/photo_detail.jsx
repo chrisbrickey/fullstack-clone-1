@@ -8,11 +8,11 @@ class PhotoDetail extends React.Component {
   constructor(props) {
     super(props);
 
-    let myId;
+    let theId;
     if (this.props.currentPhoto) {
-      myId = this.props.currentPhoto.id;
+      theId = this.props.currentPhoto.id;
     } else {
-      myId = null;
+      theId = null;
     }
 
     this.state = {
@@ -20,7 +20,7 @@ class PhotoDetail extends React.Component {
       photo: {
         caption: "",
         location: "",
-        id: myId,
+        id: theId,
       }
     };
 
@@ -113,7 +113,7 @@ class PhotoDetail extends React.Component {
                     <label>
                         <input
                           type="text"
-                          placeholder="caption xxx"
+                          placeholder="caption"
                           name="caption"
                           value={this.state.photo.caption}
                           onChange={this.editPhoto}
@@ -125,7 +125,7 @@ class PhotoDetail extends React.Component {
                     <label>
                         <input
                             type="text"
-                            placeholder="location xxx"
+                            placeholder="location"
                             name="location"
                             value={this.state.photo.location}
                             onChange={this.editPhoto}
