@@ -4,7 +4,7 @@ import merge from 'lodash/merge';
 import Dropzone from 'react-dropzone';
 import request from 'superagent';
 
-import theFooter from '../Navigation/footer';
+import FooterXXX from '../Navigation/footer';
 import HeaderXXX from '../Navigation/header';
 
 const CLOUDINARY_UPLOAD_PRESET = 'n440adct';
@@ -173,7 +173,7 @@ class Upload extends React.Component {
           </main>
 
 
-          <theFooter/>
+          <FooterXXX/>
 
       </div>
 

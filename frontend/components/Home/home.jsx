@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import merge from 'lodash/merge';
 
-import theFooter from '../Navigation/footer';
+import FooterXXX from '../Navigation/footer';
 import HeaderXXX from '../Navigation/header';
 
 
@@ -75,7 +75,7 @@ class Home extends React.Component {
               </ul>
           </main>
 
-          <theFooter/>
+          <FooterXXX/>
 
       </div>
     );
