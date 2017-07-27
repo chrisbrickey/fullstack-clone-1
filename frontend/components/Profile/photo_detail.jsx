@@ -76,14 +76,7 @@ class PhotoDetail extends React.Component {
       })
     );
 
-    /////=======================NEW CODE===================
-    // .then(
-    //   ( () => {
-    //     console.log("inside callback for destroyPhoto");
-    //     this.setState({ photo: { caption: "", location: ""} });
-    //   })
-    // );
-    /////=======================NEW CODE===================
+
 
   }
 
@@ -91,11 +84,6 @@ class PhotoDetail extends React.Component {
     console.log("inside editPhoto on photoDetail page");
 
     const newPhoto = merge({}, this.state);
-
-    // console.log("field name", event.target.name);
-    // console.log("current value at field name", newPhoto.photo[event.target.name]);
-    // console.log("new value at field name", event.target.value);
-
     newPhoto.photo[event.target.name] = event.target.value;
     this.setState(newPhoto);
   }
@@ -226,10 +214,6 @@ class PhotoDetail extends React.Component {
 
 
                               </div>
-
-
-
-
 
 
                       </div>

@@ -72,7 +72,7 @@ class Profile extends React.Component {
                         <button
                           onClick={ () => this.showDetail(photo.id) }
                           className="detailButton"
-                          value="see detail/edit">View / Edit / Delete</button>
+                          value="see detail/edit">View / Edit</button>
                     </div>
 
               </li>
