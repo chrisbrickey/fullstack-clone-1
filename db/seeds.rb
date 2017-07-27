@@ -12,11 +12,11 @@ Photo.destroy_all
 
 #will rollback all seeds if any issues; create! fails loudly so can get more information on errors
 ActiveRecord::Base.transaction do
-  demo1 = User.create!(name: 'Chris Brickey', username: 'chri5brickey1', password: '123456', profile_img_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1501129164/headshot_crop3_xekgsc.jpg', tagline: 'always be dancing | www.chrisbrickey.com')
-  demo2 = User.create!(name: 'Chris Brickey', username: 'chri5brickey2', password: '123456', profile_img_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1501129164/headshot_crop3_xekgsc.jpg', tagline: 'always be dancing | www.chrisbrickey.com')
-  demo3 = User.create!(name: 'Chris Brickey', username: 'chri5brickey3', password: '123456', profile_img_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1501129164/headshot_crop3_xekgsc.jpg', tagline: 'always be dancing | www.chrisbrickey.com')
-  demo4 = User.create!(name: 'Chris Brickey', username: 'chri5brickey4', password: '123456', profile_img_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1501129164/headshot_crop3_xekgsc.jpg', tagline: 'always be dancing | www.chrisbrickey.com')
-  demo5 = User.create!(name: 'Chris Brickey', username: 'chri5brickey5', password: '123456', profile_img_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1501129164/headshot_crop3_xekgsc.jpg', tagline: 'always be dancing | www.chrisbrickey.com')
+  demo1 = User.create!(name: 'Chris Brickey', username: 'chri5brickey1', password: '123456', profile_img_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1501138321/headshot_crop4_cjy4sm.jpg', tagline: 'always be dancing | www.chrisbrickey.com')
+  demo2 = User.create!(name: 'Chris Brickey', username: 'chri5brickey2', password: '123456', profile_img_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1501138321/headshot_crop4_cjy4sm.jpg', tagline: 'always be dancing | www.chrisbrickey.com')
+  demo3 = User.create!(name: 'Chris Brickey', username: 'chri5brickey3', password: '123456', profile_img_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1501138321/headshot_crop4_cjy4sm.jpg', tagline: 'always be dancing | www.chrisbrickey.com')
+  demo4 = User.create!(name: 'Chris Brickey', username: 'chri5brickey4', password: '123456', profile_img_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1501138321/headshot_crop4_cjy4sm.jpg', tagline: 'always be dancing | www.chrisbrickey.com')
+  demo5 = User.create!(name: 'Chris Brickey', username: 'chri5brickey5', password: '123456', profile_img_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1501138321/headshot_crop4_cjy4sm.jpg', tagline: 'always be dancing | www.chrisbrickey.com')
 
   otheruser1 = User.create!(name: 'Alice Chen', username: 'alice_chen', password: '123456', profile_img_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/c_scale,w_590/v1500953840/instagram-color-fade_pvpssi.png', tagline: "I'm good at computers")
   otheruser2 = User.create!(name: 'Arvind Ravi', username: 'arvind', password: '123456', profile_img_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/c_scale,w_590/v1500953840/instagram-color-fade_pvpssi.png', tagline: "I'm good at computers")
@@ -42,7 +42,7 @@ ActiveRecord::Base.transaction do
 
   photo1 = Photo.create!(
     photo_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500771271/fierce_xyjq3a.jpg',
-    caption: 'ballerina en pointe',
+    caption: 'en pointe',
     location: '',
     author_id: demo1.id
     )
@@ -62,7 +62,7 @@ ActiveRecord::Base.transaction do
     )
 
   photo4 = Photo.create!(
-    photo_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1501128905/coat-med_ocqb4a.png',
+    photo_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1501138480/coat-sml_yrydyv.png',
     caption: 'en l\'air',
     location: '',
     author_id: demo2.id
@@ -84,7 +84,7 @@ ActiveRecord::Base.transaction do
 
   photo7 = Photo.create!(
     photo_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1501053260/leap_z9x4xf.jpg',
-    caption: '',
+    caption: 'momentum',
     location: '',
     author_id: demo3.id
     )
@@ -112,22 +112,22 @@ ActiveRecord::Base.transaction do
 
   photo11 = Photo.create!(
     photo_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500771634/sunset_oqve3y.jpg',
-    caption: '',
+    caption: 'grande sunset',
     location: '',
     author_id: demo4.id
     )
 
   photo12 = Photo.create!(
     photo_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500771579/dark_red_l5qojp.jpg',
-    caption: '',
+    caption: 'superhero',
     location: '',
     author_id: demo4.id
     )
 
   photo13 = Photo.create!(
     photo_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500932608/bi1vxhx96gsndgh1rbxd.jpg',
-    caption: 'the studio',
-    location: '',
+    caption: 'view',
+    location: 'from the studio',
     author_id: demo5.id
     )
 
@@ -141,7 +141,7 @@ ActiveRecord::Base.transaction do
   photo15 = Photo.create!(
     photo_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1501053595/swan_lake_inls3n.jpg',
     caption: 'swans',
-    location: '',
+    location: 'on a lake',
     author_id: demo5.id
     )
 
