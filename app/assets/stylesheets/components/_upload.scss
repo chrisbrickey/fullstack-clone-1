@@ -40,7 +40,6 @@ $instagram-red: #f04752;
 
 .upload-form-container {
   // background-color: lightblue;
-  background-color: $instagram-white;
   margin: 5px;
   padding: 20px;
   display: flex;
@@ -55,6 +54,7 @@ $instagram-red: #f04752;
 
 .details-container {
   // background-color: red;
+  background-color: $instagram-white;
   align-items: center;
   width: 230px;
   display: flex;
