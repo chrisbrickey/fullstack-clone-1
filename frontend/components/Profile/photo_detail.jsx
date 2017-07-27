@@ -133,15 +133,15 @@ class PhotoDetail extends React.Component {
                       </div>
 
 
+
+
+
                       <div className="detail-container">
-
-
                         <div className='fromHome'>
-
                           <div className="feedItem-container">
+                            <div className="info-top">
 
 
-                              <div className="info-top">
                                   <div className="thumbnailPic-container">
                                         <img
                                             id="thumbnail"
@@ -149,12 +149,62 @@ class PhotoDetail extends React.Component {
                                             alt="photo"
                                         />
                                     </div>
+
                                   <div id="info-username">{this.props.currentPhoto.username}</div>
-                                </div>
+                                  </div>
 
                                 <div className="item-at-bottom">
                                   <div id="line"></div>
                                 </div>
+
+
+
+
+                                <form onSubmit={this.handleSubmit} className="edit-form">
+
+                                  <label>
+                                      <input
+                                        type="text"
+                                        placeholder="caption"
+                                        name="caption"
+                                        value={this.state.photo.caption}
+                                        onChange={this.editPhoto}
+                                        className="edit-input"
+                                      />
+                                  </label>
+                                  <br/>
+
+                                  <label>
+                                      <input
+                                          type="text"
+                                          placeholder="location"
+                                          name="location"
+                                          value={this.state.photo.location}
+                                          onChange={this.editPhoto}
+                                          className="edit-input"
+                                      />
+                                  </label>
+                                  <br/>
+
+
+                                  <button
+                                    onClick={this.handleSubmit}
+                                    type="submit"
+                                    value="Submit"
+                                    className="edit-submit">
+                                    Submit Changes
+                                  </button>
+                                  <br/>
+
+                                  <button
+                                      onClick={this.destroyMe}
+                                      className="deleteButton2">
+                                      Delete Photo
+                                  </button>
+                                </form>
+
+
+
 
 
                                 <div className="item-at-bottom">
@@ -177,17 +227,6 @@ class PhotoDetail extends React.Component {
 
                           </div>
 
-
-
-
-
-
-
-
-
-
-
-
                           from Home
                         </div>
 
@@ -195,48 +234,7 @@ class PhotoDetail extends React.Component {
 
 
 
-                          <form onSubmit={this.handleSubmit} className="edit-form">
 
-                            <label>
-                                <input
-                                  type="text"
-                                  placeholder="caption"
-                                  name="caption"
-                                  value={this.state.photo.caption}
-                                  onChange={this.editPhoto}
-                                  className="edit-input"
-                                />
-                            </label>
-                            <br/>
-
-                            <label>
-                                <input
-                                    type="text"
-                                    placeholder="location"
-                                    name="location"
-                                    value={this.state.photo.location}
-                                    onChange={this.editPhoto}
-                                    className="edit-input"
-                                />
-                            </label>
-                            <br/>
-
-
-                            <button
-                              onClick={this.handleSubmit}
-                              type="submit"
-                              value="Submit"
-                              className="edit-submit">
-                              Submit Changes
-                            </button>
-                            <br/>
-
-                            <button
-                                onClick={this.destroyMe}
-                                className="deleteButton2">
-                                Delete Photo
-                            </button>
-                        </form>
 
 
                     </div>
