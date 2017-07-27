@@ -51,6 +51,7 @@ class PhotoDetail extends React.Component {
     if (this.props.currentPhoto && Object.keys(this.props.currentPhoto) && !prevState.modalOpen && this.state.modalOpen) {
       const newState = merge({}, this.state);
       newState.photo.caption = this.props.currentPhoto.caption;
+      newState.photo.location = this.props.currentPhoto.location;
       this.setState(newState);
     }
   }
