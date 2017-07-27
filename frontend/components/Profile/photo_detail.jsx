@@ -134,6 +134,67 @@ class PhotoDetail extends React.Component {
 
 
                       <div className="detail-container">
+
+
+                        <div className='fromHome'>
+
+                          <div className="feedItem-container">
+
+
+                              <div className="info-top">
+                                  <div className="thumbnailPic-container">
+                                        <img
+                                            id="thumbnail"
+                                            src={this.props.currentPhoto.profileImgUrl}
+                                            alt="photo"
+                                        />
+                                    </div>
+                                  <div id="info-username">{this.props.currentPhoto.username}</div>
+                                </div>
+
+                                <div className="item-at-bottom">
+                                  <div id="line"></div>
+                                </div>
+
+
+                                <div className="item-at-bottom">
+                                  <div id="line"></div>
+                                </div>
+
+
+
+                              <div className="info-bottom">
+                                  <div className="item-at-bottom" id="info-uploadDate">{this.props.currentPhoto.uploadDate} ago</div>
+
+                                  <div className="item-at-bottom">
+                                    <div id="line"></div>
+                                  </div>
+
+                                  <div className="item-at-bottom" id="info-addComment">Add a comment... (placeholder)</div>
+                              </div>
+
+
+
+                          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+                          from Home
+                        </div>
+
+
+
+
+
                           <form onSubmit={this.handleSubmit} className="edit-form">
 
                             <label>
@@ -168,15 +229,16 @@ class PhotoDetail extends React.Component {
                               className="edit-submit">
                               Submit Changes
                             </button>
-                                <br/>
+                            <br/>
 
                             <button
                                 onClick={this.destroyMe}
                                 className="deleteButton2">
                                 Delete Photo
                             </button>
-
                         </form>
+
+
                     </div>
 
                 </div>
