@@ -162,7 +162,7 @@ class PhotoDetail extends React.Component {
                                   </div>
 
 
-                                  <form onSubmit={this.handleSubmit} className="edit-form">
+                                  <form className="edit-form">
 
                                     <label>
                                         <input
