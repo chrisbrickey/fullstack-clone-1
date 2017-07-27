@@ -31,19 +31,11 @@ $instagram-red: #f04752;
 }
 
 .photo-modal-inner {
-  // overflow: scroll;
-  // height: 100%;
-
   display: flex;
-  justify-content: center;
-  align-items: center;
-  // min-width: 100vw;
-  // max-height: 100vh;
-  // width: 80%;
-  // height: 80%;
-
+  flex-direction: row;
+  // justify-content: center;
+  // align-items: right;
   background-color: orange;
-  margin: 20px;
 }
 
 .picture-box {
@@ -59,30 +51,35 @@ $instagram-red: #f04752;
 }
 
 .actualPhoto {
-  // max-width: 800px;
+  max-width: 800px;
   margin: 10px;
 }
 
 
+.duo-container {
+  background-color: green;
+  display: flex;
+  margin: 10px;
+}
+
 .detail-container {
-  background-color: lightblue;
-  // padding: 3px;
+  background-color: lightgreen;
+  padding: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: top;
   align-items: center;
-
-  margin: 10px;
-  padding: 10px;
+  margin: 10px 0px 10px 0px;
 }
 
 .edit-form {
   background-color: yellow;
   display: flex;
-  justify-content: bottom;
   flex-direction: column;
+  // justify-content: bottom;
+
   padding: 10px;
-  margin: 10px;
+  // margin: 10px;
 }
 
 .edit-input {
@@ -90,6 +87,7 @@ $instagram-red: #f04752;
   font-size: 120%;
   font-weight: 300;
   width: 200px;
+  margin: 0px;
 }
 
 .edit-submit {
@@ -132,7 +130,7 @@ $instagram-red: #f04752;
   position: absolute;
   top: 20px;
   right: 30px;
-  width: 25px;
+  width: 20px;
 }
 
 

@@ -108,77 +108,71 @@ class PhotoDetail extends React.Component {
           <main className="photo-modal-outer">
               <main className="photo-modal-inner">
 
-                <button>
-                    <img
-                        src="https://res.cloudinary.com/dckkkjkuz/image/upload/v1501126203/forbidden-mark_l01ir1.png"
-                        alt="close mark"
-                        className="closeMark"
-                        onClick={this.closeModal}/>
-                </button>
+
+                  <button>
+                      <img
+                          src="https://res.cloudinary.com/dckkkjkuz/image/upload/v1501126203/forbidden-mark_l01ir1.png"
+                          alt="close mark"
+                          className="closeMark"
+                          onClick={this.closeModal}/>
+                  </button>
+
+                  <div className="duo-container">
+
+                      <div className="picture-box">
+                          <img
+                              src={this.props.currentPhoto.photoUrl}
+                              alt="photo"
+                              className="actualPhoto"/>
+
+                          <button
+                              onClick={this.destroyMe}
+                              className="deleteButton">
+                              Delete Photo
+                          </button>
+                      </div>
 
 
+                      <div className="detail-container">
+                          <form onSubmit={this.handleSubmit} className="edit-form">
+
+                            <label>
+                                <input
+                                  type="text"
+                                  placeholder="caption"
+                                  name="caption"
+                                  value={this.state.photo.caption}
+                                  onChange={this.editPhoto}
+                                  className="edit-input"
+                                />
+                            </label>
+                            <br/>
+
+                            <label>
+                                <input
+                                    type="text"
+                                    placeholder="location"
+                                    name="location"
+                                    value={this.state.photo.location}
+                                    onChange={this.editPhoto}
+                                    className="edit-input"
+                                />
+                            </label>
+                            <br/>
 
 
+                            <button
+                              onClick={this.handleSubmit}
+                              type="submit"
+                              value="Submit"
+                              className="edit-submit">
+                              Submit Changes
+                            </button>
 
+                        </form>
+                    </div>
 
-                <div className="picture-box">
-                    <img
-                        src={this.props.currentPhoto.photoUrl}
-                        alt="photo"
-                        className="actualPhoto"/>
-
-                    <button
-                        onClick={this.destroyMe}
-                        className="deleteButton">
-                        Delete Photo
-                    </button>
                 </div>
-
-
-
-
-
-
-
-                  <form onSubmit={this.handleSubmit} className="edit-form">
-
-                    <label>
-                        <input
-                          type="text"
-                          placeholder="caption"
-                          name="caption"
-                          value={this.state.photo.caption}
-                          onChange={this.editPhoto}
-                          className="edit-input"
-                        />
-                    </label>
-                    <br/>
-
-                    <label>
-                        <input
-                            type="text"
-                            placeholder="location"
-                            name="location"
-                            value={this.state.photo.location}
-                            onChange={this.editPhoto}
-                            className="edit-input"
-                        />
-                    </label>
-                    <br/>
-
-
-                    <button
-                      onClick={this.handleSubmit}
-                      type="submit"
-                      value="Submit"
-                      className="edit-submit">
-                      Submit Changes
-                    </button>
-
-                </form>
-
-
-
 
           </main>
       </main>
