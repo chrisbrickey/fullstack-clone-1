@@ -54,8 +54,8 @@ class Home extends React.Component {
 
             return (
                 <li key={photo.id} className="feedItem-container">
-                    <div className="info-top">
 
+                    <section className="info-top">
 
                         <div className="top-left-container">NEW!!
                             <div className="thumbnailPic-container">
@@ -72,8 +72,7 @@ class Home extends React.Component {
                             <div className="item-at-bottom" id="info-location">{photo.location}</div>
                         </div>
 
-
-                      </div>
+                    </section>
 
 
                     <img className="the-main-event"
@@ -82,17 +81,45 @@ class Home extends React.Component {
                     />
 
 
-                    <div className="info-bottom">
-                        <div className="item-at-bottom" id="info-caption">{photo.caption}</div>
+                    <section className="info-bottom">
 
-                        <div className="item-at-bottom" id="info-uploadDate">{photo.uploadDate} ago</div>
+                        <div className="likes-container">
+                            <div className="likes-icon">
+                                <img
+                                    src={'https://res.cloudinary.com/dckkkjkuz/image/upload/v1501188966/007-favorite_t5zsnu.png'}
+                                    alt="heart icon"
+                                    className="heart-icon"
+                                />
+                            </div>
 
-                        <div className="item-at-bottom">
-                          <div id="line"></div>
+                            <div className="likes-count">
+
+                            </div>
                         </div>
 
-                        <div className="item-at-bottom" id="info-addComment">Add a comment... (placeholder)</div>
-                    </div>
+
+                        <div className="item-at-bottom" >
+
+                            <div id="info-caption">{photo.username}</div>
+                                <div id="caption-spacer"></div>
+                            <div id="info-caption">{photo.caption}</div>
+
+
+                            <div className="item-at-bottom" id="info-uploadDate">{photo.uploadDate} ago</div>
+
+                            <div className="item-at-bottom">
+                              <div id="line"></div>
+                            </div>
+
+                            <div className="item-at-bottom" id="info-addComment">Add a comment... (placeholder)</div>
+
+                          </div>
+
+
+
+
+                    </section>
+
                 </li>
             );
         });
