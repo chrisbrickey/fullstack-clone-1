@@ -62,7 +62,7 @@ ActiveRecord::Base.transaction do
     )
 
   photo4 = Photo.create!(
-    photo_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500771188/coat_omguom.jpg',
+    photo_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1501128905/coat-med_ocqb4a.png',
     caption: 'en l\'air',
     location: '',
     author_id: demo2.id
