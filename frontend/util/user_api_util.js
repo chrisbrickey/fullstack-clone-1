@@ -1,5 +1,5 @@
 export const ajaxFetchAllUsers = () => {
-  console.log("in ajaxFetchAllUsers");
+
   return(
     $.ajax({
       method: 'GET',
@@ -9,7 +9,7 @@ export const ajaxFetchAllUsers = () => {
 };
 
 export const ajaxFetchSingleUser = (userId) => {
-  console.log("in ajaxFetchSingleUser");
+
   return(
     $.ajax({
       method: 'GET',
