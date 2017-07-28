@@ -24,7 +24,7 @@ class LikesDetail extends React.Component {
     if (this.props.thisPhoto.likedByCurrentUser) {
        return(
 
-             <button>
+             <button id="heart-button">
                  <img
                      src={'https://res.cloudinary.com/dckkkjkuz/image/upload/v1501199362/011-hearts_c0p7ac.png'}
                      alt="red heart icon"
@@ -37,7 +37,7 @@ class LikesDetail extends React.Component {
     } else {
       return(
 
-            <button>
+            <button id="heart-button">
                 <img
                     src={'https://res.cloudinary.com/dckkkjkuz/image/upload/v1501188966/007-favorite_t5zsnu.png'}
                     alt="black heart icon"
