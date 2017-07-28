@@ -2,13 +2,11 @@ class Api::CommentsController < ApplicationController
 
 
 def show
-  # debugger
   @comment = Comment.find(params[:id])
   render "api/comments/show"
 end
 
 def create
-  # debugger
   @comment = Comment.new(comment_params)
   @comment.user_id = current_user.id
   @comment.username = current_user.username
@@ -24,10 +22,7 @@ def create
 
 end
 
-
-#should I be destroying by params[:id] or comment_params?
 def destroy
-  # debugger
   @comment = Comment.find_by(id: params[:id])
 
   if !@comment
@@ -50,12 +45,8 @@ def destroy
 
 end
 
-
-
-
 private
 
-#may need to change spelling of photo_id
 def comment_params
   params.require(:comment).permit(:body, :photo_id, :id)
 end

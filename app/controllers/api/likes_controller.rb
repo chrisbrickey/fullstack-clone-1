@@ -1,6 +1,5 @@
 class Api::LikesController < ApplicationController
 
-  #may need to assign likable_type based on the kind of id coming in; for now trying to send that info from front end in ajax request
   def create
     @like = Like.new(like_params)
     @like.user_id = current_user.id
@@ -16,7 +15,6 @@ class Api::LikesController < ApplicationController
 
   end
 
-
   def destroy
     @like = Like.find_by(like_params)
 
@@ -31,10 +29,10 @@ class Api::LikesController < ApplicationController
 
   end
 
-
   private
 
   def like_params
     params.require(:like).permit(:likable_id, :likable_type)
   end
+  
 end

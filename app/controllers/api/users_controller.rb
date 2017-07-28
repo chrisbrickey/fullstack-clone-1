@@ -1,11 +1,9 @@
 class Api::UsersController < ApplicationController
 
-  #load all users
   def index
     @users = User.all
   end
 
-  #show one user
   def show
     @user = User.find_by_credentials(
       params[:user][:username],
@@ -13,7 +11,6 @@ class Api::UsersController < ApplicationController
     )
   end
 
-  #create a user (new account)
   def create
     @user = User.new(user_params)
 
@@ -28,7 +25,6 @@ class Api::UsersController < ApplicationController
     end
   end
 
-  #edit a user
   def update
     @user = User.find(params[:id])
 
