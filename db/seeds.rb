@@ -45,17 +45,12 @@ ActiveRecord::Base.transaction do
 
   photo24 = Photo.create!(
     photo_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1501092784/ftbnu6b6jw4qonu1hqrd.jpg',
-    caption: 'beach',
-    location: '',
+    caption: '',
+    location: 'beach',
     author_id: demo5.id
     )
 
-  photo23 = Photo.create!(
-    photo_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1501257003/redandwhite_smaller_ypraxd.png',
-    caption: 'connection',
-    location: '',
-    author_id: demo5.id
-    )
+
 
   photo22 = Photo.create!(
     photo_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1501086228/hw6ozj3mdelhn5wpsn2x.jpg',
@@ -250,7 +245,7 @@ ActiveRecord::Base.transaction do
   like25 = Like.create!(user_id: demo3.id, likable_id: photo11.id, likable_type: 'Photo')
   like26 = Like.create!(user_id: demo3.id, likable_id: photo15.id, likable_type: 'Photo')
   like27 = Like.create!(user_id: demo3.id, likable_id: photo19.id, likable_type: 'Photo')
-  like28 = Like.create!(user_id: demo3.id, likable_id: photo23.id, likable_type: 'Photo')
+  like28 = Like.create!(user_id: demo3.id, likable_id: photo22.id, likable_type: 'Photo')
   like29 = Like.create!(user_id: demo3.id, likable_id: photo24.id, likable_type: 'Photo')
   like30 = Like.create!(user_id: demo3.id, likable_id: photo18.id, likable_type: 'Photo')
 
@@ -259,7 +254,7 @@ ActiveRecord::Base.transaction do
   like33 = Like.create!(user_id: demo2.id, likable_id: photo8.id, likable_type: 'Photo')
   like34 = Like.create!(user_id: demo2.id, likable_id: photo10.id, likable_type: 'Photo')
   like35 = Like.create!(user_id: demo2.id, likable_id: photo12.id, likable_type: 'Photo')
-  like36 = Like.create!(user_id: demo2.id, likable_id: photo23.id, likable_type: 'Photo')
+  like36 = Like.create!(user_id: demo2.id, likable_id: photo18.id, likable_type: 'Photo')
   like37 = Like.create!(user_id: demo2.id, likable_id: photo14.id, likable_type: 'Photo')
   like38 = Like.create!(user_id: demo2.id, likable_id: photo17.id, likable_type: 'Photo')
   like39 = Like.create!(user_id: demo2.id, likable_id: photo20.id, likable_type: 'Photo')
