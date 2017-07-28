@@ -18,7 +18,4 @@ class Photo < ApplicationRecord
     self.likes.length
   end
 
-
-
-
 end
