@@ -10,6 +10,7 @@ class LikesDetail extends React.Component {
 
     this.likeThisPhoto = this.likeThisPhoto.bind(this);
     this.unlikeThisPhoto = this.unlikeThisPhoto.bind(this);
+    this.displayLikeButton = this.displayLikeButton.bind(this);
   }
 
   likeThisPhoto(event) {
@@ -27,35 +28,57 @@ class LikesDetail extends React.Component {
   }
 
 
+
+  displayLikeButton() {
+    console.log(this.props.thisPhoto.likedByCurrentUser);
+    if (this.props.thisPhoto.likedByCurrentUser) {
+       return(
+
+         <div className="unlikes-button">
+             <button>Unlike Button
+                 <img
+                     src={'https://res.cloudinary.com/dckkkjkuz/image/upload/v1501199362/011-hearts_c0p7ac.png'}
+                     alt="red heart icon"
+                     id="heart-icon"
+                     onClick={this.unlikeThisPhoto}
+                 />
+             </button>
+         </div>
+
+       );
+    } else {
+      return(
+
+
+
+        <div className="likes-button">
+            <button>Like Button
+                <img
+                    src={'https://res.cloudinary.com/dckkkjkuz/image/upload/v1501188966/007-favorite_t5zsnu.png'}
+                    alt="black heart icon"
+                    id="heart-icon"
+                    onClick={this.likeThisPhoto}
+                />
+            </button>
+        </div>
+
+
+      );
+    }
+  }
+
+
   render() {
 
     return(
 
         <div className="innerLikeContainer">
 
-            <div className="likes-button">
-                <button>Like Button
-                    <img
-                        src={'https://res.cloudinary.com/dckkkjkuz/image/upload/v1501188966/007-favorite_t5zsnu.png'}
-                        alt="black heart icon"
-                        id="heart-icon"
-                        onClick={this.likeThisPhoto}
-                    />
-                </button>
-            </div>
 
+          {this.displayLikeButton()}
             <div id="caption-spacer"></div>
 
-            <div className="unlikes-button">
-                <button>Unlike Button
-                    <img
-                        src={'https://res.cloudinary.com/dckkkjkuz/image/upload/v1501199362/011-hearts_c0p7ac.png'}
-                        alt="red heart icon"
-                        id="heart-icon"
-                        onClick={this.unlikeThisPhoto}
-                    />
-                </button>
-            </div>
+
 
 
             <div className="likes-count-container">
