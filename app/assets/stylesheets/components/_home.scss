@@ -158,8 +158,8 @@ main {
 }
 
 #comment-spacer {
-  // background-color: orange;
-  // height: 20px;
+  background-color: orange;
+  height: 30px;
 
   margin: 3px 0px 3px 0px;
   padding: 3px 0px 3px 0px;
@@ -180,8 +180,9 @@ main {
 #info-addComment {
   // background-color: brown;
   color: $instagram-grey;
-  font-weight: bold;
+  font-weight: 400;
+  letter-spacing: 0.3px;
 
   margin: 5px 0px 5px 0px;
-  padding: 10px 0px 10px 0px;
+  padding: 12px 0px 12px 0px;
 }

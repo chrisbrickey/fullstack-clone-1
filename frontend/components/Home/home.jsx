@@ -7,6 +7,7 @@ import _ from 'lodash';
 import FooterXXX from '../Navigation/footer';
 import HeaderXXX from '../Navigation/header';
 import LikesContainer from '../Likes/likes_container';
+import Comments from '../Comments/comments';
 
 
 class Home extends React.Component {
@@ -104,11 +105,23 @@ class Home extends React.Component {
                             </div>
 
 
-                            <div id="comment-spacer"></div>
+                            <div id="comment-spacer">
+                                <Comments
+                                    currentUser={this.props.currentUser}
+                                    thisPhoto={photo}
+                                    thisPhotoId={photo.id}
+                                    createComment={this.props.createComment}
+                                    destroyComment={this.props.destroyComment}
+                                />
+                            </div>
+
+
+
+                            <div id="info-uploadDate">{this.capitalize(photo.uploadDate)} AGO</div>
 
                             <div id="line"></div>
 
-                            <div id="info-uploadDate">{this.capitalize(photo.uploadDate)} AGO</div>
+                            <div id="info-addComment">Add a comment...</div>
 
 
                         </div>

@@ -8,6 +8,9 @@ import { fetchAllPhotos } from '../../actions/photo_actions';
 import { createPhotoLike,
          destroyPhotoLike } from '../../actions/photo_like_actions';
 
+import { createComment,
+          destroyComment } from '../../actions/comment_actions';
+
 import Home from './home';
 
 
@@ -27,7 +30,8 @@ const mapDispatchToProps = (dispatch, { location }) => {
     fetchAllPhotos: () => dispatch(fetchAllPhotos()),
     createPhotoLike: (photoId) => dispatch(createPhotoLike(photoId)),
     destroyPhotoLike: (photoId) => dispatch(destroyPhotoLike(photoId)),
-
+    createComment: (comment) => dispatch(createComment(comment)),
+    destroyComment: (comment) => dispatch(createComment(comment)),
 
     logoutDestroySession: () => dispatch(logoutDestroySession()),
     clearErrors: () => dispatch(clearErrors())
