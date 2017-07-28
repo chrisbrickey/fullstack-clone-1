@@ -76,7 +76,6 @@ export const photoReducer = (state = defaultState, action) => {
 
       newState = merge({}, state);
       const anotherTargetPhoto = newState.byId[action.comment.photoId];
-      // console.log("targetPhoto", targetPhoto);
       anotherTargetPhoto.comments.forEach ( (comment, index) => {
           if (comment.id === action.comment.id) {
             anotherTargetPhoto.comments.splice(index, 1);

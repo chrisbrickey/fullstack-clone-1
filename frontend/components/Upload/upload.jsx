@@ -11,8 +11,6 @@ const CLOUDINARY_UPLOAD_PRESET = 'n440adct';
 const CLOUDINARY_UPLOAD_URL = 'https://api.cloudinary.com/v1_1/dckkkjkuz/image/upload';
 
 
-console.log("on the upload.jsx");
-
 class Upload extends React.Component {
   constructor(props) {
     super(props);
@@ -179,13 +177,6 @@ class Upload extends React.Component {
           <FooterXXX/>
 
       </div>
-
-
-
-
-
-
-
 
 
     );

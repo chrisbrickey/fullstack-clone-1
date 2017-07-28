@@ -16,7 +16,6 @@ class Signup extends React.Component {
       errors: null
     };
 
-    //this.anyMethod = this.anyMethod.bind(this);
     this.updateUser = this.updateUser.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.demoLogin = this.demoLogin.bind(this);
@@ -69,7 +68,6 @@ class Signup extends React.Component {
     this.props.loginCreateSession(demoUserArray[Math.floor(Math.random() * demoUserArray.length)]);
   }
 
-  //errors might be null so rendering conditionally
   renderErrors() {
     if (this.props.errors) {
       return(
