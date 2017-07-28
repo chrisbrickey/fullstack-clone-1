@@ -18,7 +18,7 @@ export const receiveComment = comment => {
   });
 };
 
-
+//server is looking for comment key and not finding it
 export const removeComment = comment => {
   console.log("inside sync removeComment");
   console.log(comment);
