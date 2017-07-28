@@ -32,9 +32,6 @@ class Home extends React.Component {
 
   render() {
 
-
-    // console.log("this.props", this.props);
-
     const photoFeedObject = this.props.photos.byId;
     let photoFeedList = null;
     let arrayOfIdsOrderedByTimePosted = [];
