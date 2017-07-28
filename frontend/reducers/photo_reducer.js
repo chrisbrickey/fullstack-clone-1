@@ -77,6 +77,7 @@ export const photoReducer = (state = defaultState, action) => {
     case RECEIVE_COMMENT:
       console.log("inside photo reducer at RECEIVE_COMMENT");
 
+      //probably need to change photoID to photo_id now that I've changed jbuilder 
       newState = merge({}, state);
       const targetPhoto = newState.byId[action.comment.photoId];
       // console.log("targetPhoto", targetPhoto);
