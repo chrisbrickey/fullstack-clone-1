@@ -76,16 +76,26 @@ export const photoReducer = (state = defaultState, action) => {
 
     case RECEIVE_COMMENT:
       console.log("inside photo reducer at RECEIVE_COMMENT");
-      console.log("action", action);
 
       newState = merge({}, state);
-      console.log("newState at 242", newState.byId[242]);
-
       const targetPhoto = newState.byId[action.comment.photoId];
-      console.log("targetPhoto", targetPhoto);
+      // console.log("targetPhoto", targetPhoto);
       targetPhoto.comments.push(action.comment);
       return newState;
 
+      case REMOVE_COMMENT:
+        console.log("inside photo reducer at REMOVE_COMMENT");
+        // console.log("action", action);
+
+        newState = merge({}, state);
+        const anotherTargetPhoto = newState.byId[action.comment.photoId];
+        // console.log("targetPhoto", targetPhoto);
+        anotherTargetPhoto.comments.forEach ( (comment, index) => {
+            if (comment.id === action.comment.id) {
+              anotherTargetPhoto.comments.splice(index, 1);
+            }
+        });
+        return newState;
 
     default:
         return state;
