@@ -159,7 +159,9 @@ $instagram-red: #f04752;
   // padding-left: 150px;
   margin: 10px;
   display: flex;
-  flex-direction: column;
+  // flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   // justify-content: left;
   // align-items: bottom;
 
@@ -167,6 +169,7 @@ $instagram-red: #f04752;
 
 .photoItem-container {
   // background-color: yellow;
+  background-color: $instagram-grey-fullscreen;
   margin: 20px;
   padding: 3px;
 }
@@ -178,18 +181,19 @@ $instagram-red: #f04752;
 .detailButton-container {
   display: flex;
   flex-direction: column;
-  background-color: orange;
+  // background-color: orange;
   width: 200px;
-  background-color: $instagram-white;
+  // background-color: $instagram-white;
   // margin: 10px;
   // padding: 10px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: $instagram-light-grey;
+  // border-width: 1px;
+  // border-style: solid;
+  // border-color: $instagram-light-grey;
 }
 
 .userPhoto {
-  width: 200px;
+  height: 200px;
+  margin: 0px 20px 0px 20px;
 }
 
 
