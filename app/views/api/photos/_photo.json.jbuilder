@@ -13,7 +13,7 @@ json.likesCount         photo.count_of_likes
 json.usersWhoLike       photo.users_who_like
 json.likedByCurrentUser logged_in? && Like.exists?(user_id: current_user.id, likable_id: photo.id, likable_type: "Photo")
 
-
+json.comments           photo.comments
 
 # json.extract! photo, :photo_url, :caption, :location, :author_id, :created_at
 #returns {photo_url:      , caption:     , location:     , author_id:     , created_at:      }
