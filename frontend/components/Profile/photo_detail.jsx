@@ -191,32 +191,24 @@ class PhotoDetail extends React.Component {
 
                               </div>
 
+
                               <div className="info-middle"></div>
 
 
-                              <div className="info-bottom2">
 
-                                  <div className="item-at-bottom">
-                                    <div id="line"></div>
-                                  </div>
 
-                                  <div className="item-at-bottom" id="info-uploadDate2">
+
+                                  <div id="line2"></div>
+
+
+                                  <div id="info-uploadDate2">
                                       {this.props.currentPhoto.uploadDate} ago
                                   </div>
-
-                                  <div className="item-at-bottom">
-                                    <div id="line"></div>
-                                  </div>
-
-                                  <div className="item-at-bottom" id="info-addComment2">
-                                      Add a comment... (placeholder)
-                                  </div>
-
 
                               </div>
 
 
-                      </div>
+        
 
 
                 </div>
