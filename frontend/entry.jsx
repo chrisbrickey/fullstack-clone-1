@@ -7,13 +7,13 @@ import { configureStore } from './store/store';
 
 
 //photo development
-// import { ajaxFetchAllPhotos,
-//          ajaxCreatePhoto,
-//          ajaxFetchSinglePhoto } from './util/photo_api_util';
-//
-// import {ajaxFetchAllUsers,
-//         ajaxFetchSingleUser } from './util/user_api_util';
-//
+import { ajaxFetchAllPhotos,
+         ajaxCreatePhoto,
+         ajaxFetchSinglePhoto } from './util/photo_api_util';
+
+import {ajaxFetchAllUsers,
+        ajaxFetchSingleUser } from './util/user_api_util';
+
 import { receiveAllPhotos,
          receiveSinglePhoto,
          fetchAllPhotos,
@@ -53,7 +53,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // window.loginCreateSession = loginCreateSession;
   // window.logoutDestroySession = logoutDestroySession;
   //
-  //
   // window.ajaxFetchAllPhotos = ajaxFetchAllPhotos;
   // window.ajaxFetchSinglePhoto = ajaxFetchSinglePhoto;
   //
@@ -63,23 +62,23 @@ document.addEventListener('DOMContentLoaded', () => {
   // window.fetchSinglePhoto = fetchSinglePhoto;
   // window.createPhoto = createPhoto;
   // window.updatePhoto = updatePhoto;
-  window.destroyPhoto = destroyPhoto;
+  // window.destroyPhoto = destroyPhoto;
   //
   // window.ajaxFetchAllUsers = ajaxFetchAllUsers;
   // window.ajaxFetchSingleUser = ajaxFetchSingleUser;
-
-  window.ajaxCreatePhotoLike = ajaxCreatePhotoLike;
-  window.ajaxDestroyPhotoLike = ajaxDestroyPhotoLike;
-  window.createPhotoLike = createPhotoLike;
-  window.destroyPhotoLike = destroyPhotoLike;
-
-  window.ajaxFetchComment = ajaxFetchComment;
-  window.ajaxCreateComment = ajaxCreateComment;
-  window.ajaxDestroyComment = ajaxDestroyComment;
-
-  window.fetchComment = fetchComment;
-  window.createComment = createComment;
-  window.destroyComment = destroyComment;
+  //
+  // window.ajaxCreatePhotoLike = ajaxCreatePhotoLike;
+  // window.ajaxDestroyPhotoLike = ajaxDestroyPhotoLike;
+  // window.createPhotoLike = createPhotoLike;
+  // window.destroyPhotoLike = destroyPhotoLike;
+  //
+  // window.ajaxFetchComment = ajaxFetchComment;
+  // window.ajaxCreateComment = ajaxCreateComment;
+  // window.ajaxDestroyComment = ajaxDestroyComment;
+  //
+  // window.fetchComment = fetchComment;
+  // window.createComment = createComment;
+  // window.destroyComment = destroyComment;
 
 
   let store;
