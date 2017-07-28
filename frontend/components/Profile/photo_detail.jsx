@@ -57,7 +57,6 @@ class PhotoDetail extends React.Component {
   }
 
   globalPhotoModal () {
-    console.log("inside globalPhotoModal");
     this.props.fetchSinglePhoto(this.props.currentPhotoId);
     this.setState({ modalOpen: !this.state.modalOpen });
   }
@@ -67,11 +66,9 @@ class PhotoDetail extends React.Component {
   }
 
   destroyMe(event) {
-    console.log("inside destroyMe on photoDetail page");
     this.props.destroyPhoto(this.props.currentPhoto)
     .then(
       ( () => {
-        console.log("inside callback for destroyPhoto");
         this.setState({ photo: { caption: "", location: ""} });
       })
     );
@@ -89,23 +86,18 @@ class PhotoDetail extends React.Component {
   }
 
   editPhoto(event) {
-    console.log("inside editPhoto on photoDetail page");
-
     const newPhoto = merge({}, this.state);
     newPhoto.photo[event.target.name] = event.target.value;
     this.setState(newPhoto);
   }
 
   handleSubmit(event) {
-    console.log("inside handleSubmit on photoDetail page");
-
     event.preventDefault();
     this.closeModal();
 
     this.props.updatePhoto(this.state.photo)
       .then(
         ( () => {
-          console.log("inside callback for updatePhoto");
           this.setState({ photo: { caption: "", location: ""} });
         })
       );
@@ -115,8 +107,6 @@ class PhotoDetail extends React.Component {
 
   render() {
 
-
-
     if (this.state.modalOpen && this.props.currentPhoto) {
 
       let likesWord;
@@ -125,7 +115,7 @@ class PhotoDetail extends React.Component {
       } else {
         likesWord = "likes";
       }
-      
+
       return (
 
           <main className="photo-modal-outer">
