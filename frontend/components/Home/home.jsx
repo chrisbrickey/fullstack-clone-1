@@ -8,6 +8,7 @@ import FooterXXX from '../Navigation/footer';
 import HeaderXXX from '../Navigation/header';
 import LikesContainer from '../Likes/likes_container';
 import Comments from '../Comments/comments';
+import CommentForm from '../Comments/comment_form';
 
 
 class Home extends React.Component {
@@ -105,7 +106,7 @@ class Home extends React.Component {
                             </div>
 
 
-                            <div id="comment-spacer">
+                            <div className="comment-list">
                                 <Comments
                                     currentUser={this.props.currentUser}
                                     thisPhoto={photo}
@@ -122,7 +123,16 @@ class Home extends React.Component {
 
                             <div id="line"></div>
 
-                            <div id="info-addComment">Add a comment...</div>
+                            <div id="info-addComment">Add a comment...
+                                <CommentForm
+                                    currentUser={this.props.currentUser}
+                                    thisPhoto={photo}
+                                    thisPhotoId={photo.id}
+                                    fetchComment={this.props.fetchComment}
+                                    createComment={this.props.createComment}
+                                    destroyComment={this.props.destroyComment}
+                                />
+                            </div>
 
 
                         </div>
