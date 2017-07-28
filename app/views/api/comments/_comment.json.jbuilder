@@ -4,7 +4,7 @@ json.userId     comment.user_id
 json.photoId    comment.photo_id
 json.exactTime  comment.created_at
 
-json.username   comment.user.username
+json.username   comment.username
 
 #initially was pulling info like below...
 # json.extract! @comment, :id, :body, :user_id, :photo_id

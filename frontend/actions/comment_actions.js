@@ -8,6 +8,8 @@ export const REMOVE_COMMENT = 'REMOVE_COMMENT';
 
 //synchronous action creators
 
+
+//when fetching...you need to access the key .responseJSON....it has all the keys including username!!!
 export const receiveComment = comment => {
   console.log("inside sync receiveComment");
   console.log(comment);

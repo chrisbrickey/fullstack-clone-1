@@ -5,4 +5,8 @@ class Comment < ApplicationRecord
   belongs_to :photo
   has_many :likes, as: :likable, dependent: :destroy
 
+  def username
+    self.user.username
+  end
+
 end

@@ -32,7 +32,8 @@ import { createPhotoLike,
 
 
 //comment development
-import { ajaxCreateComment,
+import { ajaxFetchComment,
+         ajaxCreateComment,
          ajaxDestroyComment } from './util/comment_api_util';
 
 import { createComment,
@@ -71,6 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.createPhotoLike = createPhotoLike;
   window.destroyPhotoLike = destroyPhotoLike;
 
+  window.ajaxFetchComment = ajaxFetchComment;
   window.ajaxCreateComment = ajaxCreateComment;
   window.ajaxDestroyComment = ajaxDestroyComment;
 

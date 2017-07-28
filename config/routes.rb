@@ -13,7 +13,7 @@ Rails.application.routes.draw do
     resources :follows, only: %i[destroy]
 
     resources :photos, only: %i[index show create update destroy], shallow: true do
-      resources :comments, only: %i[create]
+      resources :comments, only: %i[show create]
       resource :like, only: %i[create destroy]
     end
 
