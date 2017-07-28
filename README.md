@@ -7,7 +7,7 @@
 #### Detail View with Edit
 A graceful modal overlays each users profile page when one of their images is selected.  It shows details of the post and allows the creator of a post to edit the details with instant update across the application.
 
-
+![Demo login](http://res.cloudinary.com/calb3ars/image/upload/c_scale,w_600/v1490385294/Screen_Shot_2017-03-24_at_12.54.30_PM_oapdik.png)
 
 #### Drag & Drop Upload
 Users can upload with ease with drag/drop functionality.  They can also double-click in the same spot if they prefer to select a file from their directories.
