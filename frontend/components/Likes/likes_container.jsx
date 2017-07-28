@@ -11,25 +11,5 @@ import { fetchAllPhotos,
          destroyPhoto } from '../../actions/photo_actions';
 
 import LikesDetail from './likes_detail';
-// thisPhoto, thisPhotoId, createPhotoLike, destroyPhotoLike, currentUser are being passed in from Home where this container is rendered
 
-
-const mapStateToProps = (state) => {
-
-  return {
-
-  };
-};
-
-
-const mapDispatchToProps = (dispatch, { location }) => {
-//
-  return {
-
-  };
-};
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(LikesDetail);
+export default connect()(LikesDetail);

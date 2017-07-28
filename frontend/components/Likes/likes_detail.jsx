@@ -2,8 +2,6 @@ import React from 'react';
 import merge from 'lodash/merge';
 import {hashHistory} from 'react-router';
 
-// thisPhoto, thisPhotoId, createPhotoLike, destroyPhotoLike, currentUser are being passed in from Home where this component's container is rendered
-
 class LikesDetail extends React.Component {
   constructor(props) {
     super(props);
@@ -14,23 +12,15 @@ class LikesDetail extends React.Component {
   }
 
   likeThisPhoto(event) {
-    // console.log("inside likeThisPhoto on same file working on photoId:", this.props.thisPhotoId);
-    // console.log("...and this is the current state of that photo:", this.props.thisPhoto);
-
     this.props.createPhotoLike(this.props.thisPhotoId);
   }
 
   unlikeThisPhoto(event) {
-    // console.log("inside unlikeThisPhoto on same file working on photoId:", this.props.thisPhotoId);
-    // console.log("...and this is the current state of that photo:", this.props.thisPhoto);
-
     this.props.destroyPhotoLike(this.props.thisPhotoId);
   }
 
-
-
   displayLikeButton() {
-    // console.log(this.props.thisPhoto.likedByCurrentUser);
+
     if (this.props.thisPhoto.likedByCurrentUser) {
        return(
 
