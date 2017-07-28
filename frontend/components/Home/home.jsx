@@ -9,8 +9,6 @@ import HeaderXXX from '../Navigation/header';
 import LikesContainer from '../Likes/likes_container';
 
 
-console.log("on the home.jsx");
-
 class Home extends React.Component {
   constructor(props) {
     super(props);
@@ -40,13 +38,10 @@ class Home extends React.Component {
     let arrayOfIdsOrderedByTimePosted = [];
 
     if (photoFeedObject) {
-        // console.log("original photoFeedObject", photoFeedObject);
 
         let photoFeedArrayValues = Object.values(photoFeedObject);
-        // console.log("new photoFeedArrayValues", photoFeedArrayValues);
 
         let sortedFeedObjects = sortBy(photoFeedArrayValues, 'exactTime').reverse();
-        // console.log("sortedFeedObjects", sortedFeedObjects);
 
 
         sortedFeedObjects.forEach( (photo1) => {
@@ -63,7 +58,7 @@ class Home extends React.Component {
 
                     <section className="info-top">
 
-                        <div className="top-left-container">NEW!!
+                        <div className="top-left-container">
                             <div className="thumbnailPic-container">
                                 <img
                                     id="thumbnail"
@@ -73,7 +68,7 @@ class Home extends React.Component {
                             </div>
                         </div>
 
-                        <div className="top-right-container">NEW!!
+                        <div className="top-right-container">
 
                             <div id="info-username">{photo.username}</div>
                             <div id="info-location">{photo.location}</div>
