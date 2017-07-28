@@ -1,6 +1,4 @@
 export const ajaxFetchComment = (id) => {
-  console.log("in ajaxFetchComment");
-  console.log(id);
 
   return (
     $.ajax({
@@ -12,8 +10,6 @@ export const ajaxFetchComment = (id) => {
 
 
 export const ajaxCreateComment = (comment) => {
-  console.log("in ajaxCreateComment");
-  console.log(comment);
 
   return(
     $.ajax({
@@ -24,10 +20,7 @@ export const ajaxCreateComment = (comment) => {
   );
 };
 
-//could just pass in the comment's id instead of the whole comment and grab it from params
 export const ajaxDestroyComment = (id) => {
-  console.log("in ajaxDestroyComment");
-  // console.log(comment);
 
   return(
     $.ajax({

@@ -1,8 +1,5 @@
-
-//eventually this method may need to have an argument (current user) so that it only shows the photos of peple that the current user follows
-//therefore, it would need an extra item in the ajax request...data
 export const ajaxFetchAllPhotos = () => {
-  console.log("in ajaxFetchAllPhotos");
+
   return(
     $.ajax({
       method: 'GET',
@@ -13,7 +10,7 @@ export const ajaxFetchAllPhotos = () => {
 
 
 export const ajaxFetchSinglePhoto = (id) => {
-  console.log("in ajaxFetchSinglePhoto");
+
   return(
     $.ajax({
       method: 'GET',
@@ -24,7 +21,7 @@ export const ajaxFetchSinglePhoto = (id) => {
 
 
 export const ajaxCreatePhoto = (data) => {
-  console.log("in ajaxCreatePhoto");
+
   return(
     $.ajax({
       method: 'POST',
@@ -35,9 +32,7 @@ export const ajaxCreatePhoto = (data) => {
 };
 
 
-//when dispatched from frontend, photo.id is not available
 export const ajaxUpdatePhoto = (photo) => {
-  console.log("in ajaxUpdatePhoto");
 
   return(
     $.ajax({
@@ -50,7 +45,6 @@ export const ajaxUpdatePhoto = (photo) => {
 
 
 export const ajaxDestroyPhoto = (photo) => {
-  console.log("in ajaxDestroyPhoto");
 
   return(
     $.ajax({

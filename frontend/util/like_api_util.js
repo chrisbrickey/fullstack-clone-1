@@ -1,5 +1,4 @@
 export const ajaxCreatePhotoLike = (photoId) => {
-  console.log("in ajaxCreatePhotoLike");
 
   return(
     $.ajax({
@@ -12,7 +11,6 @@ export const ajaxCreatePhotoLike = (photoId) => {
 
 
 export const ajaxDestroyPhotoLike = (photoId) => {
-  console.log("in ajaxDestroyPhotoLike");
 
   return(
     $.ajax({

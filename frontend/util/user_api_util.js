@@ -17,14 +17,3 @@ export const ajaxFetchSingleUser = (userId) => {
     })
   );
 };
-
-
-// export const ajaxFetchUsersPhotos = (userId) => {
-//   console.log("in ajaxFetchUsersPhotos");
-//   return(
-//     $.ajax({
-//       method: 'GET',
-//       url: ''
-//     })
-//   );
-// };
