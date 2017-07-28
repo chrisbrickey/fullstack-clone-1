@@ -13,7 +13,7 @@ export const REMOVE_PHOTO = 'REMOVE_PHOTO';
 
 export const receiveAllPhotos = photos => {
   console.log("inside sync receiveAllPhotos");
-  console.log(photos);
+  // console.log(photos);
   return({
     type: RECEIVE_ALL_PHOTOS,
     byId: photos
@@ -23,7 +23,7 @@ export const receiveAllPhotos = photos => {
 
 export const receiveSinglePhoto = photo => {
   console.log("inside sync receiveSinglePhoto");
-  console.log(photo);
+  // console.log(photo);
   console.log(photo.id);
 
   return({
@@ -36,7 +36,7 @@ export const receiveSinglePhoto = photo => {
 
 export const removePhoto = photo => {
   console.log("inside sync removePhoto");
-  console.log(photo);
+  // console.log(photo);
   return({
     type: REMOVE_PHOTO,
     photo
@@ -76,7 +76,7 @@ export const createPhoto = (data) => dispatch => {
 
 export const updatePhoto = (data) => dispatch => {
   console.log("in async updatePhoto");
-  console.log (data);
+  // console.log (data);
 
   return ajaxUpdatePhoto(data)
     .then( returnedPhoto => (dispatch(receiveSinglePhoto(returnedPhoto)))

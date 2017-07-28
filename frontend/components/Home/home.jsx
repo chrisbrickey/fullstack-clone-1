@@ -23,7 +23,7 @@ class Home extends React.Component {
   render() {
 
 
-    console.log("this.props", this.props);
+    // console.log("this.props", this.props);
 
     const photoFeedObject = this.props.photos.byId;
     let photoFeedList = null;
@@ -82,6 +82,7 @@ class Home extends React.Component {
 
                             <div className="likes-container">
                                 <LikesContainer
+                                  currentUser={this.props.currentUser}
                                   thisPhoto={photo}
                                   thisPhotoId={photo.id}
                                   createPhotoLike={this.props.createPhotoLike}

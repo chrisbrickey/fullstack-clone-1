@@ -62,7 +62,16 @@ export const photoReducer = (state = defaultState, action) => {
       console.log("inside photo reducer at REMOVE_PHOTO_LIKE");
 
       newState = merge({}, state);
+      const anotherPhoto = newState.byId[action.photoLike.likableId];
+      anotherPhoto.likesCount -= 1;
 
+      anotherPhoto.usersWhoLike.splice(anotherPhoto.usersWhoLike.indexOf(action.photoLike.userId), 1)
+
+      anotherPhoto.usersWhoLike.push(action.photoLike.userId);
+
+      anotherPhoto.likedByCurrentUser = false;
+
+      return newState;
 
 
     default:

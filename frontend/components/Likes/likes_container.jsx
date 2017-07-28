@@ -11,7 +11,7 @@ import { fetchAllPhotos,
          destroyPhoto } from '../../actions/photo_actions';
 
 import LikesDetail from './likes_detail';
-// thisPhoto, thisPhotoId, createPhotoLike, destroyPhotoLike are being passed in from Home where this container is rendered
+// thisPhoto, thisPhotoId, createPhotoLike, destroyPhotoLike, currentUser are being passed in from Home where this container is rendered
 
 
 const mapStateToProps = (state) => {
