@@ -20,6 +20,16 @@ class Home extends React.Component {
       this.props.fetchAllPhotos();
   }
 
+  capitalize(string) {
+    let newString = "";
+    let oldArray = string.split("");
+    oldArray.forEach( (el) => {
+      newString += el.toUpperCase();
+    });
+
+    return newString;
+  }
+
   render() {
 
 
@@ -64,8 +74,10 @@ class Home extends React.Component {
                         </div>
 
                         <div className="top-right-container">NEW!!
+
                             <div id="info-username">{photo.username}</div>
-                            <div className="item-at-bottom" id="info-location">{photo.location}</div>
+                            <div id="info-location">{photo.location}</div>
+
                         </div>
 
                     </section>
@@ -77,10 +89,10 @@ class Home extends React.Component {
                     />
 
 
-                    <section className="info-bottom">
-                        <div className="item-at-bottom" >
+                  <section className="feed-bottom-outer">
+                        <div className="feed-bottom-inner">
 
-                            <div className="likes-container">
+                            <div className="likes-container" >
                                 <LikesContainer
                                   currentUser={this.props.currentUser}
                                   thisPhoto={photo}
@@ -90,26 +102,27 @@ class Home extends React.Component {
                                   />
                             </div>
 
-                            <div id="info-caption">{photo.username}</div>
-                                <div id="caption-spacer"></div>
-                            <div id="info-caption">{photo.caption}</div>
-
-                              <div className="item-at-bottom">
-                                <div id="comment-spacer"></div>
-                              </div>
-
-                            <div className="item-at-bottom">
-                              <div id="line"></div>
+                            <div className="caption-container">
+                                <div id="info-caption" >{photo.username}</div>
+                                    <div id="caption-spacer"></div>
+                                <div id="info-caption" >{photo.caption}</div>
                             </div>
 
 
-                            <div className="item-at-bottom" id="info-uploadDate">{photo.uploadDate} ago</div>
 
-                            <div className="item-at-bottom">
-                              <div id="line"></div>
+                            <div id="comment-spacer">
+                                comments will go here if there are any
                             </div>
 
-                            <div className="item-at-bottom" id="info-addComment">Add a comment... (placeholder)</div>
+
+
+                            <div id="info-uploadDate">{this.capitalize(photo.uploadDate)} AGO</div>
+
+
+                            <div id="line"></div>
+
+
+                            <div id="info-addComment">Add a comment...</div>
 
 
 
