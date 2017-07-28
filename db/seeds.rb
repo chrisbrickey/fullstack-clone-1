@@ -49,8 +49,8 @@ ActiveRecord::Base.transaction do
     )
 
   photo23 = Photo.create!(
-    photo_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500960803/z8sekzildv0rwygsygkt.jpg',
-    caption: 'connect',
+    photo_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1501257003/redandwhite_smaller_ypraxd.png',
+    caption: 'connection',
     location: '',
     author_id: demo5.id
     )
@@ -116,9 +116,9 @@ ActiveRecord::Base.transaction do
 
 
   photo14 = Photo.create!(
-    photo_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500932608/bi1vxhx96gsndgh1rbxd.jpg',
-    caption: 'view',
-    location: 'from the studio',
+    photo_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1501257012/wallpaperStudio_smaller_scnd7x.png',
+    caption: 'love the view',
+    location: 'the studio',
     author_id: demo3.id
     )
 
@@ -198,7 +198,7 @@ ActiveRecord::Base.transaction do
     )
 
   photo3 = Photo.create!(
-    photo_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500771107/mural_c8cg36.jpg',
+    photo_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1501257022/mural_smaller_rsvfhf.png',
     caption: 'urban inspiration',
     location: '',
     author_id: demo1.id
