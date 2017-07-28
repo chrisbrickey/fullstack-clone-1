@@ -1,6 +1,5 @@
 export const ajaxCreatePhotoLike = (photoId) => {
   console.log("in ajaxCreatePhotoLike");
-  console.log(photoId);
 
   return(
     $.ajax({
