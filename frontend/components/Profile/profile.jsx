@@ -63,16 +63,23 @@ class Profile extends React.Component {
               <li key={photo.id} className="photoItem-container">
 
                     <div className="detailButton-container">
-                        <img
-                            src={photo.photoUrl}
-                            alt="photo"
-                            className="userPhoto"/>
+
+                        <button>
+                            <img
+                                src={photo.photoUrl}
+                                alt="photo"
+                                className="userPhoto"
+                                onClick={ () => this.showDetail(photo.id) }
+                            />
+                        </button>
 
 
                         <button
-                          onClick={ () => this.showDetail(photo.id) }
-                          className="detailButton"
-                          value="see detail/edit">View / Edit</button>
+                            onClick={ () => this.showDetail(photo.id) }
+                            className="detailButton"
+                            value="see detail/edit">
+                            View / Edit
+                        </button>
                     </div>
 
               </li>
