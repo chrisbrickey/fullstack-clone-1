@@ -15,6 +15,7 @@ $instagram-red: #f04752;
 }
 
 .photo-modal-outer {
+  z-index: 9000;
   overflow: scroll;
   background-color: rgba(0, 0, 0, 0.7);
 
