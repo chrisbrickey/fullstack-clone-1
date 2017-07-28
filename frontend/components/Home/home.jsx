@@ -123,7 +123,7 @@ class Home extends React.Component {
 
                             <div id="line"></div>
 
-                            <div id="info-addComment">Add a comment...
+                            <div id="info-addComment">
                                 <CommentForm
                                     currentUser={this.props.currentUser}
                                     thisPhoto={photo}

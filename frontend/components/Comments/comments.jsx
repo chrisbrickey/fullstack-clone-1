@@ -10,8 +10,21 @@ class Comments extends React.Component {
 
   }
 
+  componentDidMount() {
+      // this.props.fetchAllComments(); //does not yet exist
+    }
 
+  componentWillReceiveProps(nextProps) {
 
+    // if (this.state.comment.id !== nextProps.comment.id){
+      // const newState = merge({}, this.state);
+      // newState.photo.id = nextProps.currentPhoto.id;
+      // newState.photo.caption = nextProps.currentPhoto.caption;
+      // newState.photo.location = nextProps.currentPhoto.location;
+      // this.setState(newState);
+    // }
+
+  }
 
 
   render() {

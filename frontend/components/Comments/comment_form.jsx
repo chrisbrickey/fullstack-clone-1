@@ -50,7 +50,7 @@ class CommentForm extends React.Component {
     return(
 
         <div>
-            <form className="edit-form">
+            <form >
                 <label>
                     <input
                         type="text"
@@ -58,6 +58,7 @@ class CommentForm extends React.Component {
                         value={this.state.comment.body}
                         onChange={this.editComment}
                         className="edit-input"
+                        id="comment-input"
                     />
                 </label>
 
@@ -65,7 +66,9 @@ class CommentForm extends React.Component {
                   onClick={this.handleSubmit}
                   type="submit"
                   value="Submit"
-                  className="edit-submit">
+                  className="edit-submit"
+                  id="comment-submit"
+                  >
                   Post It
                 </button>
             </form>

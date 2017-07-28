@@ -216,10 +216,30 @@ main {
 
 #info-addComment {
   // background-color: brown;
+  margin: 5px 0px 5px 0px;
+  padding: 5px 0px 5px 0px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+}
+
+#comment-input {
+  height: 37px;
+  width: 488px;
+  margin: 0px;
+  padding: 0px 2px 0px 2px;
+  font-size: 110%;
   color: $instagram-grey;
   font-weight: 400;
   letter-spacing: 0.3px;
+}
 
-  margin: 5px 0px 5px 0px;
-  padding: 12px 0px 12px 0px;
+#comment-submit {
+  height: 40px;
+  width: 70px;
+  margin: 0px 0px 0px 10px;
+  padding: 0px;
+  letter-spacing: 0.3px;
 }
