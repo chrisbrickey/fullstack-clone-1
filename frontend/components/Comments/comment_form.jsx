@@ -2,8 +2,6 @@ import React from 'react';
 import merge from 'lodash/merge';
 import {hashHistory} from 'react-router';
 
-// thisPhoto, thisPhotoId, fetchComment, createComment, destroyComment, currentUser are being passed in from Home where this component's container is rendered
-
 class CommentForm extends React.Component {
   constructor(props) {
     super(props);
@@ -16,12 +14,10 @@ class CommentForm extends React.Component {
 
     this.editComment = this.editComment.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-
   }
 
 
   editComment(event) {
-    console.log("inside editComment on CommentForm");
 
     const newComment = merge({}, this.state);
     newComment.comment.body = event.target.value;
@@ -29,13 +25,11 @@ class CommentForm extends React.Component {
   }
 
   handleSubmit(event) {
-    console.log("inside handleSubmit on CommentForm");
 
     event.preventDefault();
     this.props.createComment(this.state.comment)
       .then(
         ( () => {
-          console.log("inside callback for createComment");
           this.setState({ comment: { body: "", photo_id: this.props.thisPhotoId } });
         })
       );
@@ -44,8 +38,6 @@ class CommentForm extends React.Component {
 
 
   render() {
-
-    // console.log("this.props", this.props);
 
     return(
 
@@ -72,7 +64,6 @@ class CommentForm extends React.Component {
                   Post It
                 </button>
             </form>
-
 
 
         </div>
