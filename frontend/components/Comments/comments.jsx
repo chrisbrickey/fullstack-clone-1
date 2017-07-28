@@ -37,14 +37,19 @@ class Comments extends React.Component {
 
       return(
         <div key={comment.id} className="single-comment-container">
-          <div id="commenter">{comment.username}</div>
-          <div id="comment-spacer"></div>
-          <div id="comment-body">{comment.body}</div>
 
-        <button
-          onClick={() => this.props.destroyComment(comment.id) }>
-          DELETE ME!
-        </button>
+            <div id="commenter">{comment.username}</div>
+            <div id="comment-spacer"></div>
+            <div id="comment-body">{comment.body}</div>
+            <div id="comment-spacer"></div>
+
+            <div id="comment-destroy">
+                <button
+                  onClick={() => this.props.destroyComment(comment.id) }>
+                  Delete
+                </button>
+            </div>
+
         </div>
       );
     });
