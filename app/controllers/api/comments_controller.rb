@@ -19,7 +19,7 @@ end
 
 #should I be destroying by params[:id] or comment_params?
 def destroy
-  debugger
+  # debugger
   @comment = Comment.find_by(comment_params)
 
   if @comment.user_id === current_user.id
