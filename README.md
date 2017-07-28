@@ -4,16 +4,27 @@
 
 ## Features Highlight
 
-##### Detail View with Edit
-xxxxx
+#### Detail View with Edit
+A graceful modal overlays each users profile page when one of their images is selected.  It shows details of the post and allows the creator of a post to edit the details with instant update across the application.
 
 
-##### Drag & Drop Upload
-xxxxx
+
+#### Drag & Drop Upload
+Users can upload with ease with drag/drop functionality.  They can also double-click in the same spot if they prefer to select a file from their directories.
 
 
-##### Likes & Comments
-xxxxx
+
+#### Likes & Comments
+The Like button toggles to indicate whether the current user has or has not liked a particular post and the sum total likes for each post updates live.  Comments can be added on-the-spot by simply typing and returning. They are instantly viewable by all users.  Post and delete buttons are also made available to the user for further guidance and ease-of-use.  Likes and comments are protected such that only the user initiating either a like or comment can reverse/delete it.
+
+
+
+
+
+#### Secure Authentication
+Users are greeted with an intuitive login page that guides them to successful login with informative and friendly error messages.
+
+
 
 
 ## Technology
@@ -40,13 +51,13 @@ insta-étoile is a single-page web application that utilizes a Ruby on Rails bac
 [api-endpoints]: docs/api-endpoints.md
 [schema]: docs/schema.md
 
-## Future Development:
+## Future Development
 
-##### Video Play
+#### Video Play
 Performing artists will be able to upload and share videos of rehearsals and performances.
 
-##### Robust User Profiles
+#### Robust User Profiles
 Performing artists will be able to synthesize and showcase their experience and talent in a full page profile.  They can share their career journey with pictures and videos accompanied by supporting text. The user profile template will allow for some curation but will maintain a consistent structure that is easy for others to absorb.
 
-##### Explore & Follow
+#### Explore & Follow
 Casting staff and the broader community will be able to search and follow performing artists.  A user's photo feed will consists only of posts from artists that they are following.  Users will be able to search for performing artists based on content of their posts and profiles.
