@@ -59,6 +59,7 @@ $instagram-red: #f04752;
 }
 
 .detail-container {
+  // background-color: purple;
   background-color: $instagram-white;
   padding: 2px;
   display: flex;
@@ -78,6 +79,7 @@ $instagram-red: #f04752;
 }
 
 .info-top2 {
+  // background-color: red;
   padding: 0px 3px 0px 3px;
   display: flex;
   flex-direction: row;
@@ -123,7 +125,7 @@ $instagram-red: #f04752;
   font-weight: 300;
   margin: 2px 0px 2px 0px;
   height: 10px;
-  width: 94%;
+  width: 200px;
 }
 
 .edit-submit {
@@ -138,6 +140,7 @@ $instagram-red: #f04752;
   border-radius: 3px;
   cursor: pointer;
   margin: 2px 0px 2px 0px;
+  letter-spacing: 0.3px;
 }
 
 .edit-submit:active {
@@ -156,6 +159,7 @@ $instagram-red: #f04752;
   border-radius: 3px;
   cursor: pointer;
   margin: 2px 0px 2px 0px;
+  letter-spacing: 0.3px;
 }
 
 .deleteButton2:active {
@@ -168,38 +172,66 @@ $instagram-red: #f04752;
   flex: 1;
 }
 
+/////////////////////
 
-.info-bottom2 {
-  // background-color: grey;
-  display: flex;
-  margin: 5px;
-  flex-direction: column;
-  cursor:default;
-}
 
-// .item-at-bottom {
-//   margin: 3px;
-//   padding: 5px;
-//   // background-color: yellow;
-//   display: flex;
-//   flex-direction: column;
-//   // font-size: 110%;
-//   color: black;
-//   font-weight: bold;
-// }
-
-#info-uploadDate2 {
-  color: $instagram-grey;
-  font-size: 90%;
-  margin-bottom: 0px;
-}
-
-#line {
+#line2 {
   height: 1px;
   background-color: $instagram-light-grey;
 }
 
-#info-addComment2 {
-  color: $instagram-grey;
-  font-size: 95%;
+
+.likes-show-container {
+  // background-color: orange;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  padding: 10px;
+
+  // margin: 3px 0px 3px 0px;
+  // padding: 3px 0px 3px 0px;
+    // padding: 5px;
 }
+
+.likesNumber {
+  // background-color: pink;
+  // font-size: 120%;
+  color: black;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+.spacer {
+  // background-color: red;
+  width: 6px;
+  height: 6px;
+}
+
+.likesText {
+  // background-color: lightgreen;
+  // font-size: 120%;
+  color: black;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+
+#info-uploadDate2 {
+  // background-color: yellow;
+
+  color: $instagram-grey;
+  font-size: 80%;
+  // margin: 5px 0px 0px 0px;
+  // padding: 5px 0px 5px 0px;
+    // padding: 5px;
+  letter-spacing: 0.3px;
+  padding: 10px;
+}
+
+//
+//
+// #info-addComment2 {
+//   color: $instagram-grey;
+//   font-size: 95%;
+// }

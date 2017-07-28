@@ -76,8 +76,16 @@ class PhotoDetail extends React.Component {
       })
     );
 
+  }
 
+  capitalize(string) {
+    let newString = "";
+    let oldArray = string.split("");
+    oldArray.forEach( (el) => {
+      newString += el.toUpperCase();
+    });
 
+    return newString;
   }
 
   editPhoto(event) {
@@ -107,7 +115,17 @@ class PhotoDetail extends React.Component {
 
   render() {
 
+
+
     if (this.state.modalOpen && this.props.currentPhoto) {
+
+      let likesWord;
+      if (this.props.currentPhoto.likesCount === 1) {
+        likesWord = "like";
+      } else {
+        likesWord = "likes";
+      }
+      
       return (
 
           <main className="photo-modal-outer">
@@ -195,20 +213,31 @@ class PhotoDetail extends React.Component {
                               <div className="info-middle"></div>
 
 
+                              <div id="line2"></div>
 
 
-
-                                  <div id="line2"></div>
-
-
-                                  <div id="info-uploadDate2">
-                                      {this.props.currentPhoto.uploadDate} ago
+                              <div className="likes-show-container">
+                                  <div className="likesNumber">
+                                      {this.props.currentPhoto.likesCount}
                                   </div>
+                                  <div className="spacer"></div>
+                                  <div className="likesText">
+                                      {likesWord}
+                                  </div>
+                              </div>
+
+
+                              <div id="line2"></div>
+
+
+                              <div id="info-uploadDate2">
+                                  {this.capitalize(this.props.currentPhoto.uploadDate)} AGO
+                              </div>
 
                               </div>
 
 
-        
+
 
 
                 </div>
