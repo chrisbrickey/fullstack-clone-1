@@ -28,7 +28,7 @@ class FooterXXX extends React.Component {
                       <li>DIRECTORY</li>
                       <li>LANGUAGE</li>
                       <li>{"      "}</li>
-                      <li id="copyright"> &copy; 2017 INSTAGRAM</li>
+                      <li id="copyright"> 2017 CHRISBRICKEY</li>
                   </ul>
               </footer>
           </section>
