@@ -4,15 +4,15 @@
 
 ## Features Highlight
 
-##### some feature
+##### Detail View with Edit
 xxxxx
 
 
-##### some other feature
+##### Drag & Drop Upload
 xxxxx
 
 
-##### yet another feature
+##### Likes & Comments
 xxxxx
 
 
