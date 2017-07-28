@@ -3,6 +3,6 @@ class Comment < ApplicationRecord
 
   belongs_to :user
   belongs_to :photo
-  has_many :likes, as: :likable
-  
+  has_many :likes, as: :likable, dependent: :destroy
+
 end
