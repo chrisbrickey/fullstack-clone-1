@@ -33,7 +33,7 @@ const mapDispatchToProps = (dispatch, { location }) => {
     destroyPhotoLike: (photoId) => dispatch(destroyPhotoLike(photoId)),
     fetchComment: (id) => dispatch(fetchComment(id)),
     createComment: (comment) => dispatch(createComment(comment)),
-    destroyComment: (id) => dispatch(createComment(id)),
+    destroyComment: (id) => dispatch(destroyComment(id)),
 
     logoutDestroySession: () => dispatch(logoutDestroySession()),
     clearErrors: () => dispatch(clearErrors())

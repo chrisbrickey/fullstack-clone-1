@@ -40,6 +40,11 @@ class Comments extends React.Component {
           <div id="commenter">{comment.username}</div>
           <div id="comment-spacer"></div>
           <div id="comment-body">{comment.body}</div>
+
+        <button
+          onClick={() => this.props.destroyComment(comment.id) }>
+          DELETE ME!
+        </button>
         </div>
       );
     });

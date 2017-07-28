@@ -28,22 +28,23 @@ end
 #should I be destroying by params[:id] or comment_params?
 def destroy
   # debugger
-  @comment = Comment.find_by(params[:id])
+  @comment = Comment.find_by(id: params[:id])
 
-  if @comment.user_id === current_user.id
-
-    if @comment.destroy
-      render "api/comments/show"
-    else
-      render(
-        json: @comment.errors.full_messages,
-        status: 422
-      )
-    end
-
+  if !@comment
+    head :not_found
+  elsif !logged_in?
+    head :unauthorized
+  elsif @comment.user_id != current_user.id
     render(
       json: ["This is not your comment."],
       status: 403
+    )
+  elsif @comment.destroy
+    render "api/comments/show"
+  else
+    render(
+      json: @comment.errors.full_messages,
+      status: 422
     )
   end
 

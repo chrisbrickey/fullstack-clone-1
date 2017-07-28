@@ -77,8 +77,10 @@ export const photoReducer = (state = defaultState, action) => {
     case RECEIVE_COMMENT:
       console.log("inside photo reducer at RECEIVE_COMMENT");
 
-      const newComment = action.comment;
-      return merge({}, state, newComment);
+      newState = merge({}, state);
+      const targetPhoto = newState.byId[action.comment.photoId];
+      targetPhoto.comments.push(action.comment);
+      return newState;
 
     case REMOVE_COMMENT:
       console.log("inside photo reducer at REMOVE_COMMENT");

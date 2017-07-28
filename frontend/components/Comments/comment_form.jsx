@@ -72,6 +72,9 @@ class CommentForm extends React.Component {
                   Post It
                 </button>
             </form>
+
+
+            
         </div>
 
     );
