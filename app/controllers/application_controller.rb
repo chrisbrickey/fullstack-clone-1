@@ -2,14 +2,13 @@ class ApplicationController < ActionController::Base
   # skip_before_action :verify_authenticity_token
   # protect_from_forgery prepend: true, with: :exception
   # prevents CSRF attacks by raising exception
-  # protect_from_forgery with: :exception
+  protect_from_forgery with: :exception
 
   helper_method :current_user, :logged_in?
 
   private
 
   def current_user
-    # return nil unless session[:session_token]     #perhaps unnecessary
     @current_user ||= User.find_by(session_token: session[:session_token])
   end
 
@@ -22,7 +21,6 @@ class ApplicationController < ActionController::Base
   def logout
     current_user.try(:reset_session_token!)
     session[:session_token] = nil
-    # @current_user = nil        #perhaps unnecessary
   end
 
   def logged_in?
