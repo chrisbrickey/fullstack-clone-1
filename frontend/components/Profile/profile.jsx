@@ -15,15 +15,11 @@ class Profile extends React.Component {
     this.state = {
       currentPhotoId: null
     };
-
-    //this.anyMethod = this.anyMethod.bind(this);
     this.showDetail = this.showDetail.bind(this);
 
   }
 
   showDetail(id) {
-    console.log("inside showDetail fxn");
-    console.log(id);
     this.setState({currentPhotoId: id}, () => {
       window.globalPhotoModal();
     });
@@ -31,7 +27,6 @@ class Profile extends React.Component {
 
 
   render() {
-    console.log("in the render method of profile.jsx");
 
     let profilePicture;
     if (this.props.currentUser.profileImgUrl) {
