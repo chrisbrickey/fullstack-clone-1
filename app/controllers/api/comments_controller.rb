@@ -2,6 +2,7 @@ class Api::CommentsController < ApplicationController
 
 
 def show
+  # debugger
   @comment = Comment.find(params[:id])
   render "api/comments/show"
 end

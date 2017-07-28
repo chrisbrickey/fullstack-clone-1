@@ -36,8 +36,9 @@ import { ajaxFetchComment,
          ajaxCreateComment,
          ajaxDestroyComment } from './util/comment_api_util';
 
-import { createComment,
-          destroyComment } from './actions/comment_actions';
+import { fetchComment,
+         createComment,
+         destroyComment } from './actions/comment_actions';
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -76,6 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.ajaxCreateComment = ajaxCreateComment;
   window.ajaxDestroyComment = ajaxDestroyComment;
 
+  window.fetchComment = fetchComment;
   window.createComment = createComment;
   window.destroyComment = destroyComment;
 

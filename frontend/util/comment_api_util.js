@@ -1,5 +1,6 @@
 export const ajaxFetchComment = (id) => {
   console.log("in ajaxFetchComment");
+  console.log(id);
 
   return (
     $.ajax({
