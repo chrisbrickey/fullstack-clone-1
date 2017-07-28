@@ -31,6 +31,13 @@ import { createPhotoLike,
          destroyPhotoLike } from './actions/photo_like_actions';
 
 
+//comment development
+import { ajaxCreateComment,
+         ajaxDestroyComment } from './util/comment_api_util';
+
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
 
   // window.ajaxSignup = ajaxSignup;
@@ -62,6 +69,9 @@ document.addEventListener('DOMContentLoaded', () => {
   window.ajaxDestroyPhotoLike = ajaxDestroyPhotoLike;
   window.createPhotoLike = createPhotoLike;
   window.destroyPhotoLike = destroyPhotoLike;
+
+  window.ajaxCreateComment = ajaxCreateComment;
+  window.ajaxDestroyComment = ajaxDestroyComment;
 
 
   let store;

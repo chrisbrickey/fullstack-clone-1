@@ -1,6 +1,7 @@
 class Api::CommentsController < ApplicationController
 
 def create
+  # debugger
   @comment = Comment.new(comment_params)
   @comment.user_id = current_user.id
 
@@ -16,16 +17,24 @@ def create
 end
 
 
-#should I be destroying by params[:id] instead?
+#should I be destroying by params[:id] or comment_params?
 def destroy
-  @comment = Comment.find_by(comment_params)
+  @comment = Comment.find_by(params[:id])
 
-  if @comment.destroy
-    render "api/comments/show"
-  else
+  if @comment.user_id === current_user.id
+
+    if @comment.destroy
+      render "api/comments/show"
+    else
+      render(
+        json: @comment.errors.full_messages,
+        status: 422
+      )
+    end
+
     render(
-      json: @comment.errors.full_messages,
-      status: 422
+      json: ["This is not your comment."],
+      status: 403
     )
   end
 

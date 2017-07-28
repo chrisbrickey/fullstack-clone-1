@@ -1,16 +1,17 @@
-export const ajaxCreateComment = (photoId, body) => {
+export const ajaxCreateComment = (comment) => {
   console.log("in ajaxCreateComment");
+  console.log(comment);
 
   return(
     $.ajax({
       method: 'POST',
-      url: `api/photos/${photoId}/comments`,
-      data: {comment: { photo_id: photoId, body: body}}
+      url: `api/photos/${comment.photo_id}/comments`,
+      data: {comment}
       })
   );
 };
 
-
+//could just pass in the comment's id instead of the whole comment
 export const ajaxDestroyComment = (comment) => {
   console.log("in ajaxDestroyComment");
 
