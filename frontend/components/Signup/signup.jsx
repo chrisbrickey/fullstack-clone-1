@@ -34,17 +34,13 @@ class Signup extends React.Component {
   }
 
   handleSubmit(event) {
-    console.log("inside handleSubmit");
     let testUser = this.state.user;
-    console.log(testUser);
-    console.log({user: testUser});
 
     event.preventDefault();
     let newUser = this.state.user;
     this.props.processForm({ user: newUser })
       .then(
         (()=> {
-          console.log("inside submit callback upon success");
           this.setState({ user: { name: "", username: "", password: ""}, errors: null});
         }),
 
@@ -95,9 +91,6 @@ class Signup extends React.Component {
     return (
 
       <div className="auth-container">
-
-
-
 
 
           <div className="auth-outer">

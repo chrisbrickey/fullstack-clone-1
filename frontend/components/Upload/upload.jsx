@@ -41,19 +41,17 @@ class Upload extends React.Component {
 
       upload.end((err, response) => {
         if (err) {
-          console.log(`error resulting from cloudinary upload: ${err}`);
+
         }
 
         if (response.body.secure_url !== 'placeholder') {
           this.setState({ photo: { photo_url: response.body.secure_url}});
-          console.log(this.state);
         }
 
       });
   }
 
   updatePhoto(event) {
-    console.log("inside updatePhoto on upload page");
 
     const newPhoto = merge({}, this.state);
     newPhoto.photo[event.target.name] = event.target.value;
@@ -61,7 +59,6 @@ class Upload extends React.Component {
   }
 
   handleSubmit(event) {
-    console.log("inside handleSubmit on upload page");
 
     let testPhoto = this.state.photo;
 
@@ -71,7 +68,6 @@ class Upload extends React.Component {
     this.props.createPhoto({ photo: testPhoto })
       .then(
         (()=> {
-          console.log("inside handleSubmit callback upon success");
           this.setState({ photo: { caption: "", location: "", photo_url: ""} });
           this.props.history.push(`/`);
         })
@@ -79,8 +75,6 @@ class Upload extends React.Component {
   }
 
   render() {
-
-    console.log("this.props", this.props);
 
     return (
       <div className="upload-page-container">
