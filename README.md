@@ -1,6 +1,6 @@
 # insta-étoile
 
-[insta-étoile](www.insta-étoile.com) is visual platform that enables performing artists to share and showcase photos of their craft while building a community of supporters and followers. insta-étoile will further the careers of performing artists by providing robust, immersive user profiles to broadcast their experience in a beautiful and digestible format.
+[insta-étoile](www.insta-étoile.com) is a full-stack web app inspired by Instagram.  Danseur Étoile (literally 'star dancer' in French) is the highest rank within the Paris Opera Ballet. insta-étoile provides a visual platform to enable performing artists of all kinds to instantly share and showcase photos of their craft while building a community of supporters and followers. insta-étoile will further the careers of performing artists by broadcasting their experience in a beautiful and digestible format, linking robust immersive profiles with an artist's community and following.
 
 ## Features Highlight
 
@@ -13,7 +13,7 @@ xxxxx
 
 
 ##### yet another feature
-xxxxxÂ
+xxxxx
 
 
 ## Technology
