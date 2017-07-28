@@ -17,19 +17,21 @@ xxxxx
 
 
 ## Technology
-xxxxx
 
+insta-étoile is a single-page web application that utilizes a Ruby on Rails backend and React.js/Redux frontend with various dependencies.
 
-
+- [Frontend technology][frontend]
+- [Backend technology][backend]
+[frontend]: docs/frontend.md
+[backend]: docs/backend.md
 
 ## Project Design
 
-* [Development README][READMEdev]
-* [View Wireframes][wireframes]
-* [React Components][components]
-* [API endpoints][api-endpoints]
-* [DB schema][schema]
-* [Sample State][sample-state]
+- [View Wireframes][wireframes]
+- [React Components][components]
+- [API endpoints][api-endpoints]
+- [DB schema][schema]
+- [Sample State][sample-state]
 
 [READMEdev]: docs/READMEdev.md
 [wireframes]: docs/wireframes
