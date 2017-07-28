@@ -12,8 +12,7 @@ export const REMOVE_PHOTO = 'REMOVE_PHOTO';
 //synchronous action creators
 
 export const receiveAllPhotos = photos => {
-  console.log("inside sync receiveAllPhotos");
-  // console.log(photos);
+
   return({
     type: RECEIVE_ALL_PHOTOS,
     byId: photos
@@ -22,9 +21,6 @@ export const receiveAllPhotos = photos => {
 
 
 export const receiveSinglePhoto = photo => {
-  console.log("inside sync receiveSinglePhoto");
-  // console.log(photo);
-  console.log(photo.id);
 
   return({
     type: RECEIVE_SINGLE_PHOTO,
@@ -35,8 +31,7 @@ export const receiveSinglePhoto = photo => {
 
 
 export const removePhoto = photo => {
-  console.log("inside sync removePhoto");
-  // console.log(photo);
+
   return({
     type: REMOVE_PHOTO,
     photo
@@ -48,7 +43,6 @@ export const removePhoto = photo => {
 //asynchronous action creators
 
 export const fetchAllPhotos = () => dispatch => {
-  console.log("in async fetchAllPhotos");
 
   return ajaxFetchAllPhotos()
     .then( returnedPhotos => (dispatch(receiveAllPhotos(returnedPhotos)))
@@ -57,7 +51,6 @@ export const fetchAllPhotos = () => dispatch => {
 
 
 export const fetchSinglePhoto = (id) => dispatch => {
-  console.log("in async fetchSinglePhoto");
 
   return ajaxFetchSinglePhoto(id)
     .then( returnedPhoto => (dispatch(receiveSinglePhoto(returnedPhoto)))
@@ -66,7 +59,6 @@ export const fetchSinglePhoto = (id) => dispatch => {
 
 
 export const createPhoto = (data) => dispatch => {
-  console.log("in async createPhoto");
 
   return ajaxCreatePhoto(data)
     .then( returnedPhoto => (dispatch(receiveSinglePhoto(returnedPhoto)))
@@ -75,8 +67,6 @@ export const createPhoto = (data) => dispatch => {
 
 
 export const updatePhoto = (data) => dispatch => {
-  console.log("in async updatePhoto");
-  // console.log (data);
 
   return ajaxUpdatePhoto(data)
     .then( returnedPhoto => (dispatch(receiveSinglePhoto(returnedPhoto)))
@@ -85,7 +75,6 @@ export const updatePhoto = (data) => dispatch => {
 
 
 export const destroyPhoto = (photo) => dispatch => {
-  console.log("in async destroyPhoto");
 
   return ajaxDestroyPhoto(photo)
     .then( photoItDeleted => (dispatch(removePhoto(photoItDeleted)))
