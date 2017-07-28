@@ -14,37 +14,3 @@ json.usersWhoLike       photo.users_who_like
 json.likedByCurrentUser logged_in? && Like.exists?(user_id: current_user.id, likable_id: photo.id, likable_type: "Photo")
 
 json.comments           photo.comments
-
-# json.extract! photo, :photo_url, :caption, :location, :author_id, :created_at
-#returns {photo_url:      , caption:     , location:     , author_id:     , created_at:      }
-
-
-# eventually, this slice of state should look like...
-# photos: {
-
-#   currentPhoto: 4,
-#
-#   byPopularity: [4, ...],
-#
-#   byId: {
-#     1: {
-#       id: 1,
-#       photoUrl: 'xx.png',
-#       caption: "xx",
-#       location: "xx",
-#       uploadDate: 'xx',
-#
-#       userId: 1,
-#       username: 'xx',
-#       profileImgUrl: 'xx.png',
-#       comments: [2, ...],
-#       likesCount: 10,
-#       likers: ["xx", ...]
-#     },
-#
-#     2: {
-#       ...
-#     }
-#   },
-#
-# },
