@@ -80,31 +80,19 @@ export const photoReducer = (state = defaultState, action) => {
       const newComment = action.comment;
       return merge({}, state, newComment);
 
-      //probably need to change photoID to photo_id now that I've changed jbuilder
-      // newState = merge({}, state);
-      // console.log(action);
-      // console.log(action.comment);
-      // console.log(action.comment.photoId);
-      // const targetPhoto = newState.byId[action.comment.photoId];
+    case REMOVE_COMMENT:
+      console.log("inside photo reducer at REMOVE_COMMENT");
+      // console.log("action", action);
+
+      newState = merge({}, state);
+      const anotherTargetPhoto = newState.byId[action.comment.photoId];
       // console.log("targetPhoto", targetPhoto);
-      // console.log(targetPhoto.comments);
-      //you're pushing duplicates in now....just need to merge
-      // targetPhoto.comments.push(action.comment);
-      // return newState;
-
-      case REMOVE_COMMENT:
-        console.log("inside photo reducer at REMOVE_COMMENT");
-        // console.log("action", action);
-
-        newState = merge({}, state);
-        const anotherTargetPhoto = newState.byId[action.comment.photoId];
-        // console.log("targetPhoto", targetPhoto);
-        anotherTargetPhoto.comments.forEach ( (comment, index) => {
-            if (comment.id === action.comment.id) {
-              anotherTargetPhoto.comments.splice(index, 1);
-            }
-        });
-        return newState;
+      anotherTargetPhoto.comments.forEach ( (comment, index) => {
+          if (comment.id === action.comment.id) {
+            anotherTargetPhoto.comments.splice(index, 1);
+          }
+      });
+      return newState;
 
     default:
         return state;

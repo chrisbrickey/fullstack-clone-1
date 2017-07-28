@@ -27,7 +27,7 @@ export const removeComment = comment => {
 
   return({
     type: REMOVE_COMMENT,
-    comment
+    comment: comment
   });
 };
 

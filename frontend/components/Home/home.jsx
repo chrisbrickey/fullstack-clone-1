@@ -110,6 +110,7 @@ class Home extends React.Component {
                                     currentUser={this.props.currentUser}
                                     thisPhoto={photo}
                                     thisPhotoId={photo.id}
+                                    fetchComment={this.props.fetchComment}
                                     createComment={this.props.createComment}
                                     destroyComment={this.props.destroyComment}
                                 />

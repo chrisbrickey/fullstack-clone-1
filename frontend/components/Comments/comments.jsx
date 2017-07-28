@@ -12,6 +12,8 @@ class Comments extends React.Component {
 
 
 
+
+
   render() {
 
     // console.log("this.props", this.props);
@@ -20,9 +22,13 @@ class Comments extends React.Component {
     // console.log(arrayOfComments);
 
     let commentsToRender = arrayOfComments.map( (comment) => {
-      console.log(comment);
+      console.log(comment.id);
+      // console.log("comment.username", comment.username);
+      // this.props.fetchComment(comment.id);
 
-      console.log("comment.username", comment.username);
+
+
+
       return(
         <div key={comment.id} className="single-comment-container">
           <div className="commenter">{comment.username}</div>
