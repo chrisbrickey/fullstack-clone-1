@@ -16,9 +16,7 @@ export const sessionReducer = (state = defaultState, action) => {
   switch(action.type) {
 
     case RECEIVE_CURRENT_USER:
-      console.log("inside reducer at RECEIVE_CURRENT_USER");
       const currentUser = action.currentUser;
-      console.log(currentUser);
 
       return merge({}, state, {
         currentUser: currentUser,
@@ -26,16 +24,10 @@ export const sessionReducer = (state = defaultState, action) => {
       });
 
     case RECEIVE_ERRORS:
-      console.log("inside reducer at RECEIVE_ERRORS");
       return merge({}, state, { errors: action.errors });
 
     case CLEAR_ERRORS:
-      console.log("inside reducer at CLEAR_ERRORS");
-      console.log(action.errors);
-      console.log(merge({}, state, { errors: null }));
-
       return merge({}, state, { errors: null });
-
 
     default:
       return state;
