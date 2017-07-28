@@ -35,7 +35,8 @@ import { createPhotoLike,
 import { ajaxCreateComment,
          ajaxDestroyComment } from './util/comment_api_util';
 
-
+import { createComment,
+          destroyComment } from './actions/comment_actions';
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -72,6 +73,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.ajaxCreateComment = ajaxCreateComment;
   window.ajaxDestroyComment = ajaxDestroyComment;
+
+  window.createComment = createComment;
+  window.destroyComment = destroyComment;
 
 
   let store;

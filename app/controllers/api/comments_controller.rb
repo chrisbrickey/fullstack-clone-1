@@ -19,7 +19,8 @@ end
 
 #should I be destroying by params[:id] or comment_params?
 def destroy
-  @comment = Comment.find_by(params[:id])
+  debugger
+  @comment = Comment.find_by(comment_params)
 
   if @comment.user_id === current_user.id
 
@@ -47,7 +48,7 @@ private
 
 #may need to change spelling of photo_id
 def comment_params
-  params.require(:comment).permit(:body, :photo_id)
+  params.require(:comment).permit(:body, :photo_id, :id)
 end
 
 end

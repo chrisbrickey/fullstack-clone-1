@@ -11,9 +11,10 @@ export const ajaxCreateComment = (comment) => {
   );
 };
 
-//could just pass in the comment's id instead of the whole comment
+//could just pass in the comment's id instead of the whole comment and grab it from params
 export const ajaxDestroyComment = (comment) => {
   console.log("in ajaxDestroyComment");
+  // console.log(comment);
 
   return(
     $.ajax({
