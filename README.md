@@ -7,25 +7,22 @@
 #### Detail View with Edit
 A graceful modal overlays each users profile page when one of their images is selected.  It shows details of the post and allows the creator of a post to edit the details with instant update across the application.
 
-![Demo login](http://res.cloudinary.com/calb3ars/image/upload/c_scale,w_600/v1490385294/Screen_Shot_2017-03-24_at_12.54.30_PM_oapdik.png)
+![Detail](https://res.cloudinary.com/dckkkjkuz/image/upload/v1501280102/view_edit_cxeurx.png)
 
 #### Drag & Drop Upload
 Users can upload with ease with drag/drop functionality.  They can also double-click in the same spot if they prefer to select a file from their directories.
 
-
+![Upload](https://res.cloudinary.com/dckkkjkuz/image/upload/v1501280085/drag_drop_tvz3tc.png)
 
 #### Likes & Comments
 The Like button toggles to indicate whether the current user has or has not liked a particular post and the sum total likes for each post updates live.  Comments can be added on-the-spot by simply typing and returning. They are instantly viewable by all users.  Post and delete buttons are also made available to the user for further guidance and ease-of-use.  Likes and comments are protected such that only the user initiating either a like or comment can reverse/delete it.
 
-
-
-
+![Likes_Comments](https://res.cloudinary.com/dckkkjkuz/image/upload/v1501280092/likes_comments_jtghyt.png)
 
 #### Secure Authentication
 Users are greeted with an intuitive login page that guides them to successful login with informative and friendly error messages.
 
-
-
+![Login](https://res.cloudinary.com/dckkkjkuz/image/upload/v1501280097/login_gt0iav.png)
 
 ## Technology
 
