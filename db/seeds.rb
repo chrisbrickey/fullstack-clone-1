@@ -9,6 +9,8 @@
 #no seeds leftover from previous builds
 User.destroy_all
 Photo.destroy_all
+Like.destroy_all
+Comment.destroy_all
 
 #will rollback all seeds if any issues; create! fails loudly so can get more information on errors
 ActiveRecord::Base.transaction do
@@ -87,8 +89,8 @@ ActiveRecord::Base.transaction do
 
   photo18 = Photo.create!(
     photo_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1501053595/swan_lake_inls3n.jpg',
-    caption: 'swans',
-    location: 'on a lake',
+    caption: '',
+    location: 'on swan lake',
     author_id: demo4.id
     )
 
@@ -218,6 +220,61 @@ ActiveRecord::Base.transaction do
     author_id: demo1.id
     )
 
+
+  likeX = Like.create!(user_id: demo5.id, likable_id: __, likable_type: 'Photo')
+  likeX = Like.create!(user_id: demo5.id, likable_id: __, likable_type: 'Photo')
+  likeX = Like.create!(user_id: demo5.id, likable_id: __, likable_type: 'Photo')
+  likeX = Like.create!(user_id: demo5.id, likable_id: __, likable_type: 'Photo')
+  likeX = Like.create!(user_id: demo5.id, likable_id: __, likable_type: 'Photo')
+  likeX = Like.create!(user_id: demo5.id, likable_id: __, likable_type: 'Photo')
+  likeX = Like.create!(user_id: demo5.id, likable_id: __, likable_type: 'Photo')
+  likeX = Like.create!(user_id: demo5.id, likable_id: __, likable_type: 'Photo')
+  likeX = Like.create!(user_id: demo5.id, likable_id: __, likable_type: 'Photo')
+  likeX = Like.create!(user_id: demo5.id, likable_id: __, likable_type: 'Photo')
+
+  likeX = Like.create!(user_id: demo4.id, likable_id: __, likable_type: 'Photo')
+  likeX = Like.create!(user_id: demo4.id, likable_id: __, likable_type: 'Photo')
+  likeX = Like.create!(user_id: demo4.id, likable_id: __, likable_type: 'Photo')
+  likeX = Like.create!(user_id: demo4.id, likable_id: __, likable_type: 'Photo')
+  likeX = Like.create!(user_id: demo4.id, likable_id: __, likable_type: 'Photo')
+  likeX = Like.create!(user_id: demo4.id, likable_id: __, likable_type: 'Photo')
+  likeX = Like.create!(user_id: demo4.id, likable_id: __, likable_type: 'Photo')
+  likeX = Like.create!(user_id: demo4.id, likable_id: __, likable_type: 'Photo')
+  likeX = Like.create!(user_id: demo4.id, likable_id: __, likable_type: 'Photo')
+  likeX = Like.create!(user_id: demo4.id, likable_id: __, likable_type: 'Photo')
+
+  likeX = Like.create!(user_id: demo3.id, likable_id: __, likable_type: 'Photo')
+  likeX = Like.create!(user_id: demo3.id, likable_id: __, likable_type: 'Photo')
+  likeX = Like.create!(user_id: demo3.id, likable_id: __, likable_type: 'Photo')
+  likeX = Like.create!(user_id: demo3.id, likable_id: __, likable_type: 'Photo')
+  likeX = Like.create!(user_id: demo3.id, likable_id: __, likable_type: 'Photo')
+  likeX = Like.create!(user_id: demo3.id, likable_id: __, likable_type: 'Photo')
+  likeX = Like.create!(user_id: demo3.id, likable_id: __, likable_type: 'Photo')
+  likeX = Like.create!(user_id: demo3.id, likable_id: __, likable_type: 'Photo')
+  likeX = Like.create!(user_id: demo3.id, likable_id: __, likable_type: 'Photo')
+  likeX = Like.create!(user_id: demo3.id, likable_id: __, likable_type: 'Photo')
+
+  likeX = Like.create!(user_id: demo2.id, likable_id: __, likable_type: 'Photo')
+  likeX = Like.create!(user_id: demo2.id, likable_id: __, likable_type: 'Photo')
+  likeX = Like.create!(user_id: demo2.id, likable_id: __, likable_type: 'Photo')
+  likeX = Like.create!(user_id: demo2.id, likable_id: __, likable_type: 'Photo')
+  likeX = Like.create!(user_id: demo2.id, likable_id: __, likable_type: 'Photo')
+  likeX = Like.create!(user_id: demo2.id, likable_id: __, likable_type: 'Photo')
+  likeX = Like.create!(user_id: demo2.id, likable_id: __, likable_type: 'Photo')
+  likeX = Like.create!(user_id: demo2.id, likable_id: __, likable_type: 'Photo')
+  likeX = Like.create!(user_id: demo2.id, likable_id: __, likable_type: 'Photo')
+  likeX = Like.create!(user_id: demo2.id, likable_id: __, likable_type: 'Photo')
+
+  likeX = Like.create!(user_id: demo1.id, likable_id: __, likable_type: 'Photo')
+  likeX = Like.create!(user_id: demo1.id, likable_id: __, likable_type: 'Photo')
+  likeX = Like.create!(user_id: demo1.id, likable_id: __, likable_type: 'Photo')
+  likeX = Like.create!(user_id: demo1.id, likable_id: __, likable_type: 'Photo')
+  likeX = Like.create!(user_id: demo1.id, likable_id: __, likable_type: 'Photo')
+  likeX = Like.create!(user_id: demo1.id, likable_id: __, likable_type: 'Photo')
+  likeX = Like.create!(user_id: demo1.id, likable_id: __, likable_type: 'Photo')
+  likeX = Like.create!(user_id: demo1.id, likable_id: __, likable_type: 'Photo')
+  likeX = Like.create!(user_id: demo1.id, likable_id: __, likable_type: 'Photo')
+  likeX = Like.create!(user_id: demo1.id, likable_id: __, likable_type: 'Photo')
 
 
 
