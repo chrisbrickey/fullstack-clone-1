@@ -1,10 +1,14 @@
 import merge from 'lodash/merge';
+
 import { RECEIVE_ALL_PHOTOS,
          RECEIVE_SINGLE_PHOTO,
          REMOVE_PHOTO } from '../actions/photo_actions';
 
 import { RECEIVE_PHOTO_LIKE,
          REMOVE_PHOTO_LIKE } from '../actions/photo_like_actions';
+
+import { RECEIVE_COMMENT,
+         REMOVE_COMMENT } from '../actions/comment_actions';
 
 
 const defaultState = Object.freeze({
@@ -64,13 +68,22 @@ export const photoReducer = (state = defaultState, action) => {
       newState = merge({}, state);
       const anotherPhoto = newState.byId[action.photoLike.likableId];
       anotherPhoto.likesCount -= 1;
-
       anotherPhoto.usersWhoLike.splice(anotherPhoto.usersWhoLike.indexOf(action.photoLike.userId), 1)
-
       anotherPhoto.usersWhoLike.push(action.photoLike.userId);
-
       anotherPhoto.likedByCurrentUser = false;
+      return newState;
 
+
+    case RECEIVE_COMMENT:
+      console.log("inside photo reducer at RECEIVE_COMMENT");
+      console.log("action", action);
+
+      newState = merge({}, state);
+      console.log("newState at 242", newState.byId[242]);
+
+      const targetPhoto = newState.byId[action.comment.photoId];
+      console.log("targetPhoto", targetPhoto);
+      targetPhoto.comments.push(action.comment);
       return newState;
 
 
