@@ -103,27 +103,17 @@ class Home extends React.Component {
                             </div>
 
                             <div className="caption-container">
-                                <div id="info-caption" >{photo.username}</div>
+                                <div>{photo.username}</div>
                                     <div id="caption-spacer"></div>
-                                <div id="info-caption" >{photo.caption}</div>
+                                <div id="info-caption">{photo.caption}</div>
                             </div>
 
 
-
-                            <div id="comment-spacer">
-                                comments will go here if there are any
-                            </div>
-
-
-
-                            <div id="info-uploadDate">{this.capitalize(photo.uploadDate)} AGO</div>
-
+                            <div id="comment-spacer"></div>
 
                             <div id="line"></div>
 
-
-                            <div id="info-addComment">Add a comment...</div>
-
+                            <div id="info-uploadDate">{this.capitalize(photo.uploadDate)} AGO</div>
 
 
                         </div>

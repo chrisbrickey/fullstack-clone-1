@@ -57,6 +57,10 @@ main {
   // margin: 5px 50px 5px 50px;
 }
 
+
+
+//don't know if i need below.....
+
 #info-username {
   font-size: 110%;
   font-weight: bold;
@@ -78,6 +82,14 @@ main {
   font-weight: bold;
 }
 
+#caption {
+  color: black;
+  font-weight: bold;
+  padding: 5px;
+}
+
+//don't know if i need above.....
+
 
 
 .feedItem-container > img {
@@ -95,15 +107,21 @@ main {
 }
 
 .feed-bottom-inner {
-  background-color: blue;
+  // background-color: blue;
   display: flex;
   flex-direction: column;
   font-size: 115%;
   padding: 5px;
 }
 
+#heart-icon {
+  width: 24px;
+  height: 22px;
+  // background-color: grey;
+}
+
 .likes-count-container {
-  background-color: pink;
+  // background-color: pink;
   display: flex;
   flex-direction: row;
   justify-content: left;
@@ -114,7 +132,7 @@ main {
 }
 
 .caption-container {
-  background-color: lightblue;
+  // background-color: lightblue;
   display: flex;
   flex-direction: row;
   justify-content: left;
@@ -124,25 +142,15 @@ main {
   padding: 3px 0px 3px 0px;
 }
 
-#heart-icon {
-  width: 24px;
-  height: 22px;
-  background-color: grey;
-}
-
 #caption-spacer {
-  background-color: red;
-  width: 3px;
-  height: 10px;
-  padding: 5px;
+  // background-color: red;
+  width: 6px;
+  height: 6px;
 }
 
-#caption {
-  color: black;
-  font-weight: bold;
-  padding: 5px;
+#info-caption {
+  font-weight: 200;
 }
-
 
 
 
@@ -153,8 +161,8 @@ main {
 }
 
 #comment-spacer {
-  background-color: orange;
-  height: 40px;
+  // background-color: orange;
+  // height: 20px;
 
   margin: 3px 0px 3px 0px;
   padding: 3px 0px 3px 0px;
@@ -163,18 +171,17 @@ main {
 }
 
 #info-uploadDate {
-  background-color: purple;
+  // background-color: purple;
 
   color: $instagram-grey;
   font-size: 80%;
-  font-weight: bold;
   margin: 5px 0px 5px 0px;
   padding: 5px 0px 5px 0px;
 
 }
 
 #info-addComment {
-  background-color: brown;
+  // background-color: brown;
   color: $instagram-grey;
   font-weight: bold;
 
