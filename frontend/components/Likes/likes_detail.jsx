@@ -63,6 +63,13 @@ class LikesDetail extends React.Component {
 
   render() {
 
+    let likesWord;
+    if (this.props.thisPhoto.likesCount === 1) {
+      likesWord = "like";
+    } else {
+      likesWord = "likes";
+    }
+
     return(
 
         <div className="innerLikeContainer">
@@ -73,7 +80,7 @@ class LikesDetail extends React.Component {
               <div className="likes-count-container">
                   <div id="info-likes" className="item-at-bottom">{this.props.thisPhoto.likesCount}</div>
                       <div id="caption-spacer"></div>
-                  <div id="info-likes" className="item-at-bottom">likes</div>
+                  <div id="info-likes" className="item-at-bottom">{likesWord}</div>
               </div>
 
 
