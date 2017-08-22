@@ -30,6 +30,7 @@ insta-étoile is a single-page web application that utilizes a Ruby on Rails bac
 
 - [Frontend technology][frontend]
 - [Backend technology][backend]
+
 [frontend]: docs/frontend.md
 [backend]: docs/backend.md
 
