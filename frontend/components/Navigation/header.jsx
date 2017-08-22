@@ -19,7 +19,7 @@ class HeaderXXX extends React.Component {
             <div className="left-header">
                 <Link className="profile-link" to={`/`}>
                     <img
-                        src={'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500614262/camera_jmhdl8.png'}
+                        src={'https://res.cloudinary.com/dckkkjkuz/image/upload/v1503432974/instagram-logo-grey_g4rmfr.png'}
                         alt="Instagram Camera Icon"
                         className="camera-icon"
                     />
@@ -29,7 +29,7 @@ class HeaderXXX extends React.Component {
 
                   <Link className="profile-link" to={`/`}>
                       <img
-                          src={'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500659742/InstagramLogo_kgliwu.png'}
+                          src={'https://res.cloudinary.com/dckkkjkuz/image/upload/v1503431792/billabong_font_crop1_xhjdzw.png'}
                           alt="Instagram Logo"
                           className="header-logo"
                       />
