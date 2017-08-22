@@ -131,7 +131,7 @@ class Signup extends React.Component {
                             <section className="auth-form-contents">
 
                                 <img
-                                  src={'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500659742/InstagramLogo_kgliwu.png'}
+                                  src={'https://res.cloudinary.com/dckkkjkuz/image/upload/v1503431792/billabong_font_crop1_xhjdzw.png'}
                                   alt="Instagram Logo"
                                   className="login-logo"/>
 
