@@ -17,18 +17,9 @@ class FooterXXX extends React.Component {
           <section className="footer-section">
               <footer>
                   <ul className="navLinks">
-                      <li>ABOUT US</li>
-                      <li>SUPPORT</li>
-                      <li>BLOG</li>
-                      <li>PRESS</li>
-                      <li>API</li>
-                      <li>JOBS</li>
-                      <li>PRIVACY</li>
-                      <li>TERMS</li>
-                      <li>DIRECTORY</li>
-                      <li>LANGUAGE</li>
-                      <li>{"      "}</li>
-                      <li id="copyright"> 2017 CHRISBRICKEY</li>
+                      <li>
+                          <a id="copyright" href="http://www.chrisbrickey.com">WWW.CHRISBRICKEY.COM</a>
+                      </li>
                   </ul>
               </footer>
           </section>

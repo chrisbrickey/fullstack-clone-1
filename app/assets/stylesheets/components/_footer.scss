@@ -50,5 +50,8 @@ footer {
 }
 
 #copyright {
-  color: grey;
+  // color: grey;
+  color: inherit;
+  text-decoration: none;
+  letter-spacing: 1px;
 }
