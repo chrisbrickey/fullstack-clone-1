@@ -18,7 +18,7 @@ class Upload extends React.Component {
       photo: {
         caption: "",
         location: "",
-        photo_url: "placeholder"
+        photo_url: "z"
       },
     };
 
@@ -44,7 +44,7 @@ class Upload extends React.Component {
 
         }
 
-        if (response.body.secure_url !== 'placeholder') {
+        if (response.body.secure_url !== 'z') {
           this.setState({ photo: { photo_url: response.body.secure_url}});
         }
 
@@ -64,7 +64,7 @@ class Upload extends React.Component {
 
     event.preventDefault();
 
-    let newPhoto = this.state.photo;
+    // let newPhoto = this.state.photo;
     this.props.createPhoto({ photo: testPhoto })
       .then(
         (()=> {
@@ -102,7 +102,8 @@ class Upload extends React.Component {
                                     accept="image/*"
                                     onDrop={this.onImageDrop.bind(this)}>
                                     <div className="insideDropZone">
-                                        Drag/drop an image here or double-click to select a file to upload
+                                        <div>Required:</div>
+                                        <div>Drag/drop an image here or double-click to select a file to upload</div>
                                     </div>
                                 </Dropzone>
                             </div>
@@ -150,7 +151,7 @@ class Upload extends React.Component {
 
                       <section className="newPhotoBox">
                       <div>
-                          {this.state.photo.photo_url === 'placeholder' ? null :
+                          {this.state.photo.photo_url === 'z' ? null :
                               (<div>
                                   <img
                                     src={this.state.photo.photo_url}

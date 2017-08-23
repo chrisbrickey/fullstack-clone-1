@@ -1,6 +1,9 @@
 class Photo < ApplicationRecord
   validates :photo_url, :author_id, presence: true
 
+  validates :photo_url,
+              length: { minimum: 3, message: "photo required" }
+
   belongs_to :author,
     primary_key: :id,
     foreign_key: :author_id,
