@@ -43,11 +43,11 @@ ActiveRecord::Base.transaction do
 
 
 
-  photo24 = Photo.create!(
+  photo23 = Photo.create!(
     photo_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1501092784/ftbnu6b6jw4qonu1hqrd.jpg',
     caption: '',
     location: 'beach',
-    author_id: demo5.id
+    author_id: demo3.id
     )
 
 
@@ -56,14 +56,14 @@ ActiveRecord::Base.transaction do
     photo_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1501086228/hw6ozj3mdelhn5wpsn2x.jpg',
     caption: 'sway',
     location: '',
-    author_id: demo5.id
+    author_id: demo2.id
     )
 
   photo21 = Photo.create!(
     photo_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1501053343/backbend_vh5ltl.jpg',
     caption: 'flexing',
     location: '',
-    author_id: demo5.id
+    author_id: demo1.id
     )
 
   photo20 = Photo.create!(
@@ -86,28 +86,28 @@ ActiveRecord::Base.transaction do
     photo_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1501053595/swan_lake_inls3n.jpg',
     caption: '',
     location: 'on swan lake',
-    author_id: demo4.id
+    author_id: demo3.id
     )
 
   photo17 = Photo.create!(
     photo_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500771579/dark_red_l5qojp.jpg',
     caption: 'superhero',
     location: '',
-    author_id: demo4.id
+    author_id: demo2.id
     )
 
   photo16 = Photo.create!(
     photo_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1501053260/leap_z9x4xf.jpg',
     caption: 'momentum',
     location: '',
-    author_id: demo4.id
+    author_id: demo1.id
     )
 
   photo15 = Photo.create!(
     photo_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500771428/coral_nvemtt.jpg',
     caption: 'shape',
     location: '',
-    author_id: demo4.id
+    author_id: demo5.id
     )
 
 
@@ -116,7 +116,7 @@ ActiveRecord::Base.transaction do
     photo_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1501257012/wallpaperStudio_smaller_scnd7x.png',
     caption: 'love the view',
     location: 'the studio',
-    author_id: demo3.id
+    author_id: demo4.id
     )
 
   photo13 = Photo.create!(
@@ -130,21 +130,21 @@ ActiveRecord::Base.transaction do
     photo_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500771634/sunset_oqve3y.jpg',
     caption: 'grande sunset',
     location: '',
-    author_id: demo3.id
+    author_id: demo2.id
     )
 
   photo11 = Photo.create!(
     photo_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500933186/fif8afswdavqfxnwomtu.jpg',
     caption: '',
     location: '',
-    author_id: demo3.id
+    author_id: demo1.id
     )
 
   photo10 = Photo.create!(
     photo_url: ' https://res.cloudinary.com/dckkkjkuz/image/upload/v1501140409/male3_tljxqb.jpg',
     caption: 'wind up',
     location: '',
-    author_id: demo3.id
+    author_id: demo5.id
     )
 
 
@@ -153,14 +153,14 @@ ActiveRecord::Base.transaction do
     photo_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1501140370/d4d1f242a23027cf871a355974e9a079_jk55ia.jpg',
     caption: 'magenta',
     location: '',
-    author_id: demo2.id
+    author_id: demo4.id
     )
 
   photo8 = Photo.create!(
     photo_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1501070203/rxoiqsrwolgmdfxkmjro.jpg',
     caption: 'in motion',
     location: '',
-    author_id: demo2.id
+    author_id: demo3.id
     )
 
   photo7 = Photo.create!(
@@ -174,7 +174,7 @@ ActiveRecord::Base.transaction do
     photo_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1501054164/couple_izifdx.jpg',
     caption: 'love',
     location: '',
-    author_id: demo2.id
+    author_id: demo1.id
     )
 
 
@@ -182,7 +182,7 @@ ActiveRecord::Base.transaction do
     photo_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1501138480/coat-sml_yrydyv.png',
     caption: 'en l\'air',
     location: '',
-    author_id: demo2.id
+    author_id: demo5.id
     )
 
 
@@ -191,21 +191,21 @@ ActiveRecord::Base.transaction do
     photo_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1501053292/silouette_q78lo5.jpg',
     caption: 'profile',
     location: 'on stage',
-    author_id: demo1.id
+    author_id: demo4.id
     )
 
   photo3 = Photo.create!(
     photo_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1501257022/mural_smaller_rsvfhf.png',
     caption: 'urban inspiration',
     location: '',
-    author_id: demo1.id
+    author_id: demo3.id
     )
 
   photo2 = Photo.create!(
     photo_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500771420/infinity_neg30m.jpg',
     caption: 'infinitely beautiful',
     location: '',
-    author_id: demo1.id
+    author_id: demo2.id
     )
 
   photo1 = Photo.create!(
@@ -246,7 +246,7 @@ ActiveRecord::Base.transaction do
   like26 = Like.create!(user_id: demo3.id, likable_id: photo15.id, likable_type: 'Photo')
   like27 = Like.create!(user_id: demo3.id, likable_id: photo19.id, likable_type: 'Photo')
   like28 = Like.create!(user_id: demo3.id, likable_id: photo22.id, likable_type: 'Photo')
-  like29 = Like.create!(user_id: demo3.id, likable_id: photo24.id, likable_type: 'Photo')
+  like29 = Like.create!(user_id: demo3.id, likable_id: photo23.id, likable_type: 'Photo')
   like30 = Like.create!(user_id: demo3.id, likable_id: photo18.id, likable_type: 'Photo')
 
   like31 = Like.create!(user_id: demo2.id, likable_id: photo2.id, likable_type: 'Photo')
@@ -258,7 +258,7 @@ ActiveRecord::Base.transaction do
   like37 = Like.create!(user_id: demo2.id, likable_id: photo14.id, likable_type: 'Photo')
   like38 = Like.create!(user_id: demo2.id, likable_id: photo17.id, likable_type: 'Photo')
   like39 = Like.create!(user_id: demo2.id, likable_id: photo20.id, likable_type: 'Photo')
-  like40 = Like.create!(user_id: demo2.id, likable_id: photo24.id, likable_type: 'Photo')
+  like40 = Like.create!(user_id: demo2.id, likable_id: photo23.id, likable_type: 'Photo')
 
   like41 = Like.create!(user_id: demo1.id, likable_id: photo2.id, likable_type: 'Photo')
   like42 = Like.create!(user_id: demo1.id, likable_id: photo3.id, likable_type: 'Photo')
