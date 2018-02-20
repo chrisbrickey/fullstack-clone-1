@@ -64,6 +64,7 @@ group :development do
   #LiveReload speeds up development by refreshing browser every time a file saves.
   gem 'guard-livereload', '~> 2.5', require: false
   gem 'rack-livereload'
+  gem 'guard-rspec', require: false
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
