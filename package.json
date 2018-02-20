@@ -39,13 +39,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chrisbrickey/fullstack-clone-1.git"
+    "url": "git+https://github.com/chrisbrickey/insta-etoile.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/chrisbrickey/fullstack-clone-1/issues"
+    "url": "https://github.com/chrisbrickey/insta-etoile/issues"
   },
-  "homepage": "https://github.com/chrisbrickey/fullstack-clone-1#readme"
+  "homepage": "https://github.com/chrisbrickey/insta-etoile#readme"
 }

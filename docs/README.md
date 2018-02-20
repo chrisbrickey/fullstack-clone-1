@@ -1,9 +1,9 @@
-# Insta-Étoile 
+# Insta-Étoile
 
 This visual platform enables performing artists (ballet dancers to start) to share and showcase photos and videos of their craft while building a community of supporters and followers. The initial release will be an Instagram clone. The longer-term vision is to further the careers of performing artists by providing robust user profiles that are much more immersive than sites like LinkedIn and AngelList.
 
 [Heroku](https://lit-mesa-39574.herokuapp.com)
-[Github](https://github.com/chrisbrickey/fullstack-clone-1)
+[Github](https://github.com/chrisbrickey/insta-etoile)
 [Trello](https://trello.com/b/uhBuM9rx/etoile-working-title)
 
 
