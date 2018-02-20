@@ -2,6 +2,7 @@
 
 [insta-étoile](www.insta-étoile.com) is a full-stack web app inspired by Instagram.  Danseur Étoile (literally 'star dancer' in French) is the highest rank within the Paris Opera Ballet. insta-étoile provides a visual platform to enable performing artists of all kinds to instantly share and showcase photos of their craft while building a community of supporters and followers. insta-étoile will further the careers of performing artists by broadcasting their experience in a beautiful and digestible format, linking robust immersive profiles with an artist's community and following.
 
+
 ## Features Highlight
 
 #### Detail View with Edit
@@ -24,15 +25,17 @@ Users are greeted with an intuitive login page that guides them to successful lo
 
 ![Login](https://res.cloudinary.com/dckkkjkuz/image/upload/v1501280097/login_gt0iav.png)
 
+
 ## Technology
 
-insta-étoile is a single-page web application that utilizes a Ruby on Rails backend and React.js/Redux frontend with various dependencies.
+insta-étoile is a single-page web application that utilizes a Rails5 backend and React/Redux frontend with various dependencies.
 
 - [Frontend technology][frontend]
 - [Backend technology][backend]
 
 [frontend]: docs/frontend.md
 [backend]: docs/backend.md
+
 
 ## Project Design
 
@@ -48,6 +51,22 @@ insta-étoile is a single-page web application that utilizes a Ruby on Rails bac
 [sample-state]: docs/sample-state.md
 [api-endpoints]: docs/api-endpoints.md
 [schema]: docs/schema.md
+
+
+## How to Run Locally
+1. Clone this repo
+2. Change your local Ruby version to match the version specified in the Gemfile
+3. Install ruby gems
+  - `bundle install`
+4. Install node modules
+  - `npm install`
+5. In one terminal window, run the rails server
+  - `rails s`
+6. In a second terminal window, run webpack to manage frontend assets
+  - `webpack --watch`
+7. In a third terminal window, activate hot reload to make development more efficient
+  - `guard`
+
 
 ## Future Development
 
