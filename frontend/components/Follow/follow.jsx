@@ -32,8 +32,14 @@ class Follow extends React.Component {
           return (
               <li key={userObject.id} className="feedItem-container">
                   <div className="subcontainer">
-                      <div id="info-username">{userObject.username}</div>
-                      <div id="info-tagline">{userObject.tagline}</div>
+                      <img className="profile-photo"
+                          src={userObject.profileImgUrl}
+                          alt="user photo"
+                      />
+
+                      <div className="info-username">{userObject.username}</div>
+                      <div className="info-tagline">{userObject.tagline}</div>
+                      <div className="info-followerCount"># of Followers: {userObject.followersCount}</div>
                   </div>
               </li>
           );
