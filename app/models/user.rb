@@ -40,6 +40,16 @@ class User < ApplicationRecord
     class_name: "Follow",
     dependent: :destroy #only use dependent destroy if it points to the Follow table; DONT use it if pointing through to the User table
 
+  has_many :users_that_i_follow,
+      through: :follower_records,
+      source: :followed_user
+
+  has_many :users_who_follow_me,
+    through: :followed_records,
+    source: :follower_user
+
+
+
 
   attr_reader :password
 
