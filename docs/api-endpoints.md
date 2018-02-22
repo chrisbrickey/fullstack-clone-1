@@ -50,8 +50,8 @@
 
 ### Follows
 
-- `POST /api/users/:user_id/follows` - add a follow to a user
-- `DELETE /api/follows/:follow_id` - remove a follow from a user
+- `POST /api/users/:user_id/follows` - add a follow record to a user (:user_id corresponds to follower_id)
+- `DELETE /api/follows/:follow_id` - remove a follow record
 
 
 ### Bonus
