@@ -48,11 +48,14 @@ class HeaderXXX extends React.Component {
                     />
                 </Link>
 
-                <img
-                    src={'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500614263/heart_sqbqyf.svg'}
-                    alt="likes and follows"
-                    className="header-icons"
-                />
+                <Link className="profile-link" to="/follow">
+                    <img
+                        src={'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500614263/heart_sqbqyf.svg'}
+                        alt="likes and follows"
+                        className="header-icons"
+                    />
+                </Link>
+
 
               <Link className="profile-link" to={`users/${this.props.userId}`}>
                   <img
