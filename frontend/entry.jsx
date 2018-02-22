@@ -42,9 +42,9 @@ import { fetchComment,
 
 
  //follow development
- import { ajaxFetchAllFollows,
-          ajaxCreateFollow,
-          ajaxDestroyFollow } from './util/follow_api_util';
+import { ajaxFetchAllFollows,
+         ajaxCreateFollow,
+         ajaxDestroyFollow } from './util/follow_api_util';
 
 import { createFollow,
          destroyFollow } from './actions/follow_actions';
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // window.updatePhoto = updatePhoto;
   // window.destroyPhoto = destroyPhoto;
   //
-  // window.ajaxFetchAllUsers = ajaxFetchAllUsers;
+  window.ajaxFetchAllUsers = ajaxFetchAllUsers;
   // window.ajaxFetchSingleUser = ajaxFetchSingleUser;
   //
   // window.ajaxCreatePhotoLike = ajaxCreatePhotoLike;
