@@ -10,7 +10,7 @@ Rails.application.routes.draw do
       resource :like, only: %i[create destroy]
     end
 
-    resources :follows, only: %i[destroy]
+    resources :follows, only: %i[index destroy] #remove index in final version
 
     resources :photos, only: %i[index show create update destroy], shallow: true do
       resources :comments, only: %i[show create]

@@ -1,5 +1,9 @@
 class Api::FollowsController < ApplicationController
 
+  def index #remove from final version
+    @follows = Follow.all
+  end
+
   def create
     @follow = Follow.new(follow_params)
     @follow.follower_id = current_user.id
