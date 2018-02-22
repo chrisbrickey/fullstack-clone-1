@@ -46,6 +46,9 @@ import { fetchComment,
           ajaxCreateFollow,
           ajaxDestroyFollow } from './util/follow_api_util';
 
+import { createFollow,
+         destroyFollow } from './actions/follow_actions';
+
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -89,6 +92,8 @@ document.addEventListener('DOMContentLoaded', () => {
   window.ajaxFetchAllFollows = ajaxFetchAllFollows;
   window.ajaxCreateFollow = ajaxCreateFollow;
   window.ajaxDestroyFollow = ajaxDestroyFollow;
+  window.createFollow = createFollow;
+  window.destroyFollow = destroyFollow;
 
 
   let store;
