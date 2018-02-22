@@ -58,6 +58,14 @@ class User < ApplicationRecord
     self.photos.length
   end
 
+  def followers_count
+    self.followed_records.length
+  end
+
+  def following_count
+    self.follower_records.length
+  end
+
   def self.find_by_credentials(username, password)
     user = User.find_by_username(username)
     return nil if user.nil?
