@@ -18,17 +18,28 @@ class User < ApplicationRecord
 
   validates :password_digest, presence: true
 
+
   has_many :photos,
     primary_key: :id,
     foreign_key: :author_id,
     class_name: "Photo"
 
-
-
   has_many :likes      #no route specified for this because the like is actually made onto a photo, comment, etc. (see polymorphic structure of Likes table)
+
   has_many :comments   #no route specified for this because the comment is actually made onto a photo, user_id foreign key creates association
-  has_many :followers  #other users that are following this user
-  has_many :followings #other users that this user is following
+
+  has_many :follower_records, #follows (records on join table) where this user is following other users
+    primary_key: :id,
+    foreign_key: :follower_id,
+    class_name: "Follow",
+    dependent: :destroy #only use dependent destroy if it points to the Follow table; DONT use it if pointing through to the User table
+
+  has_many :followed_records, #follows (records on join table) where other users are following this user
+    primary_key: :id,
+    foreign_key: :following_id,
+    class_name: "Follow",
+    dependent: :destroy #only use dependent destroy if it points to the Follow table; DONT use it if pointing through to the User table
+
 
   attr_reader :password
 
