@@ -20,7 +20,7 @@ class HeaderXXX extends React.Component {
                 <Link className="profile-link" to={`/`}>
                     <img
                         src={'https://res.cloudinary.com/dckkkjkuz/image/upload/v1503432974/instagram-logo-grey_g4rmfr.png'}
-                        alt="Instagram Camera Icon"
+                        alt="camera icon"
                         className="camera-icon"
                     />
                 </Link>
@@ -30,7 +30,7 @@ class HeaderXXX extends React.Component {
                   <Link className="profile-link" to={`/`}>
                       <img
                           src={'https://res.cloudinary.com/dckkkjkuz/image/upload/v1503431792/billabong_font_crop1_xhjdzw.png'}
-                          alt="Instagram Logo"
+                          alt="insta-étoile logo"
                           className="header-logo"
                       />
                   </Link>
@@ -51,7 +51,7 @@ class HeaderXXX extends React.Component {
                 <Link className="profile-link" to="/follow">
                     <img
                         src={'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500614263/heart_sqbqyf.svg'}
-                        alt="likes and follows"
+                        alt="follow users"
                         className="header-icons"
                     />
                 </Link>
@@ -60,7 +60,7 @@ class HeaderXXX extends React.Component {
               <Link className="profile-link" to={`users/${this.props.userId}`}>
                   <img
                       src={'https://res.cloudinary.com/dckkkjkuz/image/upload/v1500614263/user_nu2dc8.svg'}
-                      alt="user profile"
+                      alt="my profile"
                       className="header-icons"
                   />
               </Link>
