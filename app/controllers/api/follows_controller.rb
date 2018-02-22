@@ -1,7 +1,7 @@
 class Api::FollowsController < ApplicationController
 
   def create
-    @follow = Follow.new(photo_params)
+    @follow = Follow.new(follow_params)
     @follow.follower_id = current_user.id
 
     if @follow.save
@@ -24,7 +24,7 @@ class Api::FollowsController < ApplicationController
   private
 
   def follow_params
-    params.require(:photo).permit(
+    params.require(:follow).permit(
       :id,
       :following_id)
   end
