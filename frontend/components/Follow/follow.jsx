@@ -16,18 +16,49 @@ class Follow extends React.Component {
 
   render() {
 
+    const userFeedObject = this.props.users.byId;
+    let userList = null;
+
+    if (userFeedObject) {
+      let userFeedArray = Object.values(userFeedObject);
+
+      userList = userFeedArray.map( (userObject) => {
+        if (userObject.id === this.props.currentUser.id) {
+          return (
+            <li key={userObject.id} className="empty-feedItem-container">
+            </li>
+          );
+        } else {
+          return (
+              <li key={userObject.id} className="feedItem-container">
+                  <div className="subcontainer">
+                      <div id="info-username">{userObject.username}</div>
+                      <div id="info-tagline">{userObject.tagline}</div>
+                  </div>
+              </li>
+          );
+        }
+
+      });
+
+    }
+
+
     return (
       <div className="follow-page-container">
+
           <HeaderXXX userId={this.props.currentUser.id}/>
 
           <main className="follow-sub-container">
               <div className="sub-sub-container">
-
-
+                  <ul className="followFeed">
+                    {userList}
+                  </ul>
               </div>
             </main>
 
           <FooterXXX/>
+
       </div>
 
     );
