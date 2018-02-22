@@ -32,13 +32,13 @@ class User < ApplicationRecord
     primary_key: :id,
     foreign_key: :follower_id,
     class_name: "Follow",
-    dependent: :destroy #only use dependent destroy if it points to the Follow table; DONT use it if pointing through to the User table
+    dependent: :destroy #ensures that following relationships are deleted (only from Follows table) when the user that is following another is destroyed
 
   has_many :followed_records, #follows (records on join table) where other users are following this user
     primary_key: :id,
     foreign_key: :following_id,
     class_name: "Follow",
-    dependent: :destroy #only use dependent destroy if it points to the Follow table; DONT use it if pointing through to the User table
+    dependent: :destroy #ensures that following relationships are deleted (only from Follows table) when the user that is being following by another is destroyed
 
   has_many :users_that_i_follow,
       through: :follower_records,
@@ -47,8 +47,6 @@ class User < ApplicationRecord
   has_many :users_who_follow_me,
     through: :followed_records,
     source: :follower_user
-
-
 
 
   attr_reader :password
