@@ -14,6 +14,8 @@ import { ajaxFetchAllPhotos,
 import {ajaxFetchAllUsers,
         ajaxFetchSingleUser } from './util/user_api_util';
 
+import { fetchAllUsers } from './actions/user_actions';
+
 import { receiveAllPhotos,
          receiveSinglePhoto,
          fetchAllPhotos,
@@ -75,6 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
   //
   window.ajaxFetchAllUsers = ajaxFetchAllUsers;
   // window.ajaxFetchSingleUser = ajaxFetchSingleUser;
+  window.fetchAllUsers = fetchAllUsers;
   //
   // window.ajaxCreatePhotoLike = ajaxCreatePhotoLike;
   // window.ajaxDestroyPhotoLike = ajaxDestroyPhotoLike;
