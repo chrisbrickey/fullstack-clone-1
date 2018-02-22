@@ -36,9 +36,9 @@
         profileImgUrl: 'xx.png',
         tagline: "xx",
         followersCount: 10
-        followers: [2, ...],
+        usersWhoFollowMe: [2, ...],
         followingCount: 11
-        following: [2, ...],
+        usersWhoIFollow: [2, ...],
         photosCount: 15,
         photos: [2, ...]
       },
