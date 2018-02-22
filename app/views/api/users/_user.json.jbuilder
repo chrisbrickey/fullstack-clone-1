@@ -1,4 +1,9 @@
-json.extract! user, :id, :username, :profile_img_url, :name, :tagline, :photos
+json.id                 user.id
+json.username           user.username
+json.profileImgUrl      user.profile_img_url
+json.name               user.name
+json.tagline            user.tagline
+json.photos             user.photos
 
 #insert something similar to below for users to facilitate following
 # json.followersCount         user.count_of_followers
