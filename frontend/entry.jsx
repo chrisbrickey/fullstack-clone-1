@@ -41,6 +41,12 @@ import { fetchComment,
          destroyComment } from './actions/comment_actions';
 
 
+ //follow development
+ import { ajaxFetchAllFollows,
+          ajaxCreateFollow,
+          ajaxDestroyFollow } from './util/follow_api_util';
+
+
 document.addEventListener('DOMContentLoaded', () => {
 
   // window.ajaxSignup = ajaxSignup;
@@ -79,6 +85,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // window.fetchComment = fetchComment;
   // window.createComment = createComment;
   // window.destroyComment = destroyComment;
+
+  window.ajaxFetchAllFollows = ajaxFetchAllFollows;
+  window.ajaxCreateFollow = ajaxCreateFollow;
+  window.ajaxDestroyFollow = ajaxDestroyFollow;
 
 
   let store;
