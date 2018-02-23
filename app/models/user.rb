@@ -48,7 +48,6 @@ class User < ApplicationRecord
     through: :followed_records,
     source: :follower_user
 
-
   attr_reader :password
 
   after_initialize :ensure_session_token
@@ -64,6 +63,20 @@ class User < ApplicationRecord
 
   def following_count
     self.follower_records.length
+  end
+
+  def users_who_like_my_photos
+    user_ids_who_like = []
+    self.photos.each do |photo|
+      photo.users_who_like.each do |user|
+        user_ids_who_like << user.id
+      end
+    end
+    user_ids_who_like.uniq
+  end
+
+  def likers_count
+    users_who_like_my_photos.length
   end
 
   def self.find_by_credentials(username, password)
