@@ -11,8 +11,10 @@ json.followersCount     user.followers_count
 json.followingCount     user.following_count
 
 # change this to return array of user_ids to minimize info sent to frontend
-json.usersWhoFollowMe   user.users_who_follow_me
-json.usersWhoIFollow    user.users_that_i_follow
-json.booleanT           true
-json.booleanF           false
-json.followedByCurrentUser  logged_in? && Follow.exists?(follower_id: current_user.id, following_id: user.id)
+json.usersWhoFollowMe         user.users_who_follow_me
+json.usersWhoIFollow          user.users_that_i_follow
+json.followedByCurrentUser    logged_in? && Follow.exists?(follower_id: current_user.id, following_id: user.id)
+
+# json.usersWhoLike             user.users_who_like_my_photos
+# json.likersCount              user.likers_count
+json.likesCurrentUser         logged_in? && current_user.users_who_like_my_photos.include?(user.id)
