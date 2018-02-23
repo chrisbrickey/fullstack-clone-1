@@ -83,7 +83,7 @@ class Upload extends React.Component {
 
 
           <main className="upload-sub-container">
-              <div className="sub-sub-container">
+              <div className="upload-sub-sub-container">
 
 
                   <div className="upload-form-container">
