@@ -106,16 +106,21 @@ class Follow extends React.Component {
 
 
     return (
-      <div className="follow-page-container">
+      <div id="follow-page-container">
 
           <HeaderXXX userId={this.props.currentUser.id}/>
 
-          <main className="follow-sub-container">
-              <div className="sub-sub-container">
-                  <ul className="feedItem-container">
+          <main id="follow-sub-container">
+
+              <div id="left-side">
+              </div>
+
+              <div id="right-side">
+                  <ul id="follow-list-container">
                     {userList}
                   </ul>
               </div>
+
             </main>
 
           <FooterXXX/>
