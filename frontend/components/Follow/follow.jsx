@@ -29,20 +29,37 @@ class Follow extends React.Component {
             </li>
           );
         } else {
-          return (
-              <li key={userObject.id} className="feedItem-container">
-                  <div className="subcontainer">
-                      <img className="profile-photo"
-                          src={userObject.profileImgUrl}
-                          alt="user photo"
-                      />
-
-                      <div className="info-username">{userObject.username}</div>
-                      <div className="info-tagline">{userObject.tagline}</div>
-                      <div className="info-followerCount"># of Followers: {userObject.followersCount}</div>
-                  </div>
-              </li>
-          );
+          if (userObject.followedByCurrentUser === true) {
+            return (
+                <li key={userObject.id} className="feedItem-container">
+                    <div className="subcontainer">
+                        <img className="profile-photo"
+                            src={userObject.profileImgUrl}
+                            alt="user photo"
+                        />
+                        <div className="info-username">{userObject.username}</div>
+                        <div className="info-tagline">{userObject.tagline}</div>
+                        <div className="info-followerCount"># of Followers: {userObject.followersCount}</div>
+                        <div className="info-followedbyCurrent">Followed by current user: True</div>
+                    </div>
+                </li>
+            );
+          } else {
+            return (
+                <li key={userObject.id} className="feedItem-container">
+                    <div className="subcontainer">
+                        <img className="profile-photo"
+                            src={userObject.profileImgUrl}
+                            alt="user photo"
+                        />
+                        <div className="info-username">{userObject.username}</div>
+                        <div className="info-tagline">{userObject.tagline}</div>
+                        <div className="info-followerCount"># of Followers: {userObject.followersCount}</div>
+                        <div className="info-followedbyCurrent">Followed by current user: False</div>
+                    </div>
+                </li>
+            );
+          }
         }
 
       });
