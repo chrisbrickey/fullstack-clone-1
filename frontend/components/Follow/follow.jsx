@@ -23,43 +23,45 @@ class Follow extends React.Component {
       let userFeedArray = Object.values(userFeedObject);
 
       userList = userFeedArray.map( (userObject) => {
+
+        let followedbyCurrent = "False";
+        if (userObject.followedByCurrentUser === true) {
+          followedbyCurrent = "True";
+        }
+
         if (userObject.id === this.props.currentUser.id) {
           return (
             <li key={userObject.id} className="empty-feedItem-container">
             </li>
           );
+
         } else {
-          if (userObject.followedByCurrentUser === true) {
-            return (
-                <li key={userObject.id} className="feedItem-container">
-                    <div className="subcontainer">
-                        <img className="profile-photo"
-                            src={userObject.profileImgUrl}
-                            alt="user photo"
-                        />
-                        <div className="info-username">{userObject.username}</div>
-                        <div className="info-tagline">{userObject.tagline}</div>
-                        <div className="info-followerCount"># of Followers: {userObject.followersCount}</div>
-                        <div className="info-followedbyCurrent">Followed by current user: True</div>
-                    </div>
-                </li>
-            );
-          } else {
-            return (
-                <li key={userObject.id} className="feedItem-container">
-                    <div className="subcontainer">
-                        <img className="profile-photo"
-                            src={userObject.profileImgUrl}
-                            alt="user photo"
-                        />
-                        <div className="info-username">{userObject.username}</div>
-                        <div className="info-tagline">{userObject.tagline}</div>
-                        <div className="info-followerCount"># of Followers: {userObject.followersCount}</div>
-                        <div className="info-followedbyCurrent">Followed by current user: False</div>
-                    </div>
-                </li>
-            );
-          }
+          return (
+              <li key={userObject.id} className="feedItem-container">
+                  <div className="subcontainer">
+
+                      <section className="info-top">
+
+                          <div className="top-left-container">
+                              <div className="thumbnailPic-container">
+                                  <img
+                                      id="thumbnail"
+                                      src={userObject.profileImgUrl}
+                                      alt="photo"
+                                  />
+                              </div>
+                          </div>
+
+                      </section>
+
+                      <div className="info-username">{userObject.username}</div>
+                      <div className="info-tagline">{userObject.tagline}</div>
+                      <div className="info-followerCount"># of Followers: {userObject.followersCount}</div>
+                      <div className="info-followedbyCurrent">Followed by current user: {followedbyCurrent}</div>
+                  </div>
+              </li>
+          );
+
         }
 
       });
