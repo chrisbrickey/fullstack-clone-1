@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import merge from 'lodash/merge';
 
+import FollowButton from './follow_button';
 import FooterXXX from '../Navigation/footer';
 import HeaderXXX from '../Navigation/header';
 
@@ -14,25 +15,39 @@ class Follow extends React.Component {
       this.props.fetchAllUsers();
   }
 
+  capitalize(string) {
+    let newString = "";
+    let oldArray = string.split("");
+    oldArray.forEach( (el) => {
+      newString += el.toUpperCase();
+    });
+
+    return newString;
+  }
+
   render() {
+
+    // console.log(this.props);
 
     const userFeedObject = this.props.users.byId;
     let userList = null;
+
 
     if (userFeedObject) {
       let userFeedArray = Object.values(userFeedObject);
 
       userList = userFeedArray.map( (userObject) => {
 
+        let likesCurrent = "False";
+        if (userObject.likesCurrentUser === true) {
+          likesCurrent = "True";
+        }
+
         let followedByCurrent = "False";
         if (userObject.followedByCurrentUser === true) {
           followedByCurrent = "True";
         }
 
-        let likesCurrent = "False";
-        if (userObject.likesCurrentUser === true) {
-          likesCurrent = "True";
-        }
 
         if (userObject.id === this.props.currentUser.id) {
           return (
@@ -76,6 +91,15 @@ class Follow extends React.Component {
                           <div className="follow-part-C">
                               <div className="info-followedByCurrent">
                                   Followed by current user: {followedByCurrent}
+                              </div>
+                              <div className="follow-button-container">
+                                  <FollowButton
+                                      currentUser={this.props.currentUser}
+                                      userToFollow={userObject}
+                                      userIdToFollow={userObject.id}
+                                      createFollow={this.props.createFollow}
+                                      destroyFollow={this.props.destroyFollow}
+                                  />
                               </div>
                           </div>
                       </section>
