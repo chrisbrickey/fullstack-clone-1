@@ -1,7 +1,7 @@
 @import "../base/colors";
 
 #follow-sub-container {
-  // background-color: brown;
+  // background-color: red;
   display: flex;
   align-items: left;
 }
@@ -24,8 +24,8 @@
 }
 
 #follow-list-container {
-  // background-color: orange;
-  background-color: $instagram-white;
+  background-color: orange;
+  // background-color: $instagram-white;
   margin: 0px 0px 0px 0px;
   padding: 0px;
   width: 600px;
@@ -37,13 +37,13 @@
 }
 
 .followItem-container {
-  // background-color: lightblue;
+  background-color: lightblue;
   margin: 0px;
   padding: 0px;
 }
 
-.info-top {
-  // background-color: lightgreen;
+.follow-item-box {
+  background-color: lightgreen;
   padding: 0px 3px 0px 3px;
   display: flex;
   flex-direction: row;
@@ -52,34 +52,45 @@
   cursor:default;
 }
 
-.top-left-container {
-  // background-color: yellow;
-}
-
-.thumbnailPic-container {
-  height: 50px;
-  width: 50px;
-  // background-color: red;
-  margin: 5px 0px 5px 0px;
-  padding: 0px;
+.follow-left-container {
+  background-color: green;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: row;
+  // justify-content: center;
+  // align-items: left;
+  padding: 5px;
 }
 
-.thumbnailPic-container > img {
-  border-radius: 100%;
-  height: 35px;
-  width: 35px;
-  // margin: 5px 50px 5px 50px;
+.follow-part-A{
+  background-color: yellow;
 }
 
-.top-right-container {
-  // background-color: pink;
+.follow-part-B {
+  background-color: pink;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: left;
+}
+
+
+.follow-right-container {
+  background-color: blue;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  // align-items: center;
+  padding: 5px;
+}
+
+.follow-part-C {
+  background-color: orange;
+  width: 3;
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  // align-items: left;
 }
 
 #info-username {

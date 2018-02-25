@@ -43,11 +43,10 @@ class Follow extends React.Component {
         } else {
           return (
               <li key={userObject.id} className="followItem-container">
-                  <div className="subcontainer">
+                  <div className="follow-item-box">
 
-                      <section className="info-top">
-
-                          <div className="top-left-container">
+                      <section className="follow-left-container">
+                          <div className="follow-part-A">
                               <div className="thumbnailPic-container">
                                   <img
                                       id="thumbnail"
@@ -57,43 +56,55 @@ class Follow extends React.Component {
                               </div>
                           </div>
 
-                          <div className="top-right-container">
+                          <div className="follow-part-B">
                               <div id="info-username">{userObject.username}</div>
                               <div id="info-location">{userObject.name}</div>
                           </div>
-
                       </section>
 
-                      <section className="feed-bottom-outer">
-                          <div className="feed-bottom-inner">
-
-                              <div className="likes-container" >
-                                  <p>Likes Container</p>
-                              </div>
-
-                              <div className="caption-container">
-                                  <div>{userObject.username}</div>
-                                      <div id="caption-spacer"></div>
-                                  <div id="info-caption">{userObject.tagline}</div>
-                              </div>
-
-
-                              <div className="comment-list">
-                                  <p>CommentList</p>
-                              </div>
-
-                              <div className="info-followerCount"># of Followers: {userObject.followersCount}</div>
-                              <div className="info-followedByCurrent">Followed by current user: {followedByCurrent}</div>
-                              <div id="info-uploadDate">{userObject.username} add capitalize and ago and change to be timestamp for_the Follow</div>
-                              <div className="info-likesCurrent">This user likes photos of_current_user: {likesCurrent}</div>
-                              <div id="info-uploadDate">{userObject.username} add capitalize and ago and change to be timestamp for_the Like</div>
-
-                              <div id="line"></div>
-
-
+                      <section className="follow-right-container">
+                          <div className="follow-part-C">
+                            hello
+                          </div>
+                          <div className="follow-part-C">
+                            there
+                          </div>
+                          <div className="follow-part-C">
+                            goodbye
                           </div>
                       </section>
 
+
+                  </div>
+
+                  <div className="feed-bottom-outer">
+                      <div className="feed-bottom-inner">
+
+                          <div className="likes-container" >
+                              <p>Likes Container</p>
+                          </div>
+
+                          <div className="caption-container">
+                              <div>{userObject.username}</div>
+                                  <div id="caption-spacer"></div>
+                              <div id="info-caption">{userObject.tagline}</div>
+                          </div>
+
+
+                          <div className="comment-list">
+                              <p>CommentList</p>
+                          </div>
+
+                          <div className="info-followerCount"># of Followers: {userObject.followersCount}</div>
+                          <div className="info-followedByCurrent">Followed by current user: {followedByCurrent}</div>
+                          <div id="info-uploadDate">{userObject.username} add capitalize and ago and change to be timestamp for_the Follow</div>
+                          <div className="info-likesCurrent">This user likes photos of_current_user: {likesCurrent}</div>
+                          <div id="info-uploadDate">{userObject.username} add capitalize and ago and change to be timestamp for_the Like</div>
+
+                          <div id="line"></div>
+
+
+                      </div>
                   </div>
               </li>
           );
@@ -112,14 +123,14 @@ class Follow extends React.Component {
 
           <main id="follow-sub-container">
 
-              <section id="left-side">
-              </section>
+              <div id="left-side">
+              </div>
 
-              <section id="right-side">
+              <div id="right-side">
                   <ul id="follow-list-container">
                     {userList}
                   </ul>
-              </section>
+              </div>
 
             </main>
 
