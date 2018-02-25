@@ -3,7 +3,7 @@ import { Link, withRouter } from 'react-router-dom';
 import merge from 'lodash/merge';
 
 
-class HeaderXXX extends React.Component {
+class TheHeader extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -77,4 +77,4 @@ class HeaderXXX extends React.Component {
 
 }
 
-export default HeaderXXX;
+export default TheHeader;

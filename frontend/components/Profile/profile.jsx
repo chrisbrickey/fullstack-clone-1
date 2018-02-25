@@ -3,8 +3,8 @@ import { Link, withRouter } from 'react-router-dom';
 import merge from 'lodash/merge';
 
 
-import FooterXXX from '../Navigation/footer';
-import HeaderXXX from '../Navigation/header';
+import TheFooter from '../Navigation/footer';
+import TheHeader from '../Navigation/header';
 
 import PhotoDetailContainer from './photo_detail_container';
 
@@ -105,7 +105,7 @@ class Profile extends React.Component {
 
       <div className="profile-page-container">
         <PhotoDetailContainer currentPhotoId={this.state.currentPhotoId}/>
-          <HeaderXXX userId={this.props.currentUser.id}/>
+          <TheHeader userId={this.props.currentUser.id}/>
 
 
           <section className="bio-container">
@@ -154,7 +154,7 @@ class Profile extends React.Component {
           </section>
 
 
-          <FooterXXX/>
+          <TheFooter/>
 
       </div>
     );

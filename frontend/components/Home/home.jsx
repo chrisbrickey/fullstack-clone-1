@@ -4,8 +4,8 @@ import merge from 'lodash/merge';
 import sortBy from 'lodash/sortBy';
 import _ from 'lodash';
 
-import FooterXXX from '../Navigation/footer';
-import HeaderXXX from '../Navigation/header';
+import TheFooter from '../Navigation/footer';
+import TheHeader from '../Navigation/header';
 import LikesContainer from '../Likes/likes_container';
 import Comments from '../Comments/comments';
 import CommentForm from '../Comments/comment_form';
@@ -144,7 +144,7 @@ class Home extends React.Component {
     return (
       <div className="home-page-container">
 
-          <HeaderXXX userId={this.props.currentUser.id}/>
+          <TheHeader userId={this.props.currentUser.id}/>
 
           <main>
               <ul className="photoFeed">
@@ -152,7 +152,7 @@ class Home extends React.Component {
               </ul>
           </main>
 
-          <FooterXXX/>
+          <TheFooter/>
 
       </div>
     );

@@ -4,8 +4,8 @@ import merge from 'lodash/merge';
 import Dropzone from 'react-dropzone';
 import request from 'superagent';
 
-import FooterXXX from '../Navigation/footer';
-import HeaderXXX from '../Navigation/header';
+import TheFooter from '../Navigation/footer';
+import TheHeader from '../Navigation/header';
 
 const CLOUDINARY_UPLOAD_PRESET = 'n440adct';
 const CLOUDINARY_UPLOAD_URL = 'https://api.cloudinary.com/v1_1/dckkkjkuz/image/upload';
@@ -79,7 +79,7 @@ class Upload extends React.Component {
     return (
       <div className="upload-page-container">
 
-          <HeaderXXX userId={this.props.currentUser.id}/>
+          <TheHeader userId={this.props.currentUser.id}/>
 
 
           <main className="upload-sub-container">
@@ -169,7 +169,7 @@ class Upload extends React.Component {
           </main>
 
 
-          <FooterXXX/>
+          <TheFooter/>
 
       </div>
 

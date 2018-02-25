@@ -3,8 +3,8 @@ import { Link, withRouter } from 'react-router-dom';
 import merge from 'lodash/merge';
 
 import FollowButton from './follow_button';
-import FooterXXX from '../Navigation/footer';
-import HeaderXXX from '../Navigation/header';
+import TheFooter from '../Navigation/footer';
+import TheHeader from '../Navigation/header';
 
 class Follow extends React.Component {
   constructor(props) {
@@ -141,7 +141,7 @@ class Follow extends React.Component {
     return (
       <div id="follow-page-container">
 
-          <HeaderXXX userId={this.props.currentUser.id}/>
+          <TheHeader userId={this.props.currentUser.id}/>
 
           <main id="follow-sub-container">
 
@@ -156,7 +156,7 @@ class Follow extends React.Component {
 
             </main>
 
-          <FooterXXX/>
+          <TheFooter/>
 
       </div>
 
