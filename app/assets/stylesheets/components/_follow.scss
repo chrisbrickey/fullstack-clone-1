@@ -24,8 +24,8 @@
 }
 
 #follow-list-container {
-  background-color: orange;
-  // background-color: $instagram-white;
+  // background-color: orange;
+  background-color: $instagram-white;
   margin: 0px 0px 0px 0px;
   padding: 0px;
   width: 600px;
@@ -37,7 +37,7 @@
 }
 
 .followItem-container {
-  background-color: lightblue;
+  // background-color: lightblue;
   margin: 0px;
   padding: 0px;
 }
@@ -62,11 +62,11 @@
 }
 
 .follow-part-A{
-  background-color: yellow;
+  // background-color: yellow;
 }
 
 .follow-part-B {
-  background-color: pink;
+  // background-color: pink;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -86,10 +86,9 @@
 
 .follow-part-C {
   background-color: orange;
-  width: 3;
   display: flex;
   flex-direction: column;
-  // justify-content: center;
+  justify-content: center;
   // align-items: left;
 }
 
@@ -133,19 +132,6 @@
   margin-bottom: 4px;
   cursor:pointer;
   // background-color: grey;
-}
-
-
-
-.likes-count-container {
-  // background-color: pink;
-  display: flex;
-  flex-direction: row;
-  justify-content: left;
-  align-items: center;
-
-  margin: 3px 0px 3px 0px;
-  padding: 3px 0px 3px 0px;
 }
 
 .caption-container {

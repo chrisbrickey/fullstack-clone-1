@@ -58,19 +58,25 @@ class Follow extends React.Component {
 
                           <div className="follow-part-B">
                               <div id="info-username">{userObject.username}</div>
-                              <div id="info-location">{userObject.name}</div>
                           </div>
                       </section>
 
                       <section className="follow-right-container">
                           <div className="follow-part-C">
-                            hello
+                              space
                           </div>
+
                           <div className="follow-part-C">
-                            there
+                              <div id="info-uploadDate">
+                                  {userObject.username} add capitalize and ago and change to be timestamp for_the Like
+                              </div>
+                              <div className="info-likesCurrent">This user likes photos of_current_user: {likesCurrent}</div>
                           </div>
+
                           <div className="follow-part-C">
-                            goodbye
+                              <div className="info-followedByCurrent">
+                                  Followed by current user: {followedByCurrent}
+                              </div>
                           </div>
                       </section>
 
@@ -80,29 +86,21 @@ class Follow extends React.Component {
                   <div className="feed-bottom-outer">
                       <div className="feed-bottom-inner">
 
-                          <div className="likes-container" >
-                              <p>Likes Container</p>
-                          </div>
-
                           <div className="caption-container">
                               <div>{userObject.username}</div>
                                   <div id="caption-spacer"></div>
-                              <div id="info-caption">{userObject.tagline}</div>
+                              <div id="info-caption">say something</div>
                           </div>
-
 
                           <div className="comment-list">
                               <p>CommentList</p>
                           </div>
 
                           <div className="info-followerCount"># of Followers: {userObject.followersCount}</div>
-                          <div className="info-followedByCurrent">Followed by current user: {followedByCurrent}</div>
                           <div id="info-uploadDate">{userObject.username} add capitalize and ago and change to be timestamp for_the Follow</div>
                           <div className="info-likesCurrent">This user likes photos of_current_user: {likesCurrent}</div>
-                          <div id="info-uploadDate">{userObject.username} add capitalize and ago and change to be timestamp for_the Like</div>
 
                           <div id="line"></div>
-
 
                       </div>
                   </div>
