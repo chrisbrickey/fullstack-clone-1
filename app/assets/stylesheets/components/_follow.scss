@@ -1,21 +1,13 @@
-$instagram-blue-background: #3897f0;
-$instagram-blue-border: #3897f0;
-$instagram-white: #fff;
-$instagram-grey: #999;
-$instagram-light-grey: #e0e0e0;
-$instagram-grey-fullscreen: #fdfdfd;
-$instagram-header-icon: #4a4a4a;
-$instagram-red: #f04752;
-
+@import "../base/colors";
 
 #follow-sub-container {
-  background-color: brown;
+  // background-color: brown;
   display: flex;
   align-items: left;
 }
 
 #left-side {
-  background-color: blue;
+  // background-color: blue;
   margin: 5px;
   padding: 5px;
   height: 500px;
@@ -23,7 +15,7 @@ $instagram-red: #f04752;
 }
 
 #right-side {
-  background-color: green;
+  // background-color: green;
   margin: 5px;
   padding: 5px;
   display: flex;
@@ -32,9 +24,9 @@ $instagram-red: #f04752;
 }
 
 #follow-list-container {
-  background-color: orange;
-  // background-color: $instagram-white;
-  margin: 0px 0px 60px 0px;
+  // background-color: orange;
+  background-color: $instagram-white;
+  margin: 0px 0px 0px 0px;
   padding: 0px;
   width: 600px;
   display: flex;
@@ -42,6 +34,12 @@ $instagram-red: #f04752;
   border-width: 1px;
   border-style: solid;
   border-color: $instagram-light-grey;
+}
+
+.followItem-container {
+  // background-color: lightblue;
+  margin: 0px;
+  padding: 0px;
 }
 
 .info-top {
@@ -99,14 +97,6 @@ $instagram-red: #f04752;
   font-weight: 300;
   letter-spacing: .75px;
 }
-
-
-
-
-.feedItem-container > img {
-  width: 600px;
-}
-
 
 
 .feed-bottom-outer {
@@ -177,7 +167,7 @@ $instagram-red: #f04752;
 
 
 .comment-list {
-  // background-color: orange;
+  // background-color: purple;
   // height: 30px;
 
   margin: 7px 0px 3px 0px;

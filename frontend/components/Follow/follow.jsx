@@ -36,13 +36,13 @@ class Follow extends React.Component {
 
         if (userObject.id === this.props.currentUser.id) {
           return (
-            <li key={userObject.id} className="empty-feedItem-container">
+            <li key={userObject.id} className="empty-followItem-container">
             </li>
           );
 
         } else {
           return (
-              <li key={userObject.id} className="feedItem-container">
+              <li key={userObject.id} className="followItem-container">
                   <div className="subcontainer">
 
                       <section className="info-top">
@@ -112,14 +112,14 @@ class Follow extends React.Component {
 
           <main id="follow-sub-container">
 
-              <div id="left-side">
-              </div>
+              <section id="left-side">
+              </section>
 
-              <div id="right-side">
+              <section id="right-side">
                   <ul id="follow-list-container">
                     {userList}
                   </ul>
-              </div>
+              </section>
 
             </main>
 
