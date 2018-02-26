@@ -5,46 +5,64 @@ import merge from 'lodash/merge';
 class FollowButton extends React.Component {
   constructor(props) {
     super(props);
-    }
-  //
-  //   this.editComment = this.editComment.bind(this);
-  //   this.handleSubmit = this.handleSubmit.bind(this);
-  // }
-  //
-  //
-  // editComment(event) {
-  //
-  //   const newComment = merge({}, this.state);
-  //   newComment.comment.body = event.target.value;
-  //   this.setState(newComment);
-  // }
-  //
-  // handleSubmit(event) {
-  //
-  //   event.preventDefault();
-  //   this.props.createComment(this.state.comment)
-  //     .then(
-  //       ( () => {
-  //         this.setState({ comment: { body: "", photo_id: this.props.thisPhotoId } });
-  //       })
-  //     );
-  //
-  // }
-  //
-  //
-  render() {
 
-    console.log(this.props);
+    this.followThisUser = this.followThisUser.bind(this);
+    this.unfollowThisUser = this.unfollowThisUser.bind(this);
+    this.displayFollowButton = this.displayFollowButton.bind(this);
+  }
+
+  followThisUser(event) {
+    this.props.createFollow(this.props.userIdToFollow);
+  }
+
+  unfollowThisUser(event) {
+    // let followId = do a query to find the follow id based on current user and user to be followed
+    // OR redefine destroyFollow in the actions/utils/etc so that it takes a user id instead of followid
+    // this.props.destroyFollow(followId);
+  }
+
+  displayFollowButton() {
+
+    if (this.props.followedByCurrent) {
+       return(
+
+             <button
+               onClick={this.unfollowThisUser}
+               type="submit"
+               value="Submit"
+               className="button-to-unfollow-user">
+               Following
+             </button>
+
+       );
+    } else {
+      return(
+
+            <button
+              onClick={this.followThisUser}
+              type="submit"
+              value="Submit"
+              className="button-to-follow-user">
+              Follow
+            </button>
+
+      );
+    }
+  }
+
+
+  render() {
 
     return(
 
         <div>
-            I'm in the FollowButton component
+            <div>{this.displayFollowButton()}</div>
+            <div></div>
         </div>
 
     );
-  }
 
+  }
 
 }
 

@@ -27,8 +27,6 @@ class Follow extends React.Component {
 
   render() {
 
-    // console.log(this.props);
-
     const userFeedObject = this.props.users.byId;
     let userList = null;
 
@@ -94,8 +92,8 @@ class Follow extends React.Component {
                               </div>
                               <div className="follow-button-container">
                                   <FollowButton
+                                      followedByCurrent={userObject.followedByCurrentUser}
                                       currentUser={this.props.currentUser}
-                                      userToFollow={userObject}
                                       userIdToFollow={userObject.id}
                                       createFollow={this.props.createFollow}
                                       destroyFollow={this.props.destroyFollow}
@@ -118,6 +116,10 @@ class Follow extends React.Component {
 
                           <div className="comment-list">
                               <p>CommentList</p>
+                          </div>
+
+                          <div className="info-followedByCurrent">
+                              Followed by current user: {followedByCurrent}
                           </div>
 
                           <div className="info-followerCount"># of Followers: {userObject.followersCount}</div>
