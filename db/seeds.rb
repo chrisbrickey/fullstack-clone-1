@@ -42,6 +42,17 @@ ActiveRecord::Base.transaction do
   otheruser20 = User.create!(name: 'Kevin Shen', username: 'kevin_shen', password: '123456', profile_img_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/c_scale,w_590/v1500953840/instagram-color-fade_pvpssi.png', tagline: "I'm good at computers")
 
 
+  follow01 = Follow.create!(follower_id: demo1.id, following_id: demo2.id)
+  follow02 = Follow.create!(follower_id: demo1.id, following_id: demo3.id)
+  follow03 = Follow.create!(follower_id: demo2.id, following_id: demo4.id)
+  follow04 = Follow.create!(follower_id: demo2.id, following_id: demo5.id)
+  follow05 = Follow.create!(follower_id: demo3.id, following_id: demo1.id)
+  follow06 = Follow.create!(follower_id: demo3.id, following_id: demo2.id)
+  follow07 = Follow.create!(follower_id: demo4.id, following_id: demo3.id)
+  follow08 = Follow.create!(follower_id: demo4.id, following_id: demo5.id)
+  follow09 = Follow.create!(follower_id: demo5.id, following_id: demo4.id)
+  follow10 = Follow.create!(follower_id: demo5.id, following_id: demo1.id)
+
 
   photo23 = Photo.create!(
     photo_url: 'https://res.cloudinary.com/dckkkjkuz/image/upload/v1501092784/ftbnu6b6jw4qonu1hqrd.jpg',
@@ -215,6 +226,20 @@ ActiveRecord::Base.transaction do
     author_id: demo1.id
     )
 
+  comment01 = Comment.create!(photo_id: photo1.id , user_id: demo2.id , body: "gorgeous")
+  comment02 = Comment.create!(photo_id: photo1.id , user_id: demo3.id , body: "love it!")
+
+  comment03 = Comment.create!(photo_id: photo2.id , user_id: demo4.id , body: "beautiful")
+
+  comment04 = Comment.create!(photo_id: photo3.id , user_id: demo5.id , body: "urban legend")
+  comment05 = Comment.create!(photo_id: photo3.id , user_id: demo1.id , body: "reach for the stars!")
+  comment06 = Comment.create!(photo_id: photo3.id , user_id: demo2.id , body: "amazing")
+
+  comment07 = Comment.create!(photo_id: photo4.id , user_id: demo3.id , body: "striking")
+
+  comment08 = Comment.create!(photo_id: photo5.id , user_id: demo4.id , body: "nailed it")
+  comment09 = Comment.create!(photo_id: photo5.id , user_id: demo2.id , body: "yes!!")
+
 
   like1 = Like.create!(user_id: demo5.id, likable_id: photo1.id, likable_type: 'Photo')
   like2 = Like.create!(user_id: demo5.id, likable_id: photo2.id, likable_type: 'Photo')
@@ -270,6 +295,7 @@ ActiveRecord::Base.transaction do
   like48 = Like.create!(user_id: demo1.id, likable_id: photo17.id, likable_type: 'Photo')
   like49 = Like.create!(user_id: demo1.id, likable_id: photo21.id, likable_type: 'Photo')
   like50 = Like.create!(user_id: demo1.id, likable_id: photo12.id, likable_type: 'Photo')
+
 
 
 
